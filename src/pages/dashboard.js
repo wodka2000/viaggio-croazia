@@ -40,7 +40,7 @@ export async function renderDashboard() {
         <span class="date-badge">✈️ ${formatDate(meta.start_date)}</span>
         <span style="color:rgba(255,255,255,0.5);">→</span>
         <span class="date-badge">${formatDate(meta.end_date)}</span>
-        <span class="date-badge">👥 ${meta.travelers} viaggiatori</span>
+        <span class="date-badge">👥 ${meta.travelers_detail || meta.travelers + ' viaggiatori'}</span>
       </div>
     </div>
 

@@ -1,9 +1,10 @@
-# Viaggio in Croazia 2026
+# Viaggio Croazia e Sesto 2026
 
 Pianificatore di viaggio statico — deployabile su GitHub Pages.
 
-**Itinerario**: 15 giorni · 20 giugno – 4 luglio 2026  
-**Destinazioni**: Zagreb · Plitvice · Zadar · Split · Hvar · Dubrovnik · Kotor
+**Itinerario**: 13 giorni · 8 – 20 agosto 2026  
+**Viaggiatori**: 2 adulti + 3 bambini (8, 6, 2 anni)  
+**Destinazioni**: Ancona → Brač → Zara → Rovigno → Trieste → Sesto
 
 ---
 

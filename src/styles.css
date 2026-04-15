@@ -858,6 +858,69 @@ ul { list-style: none; }
 }
 
 /* =========================================================
+   HOTEL — BADGE E GRUPPI
+   ========================================================= */
+.hotels-location-group {
+  margin-bottom: 2rem;
+}
+
+.hotels-group-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hotels-group-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+.hotels-group-nights {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.hotel-card--recommended {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.15), 0 2px 8px var(--color-shadow);
+}
+
+.hotel-status-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.badge-prenotato   { background: #d1fae5; color: #065f46; }
+.badge-da-prenotare { background: #fff7ed; color: #9a3412; }
+.badge-confermare  { background: #fef9c3; color: #713f12; }
+
+.hotel-recommended-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.hotel-alt-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 12px;
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* =========================================================
    MAPPA
    ========================================================= */
 .map-container {
