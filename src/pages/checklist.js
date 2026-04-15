@@ -1,5 +1,6 @@
 import { fetchTripData } from '../utils/data.js'
 import { loadChecklistState, saveChecklistState, clearChecklistState } from '../utils/storage.js'
+import { getChecklistIdeas, updateIdea } from '../utils/ideas.js'
 
 export async function renderChecklist() {
   const content = document.getElementById('page-content')
@@ -38,14 +39,95 @@ export async function renderChecklist() {
     <div class="checklist-categories" id="checklist-categories">
       ${categories.map(cat => renderCategory(cat, state)).join('')}
     </div>
+
+    <!-- Sezione idee da checklist (sincronizzata) -->
+    <div id="checklist-ideas-section">
+      ${_renderIdeasSection()}
+    </div>
   `
 
   updateGlobalProgress(categories, state)
   bindEvents(categories, state)
+
+  // Sync live: aggiorna la sezione idee quando cambiano
+  const handler = () => {
+    const section = document.getElementById('checklist-ideas-section')
+    if (section) {
+      section.innerHTML = _renderIdeasSection()
+      _bindIdeasSectionEvents()
+    }
+  }
+  window.addEventListener('ideas:updated', handler)
+  window.__currentPageCleanup = () => window.removeEventListener('ideas:updated', handler)
+
+  _bindIdeasSectionEvents()
 }
 
+/* ── IDEAS SECTION ────────────────────────────────────────── */
+
+function _renderIdeasSection() {
+  const ideas = getChecklistIdeas()
+  if (ideas.length === 0) return ''
+
+  const checked = ideas.filter(i => i.completed).length
+  const total   = ideas.length
+  const pct     = total ? (checked / total * 100) : 0
+
+  return `
+    <div class="category-card" id="ideas-checklist-card">
+      <div class="category-header">
+        <span class="category-icon">💡</span>
+        <span class="category-name">Idee / Da fare</span>
+        <span class="category-count" id="ideas-cl-count">${checked}/${total}</span>
+        <div class="category-progress">
+          <div class="category-progress-fill" id="ideas-cl-prog" style="width:${pct}%"></div>
+        </div>
+        <span class="category-chevron" id="ideas-cl-chev">▼</span>
+      </div>
+      <div class="category-items" id="ideas-cl-items">
+        ${ideas.map(idea => `
+          <label class="checklist-item ${idea.completed ? 'checked' : ''}"
+            data-idea-id="${idea.id}">
+            <input type="checkbox" data-idea-id="${idea.id}" ${idea.completed ? 'checked' : ''} />
+            <span class="checklist-item-text">${_esc(idea.text)}</span>
+            ${idea.location_name
+              ? `<span class="priority-badge" style="background:#eff6ff;color:var(--color-primary)">📍 ${_esc(idea.location_name)}</span>`
+              : ''}
+          </label>
+        `).join('')}
+        <div style="padding:0.5rem 1.25rem;">
+          <a href="#ideas" class="btn btn-outline" style="font-size:0.78rem;padding:0.3rem 0.75rem;">
+            + Aggiungi idea dalla sezione Idee
+          </a>
+        </div>
+      </div>
+    </div>
+  `
+}
+
+function _bindIdeasSectionEvents() {
+  // Toggle header
+  document.querySelector('#ideas-checklist-card .category-header')?.addEventListener('click', e => {
+    if (e.target.tagName === 'INPUT') return
+    document.getElementById('ideas-cl-items')?.classList.toggle('hidden')
+    document.getElementById('ideas-cl-chev')?.classList.toggle('open')
+  })
+
+  // Toggle idea completata
+  document.getElementById('ideas-cl-items')?.addEventListener('change', e => {
+    const cb = e.target
+    if (cb.type !== 'checkbox') return
+    const id = cb.dataset.ideaId
+    if (!id) return
+    updateIdea(id, { completed: cb.checked })
+    // ideas:updated aggiorna automaticamente la sezione
+  })
+}
+
+/* ── CATEGORIA STANDARD ───────────────────────────────────── */
+
 function renderCategory(cat, state) {
-  const total = cat.items.length
+  const total   = cat.items.length
   const checked = cat.items.filter(i => state[i.id]).length
 
   return `
@@ -77,114 +159,90 @@ function renderItem(item, checked) {
 }
 
 function bindEvents(categories, state) {
-  // Toggle singola checkbox
   document.getElementById('checklist-categories')?.addEventListener('change', e => {
     const cb = e.target
     if (cb.type !== 'checkbox') return
     const id = cb.dataset.id
     state[id] = cb.checked
-
-    const label = cb.closest('.checklist-item')
-    label?.classList.toggle('checked', cb.checked)
-
+    cb.closest('.checklist-item')?.classList.toggle('checked', cb.checked)
     saveChecklistState(state)
     updateCategoryProgress(categories, state, id)
     updateGlobalProgress(categories, state)
   })
 
-  // Click sul header categoria → toggle visibilità
   document.querySelectorAll('.category-header').forEach(header => {
     header.addEventListener('click', e => {
       if (e.target.tagName === 'INPUT') return
       const catId = header.closest('.category-card')?.dataset.cat
-      const items = document.getElementById(`items-${catId}`)
-      const chev = document.getElementById(`chev-${catId}`)
-      items?.classList.toggle('hidden')
-      chev?.classList.toggle('open')
+      document.getElementById(`items-${catId}`)?.classList.toggle('hidden')
+      document.getElementById(`chev-${catId}`)?.classList.toggle('open')
     })
   })
 
-  // Seleziona tutto
   document.getElementById('check-all')?.addEventListener('click', () => {
-    categories.forEach(cat => {
-      cat.items.forEach(item => { state[item.id] = true })
-    })
+    categories.forEach(cat => cat.items.forEach(item => { state[item.id] = true }))
     saveChecklistState(state)
     rerenderAllItems(categories, state)
     updateGlobalProgress(categories, state)
   })
 
-  // Deseleziona tutto
   document.getElementById('uncheck-all')?.addEventListener('click', () => {
-    categories.forEach(cat => {
-      cat.items.forEach(item => { state[item.id] = false })
-    })
+    categories.forEach(cat => cat.items.forEach(item => { state[item.id] = false }))
     saveChecklistState(state)
     rerenderAllItems(categories, state)
     updateGlobalProgress(categories, state)
   })
 
-  // Reset
   document.getElementById('reset-btn')?.addEventListener('click', () => {
     if (!confirm('Vuoi resettare l\'intera checklist?')) return
     clearChecklistState()
-    categories.forEach(cat => {
-      cat.items.forEach(item => { state[item.id] = false })
-    })
+    categories.forEach(cat => cat.items.forEach(item => { state[item.id] = false }))
     rerenderAllItems(categories, state)
     updateGlobalProgress(categories, state)
   })
 }
 
-function getCategoryForItem(categories, itemId) {
-  return categories.find(cat => cat.items.some(i => i.id === itemId))
-}
-
 function updateCategoryProgress(categories, state, changedItemId) {
-  const cat = getCategoryForItem(categories, changedItemId)
+  const cat = categories.find(c => c.items.some(i => i.id === changedItemId))
   if (!cat) return
-
-  const total = cat.items.length
+  const total   = cat.items.length
   const checked = cat.items.filter(i => state[i.id]).length
-  const pct = total ? (checked / total * 100) : 0
-
+  const pct     = total ? (checked / total * 100) : 0
   const countEl = document.getElementById(`count-${cat.id}`)
-  const progEl = document.getElementById(`prog-${cat.id}`)
+  const progEl  = document.getElementById(`prog-${cat.id}`)
   if (countEl) countEl.textContent = `${checked}/${total}`
-  if (progEl) progEl.style.width = `${pct}%`
+  if (progEl)  progEl.style.width  = `${pct}%`
 }
 
 function updateGlobalProgress(categories, state) {
-  const total = categories.reduce((s, c) => s + c.items.length, 0)
+  const total   = categories.reduce((s, c) => s + c.items.length, 0)
   const checked = categories.reduce((s, c) => s + c.items.filter(i => state[i.id]).length, 0)
-  const pct = total ? (checked / total * 100) : 0
-
+  const pct     = total ? (checked / total * 100) : 0
   const fill = document.getElementById('global-fill')
   const text = document.getElementById('global-text')
-  if (fill) fill.style.width = `${pct}%`
-  if (text) text.textContent = `${checked} / ${total}`
+  if (fill) fill.style.width  = `${pct}%`
+  if (text) text.textContent  = `${checked} / ${total}`
 }
 
 function rerenderAllItems(categories, state) {
   categories.forEach(cat => {
-    const total = cat.items.length
+    const total   = cat.items.length
     const checked = cat.items.filter(i => state[i.id]).length
-    const pct = total ? (checked / total * 100) : 0
-
-    // Aggiorna contatore e barra categoria
+    const pct     = total ? (checked / total * 100) : 0
     const countEl = document.getElementById(`count-${cat.id}`)
-    const progEl = document.getElementById(`prog-${cat.id}`)
+    const progEl  = document.getElementById(`prog-${cat.id}`)
     if (countEl) countEl.textContent = `${checked}/${total}`
-    if (progEl) progEl.style.width = `${pct}%`
-
-    // Aggiorna checkbox e label
+    if (progEl)  progEl.style.width  = `${pct}%`
     cat.items.forEach(item => {
       const label = document.querySelector(`.checklist-item[data-id="${item.id}"]`)
-      const cb = label?.querySelector('input[type="checkbox"]')
+      const cb    = label?.querySelector('input[type="checkbox"]')
       if (!label || !cb) return
-      const isChecked = state[item.id] || false
-      cb.checked = isChecked
-      label.classList.toggle('checked', isChecked)
+      cb.checked = state[item.id] || false
+      label.classList.toggle('checked', cb.checked)
     })
   })
+}
+
+function _esc(str) {
+  return String(str ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
 }
