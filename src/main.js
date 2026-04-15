@@ -6,6 +6,7 @@ import { renderHotels }    from './pages/hotels.js'
 import { renderChecklist } from './pages/checklist.js'
 import { renderMap }       from './components/Map.js'
 import { renderIdeas }     from './pages/ideas.js'
+import { renderNatura }    from './pages/natura.js'
 
 const routes = {
   '#dashboard': renderDashboard,
@@ -14,6 +15,7 @@ const routes = {
   '#checklist': renderChecklist,
   '#map':       renderMap,
   '#ideas':     renderIdeas,
+  '#natura':    renderNatura,
 }
 
 async function router() {
