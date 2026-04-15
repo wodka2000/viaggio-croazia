@@ -124,17 +124,26 @@ function initMap(data) {
 
 function addRouteMarkers(data) {
   markersRoute = []
-  const seen = new Set()
+  // Raggruppa i giorni per coordinate esatte (stessa posizione = stesso punto)
+  const groups = new Map()
   data.days.filter(d => d.coordinates).forEach(day => {
     const key = `${day.coordinates.lat},${day.coordinates.lng}`
-    if (seen.has(key)) return
-    seen.add(key)
+    if (!groups.has(key)) groups.set(key, [])
+    groups.get(key).push(day)
+  })
+
+  groups.forEach(days => {
+    const first = days[0]
+    const last  = days[days.length - 1]
+    const heading = days.length > 1
+      ? `Giorni ${first.day}–${last.day} — ${first.location}`
+      : `Giorno ${first.day} — ${first.location}`
 
     const marker = new google.maps.Marker({
-      position: day.coordinates,
+      position: first.coordinates,
       map: mapInstance,
-      title: day.location,
-      label: { text: String(day.day), color: '#fff', fontWeight: 'bold', fontSize: '11px' },
+      title: first.location,
+      label: { text: String(first.day), color: '#fff', fontWeight: 'bold', fontSize: '11px' },
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
         scale: 16,
@@ -146,12 +155,19 @@ function addRouteMarkers(data) {
       zIndex: 10,
     })
 
+    const dayRows = days.map(d =>
+      `<div style="margin-top:5px;font-size:12px;border-top:1px solid #e2e8f0;padding-top:4px;">
+        <span style="color:#1e40af;font-weight:700;">Gg. ${d.day}</span>
+        <span style="color:#64748b;"> · ${d.date}</span><br>
+        <span>${d.title}</span>
+      </div>`
+    ).join('')
+
     const iw = new google.maps.InfoWindow({
       content: `
-        <div style="font-family:system-ui,sans-serif;max-width:220px;">
-          <strong style="color:#1e40af;">Giorno ${day.day} — ${day.location}</strong>
-          <div style="font-size:12px;color:#64748b;margin-top:2px;">${day.date}</div>
-          <div style="margin-top:6px;font-size:13px;">${day.title}</div>
+        <div style="font-family:system-ui,sans-serif;max-width:240px;">
+          <strong style="color:#1e40af;">${heading}</strong>
+          ${dayRows}
         </div>`,
     })
     marker.addListener('click', () => iw.open(mapInstance, marker))
