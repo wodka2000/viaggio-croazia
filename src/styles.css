@@ -1119,22 +1119,6 @@ ul { list-style: none; }
   margin-bottom: 0.85rem;
 }
 
-.idea-check-label {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.88rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-.idea-check-label input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  accent-color: var(--color-primary);
-}
-
 .idea-color-row {
   display: flex;
   align-items: center;
@@ -1143,21 +1127,11 @@ ul { list-style: none; }
   flex-wrap: wrap;
 }
 
-.idea-color-row.hidden { display: none; }
-
 .idea-color-picker {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
-
-.color-option {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.color-option input[type="radio"] { display: none; }
 
 .color-dot {
   display: block;
@@ -1203,13 +1177,6 @@ ul { list-style: none; }
   transition: all var(--transition);
 }
 
-.idea-filter-btn.active,
-.idea-filter-btn:hover {
-  background: var(--color-primary);
-  color: #fff;
-  border-color: var(--color-primary);
-}
-
 /* =========================================================
    IDEE — LISTA CARD
    ========================================================= */
@@ -1230,8 +1197,6 @@ ul { list-style: none; }
   box-shadow: 0 1px 3px var(--color-shadow);
   transition: box-shadow var(--transition);
 }
-
-.idea-card:hover { box-shadow: 0 3px 10px var(--color-shadow); }
 
 .idea-card--done { opacity: 0.6; }
 
@@ -1326,12 +1291,6 @@ ul { list-style: none; }
 /* =========================================================
    IDEE — SEZIONE NEL GIORNO (itinerary)
    ========================================================= */
-.day-ideas-wrap {
-  margin-top: 1rem;
-  border-top: 1px solid var(--color-border);
-  padding-top: 0.75rem;
-}
-
 .day-ideas-section {
   display: flex;
   flex-wrap: wrap;
@@ -1368,26 +1327,6 @@ ul { list-style: none; }
   max-width: 180px;
 }
 
-.idea-tiny-badge {
-  font-size: 0.7rem;
-  flex-shrink: 0;
-}
-
-.day-idea-del {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-text-muted);
-  cursor: pointer;
-  padding: 0 0.15rem;
-  transition: color var(--transition);
-  flex-shrink: 0;
-  line-height: 1;
-  border: none;
-  background: none;
-}
-
-.day-idea-del:hover { color: var(--color-accent); }
-
 .day-add-idea-btn {
   display: inline-flex;
   align-items: center;
@@ -1405,27 +1344,6 @@ ul { list-style: none; }
   background: none;
   color: var(--color-text-muted);
   font-size: 0.78rem;
-}
-
-.day-add-idea-btn:hover { color: var(--color-primary); }
-
-.day-quick-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.75rem;
-  background: var(--color-surface-2);
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-}
-
-.day-quick-form.hidden { display: none; }
-
-.quick-form-checks {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
 }
 
 /* =========================================================
