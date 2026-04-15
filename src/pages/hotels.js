@@ -135,6 +135,17 @@ function renderHotelCard(h) {
             📞 <a href="tel:${h.phone}" style="color:var(--color-primary);">${h.phone}</a>
           </div>
         ` : ''}
+
+        <div class="hotel-links">
+          <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.name + ' ' + h.address)}"
+             target="_blank" rel="noopener" class="hotel-link-btn">
+            🗺️ Vedi su Maps
+          </a>
+          <a href="https://www.google.com/search?q=${encodeURIComponent(h.name + ' ' + h.address)}"
+             target="_blank" rel="noopener" class="hotel-link-btn">
+            🔍 Cerca online
+          </a>
+        </div>
       </div>
     </div>
   `
