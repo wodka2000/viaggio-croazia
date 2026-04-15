@@ -1,0 +1,486 @@
+{
+  "meta": {
+    "title": "Viaggio in Croazia 2026",
+    "subtitle": "Costa Dalmata e Parchi Nazionali",
+    "start_date": "2026-06-20",
+    "end_date": "2026-07-04",
+    "duration_days": 15,
+    "travelers": 2,
+    "budget_estimate_eur": 4200,
+    "emoji": "🇭🇷"
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-06-20",
+      "location": "Zagreb",
+      "title": "Arrivo a Zagabria",
+      "description": "Atterraggio all'aeroporto di Zagabria. Check-in in hotel e primo giro serale nel centro storico.",
+      "hotel_ref": "zagreb_esplanade",
+      "coordinates": { "lat": 45.8150, "lng": 15.9819 },
+      "activities": [
+        { "time": "10:30", "text": "Volo Torino → Zagreb (FR1234)" },
+        { "time": "13:00", "text": "Arrivo aeroporto Zagreb Franjo Tuđman" },
+        { "time": "14:30", "text": "Check-in Hotel Esplanade" },
+        { "time": "17:00", "text": "Passeggiata in Piazza Ban Jelačić" },
+        { "time": "19:30", "text": "Cena nel quartiere Tkalčićeva" }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-06-21",
+      "location": "Zagreb",
+      "title": "Zagabria — Città Vecchia e Musei",
+      "description": "Giornata completa alla scoperta di Zagabria: Città Alta (Gornji Grad), funicular, cattedrale e mercato Dolac.",
+      "hotel_ref": "zagreb_esplanade",
+      "coordinates": { "lat": 45.8150, "lng": 15.9819 },
+      "activities": [
+        { "time": "09:00", "text": "Colazione al Mercato Dolac" },
+        { "time": "10:00", "text": "Funicolare verso Gornji Grad" },
+        { "time": "10:30", "text": "Visita Cattedrale di Zagabria" },
+        { "time": "12:00", "text": "Museo delle Relazioni Interrotte" },
+        { "time": "14:00", "text": "Pranzo in centro" },
+        { "time": "15:30", "text": "Museo Mimara" },
+        { "time": "18:00", "text": "Aperitivo sul Tkalčićeva" }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2026-06-22",
+      "location": "Laghi di Plitvice",
+      "title": "Trasferimento ai Laghi di Plitvice",
+      "description": "Drive di circa 2h da Zagabria verso i Laghi di Plitvice. Arrivo nel pomeriggio, prima passeggiata al tramonto.",
+      "hotel_ref": "plitvice_jezero",
+      "coordinates": { "lat": 44.8654, "lng": 15.6215 },
+      "activities": [
+        { "time": "09:00", "text": "Check-out Hotel Esplanade" },
+        { "time": "09:30", "text": "Partenza in auto verso Plitvice (~130 km)" },
+        { "time": "11:30", "text": "Arrivo ai Laghi di Plitvice" },
+        { "time": "12:00", "text": "Check-in Hotel Jezero" },
+        { "time": "14:00", "text": "Ingresso Entrata 1 — Gornja jezera (laghi superiori)" },
+        { "time": "18:00", "text": "Cena in hotel con vista parco" }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2026-06-23",
+      "location": "Laghi di Plitvice",
+      "title": "Plitvice — Giornata Completa nel Parco",
+      "description": "Intera giornata nel Parco Nazionale dei Laghi di Plitvice, Patrimonio UNESCO. Percorso H completo (laghi inferiori e superiori).",
+      "hotel_ref": "plitvice_jezero",
+      "coordinates": { "lat": 44.8654, "lng": 15.6215 },
+      "activities": [
+        { "time": "08:00", "text": "Colazione presto per evitare la folla" },
+        { "time": "08:30", "text": "Entrata 2 — Percorso H (6-8 ore, 18 km)" },
+        { "time": "09:00", "text": "Grande Cascata (Veliki Slap, 78 m)" },
+        { "time": "12:00", "text": "Pranzo al sacco sul percorso" },
+        { "time": "15:00", "text": "Laghi superiori e barca panoramica" },
+        { "time": "17:00", "text": "Rientro in hotel" },
+        { "time": "19:30", "text": "Cena tradizionale croata" }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2026-06-24",
+      "location": "Zadar",
+      "title": "Trasferimento a Zara (Zadar)",
+      "description": "Drive da Plitvice a Zadar (~2h). Visita all'Organo del Mare e al Saluto al Sole.",
+      "hotel_ref": "zadar_bastion",
+      "coordinates": { "lat": 44.1194, "lng": 15.2314 },
+      "activities": [
+        { "time": "09:00", "text": "Check-out Hotel Jezero" },
+        { "time": "09:30", "text": "Partenza verso Zadar (~120 km)" },
+        { "time": "11:30", "text": "Arrivo a Zadar, check-in Hotel Bastion" },
+        { "time": "13:00", "text": "Pranzo nel centro storico" },
+        { "time": "15:00", "text": "Penisola del centro storico — Foro Romano" },
+        { "time": "16:30", "text": "Cattedrale di Sant'Anastasia" },
+        { "time": "19:00", "text": "Organo del Mare e Saluto al Sole al tramonto" },
+        { "time": "20:30", "text": "Cena sul porto" }
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2026-06-25",
+      "location": "Zadar",
+      "title": "Zadar e Arcipelago",
+      "description": "Gita in barca all'Isola di Ugljan e snorkeling nelle acque cristalline. Pomeriggio libero a Zadar.",
+      "hotel_ref": "zadar_bastion",
+      "coordinates": { "lat": 44.1194, "lng": 15.2314 },
+      "activities": [
+        { "time": "09:00", "text": "Ferry per l'Isola di Ugljan (20 min)" },
+        { "time": "10:00", "text": "Snorkeling e spiaggia a Preko" },
+        { "time": "13:00", "text": "Pranzo di pesce sull'isola" },
+        { "time": "15:30", "text": "Rientro a Zadar con ferry" },
+        { "time": "17:00", "text": "Museo delle Illusioni" },
+        { "time": "20:00", "text": "Cena in ristorante sul porto vecchio" }
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2026-06-26",
+      "location": "Split",
+      "title": "Trasferimento a Spalato (Split)",
+      "description": "Drive da Zadar a Split. Primo impatto con il Palazzo di Diocleziano, cuore del centro storico.",
+      "hotel_ref": "split_marjan",
+      "coordinates": { "lat": 43.5081, "lng": 16.4402 },
+      "activities": [
+        { "time": "09:30", "text": "Check-out Hotel Bastion" },
+        { "time": "10:00", "text": "Partenza verso Split (~155 km, 1h45)" },
+        { "time": "12:00", "text": "Arrivo a Split, check-in Hotel Marjan" },
+        { "time": "14:00", "text": "Prima visita al Palazzo di Diocleziano" },
+        { "time": "16:00", "text": "Peristilio e Cattedrale di San Doimo" },
+        { "time": "18:00", "text": "Passeggiata sul Riva (lungomare)" },
+        { "time": "20:00", "text": "Cena con vista mare" }
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2026-06-27",
+      "location": "Split",
+      "title": "Split — Esplorazione Approfondita",
+      "description": "Giornata completa a Split: Città Vecchia, Fortezza di Klis e spiaggia di Bačvice.",
+      "hotel_ref": "split_marjan",
+      "coordinates": { "lat": 43.5081, "lng": 16.4402 },
+      "activities": [
+        { "time": "09:00", "text": "Colazione nel mercato verde (pjaca)" },
+        { "time": "10:00", "text": "Fortezza di Klis (~8 km, Game of Thrones)" },
+        { "time": "12:30", "text": "Rientro a Split, pranzo in centro" },
+        { "time": "15:00", "text": "Spiaggia di Bačvice" },
+        { "time": "17:00", "text": "Passeggiata nel quartiere Varoš" },
+        { "time": "19:30", "text": "Aperitivo al tramonto sul Marjan" }
+      ]
+    },
+    {
+      "day": 9,
+      "date": "2026-06-28",
+      "location": "Hvar",
+      "title": "Gita a Hvar",
+      "description": "Gita di un giorno sull'isola di Hvar in traghetto da Split. Hvar Town, fortezza, lavanda e spiagge.",
+      "hotel_ref": "split_marjan",
+      "coordinates": { "lat": 43.1729, "lng": 16.4413 },
+      "activities": [
+        { "time": "08:00", "text": "Ferry Split → Hvar Town (1h, Jadrolinija)" },
+        { "time": "09:00", "text": "Arrivo a Hvar Town" },
+        { "time": "09:30", "text": "Fortezza Španjola (panorama mozzafiato)" },
+        { "time": "11:00", "text": "Piazza principale e Cattedrale di Santo Stefano" },
+        { "time": "13:00", "text": "Pranzo in ristorante con vista porto" },
+        { "time": "14:30", "text": "Spiaggia di Dubovica (30 min in taxi boat)" },
+        { "time": "17:00", "text": "Campagne della lavanda verso Stari Grad" },
+        { "time": "19:30", "text": "Ferry rientro a Split" }
+      ]
+    },
+    {
+      "day": 10,
+      "date": "2026-06-29",
+      "location": "Dubrovnik",
+      "title": "Trasferimento a Dubrovnik",
+      "description": "Drive panoramico da Split a Dubrovnik lungo la costa dalmata (~3h30). Passaggio per la penisola di Pelješac e vino Dingač.",
+      "hotel_ref": "dubrovnik_excelsior",
+      "coordinates": { "lat": 42.6507, "lng": 18.0944 },
+      "activities": [
+        { "time": "09:00", "text": "Check-out Hotel Marjan" },
+        { "time": "09:30", "text": "Partenza verso Dubrovnik (~220 km)" },
+        { "time": "11:00", "text": "Sosta a Makarska (caffè sul lungomare)" },
+        { "time": "12:30", "text": "Sosta cantina Dingač sulla penisola di Pelješac" },
+        { "time": "14:30", "text": "Arrivo a Dubrovnik, check-in Hotel Excelsior" },
+        { "time": "17:00", "text": "Prima passeggiata sulle Mura della Città Vecchia" },
+        { "time": "19:30", "text": "Cena nel ristorante con vista sull'Adriatico" }
+      ]
+    },
+    {
+      "day": 11,
+      "date": "2026-06-30",
+      "location": "Dubrovnik",
+      "title": "Dubrovnik — La Perla dell'Adriatico",
+      "description": "Giornata completa a Dubrovnik: Mura, Città Vecchia, funicolare sul Monte Srđ e spiaggia Banje.",
+      "hotel_ref": "dubrovnik_excelsior",
+      "coordinates": { "lat": 42.6507, "lng": 18.0944 },
+      "activities": [
+        { "time": "08:00", "text": "Passeggiata mattutina sulle Mura Cittadine (2 km)" },
+        { "time": "10:00", "text": "Stradun — Via principale della Città Vecchia" },
+        { "time": "11:00", "text": "Palazzo del Rettor e Cattedrale dell'Assunzione" },
+        { "time": "13:00", "text": "Pranzo nel vicolo Prijeko" },
+        { "time": "15:00", "text": "Funicolare sul Monte Srđ (vista panoramica)" },
+        { "time": "17:00", "text": "Spiaggia Banje (500 m dalla Città Vecchia)" },
+        { "time": "20:00", "text": "Cena gastronomica — frutti di mare freschi" }
+      ]
+    },
+    {
+      "day": 12,
+      "date": "2026-07-01",
+      "location": "Dubrovnik",
+      "title": "Isola di Lokrum e Cavtat",
+      "description": "Gita mattutina sull'Isola di Lokrum (10 min in barca). Pomeriggio a Cavtat, borgo pittoresco a 20 km da Dubrovnik.",
+      "hotel_ref": "dubrovnik_excelsior",
+      "coordinates": { "lat": 42.6507, "lng": 18.0944 },
+      "activities": [
+        { "time": "09:00", "text": "Barca per Lokrum (10 min dal porto vecchio)" },
+        { "time": "09:30", "text": "Isola di Lokrum: Forte Royal, lago di mare, pavoni" },
+        { "time": "12:00", "text": "Rientro a Dubrovnik, pranzo leggero" },
+        { "time": "14:00", "text": "Bus/auto per Cavtat (18 km sud)" },
+        { "time": "14:30", "text": "Passeggiata sul lungomare di Cavtat" },
+        { "time": "16:00", "text": "Mausoleo Račić (capolavoro architettonico)" },
+        { "time": "19:00", "text": "Rientro a Dubrovnik" },
+        { "time": "20:30", "text": "Cocktail bar con vista sulle mura illuminate" }
+      ]
+    },
+    {
+      "day": 13,
+      "date": "2026-07-02",
+      "location": "Kotor (Montenegro)",
+      "title": "Gita a Kotor, Montenegro",
+      "description": "Gita di un giorno in Montenegro: Bocche di Cattaro, città murata di Kotor e Perast. ~1h da Dubrovnik.",
+      "hotel_ref": "dubrovnik_excelsior",
+      "coordinates": { "lat": 42.4247, "lng": 18.7711 },
+      "activities": [
+        { "time": "08:30", "text": "Partenza in auto/tour per Kotor (80 km)" },
+        { "time": "10:00", "text": "Arrivo a Perast — isoletta di Nostra Signora dello Scoglio" },
+        { "time": "11:30", "text": "Arrivo a Kotor — Porta d'Armi" },
+        { "time": "12:00", "text": "Salita alle Mura di San Giovanni (1300 scalini)" },
+        { "time": "14:00", "text": "Pranzo nella Città Vecchia di Kotor" },
+        { "time": "15:30", "text": "Cattedrale di San Trifone" },
+        { "time": "17:00", "text": "Partenza rientro a Dubrovnik" },
+        { "time": "19:00", "text": "Arrivo a Dubrovnik" }
+      ]
+    },
+    {
+      "day": 14,
+      "date": "2026-07-03",
+      "location": "Split",
+      "title": "Rientro a Split",
+      "description": "Ultima mattina a Dubrovnik, poi trasferimento a Split per il volo del giorno dopo.",
+      "hotel_ref": "split_park",
+      "coordinates": { "lat": 43.5081, "lng": 16.4402 },
+      "activities": [
+        { "time": "09:00", "text": "Check-out Hotel Excelsior" },
+        { "time": "09:30", "text": "Ultimo caffè nella Città Vecchia" },
+        { "time": "10:30", "text": "Partenza verso Split (~220 km)" },
+        { "time": "14:00", "text": "Arrivo a Split, check-in Park Hotel" },
+        { "time": "15:00", "text": "Shopping souvenirs in Città Vecchia" },
+        { "time": "17:00", "text": "Ultima passeggiata sul Riva" },
+        { "time": "20:00", "text": "Cena d'addio — brudet di pesce" }
+      ]
+    },
+    {
+      "day": 15,
+      "date": "2026-07-04",
+      "location": "Torino",
+      "title": "Volo di Rientro",
+      "description": "Transfer all'aeroporto di Split e volo di rientro verso Torino. Fine del viaggio!",
+      "hotel_ref": null,
+      "coordinates": { "lat": 43.5388, "lng": 16.2979 },
+      "activities": [
+        { "time": "07:00", "text": "Check-out Park Hotel" },
+        { "time": "07:30", "text": "Transfer aeroporto Split" },
+        { "time": "10:15", "text": "Volo Split → Torino (FR1235)" },
+        { "time": "11:45", "text": "Arrivo Torino Caselle ✈️" }
+      ]
+    }
+  ],
+  "hotels": [
+    {
+      "id": "zagreb_esplanade",
+      "name": "Hotel Esplanade Zagreb",
+      "location": "Zagreb",
+      "address": "Mihanovićeva ul. 1, 10000 Zagreb",
+      "coordinates": { "lat": 45.8046, "lng": 15.9773 },
+      "checkin": "2026-06-20",
+      "checkout": "2026-06-22",
+      "nights": 2,
+      "rating": 5,
+      "price_per_night": 310,
+      "amenities": ["Wi-Fi", "Ristorante", "Bar", "Spa", "Palestra", "Parcheggio"],
+      "notes": "Storico hotel Art Déco del 1925, vicino alla stazione centrale. Scelto per posizione e eleganza.",
+      "booking_ref": "",
+      "phone": "+385 1 4566 666"
+    },
+    {
+      "id": "plitvice_jezero",
+      "name": "Hotel Jezero",
+      "location": "Laghi di Plitvice",
+      "address": "Plitvička Jezera, 53231",
+      "coordinates": { "lat": 44.8800, "lng": 15.6163 },
+      "checkin": "2026-06-22",
+      "checkout": "2026-06-24",
+      "nights": 2,
+      "rating": 4,
+      "price_per_night": 195,
+      "amenities": ["Wi-Fi", "Ristorante", "Parcheggio", "Accesso diretto al parco"],
+      "notes": "Unico hotel all'interno del parco nazionale. Accesso diretto alle piste pedonali.",
+      "booking_ref": "",
+      "phone": "+385 53 751 400"
+    },
+    {
+      "id": "zadar_bastion",
+      "name": "Hotel Bastion",
+      "location": "Zadar",
+      "address": "Bedemi Zadarskih pobuna 13, 23000 Zadar",
+      "coordinates": { "lat": 44.1167, "lng": 15.2230 },
+      "checkin": "2026-06-24",
+      "checkout": "2026-06-26",
+      "nights": 2,
+      "rating": 5,
+      "price_per_night": 265,
+      "amenities": ["Wi-Fi", "Ristorante", "Bar", "Terrazza panoramica"],
+      "notes": "Hotel boutique nelle antiche mura veneziane. A 2 min a piedi dall'Organo del Mare.",
+      "booking_ref": "",
+      "phone": "+385 23 494 950"
+    },
+    {
+      "id": "split_marjan",
+      "name": "Hotel Marjan Split",
+      "location": "Split",
+      "address": "Obala Kneza Branimira 8, 21000 Split",
+      "coordinates": { "lat": 43.5127, "lng": 16.4290 },
+      "checkin": "2026-06-26",
+      "checkout": "2026-06-29",
+      "nights": 3,
+      "rating": 4,
+      "price_per_night": 220,
+      "amenities": ["Wi-Fi", "Piscina", "Ristorante", "Vista mare", "Spiaggia privata"],
+      "notes": "Hotel moderno con vista sulla baia. A 10 min a piedi dal Palazzo di Diocleziano.",
+      "booking_ref": "",
+      "phone": "+385 21 369 888"
+    },
+    {
+      "id": "dubrovnik_excelsior",
+      "name": "Hotel Excelsior Dubrovnik",
+      "location": "Dubrovnik",
+      "address": "Frana Supila 12, 20000 Dubrovnik",
+      "coordinates": { "lat": 42.6467, "lng": 18.1021 },
+      "checkin": "2026-06-29",
+      "checkout": "2026-07-03",
+      "nights": 4,
+      "rating": 5,
+      "price_per_night": 580,
+      "amenities": ["Wi-Fi", "Piscina infinita", "Ristorante", "Spiaggia privata", "Spa", "Vista Città Vecchia"],
+      "notes": "Hotel iconico con vista diretta sulle mura di Dubrovnik. A 5 min a piedi dalla Città Vecchia.",
+      "booking_ref": "",
+      "phone": "+385 20 353 353"
+    },
+    {
+      "id": "split_park",
+      "name": "Park Hotel Split",
+      "location": "Split",
+      "address": "Hatzeov perivoj 3, 21000 Split",
+      "coordinates": { "lat": 43.5067, "lng": 16.4254 },
+      "checkin": "2026-07-03",
+      "checkout": "2026-07-04",
+      "nights": 1,
+      "rating": 4,
+      "price_per_night": 180,
+      "amenities": ["Wi-Fi", "Ristorante", "Bar", "Parcheggio"],
+      "notes": "Hotel storico immerso nel verde. Comodo per il volo mattutino.",
+      "booking_ref": "",
+      "phone": "+385 21 406 400"
+    }
+  ],
+  "checklist": {
+    "categories": [
+      {
+        "id": "documenti",
+        "name": "Documenti & Pagamenti",
+        "icon": "📄",
+        "items": [
+          { "id": "doc_1", "text": "Passaporto / Carta d'identità (valida)", "priority": "high" },
+          { "id": "doc_2", "text": "Biglietti aerei (stampa o app)", "priority": "high" },
+          { "id": "doc_3", "text": "Voucher hotel tutti gli alloggi", "priority": "high" },
+          { "id": "doc_4", "text": "Assicurazione viaggio (polizza + numeri emergenza)", "priority": "high" },
+          { "id": "doc_5", "text": "Patente di guida internazionale", "priority": "high" },
+          { "id": "doc_6", "text": "Carta di credito/debito (avvisare la banca)", "priority": "high" },
+          { "id": "doc_7", "text": "Contanti in Euro (Croazia usa EUR dal 2023)", "priority": "medium" },
+          { "id": "doc_8", "text": "Tessera Sanitaria Europea (TEAM)", "priority": "medium" },
+          { "id": "doc_9", "text": "Fotocopie documenti (file cloud)", "priority": "medium" },
+          { "id": "doc_10", "text": "Prenotazione auto a noleggio", "priority": "high" }
+        ]
+      },
+      {
+        "id": "elettronica",
+        "name": "Elettronica & Tecnologia",
+        "icon": "📱",
+        "items": [
+          { "id": "ele_1", "text": "Smartphone + caricabatterie", "priority": "high" },
+          { "id": "ele_2", "text": "Power bank (min. 10.000 mAh)", "priority": "medium" },
+          { "id": "ele_3", "text": "Fotocamera + batterie extra + SD card", "priority": "medium" },
+          { "id": "ele_4", "text": "Adattatore europeo (Tipo F, standard in Croazia)", "priority": "low" },
+          { "id": "ele_5", "text": "Cuffie / auricolari", "priority": "low" },
+          { "id": "ele_6", "text": "Laptop / tablet (opzionale)", "priority": "low" },
+          { "id": "ele_7", "text": "Download mappe offline (Google Maps)", "priority": "high" },
+          { "id": "ele_8", "text": "SIM roaming o eSIM locale", "priority": "medium" }
+        ]
+      },
+      {
+        "id": "vestiario",
+        "name": "Vestiario & Accessori",
+        "icon": "👕",
+        "items": [
+          { "id": "ves_1", "text": "Costume da bagno (2 pezzi)", "priority": "high" },
+          { "id": "ves_2", "text": "Teli da mare (2)", "priority": "medium" },
+          { "id": "ves_3", "text": "Sandali da spiaggia", "priority": "high" },
+          { "id": "ves_4", "text": "Scarpe comode per camminare (muri lastricati)", "priority": "high" },
+          { "id": "ves_5", "text": "Scarpe da trekking (Plitvice)", "priority": "high" },
+          { "id": "ves_6", "text": "Abbigliamento estivo leggero (14 giorni)", "priority": "high" },
+          { "id": "ves_7", "text": "Giacca leggera / felpa per le serate", "priority": "medium" },
+          { "id": "ves_8", "text": "Cappello parasole", "priority": "medium" },
+          { "id": "ves_9", "text": "Occhiali da sole", "priority": "high" },
+          { "id": "ves_10", "text": "Abito elegante per cena Excelsior Dubrovnik", "priority": "medium" }
+        ]
+      },
+      {
+        "id": "salute",
+        "name": "Salute & Farmacia",
+        "icon": "💊",
+        "items": [
+          { "id": "sal_1", "text": "Crema solare SPF 50+ (più tubetti)", "priority": "high" },
+          { "id": "sal_2", "text": "After-sun / gel aloe vera", "priority": "medium" },
+          { "id": "sal_3", "text": "Repellente insetti", "priority": "medium" },
+          { "id": "sal_4", "text": "Kit pronto soccorso (cerotti, disinfettante)", "priority": "medium" },
+          { "id": "sal_5", "text": "Antidolorifici / antinfiammatori", "priority": "medium" },
+          { "id": "sal_6", "text": "Antistaminici", "priority": "low" },
+          { "id": "sal_7", "text": "Farmaci personali (scorta per 15+ giorni)", "priority": "high" },
+          { "id": "sal_8", "text": "Colliri idratanti (sole + vento)", "priority": "low" }
+        ]
+      },
+      {
+        "id": "igiene",
+        "name": "Igiene & Toilette",
+        "icon": "🧴",
+        "items": [
+          { "id": "ig_1", "text": "Spazzolino + dentifricio", "priority": "high" },
+          { "id": "ig_2", "text": "Shampoo + balsamo", "priority": "medium" },
+          { "id": "ig_3", "text": "Sapone / gel doccia", "priority": "medium" },
+          { "id": "ig_4", "text": "Rasoio + schiuma", "priority": "medium" },
+          { "id": "ig_5", "text": "Deodorante", "priority": "high" },
+          { "id": "ig_6", "text": "Sacchettini zip per liquidi (aereo)", "priority": "high" }
+        ]
+      },
+      {
+        "id": "svago",
+        "name": "Svago & Attività",
+        "icon": "🏖️",
+        "items": [
+          { "id": "sv_1", "text": "Maschera e boccaglio da snorkeling", "priority": "medium" },
+          { "id": "sv_2", "text": "Kindle / libro per la spiaggia", "priority": "low" },
+          { "id": "sv_3", "text": "Guida turistica Croazia (Lonely Planet)", "priority": "low" },
+          { "id": "sv_4", "text": "App iOverlander / Maps.me scaricate offline", "priority": "medium" },
+          { "id": "sv_5", "text": "Zaino leggero per le escursioni", "priority": "high" },
+          { "id": "sv_6", "text": "Borraccia riutilizzabile", "priority": "medium" }
+        ]
+      },
+      {
+        "id": "varia",
+        "name": "Varia & Logistica",
+        "icon": "🧳",
+        "items": [
+          { "id": "var_1", "text": "Valigia / bagaglio controllato prenotato", "priority": "high" },
+          { "id": "var_2", "text": "Lucchetto TSA per valigia", "priority": "low" },
+          { "id": "var_3", "text": "Etichette bagaglio con recapito", "priority": "low" },
+          { "id": "var_4", "text": "Viniaschette per abiti (per alberghi senza ferro)", "priority": "low" },
+          { "id": "var_5", "text": "Sacchetti impermeabili per spiaggia", "priority": "medium" },
+          { "id": "var_6", "text": "Avvisare vicini / sospendere servizi (giornale, ecc.)", "priority": "medium" },
+          { "id": "var_7", "text": "Fare il pieno d'auto a noleggio prima del check-in", "priority": "medium" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pianificatore viaggio in Croazia 2026 — Itinerario, Hotel, Checklist e Mappa interattiva." />
+  <title>🇭🇷 Viaggio Croazia 2026</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇭🇷</text></svg>" />
+</head>
+<body>
+  <div id="app">
+    <!-- Nav -->
+    <nav id="main-nav" class="nav">
+      <div class="nav-brand">
+        <span class="nav-flag">🇭🇷</span>
+        <span class="nav-title">Croazia 2026</span>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#dashboard" class="nav-link" data-page="dashboard">🏠 Dashboard</a></li>
+        <li><a href="#itinerary" class="nav-link" data-page="itinerary">📅 Itinerario</a></li>
+        <li><a href="#hotels" class="nav-link" data-page="hotels">🏨 Hotel</a></li>
+        <li><a href="#checklist" class="nav-link" data-page="checklist">✅ Checklist</a></li>
+        <li><a href="#map" class="nav-link" data-page="map">🗺️ Mappa</a></li>
+      </ul>
+    </nav>
+
+    <!-- Page content -->
+    <main id="page-content" class="page-content">
+      <div class="loading">
+        <div class="loading-spinner"></div>
+        <p>Caricamento dati viaggio…</p>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

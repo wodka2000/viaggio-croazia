@@ -1,0 +1,20 @@
+node_modules/
+dist/
+
+# Environment variables — MAI committare
+.env
+.env.local
+.env.*.local
+
+# Config con API key — usa config.template.js come riferimento
+src/config.js
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
