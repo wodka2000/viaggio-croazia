@@ -205,7 +205,7 @@ export async function renderNatura() {
 function renderCard(n) {
   const imp  = IMPEGNO_LABELS[n.impegno]  || { label: n.impegno, icon: '🕐', cls: '' }
   const nota = NOTA_LABELS[n.nota_tipo]   || { label: n.nota_tipo, cls: '' }
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${n.coords.lat},${n.coords.lng}`
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(n.nome + ' ' + n.area)}`
 
   return `
     <div class="natura-card ${nota.cls}" data-id="${n.id}">
