@@ -73,6 +73,8 @@ ul { list-style: none; }
   align-items: center;
   gap: 0.5rem;
   flex-shrink: 0;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-flag { font-size: 1.4rem; }
