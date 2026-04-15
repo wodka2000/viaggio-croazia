@@ -1,5 +1,5 @@
 // Carica trip.json dal path corretto per dev e GitHub Pages.
-// import.meta.env.BASE_URL è '/' in dev e '/Viaggio_Croazia/' in produzione.
+// import.meta.env.BASE_URL è '/' in dev e '/viaggio-croazia/' in produzione.
 
 let _cache = null
 

@@ -1,6 +1,8 @@
 import { fetchTripData } from '../utils/data.js'
-import { loadChecklistState, saveChecklistState, clearChecklistState } from '../utils/storage.js'
-import { loadCustomItems, addCustomItem, toggleCustomItem, deleteCustomItem, clearCustomItems } from '../utils/storage.js'
+import {
+  loadChecklistState, saveChecklistState, clearChecklistState,
+  loadCustomItems, addCustomItem, toggleCustomItem, updateCustomItem, deleteCustomItem, clearCustomItems,
+} from '../utils/storage.js'
 import { getChecklistIdeas, updateIdea } from '../utils/ideas.js'
 
 export async function renderChecklist() {
@@ -161,6 +163,7 @@ function _renderCustomSection() {
                 ${item.category !== 'Varie'
                   ? `<span class="priority-badge" style="background:#f1f5f9;color:#64748b;">${_esc(item.category)}</span>`
                   : ''}
+                <button class="custom-item-edit" data-cid="${item.id}" title="Modifica">✏️</button>
                 <button class="custom-item-del" data-cid="${item.id}" title="Elimina">×</button>
               </div>
             `).join('')}
@@ -211,16 +214,21 @@ function _bindCustomSectionEvents() {
     // customitems:updated riaggiorna il pannello
   })
 
-  // Delete single item
+  // Click actions (delete / edit / add / clear)
   document.getElementById('custom-items-list')?.addEventListener('click', e => {
+    // Elimina
     const del = e.target.closest('.custom-item-del')
-    if (del) {
-      deleteCustomItem(del.dataset.cid)
-      return
-    }
-    const addBtn = e.target.closest('#custom-add-btn')
-    if (addBtn) _addCustomItem()
+    if (del) { deleteCustomItem(del.dataset.cid); return }
 
+    // Edit inline
+    const editBtn = e.target.closest('.custom-item-edit')
+    if (editBtn) { _startInlineEdit(editBtn.dataset.cid); return }
+
+    // Aggiungi
+    const addBtn = e.target.closest('#custom-add-btn')
+    if (addBtn) { _addCustomItem(); return }
+
+    // Clear all
     const clearBtn = e.target.closest('#clear-custom-btn')
     if (clearBtn) {
       if (confirm('Eliminare tutte le voci personalizzate?')) clearCustomItems()
@@ -240,6 +248,64 @@ function _addCustomItem() {
   if (!text) { input?.focus(); return }
   addCustomItem(text, cat)
   if (input) input.value = ''
+}
+
+function _startInlineEdit(cid) {
+  const item = loadCustomItems().find(i => i.id === cid)
+  if (!item) return
+  const row = document.querySelector(`.custom-item[data-cid="${cid}"]`)
+  if (!row) return
+
+  const textSpan = row.querySelector('.checklist-item-text')
+  const editBtnEl  = row.querySelector('.custom-item-edit')
+  const delBtnEl   = row.querySelector('.custom-item-del')
+  const catBadge   = row.querySelector('.priority-badge')
+  if (!textSpan) return
+
+  // Costruisci input + pulsanti inline
+  const input = document.createElement('input')
+  input.type      = 'text'
+  input.value     = item.text
+  input.className = 'custom-edit-input'
+
+  const saveBtn = document.createElement('button')
+  saveBtn.textContent = '✓'
+  saveBtn.className   = 'custom-item-save-edit'
+  saveBtn.title       = 'Salva'
+
+  const cancelBtn = document.createElement('button')
+  cancelBtn.textContent = '✕'
+  cancelBtn.className   = 'custom-item-cancel-edit'
+  cancelBtn.title       = 'Annulla'
+
+  // Sostituisci nel DOM
+  textSpan.replaceWith(input)
+  if (catBadge)   catBadge.style.display = 'none'
+  if (editBtnEl)  editBtnEl.replaceWith(saveBtn)
+  if (delBtnEl)   delBtnEl.style.display = 'none'
+  saveBtn.after(cancelBtn)
+  input.focus()
+  input.select()
+
+  function doSave() {
+    const newText = input.value.trim()
+    if (!newText) { input.focus(); return }
+    updateCustomItem(cid, newText)
+    // customitems:updated → _renderCustomSection → sezione ri-renderizzata
+  }
+
+  function doCancel() {
+    // Ri-renderizza la sezione senza salvare
+    const section = document.getElementById('custom-items-section')
+    if (section) { section.innerHTML = _renderCustomSection(); _bindCustomSectionEvents() }
+  }
+
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter')  { e.preventDefault(); doSave() }
+    if (e.key === 'Escape') { doCancel() }
+  })
+  saveBtn.addEventListener('click', doSave)
+  cancelBtn.addEventListener('click', doCancel)
 }
 
 /* ── CATEGORIE STATICHE ───────────────────────────────── */

@@ -64,6 +64,12 @@ export function toggleCustomItem(id, checked) {
   _saveCustomItems(loadCustomItems().map(i => i.id === id ? { ...i, checked } : i))
 }
 
+export function updateCustomItem(id, newText) {
+  const text = newText.trim()
+  if (!text) return
+  _saveCustomItems(loadCustomItems().map(i => i.id === id ? { ...i, text } : i))
+}
+
 export function deleteCustomItem(id) {
   _saveCustomItems(loadCustomItems().filter(i => i.id !== id))
 }

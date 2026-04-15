@@ -29,8 +29,11 @@ export async function renderDashboard() {
     if (!seen.has(d.location)) { seen.add(d.location); uniqueLocations.push({ location: d.location, day: d.day, date: d.date }) }
   }
 
-  const totalHotelNights = hotels.reduce((s, h) => s + h.nights, 0)
-  const totalCost = hotels.reduce((s, h) => s + h.nights * h.price_per_night, 0)
+  // Solo le strutture consigliate/selezionate — esclude le alternative
+  const recommendedHotels = hotels.filter(h => h.recommended)
+  const totalHotelNights  = recommendedHotels.reduce((s, h) => s + h.nights, 0)
+  const totalCost         = recommendedHotels.filter(h => h.price_per_night > 0)
+                              .reduce((s, h) => s + h.nights * h.price_per_night, 0)
 
   content.innerHTML = `
     <div class="dashboard-hero">
@@ -59,13 +62,13 @@ export async function renderDashboard() {
       </div>
       <div class="stat-card">
         <div class="stat-icon">🏨</div>
-        <div class="stat-value">${hotels.length}</div>
-        <div class="stat-label">Alloggi</div>
+        <div class="stat-value">${recommendedHotels.length}</div>
+        <div class="stat-label">Alloggi selezionati</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon">🌙</div>
         <div class="stat-value">${totalHotelNights}</div>
-        <div class="stat-label">Notti prenotate</div>
+        <div class="stat-label">Notti totali</div>
       </div>
     </div>
 
@@ -109,6 +112,8 @@ export async function renderDashboard() {
       <a href="#hotels" class="btn btn-outline">🏨 Controlla gli hotel</a>
       <a href="#checklist" class="btn btn-outline">✅ Apri la checklist</a>
       <a href="#map" class="btn btn-outline">🗺️ Visualizza la mappa</a>
+      <a href="#natura" class="btn btn-outline">🌿 Natura &amp; Deviazioni</a>
+      <a href="#ideas" class="btn btn-outline">💡 Idee rapide</a>
     </div>
   `
 }
