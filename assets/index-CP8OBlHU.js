@@ -710,7 +710,7 @@
     <div class="natura-grid" id="natura-grid">
       ${E.map(le).join("")}
     </div>
-  `,(i=document.getElementById("natura-filters"))==null||i.addEventListener("click",n=>{const o=n.target.closest(".natura-filter-btn");if(!o)return;t=o.dataset.area,document.querySelectorAll(".natura-filter-btn").forEach(c=>c.classList.remove("active")),o.classList.add("active");const s=document.getElementById("natura-grid");if(s){const c=t==="tutte"?E:E.filter(l=>l.area===t);s.innerHTML=c.map(le).join(""),ce()}}),ce()}function le(e){const a=ft[e.impegno]||{label:e.impegno,icon:"🕐",cls:""},t=bt[e.nota_tipo]||{label:e.nota_tipo,cls:""},i=`https://www.google.com/maps/search/?api=1&query=${e.coords.lat},${e.coords.lng}`;return`
+  `,(i=document.getElementById("natura-filters"))==null||i.addEventListener("click",n=>{const o=n.target.closest(".natura-filter-btn");if(!o)return;t=o.dataset.area,document.querySelectorAll(".natura-filter-btn").forEach(c=>c.classList.remove("active")),o.classList.add("active");const s=document.getElementById("natura-grid");if(s){const c=t==="tutte"?E:E.filter(l=>l.area===t);s.innerHTML=c.map(le).join(""),ce()}}),ce()}function le(e){const a=ft[e.impegno]||{label:e.impegno,icon:"🕐",cls:""},t=bt[e.nota_tipo]||{label:e.nota_tipo,cls:""},i=`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.nome+" "+e.area)}`;return`
     <div class="natura-card ${t.cls}" data-id="${e.id}">
       <div class="natura-card-top">
         <div>
