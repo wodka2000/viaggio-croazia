@@ -1,5 +1,5 @@
 import { fetchTripData } from '../utils/data.js'
-import { formatDate } from '../utils/data.js'
+import { formatDate, formatDateIT } from '../utils/data.js'
 import {
   loadIdeas, addIdea, updateIdea, deleteIdea,
   exportIdeasJSON, importIdeasJSON,
@@ -78,7 +78,7 @@ function _buildFormHTML(idea) {
   const isEdit = !!idea
   const dayOptions = _tripDays.map(d =>
     `<option value="${d.date}" ${idea?.day_date === d.date ? 'selected' : ''}>
-      Gg. ${d.day} — ${d.location} · ${d.date.slice(5).replace('-','/')}
+      Gg. ${d.day} — ${d.location} · ${formatDateIT(d.date)}
     </option>`
   ).join('')
 
@@ -409,7 +409,7 @@ function _openDayLinkModal(id) {
 
   const opts = _tripDays.map(d =>
     `<option value="${d.date}" ${idea.day_date === d.date ? 'selected' : ''}>
-      Gg. ${d.day} — ${d.location} · ${d.date.slice(5).replace('-','/')}
+      Gg. ${d.day} — ${d.location} · ${formatDateIT(d.date)}
     </option>`
   ).join('')
 

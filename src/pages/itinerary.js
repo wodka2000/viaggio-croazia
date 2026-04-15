@@ -1,5 +1,5 @@
 import { fetchTripData } from '../utils/data.js'
-import { formatDate, formatDayOfWeek } from '../utils/data.js'
+import { formatDate, formatDateIT, formatDayOfWeek } from '../utils/data.js'
 import { getIdeasForDay, addIdea, deleteIdea } from '../utils/ideas.js'
 
 export async function renderItinerary() {
@@ -84,7 +84,7 @@ function renderDay(day, hotelMap) {
           ${day.day}
         </div>
         <div class="timeline-date-label">
-          ${formatDayOfWeek(day.date)}<br>${day.date.slice(5).replace('-', '/')}
+          ${formatDayOfWeek(day.date)}<br>${formatDateIT(day.date)}
         </div>
       </div>
       <div class="timeline-right">

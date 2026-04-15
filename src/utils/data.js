@@ -28,6 +28,13 @@ export function formatDateShort(isoDate) {
   return d.toLocaleDateString('it-IT', { day: 'numeric', month: 'short' })
 }
 
+// Restituisce gg/mm (es. 2026-08-20 → 20/08)
+export function formatDateIT(isoDate) {
+  if (!isoDate) return ''
+  const [, mm, dd] = isoDate.split('-')
+  return `${dd}/${mm}`
+}
+
 export function formatDayOfWeek(isoDate) {
   if (!isoDate) return ''
   const d = new Date(isoDate + 'T00:00:00')
