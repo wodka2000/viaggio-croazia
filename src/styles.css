@@ -358,15 +358,17 @@ ul { list-style: none; }
   position: relative;
 }
 
-.timeline-item:not(:last-child) .timeline-line {
-  content: '';
+.timeline-line {
   position: absolute;
   left: 38px;
   top: 48px;
   bottom: 0;
   width: 2px;
-  background: var(--color-border);
   z-index: 0;
+}
+
+.timeline-item:not(:last-child) .timeline-line {
+  background: var(--color-border);
 }
 
 .timeline-left {
