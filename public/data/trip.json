@@ -183,7 +183,7 @@
       "date": "2026-08-11",
       "location": "Area di Zara",
       "title": "Brač → Zara — Check-out Pastura, Check-in Pinija",
-      "description": "Check-out dall'Hotel Pastura e trasferimento verso l'area di Zara. Check-in all'Hotel Pinija di Petrčane e primo pomeriggio di mare.",
+      "description": "Ultima mattinata di mare a Brač con calma, poi check-out e traghetto per Split nel primo pomeriggio. Trasferimento in A1 e arrivo a Petrčane nel pomeriggio, con check-in all'Hotel Pinija.",
       "hotel_ref": "zadar_pinija",
       "coordinates": {
         "lat": 44.1799,
@@ -191,33 +191,37 @@
       },
       "activities": [
         {
-          "time": "09:00",
-          "text": "Check-out Hotel Pastura, Brač"
+          "time": "09:30",
+          "text": "Colazione con calma"
         },
         {
-          "time": "mattina",
-          "text": "Traghetto dall'isola e trasferimento verso Zara"
+          "time": "10:00",
+          "text": "Ultimo bagno di mare a Postira"
         },
         {
-          "time": "15:00",
-          "text": "Check-in Hotel Pinija, Petrčane"
+          "time": "11:00",
+          "text": "Check-out Hotel Pastura"
         },
         {
-          "time": "16:30",
-          "text": "Spiaggia e relax in zona hotel"
+          "time": "12:30",
+          "text": "Pranzo a Supetar"
         },
         {
-          "time": "19:30",
-          "text": "Cena"
+          "time": "pomeriggio",
+          "text": "Traghetto Supetar → Split e trasferimento in A1 verso Zara"
+        },
+        {
+          "time": "17:00",
+          "text": "Arrivo e check-in Hotel Pinija, Petrčane"
         }
       ],
       "tips": {
         "do": [
-          "Traghetto Supetar–Spalato con l'auto",
-          "Arrivo a Petrčane e relax in spiaggia"
+          "Ultimo bagno di mare a Brač prima di partire",
+          "Traghetto pomeridiano Supetar–Split, poi A1 verso Zara"
         ],
         "eat": [
-          "Burek veloce a Spalato per pranzo",
+          "Pranzo a Supetar prima del traghetto",
           "Cena di pesce a Petrčane"
         ]
       }
