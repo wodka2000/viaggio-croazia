@@ -1638,5 +1638,37 @@
         "lng": 12.4667
       }
     }
+  ],
+  "ferries": [
+    {
+      "id": "ancona-spalato",
+      "from": "Ancona",
+      "to": "Spalato",
+      "date": "2026-08-07",
+      "time": "19:30",
+      "note": "Traghetto notturno (cabina)",
+      "pdf": "biglietti/BNV12604160000_1.pdf",
+      "day": 1
+    },
+    {
+      "id": "spalato-brac",
+      "from": "Spalato",
+      "to": "Supetar (Brač)",
+      "date": "2026-08-08",
+      "time": "10:30",
+      "note": "Catamarano/traghetto per Brač",
+      "pdf": "biglietti/Ticket_5872461-6511.pdf",
+      "day": 2
+    },
+    {
+      "id": "brac-spalato",
+      "from": "Supetar (Brač)",
+      "to": "Spalato",
+      "date": "2026-08-11",
+      "time": "14:00",
+      "note": "Ritorno verso Spalato",
+      "pdf": "biglietti/Ticket_5872461-6512.pdf",
+      "day": 5
+    }
   ]
 }

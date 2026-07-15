@@ -14,6 +14,7 @@ export async function renderItinerary() {
   }
 
   const { days, hotels, meta } = data
+  const ferries = data.ferries || []
   const hotelMap = Object.fromEntries(hotels.map(h => [h.id, h]))
 
   content.innerHTML = `
@@ -28,7 +29,7 @@ export async function renderItinerary() {
     </div>
 
     <div class="timeline">
-      ${days.map(day => renderDay(day, hotelMap)).join('')}
+      ${days.map(day => renderDay(day, hotelMap, ferries)).join('')}
     </div>
   `
 
@@ -68,8 +69,9 @@ export async function renderItinerary() {
 
 /* ── DAY CARD ─────────────────────────────────────────────── */
 
-function renderDay(day, hotelMap) {
+function renderDay(day, hotelMap, ferries = []) {
   const hotel  = day.hotel_ref ? hotelMap[day.hotel_ref] : null
+  const dayFerries = ferries.filter(f => f.day === day.day || f.date === day.date)
   const today  = new Date().toISOString().slice(0, 10)
   const isToday = day.date === today
   const isPast  = day.date < today
@@ -98,6 +100,12 @@ function renderDay(day, hotelMap) {
           </div>
           <div class="timeline-card-body hidden">
             ${day.description ? `<p class="timeline-description">${day.description}</p>` : ''}
+
+            ${dayFerries.map(f => `
+              <a class="day-ferry-badge" target="_blank" rel="noopener" href="${import.meta.env.BASE_URL}${f.pdf}">
+                🎫 Traghetto ${f.from} → ${f.to} · 🕐 ${f.time} — <strong>apri biglietto PDF</strong>
+              </a>
+            `).join('')}
 
             <div class="activities">
               ${day.activities.map(a => `

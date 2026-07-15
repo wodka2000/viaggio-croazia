@@ -10,7 +10,9 @@ dist/
 src/config.js
 
 # Documenti personali / prenotazioni — MAI committare (repo pubblico)
+# ...tranne i biglietti traghetto, che devono essere serviti dalla webapp
 *.pdf
+!public/biglietti/*.pdf
 
 # OS
 .DS_Store
