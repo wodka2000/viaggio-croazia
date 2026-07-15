@@ -1,4 +1,4 @@
-import { fetchTripData, formatDateIT } from '../utils/data.js'
+import { fetchTripData, formatDateIT, navUrl } from '../utils/data.js'
 import { getMapIdeas } from '../utils/ideas.js'
 
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ''
@@ -18,10 +18,7 @@ export async function renderMap() {
     <div class="page-header">
       <h1>🗺️ Mappa del Viaggio</h1>
       <p>Percorso completo, alloggi e idee geo-localizzate</p>
-      <a id="open-route-gmaps" class="btn btn-primary" target="_blank" rel="noopener"
-         style="display:none; margin-top:0.6rem;">
-        🚗 Apri percorso stradale in Google Maps
-      </a>
+      <div id="route-nav" class="route-nav"></div>
     </div>
     <div class="map-container" id="map-outer">
       <div class="map-controls" id="map-controls">
@@ -37,13 +34,9 @@ export async function renderMap() {
 
   _tripData = await fetchTripData()
 
-  // Pulsante "percorso stradale" — link Google Maps generato dalle tappe (funziona anche senza API key)
-  const routeUrl = buildDrivingRouteUrl(_tripData)
-  const routeBtn = document.getElementById('open-route-gmaps')
-  if (routeBtn && routeUrl) {
-    routeBtn.href = routeUrl
-    routeBtn.style.display = 'inline-flex'
-  }
+  // Lista "naviga alla tappa" — un link per destinazione (partenza: la tua posizione).
+  // Funziona anche senza API key.
+  renderRouteNav(_tripData)
 
   if (!API_KEY) {
     renderNoKeyFallback(content, _tripData)
@@ -314,18 +307,24 @@ function applyRouteVisibility() {
   routeElements.forEach(e => e.setMap(visible ? mapInstance : null))
 }
 
-// Costruisce l'URL Google Maps con l'itinerario stradale (tappe uniche in ordine).
-function buildDrivingRouteUrl(data) {
-  const pts = []
-  data.days.filter(d => d.coordinates).forEach(d => {
-    const last = pts[pts.length - 1]
-    if (!last || last.lat !== d.coordinates.lat || last.lng !== d.coordinates.lng) {
-      pts.push(d.coordinates)
-    }
-  })
-  if (pts.length < 2) return null
-  const path = pts.map(p => `${p.lat},${p.lng}`).join('/')
-  return `https://www.google.com/maps/dir/${path}`
+// Lista di link "naviga alla tappa": una destinazione per struttura, in ordine di viaggio.
+function renderRouteNav(data) {
+  const el = document.getElementById('route-nav')
+  if (!el) return
+  const stops = data.hotels.filter(h => h.recommended)
+  if (!stops.length) return
+  el.innerHTML = `
+    <div class="route-nav-title">🚗 Naviga alla tappa <span>(partenza: la tua posizione)</span></div>
+    <div class="route-nav-list">
+      ${stops.map((h, i) => `
+        <a class="route-nav-btn" target="_blank" rel="noopener"
+           href="${navUrl(h.name + ', ' + h.address)}">
+          <span class="route-nav-num">${i + 1}</span>
+          <span class="route-nav-name">${h.name}</span>
+        </a>
+      `).join('')}
+    </div>
+  `
 }
 
 function fitBounds(data) {

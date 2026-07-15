@@ -1,4 +1,5 @@
 import { addIdea } from '../utils/ideas.js'
+import { navUrlCoords } from '../utils/data.js'
 
 /* ── DATI STATICI ─────────────────────────────────────────
    Suggerimenti in linea con l'itinerario: spostamenti di
@@ -452,8 +453,11 @@ function renderCard(n) {
       ` : ''}
 
       <div class="natura-actions">
+        <a href="${navUrlCoords(n.coords.lat, n.coords.lng)}" target="_blank" rel="noopener" class="btn btn-outline natura-maps-btn">
+          🚗 Naviga
+        </a>
         <a href="${mapsUrl}" target="_blank" rel="noopener" class="btn btn-outline natura-maps-btn">
-          🗺️ Apri in Google Maps
+          🗺️ Apri in Maps
         </a>
         <button class="btn btn-outline natura-add-idea-btn"
           data-nome="${_esc(n.nome)}"

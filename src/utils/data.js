@@ -62,6 +62,16 @@ export function totalHotelCost(hotels) {
   return hotels.reduce((sum, h) => sum + hotelTotal(h), 0)
 }
 
+// Link Google Maps "naviga verso destinazione" — la partenza è la posizione attuale dell'utente.
+// query può essere un testo (nome + indirizzo) o "lat,lng".
+export function navUrl(query) {
+  return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(query)}&travelmode=driving`
+}
+
+export function navUrlCoords(lat, lng) {
+  return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving`
+}
+
 // Formattazione valuta italiana deterministica (non dipendente dal locale del browser).
 // Es. 4456.37 → "€ 4.456,37"
 export function formatEuro(n) {

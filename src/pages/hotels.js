@@ -1,5 +1,5 @@
 import { fetchTripData } from '../utils/data.js'
-import { formatDateIT, starsHtml, hotelTotal, formatEuro } from '../utils/data.js'
+import { formatDateIT, starsHtml, hotelTotal, formatEuro, navUrl } from '../utils/data.js'
 
 export async function renderHotels() {
   const content = document.getElementById('page-content')
@@ -137,6 +137,10 @@ function renderHotelCard(h) {
         ` : ''}
 
         <div class="hotel-links">
+          <a href="${navUrl(h.name + ', ' + h.address)}"
+             target="_blank" rel="noopener" class="hotel-link-btn">
+            🚗 Naviga
+          </a>
           <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.name + ' ' + h.address)}"
              target="_blank" rel="noopener" class="hotel-link-btn">
             🗺️ Vedi su Maps
