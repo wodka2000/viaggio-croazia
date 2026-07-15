@@ -14,6 +14,7 @@ export async function renderAttivita() {
   }
 
   const { days, dining } = data
+  const hikes = data.hikes || []
 
   // Tappa "oggi" o la prossima → aperta di default
   const today   = new Date().toISOString().slice(0, 10)
@@ -25,7 +26,7 @@ export async function renderAttivita() {
       <p>Pianifica in anticipo: programma, ristoranti della zona e le tue idee per ogni tappa. Tocca un giorno per espanderlo.</p>
     </div>
     <div class="attivita-list" id="attivita-list">
-      ${days.map(d => dayCardHtml(d, dining, d === current)).join('')}
+      ${days.map(d => dayCardHtml(d, dining, hikes, d === current)).join('')}
     </div>
   `
 
@@ -37,14 +38,14 @@ export async function renderAttivita() {
       [...document.querySelectorAll('.attivita-card.open')].map(el => el.dataset.date)
     )
     content.querySelector('#attivita-list').innerHTML =
-      days.map(d => dayCardHtml(d, dining, openIds.has(d.date))).join('')
+      days.map(d => dayCardHtml(d, dining, hikes, openIds.has(d.date))).join('')
     bindAccordion()
   }
   window.addEventListener('ideas:updated', handler)
   window.__currentPageCleanup = () => window.removeEventListener('ideas:updated', handler)
 }
 
-function dayCardHtml(day, dining, open) {
+function dayCardHtml(day, dining, hikes, open) {
   const count = suggestionsCount(day, dining)
   return `
     <div class="attivita-card ${open ? 'open' : ''}" data-date="${day.date}">
@@ -60,7 +61,7 @@ function dayCardHtml(day, dining, open) {
         </div>
       </button>
       <div class="attivita-body">
-        ${suggestionsSectionsHtml(day, dining)}
+        ${suggestionsSectionsHtml(day, dining, hikes)}
         <a href="#ideas" class="attivita-add-idea">➕ Aggiungi un'idea per questo giorno</a>
       </div>
     </div>

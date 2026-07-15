@@ -2580,6 +2580,15 @@ a.idea-meta-chip.idea-meta-link:hover { background: #eff6ff; color: var(--color-
 }
 .sugg-empty { font-size: 0.85rem; color: var(--color-text-muted); }
 .sugg-empty a { color: var(--color-primary); }
+.sugg-eat-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.sugg-eat {
+  padding: 0.5rem 0.65rem;
+  border-left: 3px solid #f59e0b;
+  background: rgba(245,158,11,0.08);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+.sugg-eat-act { display: block; font-weight: 700; font-size: 0.86rem; }
+.sugg-eat-tip { display: block; font-size: 0.83rem; color: var(--color-text); margin-top: 0.15rem; }
 .sugg-all-link {
   display: inline-block;
   margin-top: 1.25rem;

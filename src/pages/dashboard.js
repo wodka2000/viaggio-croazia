@@ -126,16 +126,16 @@ export async function renderDashboard() {
   // Apertura popup suggerimenti del giorno
   document.getElementById('suggestions-card')?.addEventListener('click', () => {
     if (!currentDay) return
-    openSuggestionsModal(currentDay, data.dining)
+    openSuggestionsModal(currentDay, data.dining, data.hikes)
   })
 }
 
 /* ── SUGGERIMENTI DEL GIORNO ──────────────────────────── */
 
-function openSuggestionsModal(day, dining) {
+function openSuggestionsModal(day, dining, hikes) {
   document.getElementById('suggestions-modal')?.remove()
 
-  const body = suggestionsSectionsHtml(day, dining)
+  const body = suggestionsSectionsHtml(day, dining, hikes)
 
   const modal = document.createElement('div')
   modal.id = 'suggestions-modal'

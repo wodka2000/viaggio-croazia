@@ -1516,7 +1516,8 @@
       "coordinates": {
         "lat": 46.6553,
         "lng": 12.4471
-      }
+      },
+      "eat": "Pranzo al Rifugio Nemes o alla vicina Malga Nemes: canederli, formaggi di malga e piatti tirolesi."
     },
     {
       "id": "fiscalina",
@@ -1531,7 +1532,8 @@
       "coordinates": {
         "lat": 46.6706,
         "lng": 12.3903
-      }
+      },
+      "eat": "Sosta al Rifugio Fondovalle (Talschlusshütte) per canederli e strudel."
     },
     {
       "id": "tre_cime",
@@ -1546,7 +1548,8 @@
       "coordinates": {
         "lat": 46.6132,
         "lng": 12.2955
-      }
+      },
+      "eat": "Pranzo ai rifugi lungo il giro: Auronzo, Lavaredo o Locatelli (Dreizinnenhütte)."
     },
     {
       "id": "croda_rossa",
@@ -1561,7 +1564,8 @@
       "coordinates": {
         "lat": 46.6613,
         "lng": 12.3706
-      }
+      },
+      "eat": "Ristoro ai rifugi dei prati: Rudi o Croda Rossa (Rotwandhütte), con parco giochi."
     },
     {
       "id": "monte_elmo",
@@ -1576,7 +1580,8 @@
       "coordinates": {
         "lat": 46.7226,
         "lng": 12.4137
-      }
+      },
+      "eat": "Malghe e ristori in quota sul Monte Elmo: speck, canederli e strudel."
     },
     {
       "id": "dobbiaco_lienz",
@@ -1591,7 +1596,8 @@
       "coordinates": {
         "lat": 46.735,
         "lng": 12.2206
-      }
+      },
+      "eat": "Gasthof e biergarten lungo la Drava o a Lienz; gelato a San Candido al ritorno."
     },
     {
       "id": "campo_dentro",
@@ -1606,7 +1612,8 @@
       "coordinates": {
         "lat": 46.7302,
         "lng": 12.3372
-      }
+      },
+      "eat": "Pranzo al Rifugio Tre Scarperi (Dreischusterhütte): zuppa d'orzo e Kaiserschmarrn."
     },
     {
       "id": "berti",
@@ -1621,7 +1628,8 @@
       "coordinates": {
         "lat": 46.62,
         "lng": 12.3719
-      }
+      },
+      "eat": "Ristoro al Rifugio Berti; porta comunque acqua e snack per la salita."
     },
     {
       "id": "braies",
@@ -1637,7 +1645,8 @@
         "lat": 46.6947,
         "lng": 12.0855
       },
-      "car": true
+      "car": true,
+      "eat": "Bar e ristorante all'hotel del Lago di Braies, oppure picnic sulle rive."
     },
     {
       "id": "coltrondo",
@@ -1652,7 +1661,8 @@
       "coordinates": {
         "lat": 46.6083,
         "lng": 12.4667
-      }
+      },
+      "eat": "Merenda o pranzo alla Malga Coltrondo o al Rifugio Rinfreddo: latticini e polenta."
     },
     {
       "id": "misurina",
@@ -1668,7 +1678,8 @@
       "coordinates": {
         "lat": 46.5817,
         "lng": 12.2536
-      }
+      },
+      "eat": "Bar e ristoranti sul lungolago di Misurina; piatti cadorini e pesce di lago."
     },
     {
       "id": "dobbiaco_lago",
@@ -1684,7 +1695,8 @@
       "coordinates": {
         "lat": 46.7233,
         "lng": 12.2489
-      }
+      },
+      "eat": "Ristorante del Lago di Dobbiaco, o rientro a Dobbiaco per lo strudel."
     },
     {
       "id": "san_candido",
@@ -1700,7 +1712,8 @@
       "coordinates": {
         "lat": 46.7325,
         "lng": 12.2807
-      }
+      },
+      "eat": "Nel centro di San Candido: caffè storici, gelaterie e ristoranti tirolesi."
     },
     {
       "id": "santa_caterina",
@@ -1716,7 +1729,8 @@
       "coordinates": {
         "lat": 46.5522,
         "lng": 12.43
-      }
+      },
+      "eat": "Bar e trattorie sul lungolago di Auronzo: pizza e piatti cadorini."
     },
     {
       "id": "kronplatz",
@@ -1732,7 +1746,8 @@
       "coordinates": {
         "lat": 46.7378,
         "lng": 11.9542
-      }
+      },
+      "eat": "Rifugi e ristoranti in quota a Plan de Corones; ampia scelta anche per i bimbi."
     },
     {
       "id": "cortina",
@@ -1748,7 +1763,8 @@
       "coordinates": {
         "lat": 46.5405,
         "lng": 12.1357
-      }
+      },
+      "eat": "Cortina: dal ristoro veloce ai locali gourmet; gelato in Corso Italia."
     },
     {
       "id": "monte_piana",
@@ -1764,7 +1780,8 @@
       "coordinates": {
         "lat": 46.6206,
         "lng": 12.2361
-      }
+      },
+      "eat": "Pranzo al Rifugio Bosi su Monte Piana, o a Misurina al ritorno."
     },
     {
       "id": "rif_auronzo",
@@ -1780,7 +1797,8 @@
       "coordinates": {
         "lat": 46.6136,
         "lng": 12.2957
-      }
+      },
+      "eat": "Pranzo al Rifugio Auronzo, terrazza panoramica sulle Tre Cime."
     },
     {
       "id": "rif_lavaredo",
@@ -1796,7 +1814,8 @@
       "coordinates": {
         "lat": 46.6182,
         "lng": 12.3061
-      }
+      },
+      "eat": "Sosta al Rifugio Lavaredo o Locatelli lungo il giro delle Tre Cime."
     },
     {
       "id": "rif_zsigmondy",
@@ -1811,7 +1830,8 @@
       "coordinates": {
         "lat": 46.6222,
         "lng": 12.3563
-      }
+      },
+      "eat": "Piatti caldi al Rifugio Zsigmondy-Comici dopo la salita."
     },
     {
       "id": "rif_pian_cengia",
@@ -1826,7 +1846,8 @@
       "coordinates": {
         "lat": 46.6268,
         "lng": 12.3423
-      }
+      },
+      "eat": "Ristoro al piccolo e panoramico Rifugio Pian di Cengia (Büllelejochhütte)."
     },
     {
       "id": "rif_col_varda",
@@ -1842,7 +1863,8 @@
       "coordinates": {
         "lat": 46.5726,
         "lng": 12.262
-      }
+      },
+      "eat": "Pranzo al Rifugio Col de Varda con vista sui Cadini."
     },
     {
       "id": "rif_fonda_savio",
@@ -1857,7 +1879,8 @@
       "coordinates": {
         "lat": 46.5966,
         "lng": 12.279
-      }
+      },
+      "eat": "Ristoro al Rifugio Fonda Savio tra le guglie dei Cadini."
     },
     {
       "id": "rif_vallandro",
@@ -1873,7 +1896,8 @@
       "coordinates": {
         "lat": 46.6447,
         "lng": 12.2119
-      }
+      },
+      "eat": "Pranzo al Rifugio Vallandro o alle malghe di Prato Piazza."
     },
     {
       "id": "rif_carpi",
@@ -1888,7 +1912,8 @@
       "coordinates": {
         "lat": 46.6089,
         "lng": 12.4744
-      }
+      },
+      "eat": "Ristoro al Rifugio Città di Carpi sul crinale del Comelico."
     },
     {
       "id": "rif_sorapiss",
@@ -1904,7 +1929,8 @@
       "coordinates": {
         "lat": 46.5333,
         "lng": 12.2214
-      }
+      },
+      "eat": "Sosta al Rifugio Vandelli presso il lago; porta comunque scorte d'acqua."
     }
   ],
   "ferries": [
