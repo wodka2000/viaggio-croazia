@@ -17,13 +17,38 @@
       "title": "Partenza da Roma — Traghetto per Spalato",
       "description": "Trasferimento in auto da Roma ad Ancona e imbarco sul traghetto notturno per Spalato (prenotato). Check-in al porto alle 16:30, partenza alle 19:30; notte in cabina e arrivo a Spalato la mattina dell'8.",
       "hotel_ref": null,
-      "coordinates": { "lat": 41.9028, "lng": 12.4964 },
+      "coordinates": {
+        "lat": 41.9028,
+        "lng": 12.4964
+      },
       "activities": [
-        { "time": "pomeriggio", "text": "Partenza da Roma verso il porto di Ancona (~3h)" },
-        { "time": "16:30", "text": "Check-in al porto di Ancona" },
-        { "time": "19:30", "text": "Partenza traghetto Ancona → Spalato" },
-        { "time": "sera", "text": "Cena a bordo e notte in cabina" }
-      ]
+        {
+          "time": "pomeriggio",
+          "text": "Partenza da Roma verso il porto di Ancona (~3h)"
+        },
+        {
+          "time": "16:30",
+          "text": "Check-in al porto di Ancona"
+        },
+        {
+          "time": "19:30",
+          "text": "Partenza traghetto Ancona → Spalato"
+        },
+        {
+          "time": "sera",
+          "text": "Cena a bordo e notte in cabina"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Sistemare presto la cabina e cena a bordo al tramonto",
+          "Far sfogare i bimbi sul ponte prima della notte"
+        ],
+        "eat": [
+          "A bordo: piatti italiani semplici; snack per i bambini",
+          "Sosta ad Ancona: piadina o gelato prima dell'imbarco"
+        ]
+      }
     },
     {
       "day": 2,
@@ -32,13 +57,38 @@
       "title": "Arrivo a Brač — Check-in Hotel Pastura",
       "description": "Arrivo sull'isola di Brač e check-in all'Hotel Pastura di Postira. Giornata di arrivo dedicata al primo mare e al relax in famiglia.",
       "hotel_ref": "brac_pastura",
-      "coordinates": { "lat": 43.3775, "lng": 16.6257 },
+      "coordinates": {
+        "lat": 43.3775,
+        "lng": 16.6257
+      },
       "activities": [
-        { "time": "mattina", "text": "Arrivo a Brač (Supetar) e trasferimento a Postira" },
-        { "time": "15:00", "text": "Check-in Hotel Pastura, Postira" },
-        { "time": "16:00", "text": "Primo bagno e spiaggia con i bambini" },
-        { "time": "19:30", "text": "Cena leggera in loco" }
-      ]
+        {
+          "time": "mattina",
+          "text": "Arrivo a Brač (Supetar) e trasferimento a Postira"
+        },
+        {
+          "time": "15:00",
+          "text": "Check-in Hotel Pastura, Postira"
+        },
+        {
+          "time": "16:00",
+          "text": "Primo bagno e spiaggia con i bambini"
+        },
+        {
+          "time": "19:30",
+          "text": "Cena leggera in loco"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Primo bagno a Postira e passeggiata sul lungomare",
+          "Gelato al porto al tramonto"
+        ],
+        "eat": [
+          "Pesce fresco alla griglia; ćevapi per i bimbi",
+          "Formaggio di Brač e olio d'oliva locale"
+        ]
+      }
     },
     {
       "day": 3,
@@ -47,14 +97,42 @@
       "title": "Brač — Mare e Calette",
       "description": "Giornata di mare sull'isola: calette vicine a Postira, snorkeling e relax. Possibile visita a Postira o a Supetar nel pomeriggio.",
       "hotel_ref": "brac_pastura",
-      "coordinates": { "lat": 43.3775, "lng": 16.6257 },
+      "coordinates": {
+        "lat": 43.3775,
+        "lng": 16.6257
+      },
       "activities": [
-        { "time": "09:00", "text": "Colazione con calma" },
-        { "time": "10:00", "text": "Mare e calette vicino a Postira" },
-        { "time": "13:00", "text": "Pranzo locale" },
-        { "time": "17:00", "text": "Passeggiata a Postira o Supetar" },
-        { "time": "20:00", "text": "Cena in paese" }
-      ]
+        {
+          "time": "09:00",
+          "text": "Colazione con calma"
+        },
+        {
+          "time": "10:00",
+          "text": "Mare e calette vicino a Postira"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo locale"
+        },
+        {
+          "time": "17:00",
+          "text": "Passeggiata a Postira o Supetar"
+        },
+        {
+          "time": "20:00",
+          "text": "Cena in paese"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Snorkeling nelle calette vicine a Postira",
+          "Giro tra le vie di Supetar"
+        ],
+        "eat": [
+          "Peka di polpo o agnello (da ordinare in anticipo)",
+          "Vitalac, specialità dell'isola per i più curiosi"
+        ]
+      }
     },
     {
       "day": 4,
@@ -63,14 +141,42 @@
       "title": "Brač — Zlatni Rat",
       "description": "Esperienza clou dell'isola: la spiaggia di Zlatni Rat a Bol. In alternativa, altra esperienza sull'isola. Vidova Gora resta solo come opzione panoramica per chi vuole.",
       "hotel_ref": "brac_pastura",
-      "coordinates": { "lat": 43.3775, "lng": 16.6257 },
+      "coordinates": {
+        "lat": 43.3775,
+        "lng": 16.6257
+      },
       "activities": [
-        { "time": "08:00", "text": "Partenza per Bol, prima della folla" },
-        { "time": "09:00", "text": "Zlatni Rat — spiaggia di ciottoli bianchi e acque turchesi" },
-        { "time": "13:00", "text": "Pranzo a Bol" },
-        { "time": "15:30", "text": "Rientro e relax; Vidova Gora solo come opzione" },
-        { "time": "20:00", "text": "Cena con pesce fresco" }
-      ]
+        {
+          "time": "08:00",
+          "text": "Partenza per Bol, prima della folla"
+        },
+        {
+          "time": "09:00",
+          "text": "Zlatni Rat — spiaggia di ciottoli bianchi e acque turchesi"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo a Bol"
+        },
+        {
+          "time": "15:30",
+          "text": "Rientro e relax; Vidova Gora solo come opzione"
+        },
+        {
+          "time": "20:00",
+          "text": "Cena con pesce fresco"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Zlatni Rat la mattina presto, prima della folla",
+          "Lettini, ombrellone e pedalò a Bol"
+        ],
+        "eat": [
+          "Pranzo di pesce sul porto di Bol",
+          "Granita o gelato per i bambini"
+        ]
+      }
     },
     {
       "day": 5,
@@ -79,14 +185,42 @@
       "title": "Brač → Zara — Check-out Pastura, Check-in Pinija",
       "description": "Check-out dall'Hotel Pastura e trasferimento verso l'area di Zara. Check-in all'Hotel Pinija di Petrčane e primo pomeriggio di mare.",
       "hotel_ref": "zadar_pinija",
-      "coordinates": { "lat": 44.1799, "lng": 15.1589 },
+      "coordinates": {
+        "lat": 44.1799,
+        "lng": 15.1589
+      },
       "activities": [
-        { "time": "09:00", "text": "Check-out Hotel Pastura, Brač" },
-        { "time": "mattina", "text": "Traghetto dall'isola e trasferimento verso Zara" },
-        { "time": "15:00", "text": "Check-in Hotel Pinija, Petrčane" },
-        { "time": "16:30", "text": "Spiaggia e relax in zona hotel" },
-        { "time": "19:30", "text": "Cena" }
-      ]
+        {
+          "time": "09:00",
+          "text": "Check-out Hotel Pastura, Brač"
+        },
+        {
+          "time": "mattina",
+          "text": "Traghetto dall'isola e trasferimento verso Zara"
+        },
+        {
+          "time": "15:00",
+          "text": "Check-in Hotel Pinija, Petrčane"
+        },
+        {
+          "time": "16:30",
+          "text": "Spiaggia e relax in zona hotel"
+        },
+        {
+          "time": "19:30",
+          "text": "Cena"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Traghetto Supetar–Spalato con l'auto",
+          "Arrivo a Petrčane e relax in spiaggia"
+        ],
+        "eat": [
+          "Burek veloce a Spalato per pranzo",
+          "Cena di pesce a Petrčane"
+        ]
+      }
     },
     {
       "day": 6,
@@ -95,13 +229,38 @@
       "title": "Area di Zara — Mare e Relax",
       "description": "Giornata dedicata al mare e al relax nell'area di Petrčane / Zara.",
       "hotel_ref": "zadar_pinija",
-      "coordinates": { "lat": 44.1799, "lng": 15.1589 },
+      "coordinates": {
+        "lat": 44.1799,
+        "lng": 15.1589
+      },
       "activities": [
-        { "time": "09:00", "text": "Spiaggia mattina" },
-        { "time": "13:00", "text": "Pranzo" },
-        { "time": "15:00", "text": "Relax, piscina o mare" },
-        { "time": "20:00", "text": "Cena" }
-      ]
+        {
+          "time": "09:00",
+          "text": "Spiaggia mattina"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo"
+        },
+        {
+          "time": "15:00",
+          "text": "Relax, piscina o mare"
+        },
+        {
+          "time": "20:00",
+          "text": "Cena"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Spiaggia e piscina in totale relax",
+          "Eventuale gita in barca"
+        ],
+        "eat": [
+          "Ćevapi e ražnjići alla griglia",
+          "Brodetto di pesce per gli adulti"
+        ]
+      }
     },
     {
       "day": 7,
@@ -110,14 +269,42 @@
       "title": "Zara — Centro Storico e Tramonto",
       "description": "Giornata a Zara: centro storico sulla penisola, l'Organo del Mare (Morske Orgulje) e il Saluto al Sole (Pozdrav Suncu), con il celebre tramonto sul lungomare.",
       "hotel_ref": "zadar_pinija",
-      "coordinates": { "lat": 44.1799, "lng": 15.1589 },
+      "coordinates": {
+        "lat": 44.1799,
+        "lng": 15.1589
+      },
       "activities": [
-        { "time": "10:00", "text": "Centro storico di Zara — Foro Romano, Cattedrale di Sant'Anastasia" },
-        { "time": "13:00", "text": "Pranzo in centro" },
-        { "time": "18:30", "text": "Organo del Mare (Morske Orgulje)" },
-        { "time": "19:30", "text": "Saluto al Sole (Pozdrav Suncu) e tramonto" },
-        { "time": "20:30", "text": "Cena a Zara" }
-      ]
+        {
+          "time": "10:00",
+          "text": "Centro storico di Zara — Foro Romano, Cattedrale di Sant'Anastasia"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo in centro"
+        },
+        {
+          "time": "18:30",
+          "text": "Organo del Mare (Morske Orgulje)"
+        },
+        {
+          "time": "19:30",
+          "text": "Saluto al Sole (Pozdrav Suncu) e tramonto"
+        },
+        {
+          "time": "20:30",
+          "text": "Cena a Zara"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Foro romano e centro storico di Zara",
+          "Organo del Mare e Saluto al Sole al tramonto"
+        ],
+        "eat": [
+          "Gelato passeggiando sul Kalelarga",
+          "Maraschino di Zara (per adulti)"
+        ]
+      }
     },
     {
       "day": 8,
@@ -126,14 +313,42 @@
       "title": "Zara → Velebit — Kuterevo Bear Sanctuary",
       "description": "Check-out dall'Hotel Pinija e risalita verso l'interno. Visita al Kuterevo Bear Sanctuary, check-in all'Apartman Silvija (Otočac, Valle della Gacka) e, in serata, esplorazione della Valle della Gacka.",
       "hotel_ref": "velebit_silvija",
-      "coordinates": { "lat": 44.8688, "lng": 15.2359 },
+      "coordinates": {
+        "lat": 44.8688,
+        "lng": 15.2359
+      },
       "activities": [
-        { "time": "09:00", "text": "Check-out Hotel Pinija" },
-        { "time": "mattina", "text": "Trasferimento verso l'area di Kuterevo / Velebit" },
-        { "time": "13:00", "text": "Kuterevo Bear Sanctuary — rifugio per orsi" },
-        { "time": "16:00", "text": "Check-in Apartman Silvija" },
-        { "time": "18:00", "text": "Eventuale Valle della Gacka" }
-      ]
+        {
+          "time": "09:00",
+          "text": "Check-out Hotel Pinija"
+        },
+        {
+          "time": "mattina",
+          "text": "Trasferimento verso l'area di Kuterevo / Velebit"
+        },
+        {
+          "time": "13:00",
+          "text": "Kuterevo Bear Sanctuary — rifugio per orsi"
+        },
+        {
+          "time": "16:00",
+          "text": "Check-in Apartman Silvija"
+        },
+        {
+          "time": "18:00",
+          "text": "Eventuale Valle della Gacka"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Kuterevo Bear Sanctuary",
+          "Passeggiata lungo il fiume Gacka"
+        ],
+        "eat": [
+          "Trota della Gacka e agnello della Lika",
+          "Formaggio škripavac; štrukli"
+        ]
+      }
     },
     {
       "day": 9,
@@ -142,13 +357,38 @@
       "title": "Velebit → Istria — Check-in Magali (Rovigno)",
       "description": "Eventuale breve attività naturalistica al mattino nella zona del Velebit / Gacka, poi trasferimento verso l'Istria. Check-in ai Luxury Apartments Magali 1, base per Rovigno.",
       "hotel_ref": "rovinj_magali",
-      "coordinates": { "lat": 45.1030, "lng": 13.6278 },
+      "coordinates": {
+        "lat": 45.103,
+        "lng": 13.6278
+      },
       "activities": [
-        { "time": "09:00", "text": "Eventuale attività naturalistica breve (Velebit / Gacka)" },
-        { "time": "10:30", "text": "Check-out Apartman Silvija e trasferimento verso Rovigno" },
-        { "time": "15:00", "text": "Check-in Luxury Apartments Magali 1" },
-        { "time": "17:00", "text": "Primo mare e passeggiata a Rovigno" }
-      ]
+        {
+          "time": "09:00",
+          "text": "Eventuale attività naturalistica breve (Velebit / Gacka)"
+        },
+        {
+          "time": "10:30",
+          "text": "Check-out Apartman Silvija e trasferimento verso Rovigno"
+        },
+        {
+          "time": "15:00",
+          "text": "Check-in Luxury Apartments Magali 1"
+        },
+        {
+          "time": "17:00",
+          "text": "Primo mare e passeggiata a Rovigno"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Trasferimento con sosta pranzo lungo il percorso",
+          "Bagno vicino all'appartamento; serata soft"
+        ],
+        "eat": [
+          "Fuži o pljukanci al tartufo istriano",
+          "Prenotare la cena (Ferragosto: tutto pieno)"
+        ]
+      }
     },
     {
       "day": 10,
@@ -157,14 +397,42 @@
       "title": "Rovigno e Istria",
       "description": "Giornata a Rovigno e in Istria: mare, centro storico collinare con la Chiesa di Sant'Eufemia, eventuale Canale di Leme ed eventuale cena a Rovigno.",
       "hotel_ref": "rovinj_magali",
-      "coordinates": { "lat": 45.1030, "lng": 13.6278 },
+      "coordinates": {
+        "lat": 45.103,
+        "lng": 13.6278
+      },
       "activities": [
-        { "time": "09:00", "text": "Mare in Istria" },
-        { "time": "13:00", "text": "Pranzo" },
-        { "time": "15:00", "text": "Centro storico di Rovigno — Sant'Eufemia" },
-        { "time": "17:00", "text": "Eventuale Canale di Leme (Limski Kanal)" },
-        { "time": "20:30", "text": "Eventuale cena a Rovigno" }
-      ]
+        {
+          "time": "09:00",
+          "text": "Mare in Istria"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo"
+        },
+        {
+          "time": "15:00",
+          "text": "Centro storico di Rovigno — Sant'Eufemia"
+        },
+        {
+          "time": "17:00",
+          "text": "Eventuale Canale di Leme (Limski Kanal)"
+        },
+        {
+          "time": "20:30",
+          "text": "Eventuale cena a Rovigno"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Centro storico e chiesa di Sant'Eufemia",
+          "Acquario di Rovigno o Canale di Leme"
+        ],
+        "eat": [
+          "Scampi alla busara; ostriche del Leme",
+          "Gelato sul porto per i bambini"
+        ]
+      }
     },
     {
       "day": 11,
@@ -173,14 +441,42 @@
       "title": "Istria → Trieste",
       "description": "Check-out dai Luxury Apartments Magali 1 e trasferimento a Trieste. Check-in al DoubleTree by Hilton e passeggiata in città o visita al Castello di Miramare.",
       "hotel_ref": "trieste_doubletree",
-      "coordinates": { "lat": 45.6501, "lng": 13.7741 },
+      "coordinates": {
+        "lat": 45.6501,
+        "lng": 13.7741
+      },
       "activities": [
-        { "time": "10:00", "text": "Check-out Luxury Apartments Magali 1" },
-        { "time": "10:30", "text": "Trasferimento verso Trieste (con eventuale sosta lungo il percorso)" },
-        { "time": "15:30", "text": "Check-in DoubleTree by Hilton Trieste" },
-        { "time": "17:00", "text": "Passeggiata a Trieste o Castello di Miramare" },
-        { "time": "20:00", "text": "Cena a Trieste" }
-      ]
+        {
+          "time": "10:00",
+          "text": "Check-out Luxury Apartments Magali 1"
+        },
+        {
+          "time": "10:30",
+          "text": "Trasferimento verso Trieste (con eventuale sosta lungo il percorso)"
+        },
+        {
+          "time": "15:30",
+          "text": "Check-in DoubleTree by Hilton Trieste"
+        },
+        {
+          "time": "17:00",
+          "text": "Passeggiata a Trieste o Castello di Miramare"
+        },
+        {
+          "time": "20:00",
+          "text": "Cena a Trieste"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Parco del Castello di Miramare",
+          "Passeggiata in Piazza Unità d'Italia"
+        ],
+        "eat": [
+          "Jota, gulasch e prosciutto di Praga",
+          "Caffè in un locale storico; gelato in piazza"
+        ]
+      }
     },
     {
       "day": 12,
@@ -189,14 +485,42 @@
       "title": "Trieste → Collio — Gravner, Radikon, La Subida",
       "description": "Check-out dal DoubleTree e giornata nel Collio: visite enologiche da Gravner e Radikon, eventuale pranzo o cena a La Subida (Cormons). Check-in al Castello di Spessa.",
       "hotel_ref": "collio_spessa",
-      "coordinates": { "lat": 45.9477, "lng": 13.5049 },
+      "coordinates": {
+        "lat": 45.9477,
+        "lng": 13.5049
+      },
       "activities": [
-        { "time": "09:30", "text": "Check-out DoubleTree Trieste" },
-        { "time": "10:30", "text": "Gravner — visita azienda vitivinicola (Oslavia)" },
-        { "time": "12:00", "text": "Radikon — vini naturali (Oslavia)" },
-        { "time": "13:30", "text": "Eventuale pranzo o cena a La Subida (Cormons)" },
-        { "time": "16:00", "text": "Check-in Castello di Spessa (Capriva del Friuli)" }
-      ]
+        {
+          "time": "09:30",
+          "text": "Check-out DoubleTree Trieste"
+        },
+        {
+          "time": "10:30",
+          "text": "Gravner — visita azienda vitivinicola (Oslavia)"
+        },
+        {
+          "time": "12:00",
+          "text": "Radikon — vini naturali (Oslavia)"
+        },
+        {
+          "time": "13:30",
+          "text": "Eventuale pranzo o cena a La Subida (Cormons)"
+        },
+        {
+          "time": "16:00",
+          "text": "Check-in Castello di Spessa (Capriva del Friuli)"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Visite in cantina Gravner/Radikon (su appuntamento)",
+          "Passeggiata tra i vigneti del Collio"
+        ],
+        "eat": [
+          "Pranzo a La Subida (frico, cjarsons)",
+          "Prosciutto San Daniele; gnocchi per i bimbi"
+        ]
+      }
     },
     {
       "day": 13,
@@ -205,12 +529,34 @@
       "title": "Collio → Sesto — Arrivo in Montagna",
       "description": "Check-out dal Castello di Spessa e trasferimento verso Sesto (Dolomiti). Arrivo e inizio del soggiorno in montagna.",
       "hotel_ref": "sesto_tbd",
-      "coordinates": { "lat": 46.6927, "lng": 12.3643 },
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
       "activities": [
-        { "time": "09:30", "text": "Check-out Castello di Spessa" },
-        { "time": "10:00", "text": "Trasferimento verso Sesto (Dolomiti)" },
-        { "time": "15:00", "text": "Arrivo a Sesto — inizio soggiorno in montagna 🏔️" }
-      ]
+        {
+          "time": "09:30",
+          "text": "Check-out Castello di Spessa"
+        },
+        {
+          "time": "10:00",
+          "text": "Trasferimento verso Sesto (Dolomiti)"
+        },
+        {
+          "time": "15:00",
+          "text": "Arrivo a Sesto — inizio soggiorno in montagna 🏔️"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Trasferimento verso le Dolomiti",
+          "Primo giro e aria di montagna a Sesto"
+        ],
+        "eat": [
+          "Canederli e speck altoatesini",
+          "Strudel di mele; würstel e patate per i bimbi"
+        ]
+      }
     }
   ],
   "hotels": [
@@ -220,14 +566,23 @@
       "location": "Postira (Brač)",
       "location_group": "Brač",
       "address": "Vrilo 28, 21410 Postira, Isola di Brač",
-      "coordinates": { "lat": 43.3775, "lng": 16.6257 },
+      "coordinates": {
+        "lat": 43.3775,
+        "lng": 16.6257
+      },
       "checkin": "2026-08-08",
       "checkout": "2026-08-11",
       "nights": 3,
       "rating": 4,
       "price_per_night": 310,
       "price_total": 930,
-      "amenities": ["Piscina", "Vicino al mare", "Adatto famiglie", "Ristorante", "Wi-Fi"],
+      "amenities": [
+        "Piscina",
+        "Vicino al mare",
+        "Adatto famiglie",
+        "Ristorante",
+        "Wi-Fi"
+      ],
       "notes": "Soggiorno sull'isola di Brač, a Postira. Prenotazione confermata.",
       "booking_ref": "",
       "status": "confermata",
@@ -240,14 +595,23 @@
       "location": "Petrčane (Zara)",
       "location_group": "Zara",
       "address": "Ulica V 1a, 23231 Petrčane (Zadar)",
-      "coordinates": { "lat": 44.1799, "lng": 15.1589 },
+      "coordinates": {
+        "lat": 44.1799,
+        "lng": 15.1589
+      },
       "checkin": "2026-08-11",
       "checkout": "2026-08-14",
       "nights": 3,
       "rating": 4,
       "price_per_night": 586.33,
       "price_total": 1758.99,
-      "amenities": ["Spiaggia", "Piscina", "Adatto famiglie", "Ristorante", "Wi-Fi"],
+      "amenities": [
+        "Spiaggia",
+        "Piscina",
+        "Adatto famiglie",
+        "Ristorante",
+        "Wi-Fi"
+      ],
       "notes": "Soggiorno nell'area di Zara, a Petrčane. Prenotazione confermata.",
       "booking_ref": "",
       "status": "confermata",
@@ -260,14 +624,22 @@
       "location": "Otočac (Valle della Gacka)",
       "location_group": "Velebit / Otočac",
       "address": "Ulica pod Pakljom 5, 53220 Otočac (Valle della Gacka)",
-      "coordinates": { "lat": 44.8688, "lng": 15.2359 },
+      "coordinates": {
+        "lat": 44.8688,
+        "lng": 15.2359
+      },
       "checkin": "2026-08-14",
       "checkout": "2026-08-15",
       "nights": 1,
       "rating": 0,
       "price_per_night": 300,
       "price_total": 300,
-      "amenities": ["Adatto famiglie", "Giardino", "Parcheggio", "Vicino al fiume Gacka"],
+      "amenities": [
+        "Adatto famiglie",
+        "Giardino",
+        "Parcheggio",
+        "Vicino al fiume Gacka"
+      ],
       "notes": "Appartamento nella Valle della Gacca a Otočac, base per la visita al Kuterevo Bear Sanctuary (~20 min) e l'esplorazione del Velebit. Prenotazione confermata.",
       "booking_ref": "",
       "status": "confermata",
@@ -280,14 +652,21 @@
       "location": "Rovigno (Istria)",
       "location_group": "Rovigno",
       "address": "Ulica Valsavie 11, 52210 Rovinj (Istria)",
-      "coordinates": { "lat": 45.1030, "lng": 13.6278 },
+      "coordinates": {
+        "lat": 45.103,
+        "lng": 13.6278
+      },
       "checkin": "2026-08-15",
       "checkout": "2026-08-17",
       "nights": 2,
       "rating": 0,
       "price_per_night": 315,
       "price_total": 630,
-      "amenities": ["Appartamenti", "Base per Rovigno", "Adatto famiglie"],
+      "amenities": [
+        "Appartamenti",
+        "Base per Rovigno",
+        "Adatto famiglie"
+      ],
       "notes": "Base in Istria per Rovigno, il mare e l'eventuale Canale di Leme. Prenotazione confermata.",
       "booking_ref": "",
       "status": "confermata",
@@ -300,14 +679,22 @@
       "location": "Trieste",
       "location_group": "Trieste",
       "address": "Piazza della Repubblica 1, 34122 Trieste",
-      "coordinates": { "lat": 45.6501, "lng": 13.7741 },
+      "coordinates": {
+        "lat": 45.6501,
+        "lng": 13.7741
+      },
       "checkin": "2026-08-17",
       "checkout": "2026-08-18",
       "nights": 1,
       "rating": 4,
       "price_per_night": 398.48,
       "price_total": 398.48,
-      "amenities": ["Wi-Fi", "Ristorante", "Centro città", "Vista mare"],
+      "amenities": [
+        "Wi-Fi",
+        "Ristorante",
+        "Centro città",
+        "Vista mare"
+      ],
       "notes": "Pernottamento a Trieste prima del Collio: visita della città ed eventuale Castello di Miramare. Prenotazione confermata.",
       "booking_ref": "",
       "status": "confermata",
@@ -320,14 +707,22 @@
       "location": "Capriva del Friuli (Collio)",
       "location_group": "Collio",
       "address": "Via Spessa 1, 34070 Capriva del Friuli (GO) — Collio",
-      "coordinates": { "lat": 45.9477, "lng": 13.5049 },
+      "coordinates": {
+        "lat": 45.9477,
+        "lng": 13.5049
+      },
       "checkin": "2026-08-18",
       "checkout": "2026-08-19",
       "nights": 1,
       "rating": 4,
-      "price_per_night": 438.90,
-      "price_total": 438.90,
-      "amenities": ["Residenza d'epoca", "Golf", "Parco", "Ristorante"],
+      "price_per_night": 438.9,
+      "price_total": 438.9,
+      "amenities": [
+        "Residenza d'epoca",
+        "Golf",
+        "Parco",
+        "Ristorante"
+      ],
       "notes": "Pernottamento nel Collio: Gravner, Radikon e La Subida, poi partenza per Sesto il 19 agosto. Prenotazione confermata.",
       "booking_ref": "",
       "status": "confermata",
@@ -340,14 +735,19 @@
       "location": "Sesto",
       "location_group": "Sesto",
       "address": "Sesto / Sexten, Dolomiti di Sesto, 39030 BZ",
-      "coordinates": { "lat": 46.6927, "lng": 12.3643 },
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
       "checkin": "2026-08-19",
       "checkout": "2026-08-27",
       "nights": 8,
       "rating": 0,
       "price_per_night": 0,
       "price_total": 0,
-      "amenities": ["Da definire"],
+      "amenities": [
+        "Da definire"
+      ],
       "notes": "Soggiorno a Sesto da confermare. L'itinerario Croazia/Friuli si conclude qui il 19 agosto — inizio del soggiorno sulle Dolomiti di Sesto.",
       "booking_ref": "",
       "status": "da_confermare",
@@ -406,12 +806,36 @@
         "name": "Trasporti",
         "icon": "🚗",
         "items": [
-          { "id": "tra_1", "text": "Definire e prenotare il trasferimento del 7 agosto (auto e/o traghetto verso la Croazia)", "priority": "high" },
-          { "id": "tra_2", "text": "Verificare collegamenti / traghetti per l'isola di Brač (Split–Supetar)", "priority": "high" },
-          { "id": "tra_3", "text": "Documenti auto e assicurazione estero (libretto, carta verde)", "priority": "high" },
-          { "id": "tra_4", "text": "Vignetta Slovenia (se il percorso la richiede)", "priority": "medium" },
-          { "id": "tra_5", "text": "Pedaggi / vignetta Croazia e Austria (se il percorso li richiede)", "priority": "medium" },
-          { "id": "tra_6", "text": "Verificare percorso GPS e varchi di confine con bambini", "priority": "low" }
+          {
+            "id": "tra_1",
+            "text": "Definire e prenotare il trasferimento del 7 agosto (auto e/o traghetto verso la Croazia)",
+            "priority": "high"
+          },
+          {
+            "id": "tra_2",
+            "text": "Verificare collegamenti / traghetti per l'isola di Brač (Split–Supetar)",
+            "priority": "high"
+          },
+          {
+            "id": "tra_3",
+            "text": "Documenti auto e assicurazione estero (libretto, carta verde)",
+            "priority": "high"
+          },
+          {
+            "id": "tra_4",
+            "text": "Vignetta Slovenia (se il percorso la richiede)",
+            "priority": "medium"
+          },
+          {
+            "id": "tra_5",
+            "text": "Pedaggi / vignetta Croazia e Austria (se il percorso li richiede)",
+            "priority": "medium"
+          },
+          {
+            "id": "tra_6",
+            "text": "Verificare percorso GPS e varchi di confine con bambini",
+            "priority": "low"
+          }
         ]
       },
       {
@@ -419,14 +843,46 @@
         "name": "Prenotazioni Hotel",
         "icon": "🏨",
         "items": [
-          { "id": "hot_1", "text": "Hotel Pastura (Brač) — confermato ✅", "priority": "low" },
-          { "id": "hot_2", "text": "Hotel Pinija (area Zara) — confermato ✅", "priority": "low" },
-          { "id": "hot_3", "text": "Apartman Silvija (Velebit / Kuterevo) — confermato ✅", "priority": "low" },
-          { "id": "hot_4", "text": "Luxury Apartments Magali 1 (Rovigno) — confermato ✅", "priority": "low" },
-          { "id": "hot_5", "text": "DoubleTree by Hilton Trieste — confermato ✅", "priority": "low" },
-          { "id": "hot_6", "text": "Castello di Spessa (Collio) — confermato ✅", "priority": "low" },
-          { "id": "hot_7", "text": "Confermare i dettagli del soggiorno a Sesto (dal 19 agosto)", "priority": "high" },
-          { "id": "hot_8", "text": "Stampare / salvare tutti i voucher di prenotazione", "priority": "medium" }
+          {
+            "id": "hot_1",
+            "text": "Hotel Pastura (Brač) — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_2",
+            "text": "Hotel Pinija (area Zara) — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_3",
+            "text": "Apartman Silvija (Velebit / Kuterevo) — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_4",
+            "text": "Luxury Apartments Magali 1 (Rovigno) — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_5",
+            "text": "DoubleTree by Hilton Trieste — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_6",
+            "text": "Castello di Spessa (Collio) — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_7",
+            "text": "Confermare i dettagli del soggiorno a Sesto (dal 19 agosto)",
+            "priority": "high"
+          },
+          {
+            "id": "hot_8",
+            "text": "Stampare / salvare tutti i voucher di prenotazione",
+            "priority": "medium"
+          }
         ]
       },
       {
@@ -434,11 +890,31 @@
         "name": "Attività",
         "icon": "🎯",
         "items": [
-          { "id": "att_1", "text": "Kuterevo Bear Sanctuary", "priority": "high" },
-          { "id": "att_2", "text": "Eventuale attività Velebit / Valle della Gacka", "priority": "medium" },
-          { "id": "att_3", "text": "Attività e spiagge a Brač (Zlatni Rat)", "priority": "medium" },
-          { "id": "att_4", "text": "Zara: centro storico, Organo del Mare e Saluto al Sole", "priority": "medium" },
-          { "id": "att_5", "text": "Castello di Miramare (Trieste)", "priority": "medium" }
+          {
+            "id": "att_1",
+            "text": "Kuterevo Bear Sanctuary",
+            "priority": "high"
+          },
+          {
+            "id": "att_2",
+            "text": "Eventuale attività Velebit / Valle della Gacka",
+            "priority": "medium"
+          },
+          {
+            "id": "att_3",
+            "text": "Attività e spiagge a Brač (Zlatni Rat)",
+            "priority": "medium"
+          },
+          {
+            "id": "att_4",
+            "text": "Zara: centro storico, Organo del Mare e Saluto al Sole",
+            "priority": "medium"
+          },
+          {
+            "id": "att_5",
+            "text": "Castello di Miramare (Trieste)",
+            "priority": "medium"
+          }
         ]
       },
       {
@@ -446,8 +922,16 @@
         "name": "Cantine",
         "icon": "🍷",
         "items": [
-          { "id": "can_1", "text": "Gravner (Oslavia, Collio) — contattare per visita", "priority": "medium" },
-          { "id": "can_2", "text": "Radikon (Oslavia, Collio) — contattare per visita", "priority": "medium" }
+          {
+            "id": "can_1",
+            "text": "Gravner (Oslavia, Collio) — contattare per visita",
+            "priority": "medium"
+          },
+          {
+            "id": "can_2",
+            "text": "Radikon (Oslavia, Collio) — contattare per visita",
+            "priority": "medium"
+          }
         ]
       },
       {
@@ -455,8 +939,16 @@
         "name": "Ristoranti",
         "icon": "🍽️",
         "items": [
-          { "id": "ris_1", "text": "La Subida (Cormons) — prenotazione (pranzo o cena 18 agosto)", "priority": "high" },
-          { "id": "ris_2", "text": "Eventuale cena a Rovigno", "priority": "low" }
+          {
+            "id": "ris_1",
+            "text": "La Subida (Cormons) — prenotazione (pranzo o cena 18 agosto)",
+            "priority": "high"
+          },
+          {
+            "id": "ris_2",
+            "text": "Eventuale cena a Rovigno",
+            "priority": "low"
+          }
         ]
       },
       {
@@ -464,13 +956,41 @@
         "name": "Bambini",
         "icon": "👶",
         "items": [
-          { "id": "bam_1", "text": "Documenti bambini (carta d'identità o passaporto per tutti e 3)", "priority": "high" },
-          { "id": "bam_2", "text": "Farmaci base: antipiretico, antidiarroico, antistaminico", "priority": "high" },
-          { "id": "bam_3", "text": "Giochi da viaggio (per auto e traghetto)", "priority": "medium" },
-          { "id": "bam_4", "text": "Passeggino / supporto per il piccolo (2 anni)", "priority": "high" },
-          { "id": "bam_5", "text": "Scarpette da scoglio per tutti i bambini", "priority": "high" },
-          { "id": "bam_6", "text": "Salvagente / braccioli per il più piccolo", "priority": "high" },
-          { "id": "bam_7", "text": "Snack per il viaggio (traghetto e lunghe tappe in auto)", "priority": "medium" }
+          {
+            "id": "bam_1",
+            "text": "Documenti bambini (carta d'identità o passaporto per tutti e 3)",
+            "priority": "high"
+          },
+          {
+            "id": "bam_2",
+            "text": "Farmaci base: antipiretico, antidiarroico, antistaminico",
+            "priority": "high"
+          },
+          {
+            "id": "bam_3",
+            "text": "Giochi da viaggio (per auto e traghetto)",
+            "priority": "medium"
+          },
+          {
+            "id": "bam_4",
+            "text": "Passeggino / supporto per il piccolo (2 anni)",
+            "priority": "high"
+          },
+          {
+            "id": "bam_5",
+            "text": "Scarpette da scoglio per tutti i bambini",
+            "priority": "high"
+          },
+          {
+            "id": "bam_6",
+            "text": "Salvagente / braccioli per il più piccolo",
+            "priority": "high"
+          },
+          {
+            "id": "bam_7",
+            "text": "Snack per il viaggio (traghetto e lunghe tappe in auto)",
+            "priority": "medium"
+          }
         ]
       },
       {
@@ -478,12 +998,36 @@
         "name": "Mare",
         "icon": "🏖️",
         "items": [
-          { "id": "mar_1", "text": "Costumi da bagno (almeno 2 a testa)", "priority": "high" },
-          { "id": "mar_2", "text": "Teli da mare (uno per persona)", "priority": "high" },
-          { "id": "mar_3", "text": "Crema solare SPF 50+ (adulti e bambini, più tubetti)", "priority": "high" },
-          { "id": "mar_4", "text": "After-sun / gel aloe", "priority": "medium" },
-          { "id": "mar_5", "text": "Maschere e boccaglio (snorkeling)", "priority": "medium" },
-          { "id": "mar_6", "text": "Cappello parasole per tutti", "priority": "high" }
+          {
+            "id": "mar_1",
+            "text": "Costumi da bagno (almeno 2 a testa)",
+            "priority": "high"
+          },
+          {
+            "id": "mar_2",
+            "text": "Teli da mare (uno per persona)",
+            "priority": "high"
+          },
+          {
+            "id": "mar_3",
+            "text": "Crema solare SPF 50+ (adulti e bambini, più tubetti)",
+            "priority": "high"
+          },
+          {
+            "id": "mar_4",
+            "text": "After-sun / gel aloe",
+            "priority": "medium"
+          },
+          {
+            "id": "mar_5",
+            "text": "Maschere e boccaglio (snorkeling)",
+            "priority": "medium"
+          },
+          {
+            "id": "mar_6",
+            "text": "Cappello parasole per tutti",
+            "priority": "high"
+          }
         ]
       },
       {
@@ -491,12 +1035,36 @@
         "name": "Varie",
         "icon": "🧳",
         "items": [
-          { "id": "var_1", "text": "Carte di credito / contanti Euro (Croazia usa EUR)", "priority": "high" },
-          { "id": "var_2", "text": "Caricatori telefono e power bank", "priority": "high" },
-          { "id": "var_3", "text": "Assicurazione viaggio (malattia + bagaglio)", "priority": "high" },
-          { "id": "var_4", "text": "Tessera Sanitaria Europea (TEAM) per tutti", "priority": "high" },
-          { "id": "var_5", "text": "Download mappe offline (Google Maps: Croazia, Slovenia, FVG)", "priority": "medium" },
-          { "id": "var_6", "text": "Adattatore per prese (standard EU type F, già standard in Croazia)", "priority": "low" }
+          {
+            "id": "var_1",
+            "text": "Carte di credito / contanti Euro (Croazia usa EUR)",
+            "priority": "high"
+          },
+          {
+            "id": "var_2",
+            "text": "Caricatori telefono e power bank",
+            "priority": "high"
+          },
+          {
+            "id": "var_3",
+            "text": "Assicurazione viaggio (malattia + bagaglio)",
+            "priority": "high"
+          },
+          {
+            "id": "var_4",
+            "text": "Tessera Sanitaria Europea (TEAM) per tutti",
+            "priority": "high"
+          },
+          {
+            "id": "var_5",
+            "text": "Download mappe offline (Google Maps: Croazia, Slovenia, FVG)",
+            "priority": "medium"
+          },
+          {
+            "id": "var_6",
+            "text": "Adattatore per prese (standard EU type F, già standard in Croazia)",
+            "priority": "low"
+          }
         ]
       }
     ]

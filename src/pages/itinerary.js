@@ -108,6 +108,8 @@ function renderDay(day, hotelMap) {
               `).join('')}
             </div>
 
+            ${renderTips(day.tips)}
+
             ${hotel ? `
               <div class="hotel-ref-badge">
                 🏨 ${hotel.name} · Check-in ${formatDateIT(hotel.checkin)} / Check-out ${formatDateIT(hotel.checkout)}
@@ -143,6 +145,33 @@ function renderDay(day, hotelMap) {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  `
+}
+
+/* ── TIPS BANNER (consigli del giorno) ────────────────────── */
+
+function renderTips(tips) {
+  if (!tips) return ''
+  const doList  = tips.do  || []
+  const eatList = tips.eat || []
+  if (!doList.length && !eatList.length) return ''
+
+  return `
+    <div class="day-tips">
+      <div class="day-tips-title">✨ Consigli del giorno</div>
+      <div class="day-tips-cols">
+        ${doList.length ? `
+          <div class="day-tips-col">
+            <div class="day-tips-head">🎯 Da fare</div>
+            <ul>${doList.map(t => `<li>${_esc(t)}</li>`).join('')}</ul>
+          </div>` : ''}
+        ${eatList.length ? `
+          <div class="day-tips-col">
+            <div class="day-tips-head">🍽️ Da mangiare</div>
+            <ul>${eatList.map(t => `<li>${_esc(t)}</li>`).join('')}</ul>
+          </div>` : ''}
       </div>
     </div>
   `
