@@ -85,6 +85,34 @@ const NATURA_DATA = [
     coords: { lat: 44.1867, lng: 15.8753 },
   },
 
+  /* ──────── VELEBIT / LIKA ──────── */
+  {
+    id: 'kuterevo',
+    nome: 'Kuterevo Bear Sanctuary',
+    area: 'Velebit / Lika',
+    categoria: 'natura',
+    categoriaLabel: '🐻 Rifugio animali',
+    descrizione: 'Rifugio per orsi bruni orfani ai piedi del Velebit, gestito da volontari. Si visitano gli orsi nei recinti naturali con una guida. Esperienza educativa e a basso impatto.',
+    bambini: true,
+    bambini_nota: 'Ottimo per i bambini — orsi visibili da vicino in sicurezza, percorso breve',
+    impegno: 'sosta-breve',
+    nota_tipo: 'molto-consigliato',
+    coords: { lat: 44.8253, lng: 15.1889 },
+  },
+  {
+    id: 'gacka',
+    nome: 'Valle della Gacka',
+    area: 'Velebit / Lika',
+    categoria: 'fiume',
+    categoriaLabel: '🌊 Fiume / Valle',
+    descrizione: 'Uno dei fiumi carsici più limpidi d\'Europa, nella piana attorno a Otočac. Mulini storici, trote, prati verdi e paesaggi tranquilli lontani dalla costa affollata.',
+    bambini: true,
+    bambini_nota: 'Adatto — passeggiate pianeggianti lungo il fiume e i mulini',
+    impegno: 'mezza-giornata',
+    nota_tipo: 'opzionale',
+    coords: { lat: 44.8686, lng: 15.2372 },
+  },
+
   /* ──────── ISTRIA ──────── */
   {
     id: 'brijuni',

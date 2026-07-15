@@ -1,5 +1,5 @@
 import { fetchTripData } from '../utils/data.js'
-import { formatDate, formatDateIT, formatDayOfWeek } from '../utils/data.js'
+import { formatDateIT, formatDayOfWeek } from '../utils/data.js'
 import { getIdeasForDay, addIdea, deleteIdea } from '../utils/ideas.js'
 
 export async function renderItinerary() {
@@ -19,7 +19,7 @@ export async function renderItinerary() {
   content.innerHTML = `
     <div class="page-header">
       <h1>📅 Itinerario</h1>
-      <p>${meta.title} · ${meta.duration_days} giorni · ${formatDate(meta.start_date)} → ${formatDate(meta.end_date)}</p>
+      <p>${meta.title} · ${meta.duration_days} giorni · ${formatDateIT(meta.start_date)} → ${formatDateIT(meta.end_date)}</p>
     </div>
 
     <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem;">
@@ -110,7 +110,7 @@ function renderDay(day, hotelMap) {
 
             ${hotel ? `
               <div class="hotel-ref-badge">
-                🏨 ${hotel.name} · Check-in ${hotel.checkin} / Check-out ${hotel.checkout}
+                🏨 ${hotel.name} · Check-in ${formatDateIT(hotel.checkin)} / Check-out ${formatDateIT(hotel.checkout)}
               </div>
             ` : ''}
 

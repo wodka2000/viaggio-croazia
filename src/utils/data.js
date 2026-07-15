@@ -28,7 +28,7 @@ export function formatDateShort(isoDate) {
   return d.toLocaleDateString('it-IT', { day: 'numeric', month: 'short' })
 }
 
-// Restituisce gg/mm (es. 2026-08-20 → 20/08)
+// Restituisce gg/mm (es. 2026-08-19 → 19/08)
 export function formatDateIT(isoDate) {
   if (!isoDate) return ''
   const [, mm, dd] = isoDate.split('-')
@@ -52,6 +52,21 @@ export function starsHtml(n) {
   return '★'.repeat(n) + '☆'.repeat(5 - n)
 }
 
+// Totale di un singolo hotel: preferisce price_total, fallback su nights * price_per_night.
+export function hotelTotal(h) {
+  if (h.price_total != null && h.price_total > 0) return h.price_total
+  return (h.nights || 0) * (h.price_per_night || 0)
+}
+
 export function totalHotelCost(hotels) {
-  return hotels.reduce((sum, h) => sum + h.nights * h.price_per_night, 0)
+  return hotels.reduce((sum, h) => sum + hotelTotal(h), 0)
+}
+
+// Formattazione valuta italiana deterministica (non dipendente dal locale del browser).
+// Es. 4456.37 → "€ 4.456,37"
+export function formatEuro(n) {
+  const value = Number(n) || 0
+  const [int, dec] = value.toFixed(2).split('.')
+  const grouped = int.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+  return `€ ${grouped},${dec}`
 }

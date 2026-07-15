@@ -1,5 +1,5 @@
 import { fetchTripData } from '../utils/data.js'
-import { formatDate, formatDateShort, daysUntil } from '../utils/data.js'
+import { formatDateIT, daysUntil, hotelTotal, formatEuro } from '../utils/data.js'
 
 export async function renderDashboard() {
   const content = document.getElementById('page-content')
@@ -29,20 +29,20 @@ export async function renderDashboard() {
     if (!seen.has(d.location)) { seen.add(d.location); uniqueLocations.push({ location: d.location, day: d.day, date: d.date }) }
   }
 
-  // Solo le strutture consigliate/selezionate — esclude le alternative
-  const recommendedHotels = hotels.filter(h => h.recommended)
-  const totalHotelNights  = recommendedHotels.reduce((s, h) => s + h.nights, 0)
-  const totalCost         = recommendedHotels.filter(h => h.price_per_night > 0)
-                              .reduce((s, h) => s + h.nights * h.price_per_night, 0)
+  // Solo le prenotazioni confermate (prima di Sesto) — esclude alternative e Sesto (da confermare)
+  const confirmedHotels = hotels.filter(h => h.status === 'confermata')
+  const bookedStructures = confirmedHotels.length
+  const bookedNights     = confirmedHotels.reduce((s, h) => s + h.nights, 0)
+  const totalCost        = confirmedHotels.reduce((s, h) => s + hotelTotal(h), 0)
 
   content.innerHTML = `
     <div class="dashboard-hero">
       <h1>${meta.emoji} ${meta.title}</h1>
       <p class="subtitle">${meta.subtitle}</p>
       <div class="dates">
-        <span class="date-badge">✈️ ${formatDate(meta.start_date)}</span>
+        <span class="date-badge">✈️ ${formatDateIT(meta.start_date)}</span>
         <span style="color:rgba(255,255,255,0.5);">→</span>
-        <span class="date-badge">${formatDate(meta.end_date)}</span>
+        <span class="date-badge">🏔️ ${formatDateIT(meta.end_date)}</span>
         <span class="date-badge">👥 ${meta.travelers_detail || meta.travelers + ' viaggiatori'}</span>
       </div>
     </div>
@@ -53,22 +53,22 @@ export async function renderDashboard() {
       <div class="stat-card">
         <div class="stat-icon">📅</div>
         <div class="stat-value">${meta.duration_days}</div>
-        <div class="stat-label">Giorni totali</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">📍</div>
-        <div class="stat-value">${uniqueLocations.length}</div>
-        <div class="stat-label">Destinazioni</div>
+        <div class="stat-label">Giorni (${formatDateIT(meta.start_date)}–${formatDateIT(meta.end_date)})</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon">🏨</div>
-        <div class="stat-value">${recommendedHotels.length}</div>
-        <div class="stat-label">Alloggi selezionati</div>
+        <div class="stat-value">${bookedStructures}</div>
+        <div class="stat-label">Strutture confermate</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon">🌙</div>
-        <div class="stat-value">${totalHotelNights}</div>
-        <div class="stat-label">Notti totali</div>
+        <div class="stat-value">${bookedNights}</div>
+        <div class="stat-label">Notti prenotate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">💶</div>
+        <div class="stat-value" style="font-size:1.4rem;">${formatEuro(totalCost)}</div>
+        <div class="stat-label">Costo prenotazioni</div>
       </div>
     </div>
 
@@ -91,7 +91,7 @@ export async function renderDashboard() {
           <div style="margin-bottom:0.75rem;">
             <strong>${currentDay.title}</strong>
             <div style="font-size:0.82rem; color:var(--color-text-muted); margin-top:0.2rem;">
-              📍 ${currentDay.location} · ${formatDate(currentDay.date)}
+              📍 ${currentDay.location} · ${formatDateIT(currentDay.date)}
             </div>
           </div>
           <div class="activity-list">

@@ -1,4 +1,4 @@
-import { fetchTripData } from '../utils/data.js'
+import { fetchTripData, formatDateIT } from '../utils/data.js'
 import { getMapIdeas } from '../utils/ideas.js'
 
 const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ''
@@ -158,7 +158,7 @@ function addRouteMarkers(data) {
     const dayRows = days.map(d =>
       `<div style="margin-top:5px;font-size:12px;border-top:1px solid #e2e8f0;padding-top:4px;">
         <span style="color:#1e40af;font-weight:700;">Gg. ${d.day}</span>
-        <span style="color:#64748b;"> · ${d.date}</span><br>
+        <span style="color:#64748b;"> · ${formatDateIT(d.date)}</span><br>
         <span>${d.title}</span>
       </div>`
     ).join('')
@@ -198,7 +198,7 @@ function addHotelMarkers(data) {
           <strong style="color:#065f46;">🏨 ${hotel.name}</strong>
           <div style="font-size:12px;color:#64748b;margin-top:2px;">📍 ${hotel.address}</div>
           <div style="margin-top:6px;font-size:12px;">
-            ${hotel.checkin} → ${hotel.checkout} · ${hotel.nights} notti
+            ${formatDateIT(hotel.checkin)} → ${formatDateIT(hotel.checkout)} · ${hotel.nights} nott${hotel.nights === 1 ? 'e' : 'i'}
           </div>
           ${hotel.notes ? `<div style="margin-top:6px;font-size:11px;color:#64748b;font-style:italic;">${hotel.notes}</div>` : ''}
         </div>`,
