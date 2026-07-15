@@ -112,7 +112,8 @@ export async function renderDashboard() {
       <a href="#hotels" class="btn btn-outline">🏨 Controlla gli hotel</a>
       <a href="#checklist" class="btn btn-outline">✅ Apri la checklist</a>
       <a href="#map" class="btn btn-outline">🗺️ Visualizza la mappa</a>
-      <a href="#natura" class="btn btn-outline">🌿 Natura &amp; Deviazioni</a>
+      <a href="#natura" class="btn btn-outline">🌿 Natura &amp; Cultura</a>
+      <a href="#logistics" class="btn btn-outline">📋 Note logistiche</a>
       <a href="#ideas" class="btn btn-outline">💡 Idee rapide</a>
     </div>
   `

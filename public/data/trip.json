@@ -6,22 +6,23 @@
     "end_date": "2026-08-19",
     "duration_days": 13,
     "travelers": 5,
-    "travelers_detail": "2 adulti + 3 bambini (8, 6, 2 anni)",
+    "travelers_detail": "2 adulti + 3 bambini maschi (8, 6, 2 anni)",
     "emoji": "🇭🇷"
   },
   "days": [
     {
       "day": 1,
       "date": "2026-08-07",
-      "location": "Roma → Croazia",
-      "title": "Partenza da Roma verso la Croazia",
-      "description": "Giornata di trasferimento: partenza da Roma e viaggio verso la costa dalmata. Il mezzo definitivo (auto e/o traghetto) è da confermare — nessun traghetto risulta ancora prenotato.",
+      "location": "Roma → Ancona → Spalato",
+      "title": "Partenza da Roma — Traghetto per Spalato",
+      "description": "Trasferimento in auto da Roma ad Ancona e imbarco sul traghetto notturno per Spalato (prenotato). Check-in al porto alle 16:30, partenza alle 19:30; notte in cabina e arrivo a Spalato la mattina dell'8.",
       "hotel_ref": null,
       "coordinates": { "lat": 41.9028, "lng": 12.4964 },
       "activities": [
-        { "time": "07:00", "text": "Partenza da Roma" },
-        { "time": "—", "text": "Trasferimento verso la Croazia (auto e/o traghetto da definire)" },
-        { "time": "—", "text": "Verificare in anticipo il collegamento definitivo del 7 agosto" }
+        { "time": "pomeriggio", "text": "Partenza da Roma verso il porto di Ancona (~3h)" },
+        { "time": "16:30", "text": "Check-in al porto di Ancona" },
+        { "time": "19:30", "text": "Partenza traghetto Ancona → Spalato" },
+        { "time": "sera", "text": "Cena a bordo e notte in cabina" }
       ]
     },
     {
@@ -354,6 +355,50 @@
       "phone": ""
     }
   ],
+  "logistics": [
+    {
+      "icon": "⛴️",
+      "title": "Traghetto Ancona → Spalato — PRENOTATO",
+      "priority": "high",
+      "text": "Check-in al porto di Ancona alle 16:30, partenza alle 19:30 (7 agosto). Traghetto notturno con cabina, arrivo a Spalato la mattina dell'8. Da Roma partire con ampio margine (~3h + traffico d'agosto) per essere al check-in entro le 16:30. Tenere a portata di mano un piccolo bagaglio per la notte in cabina."
+    },
+    {
+      "icon": "🚗",
+      "title": "Documenti auto ed estero",
+      "priority": "high",
+      "text": "Libretto, patente, assicurazione con carta verde per l'estero. Vignetta Slovenia se si transita in autostrada slovena; pedaggi/autostrade in Croazia. Kit obbligatorio (giubbotti catarifrangenti, triangolo)."
+    },
+    {
+      "icon": "🛥️",
+      "title": "Traghetti per l'isola di Brač",
+      "priority": "high",
+      "text": "Collegamento Spalato–Supetar (auto al seguito) all'andata (8/8) e al ritorno verso Zara (11/8). In agosto prenotare/arrivare in anticipo: code frequenti agli imbarchi."
+    },
+    {
+      "icon": "📅",
+      "title": "Ferragosto (15 agosto)",
+      "priority": "high",
+      "text": "Il 15 è giorno di trasferimento Otočac → Rovigno E arrivo in Istria, nel picco di folla. Spiagge e ristoranti pieni: serata soft in appartamento e attività la mattina presto. Prenotare in anticipo l'eventuale cena."
+    },
+    {
+      "icon": "⏱️",
+      "title": "Tratte lunghe: pianificare le soste",
+      "priority": "medium",
+      "text": "Due tratte da ~3h con i bambini: Otočac → Rovigno (~250 km, 15/8) e Capriva/Collio → Sesto (~230 km, 19/8). Prevedere una sosta pranzo/gioco (es. zona Rijeka/Učka il 15; un lago della Pusteria o Udine il 19)."
+    },
+    {
+      "icon": "🍷",
+      "title": "Cantine e ristoranti su prenotazione",
+      "priority": "medium",
+      "text": "Gravner e Radikon (18/8) sono piccoli produttori SOLO su appuntamento: contattarli con anticipo. Con tre bimbi conviene la degustazione 'a staffetta' (un genitore assaggia, l'altro con i bambini). Prenotare anche il tavolo a La Subida."
+    },
+    {
+      "icon": "🎒",
+      "title": "Tappa breve a Otočac (14–15/8)",
+      "priority": "low",
+      "text": "Una sola notte all'Apartman Silvija: tenere pronto un borsone 'essenziale' per la notte senza disfare tutto. Kuterevo Bear Sanctuary è a ~20 min dall'alloggio."
+    }
+  ],
   "checklist": {
     "categories": [
       {
@@ -422,7 +467,7 @@
           { "id": "bam_1", "text": "Documenti bambini (carta d'identità o passaporto per tutti e 3)", "priority": "high" },
           { "id": "bam_2", "text": "Farmaci base: antipiretico, antidiarroico, antistaminico", "priority": "high" },
           { "id": "bam_3", "text": "Giochi da viaggio (per auto e traghetto)", "priority": "medium" },
-          { "id": "bam_4", "text": "Passeggino / supporto per la piccola (2 anni)", "priority": "high" },
+          { "id": "bam_4", "text": "Passeggino / supporto per il piccolo (2 anni)", "priority": "high" },
           { "id": "bam_5", "text": "Scarpette da scoglio per tutti i bambini", "priority": "high" },
           { "id": "bam_6", "text": "Salvagente / braccioli per il più piccolo", "priority": "high" },
           { "id": "bam_7", "text": "Snack per il viaggio (traghetto e lunghe tappe in auto)", "priority": "medium" }

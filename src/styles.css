@@ -1508,6 +1508,57 @@ ul { list-style: none; }
 .tipo-natura    { background: #dcfce7; color: #166534; border-color: #86efac; }
 .tipo-cultura   { background: #ede9fe; color: #6d28d9; border-color: #c4b5fd; }
 
+/* ── Note logistiche ──────────────────────────────────────── */
+.logi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.logi-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: 1rem 1.1rem;
+}
+.logi-prio-high   { border-left-color: #dc2626; }
+.logi-prio-medium { border-left-color: #d97706; }
+.logi-prio-low    { border-left-color: #2563eb; }
+.logi-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+.logi-icon { font-size: 1.15rem; }
+.logi-title {
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--color-text);
+}
+.logi-badge {
+  margin-left: auto;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+.logi-prio-high   .logi-badge { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
+.logi-prio-medium .logi-badge { background: #ffedd5; color: #9a3412; border-color: #fed7aa; }
+.logi-prio-low    .logi-badge { background: #dbeafe; color: #1e40af; border-color: #bfdbfe; }
+.logi-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin: 0;
+}
+
 /* ── Lista "naviga alla tappa" (pagina Mappa) ─────────────── */
 .route-nav { margin-top: 0.75rem; }
 .route-nav-title {
