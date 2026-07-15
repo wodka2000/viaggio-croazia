@@ -9,7 +9,10 @@ export async function fetchTripData() {
   const base = import.meta.env.BASE_URL
   const url = `${base}data/trip.json`
 
-  const res = await fetch(url)
+  // 'no-cache' forza il browser a rivalidare col server (304 se invariato,
+  // file fresco se aggiornato) → gli aggiornamenti ai dati compaiono senza
+  // dover svuotare manualmente la cache.
+  const res = await fetch(url, { cache: 'no-cache' })
   if (!res.ok) throw new Error(`Impossibile caricare trip.json (${res.status})`)
 
   _cache = await res.json()
