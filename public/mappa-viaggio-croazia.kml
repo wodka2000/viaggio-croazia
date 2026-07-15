@@ -43,10 +43,10 @@
       </Placemark>
 
       <Placemark>
-        <name>3 · Apartman Silvija (Kuterevo/Velebit)</name>
+        <name>3 · Apartman Silvija (Otočac, Valle della Gacka)</name>
         <styleUrl>#alloggio</styleUrl>
-        <description>Area Kuterevo / Otočac (Velebit) — indirizzo esatto da confermare sul voucher. Check-in 14/08 → check-out 15/08 · 1 notte.</description>
-        <Point><coordinates>15.1389,44.8266,0</coordinates></Point>
+        <description>Ulica pod Pakljom 5, 53220 Otočac (Valle della Gacka). Check-in 14/08 → check-out 15/08 · 1 notte. Tel. +385 99 427 1318.</description>
+        <Point><coordinates>15.2359,44.8688,0</coordinates></Point>
       </Placemark>
 
       <Placemark>
@@ -135,7 +135,7 @@
             12.4964,41.9028,0
             16.6257,43.3775,0
             15.1589,44.1799,0
-            15.1389,44.8266,0
+            15.2359,44.8688,0
             13.6278,45.1030,0
             13.7741,45.6501,0
             13.5049,45.9477,0
