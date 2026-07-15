@@ -1765,6 +1765,146 @@
         "lat": 46.6206,
         "lng": 12.2361
       }
+    },
+    {
+      "id": "rif_auronzo",
+      "area": "Sesto",
+      "name": "Rifugio Auronzo (Auronzohütte)",
+      "type": "Rifugio",
+      "difficulty": "Facile",
+      "duration": "arrivo in auto (strada a pedaggio)",
+      "family": true,
+      "car": true,
+      "start": "Rifugio Auronzo — strada a pedaggio da Misurina",
+      "description": "Il balcone sulle Tre Cime: ci si arriva comodamente in auto e da qui parte il celebre giro. Terrazza panoramica spettacolare, base perfetta anche con i bimbi.",
+      "coordinates": {
+        "lat": 46.6136,
+        "lng": 12.2957
+      }
+    },
+    {
+      "id": "rif_lavaredo",
+      "area": "Sesto",
+      "name": "Rifugio Lavaredo (Lavaredohütte)",
+      "type": "Rifugio",
+      "difficulty": "Facile–Media",
+      "duration": "~1,5 h a/r dal Rif. Auronzo",
+      "family": true,
+      "car": false,
+      "start": "Rifugio Auronzo (Tre Cime)",
+      "description": "Breve e facile cammino sul sentiero delle Tre Cime fino al rifugio, con la vista che si apre sulle pareti nord. Ottima meta intermedia, fattibile con bambini allenati.",
+      "coordinates": {
+        "lat": 46.6182,
+        "lng": 12.3061
+      }
+    },
+    {
+      "id": "rif_zsigmondy",
+      "area": "Sesto",
+      "name": "Rifugio Zsigmondy-Comici",
+      "type": "Rifugio",
+      "difficulty": "Impegnativa",
+      "duration": "4–5 h a/r (Val Fiscalina)",
+      "family": false,
+      "start": "Val Fiscalina / Rifugio Fondovalle",
+      "description": "Uno dei rifugi più belli delle Dolomiti di Sesto, ai piedi della Croda dei Toni e della Cima Una. Salita impegnativa in ambiente severo, per camminatori allenati.",
+      "coordinates": {
+        "lat": 46.6222,
+        "lng": 12.3563
+      }
+    },
+    {
+      "id": "rif_pian_cengia",
+      "area": "Sesto",
+      "name": "Rifugio Pian di Cengia (Büllelejochhütte)",
+      "type": "Rifugio",
+      "difficulty": "Impegnativa",
+      "duration": "5–6 h (anello alto)",
+      "family": false,
+      "start": "Val Fiscalina / Rifugio Locatelli",
+      "description": "Piccolo rifugio d'alta quota tra le guglie, spesso inserito nell'anello Locatelli–Pian di Cengia–Val Fiscalina. Panorami eccezionali, itinerario per esperti.",
+      "coordinates": {
+        "lat": 46.6268,
+        "lng": 12.3423
+      }
+    },
+    {
+      "id": "rif_col_varda",
+      "area": "Sesto",
+      "name": "Rifugio Col de Varda",
+      "type": "Rifugio",
+      "difficulty": "Facile",
+      "duration": "seggiovia + 30 min (da Misurina)",
+      "family": true,
+      "car": true,
+      "start": "Seggiovia da Misurina",
+      "description": "Si sale in seggiovia sopra Misurina per una vista magnifica sui Cadini e sulle Tre Cime. Rifugio panoramico e facilissimo da raggiungere, perfetto con i bambini.",
+      "coordinates": {
+        "lat": 46.5726,
+        "lng": 12.262
+      }
+    },
+    {
+      "id": "rif_fonda_savio",
+      "area": "Sesto",
+      "name": "Rifugio Fonda Savio (Cadini di Misurina)",
+      "type": "Rifugio",
+      "difficulty": "Impegnativa",
+      "duration": "3–4 h a/r",
+      "family": false,
+      "start": "Misurina (località Genzianella)",
+      "description": "Incastonato tra le guglie dei Cadini di Misurina, uno degli scorci più fotografati delle Dolomiti. Sentiero ripido con qualche tratto attrezzato, per escursionisti.",
+      "coordinates": {
+        "lat": 46.5966,
+        "lng": 12.279
+      }
+    },
+    {
+      "id": "rif_vallandro",
+      "area": "Sesto",
+      "name": "Rifugio Vallandro (Prato Piazza)",
+      "type": "Rifugio",
+      "difficulty": "Facile–Media",
+      "duration": "1,5–2 h a/r da Prato Piazza",
+      "family": true,
+      "car": true,
+      "start": "Prato Piazza (Plätzwiese) — accesso auto regolamentato",
+      "description": "Dall'altopiano prativo di Prato Piazza si sale al rifugio con vista aperta su Cristallo, Tre Cime e Croda Rossa. Ampio e panoramico, adatto anche alle famiglie.",
+      "coordinates": {
+        "lat": 46.6447,
+        "lng": 12.2119
+      }
+    },
+    {
+      "id": "rif_carpi",
+      "area": "Sesto",
+      "name": "Rifugio Città di Carpi",
+      "type": "Rifugio",
+      "difficulty": "Media",
+      "duration": "5–6 h a/r dal passo",
+      "family": false,
+      "start": "Passo Monte Croce Comelico (dall'hotel)",
+      "description": "Rifugio panoramico sul crinale del Comelico raggiungibile direttamente dal passo, con vista a 360° sulle Dolomiti di Sesto. Bella traversata di mezza montagna.",
+      "coordinates": {
+        "lat": 46.6089,
+        "lng": 12.4744
+      }
+    },
+    {
+      "id": "rif_sorapiss",
+      "area": "Sesto",
+      "name": "Lago di Sorapiss & Rifugio Vandelli",
+      "type": "Lago / Rifugio",
+      "difficulty": "Impegnativa",
+      "duration": "4 h a/r (tratti esposti con corde)",
+      "family": false,
+      "car": false,
+      "start": "Passo Tre Croci (da Misurina/Cortina)",
+      "description": "Il famoso lago dal colore turchese ai piedi del Sorapiss, con il Rifugio Vandelli. Escursione spettacolare ma con passaggi esposti attrezzati: sconsigliata con bimbi piccoli.",
+      "coordinates": {
+        "lat": 46.5333,
+        "lng": 12.2214
+      }
     }
   ],
   "ferries": [
