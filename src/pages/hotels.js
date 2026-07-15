@@ -1,5 +1,5 @@
 import { fetchTripData } from '../utils/data.js'
-import { formatDateIT, starsHtml, hotelTotal, formatEuro, navUrl } from '../utils/data.js'
+import { formatDateIT, starsHtml, navUrl } from '../utils/data.js'
 
 export async function renderHotels() {
   const content = document.getElementById('page-content')
@@ -26,12 +26,11 @@ export async function renderHotels() {
   // Statistiche solo sulle prenotazioni confermate
   const confirmed = hotels.filter(h => h.status === 'confermata')
   const totalNights = confirmed.reduce((s, h) => s + h.nights, 0)
-  const totalCost = confirmed.reduce((s, h) => s + hotelTotal(h), 0)
 
   content.innerHTML = `
     <div class="page-header">
       <h1>🏨 Hotel &amp; Alloggi</h1>
-      <p>${confirmed.length} strutture confermate · ${totalNights} notti · ${formatEuro(totalCost)}</p>
+      <p>${confirmed.length} strutture confermate · ${totalNights} notti</p>
     </div>
 
     <div class="hotels-summary">
@@ -42,10 +41,6 @@ export async function renderHotels() {
       <div class="summary-item">
         <div class="summary-value">${totalNights}</div>
         <div class="summary-label">Notti prenotate</div>
-      </div>
-      <div class="summary-item">
-        <div class="summary-value" style="font-size:1.15rem;">${formatEuro(totalCost)}</div>
-        <div class="summary-label">Costo prenotazioni</div>
       </div>
       <div class="summary-item">
         <div class="summary-value">${hotels.filter(h => h.status === 'da_confermare').length}</div>
@@ -69,7 +64,6 @@ export async function renderHotels() {
 
 function renderHotelCard(h) {
   const nights = h.nights
-  const total = hotelTotal(h)
   const isConfirmed = h.status === 'confermata' || (h.booking_ref && h.booking_ref.length > 0)
 
   const statusBadge = isConfirmed
@@ -111,10 +105,7 @@ function renderHotelCard(h) {
             ${h.rating > 0 ? starsHtml(h.rating) : '<span style="color:var(--color-text-muted);font-size:0.78rem;">Categoria n.d.</span>'}
           </div>
           <div class="hotel-price">
-            ${total > 0
-              ? `<strong>${formatEuro(h.price_per_night)}</strong>/notte · ${nights} nott${nights === 1 ? 'e' : 'i'} · <strong style="color:var(--color-text);">${formatEuro(total)}</strong>`
-              : `<span style="color:var(--color-text-muted);">Prezzo da definire</span>`
-            }
+            ${nights} nott${nights === 1 ? 'e' : 'i'}
           </div>
         </div>
 

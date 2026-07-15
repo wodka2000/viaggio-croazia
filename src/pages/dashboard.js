@@ -1,5 +1,5 @@
 import { fetchTripData } from '../utils/data.js'
-import { formatDateIT, daysUntil, hotelTotal, formatEuro } from '../utils/data.js'
+import { formatDateIT, daysUntil } from '../utils/data.js'
 
 export async function renderDashboard() {
   const content = document.getElementById('page-content')
@@ -33,7 +33,6 @@ export async function renderDashboard() {
   const confirmedHotels = hotels.filter(h => h.status === 'confermata')
   const bookedStructures = confirmedHotels.length
   const bookedNights     = confirmedHotels.reduce((s, h) => s + h.nights, 0)
-  const totalCost        = confirmedHotels.reduce((s, h) => s + hotelTotal(h), 0)
 
   content.innerHTML = `
     <div class="dashboard-hero">
@@ -64,11 +63,6 @@ export async function renderDashboard() {
         <div class="stat-icon">🌙</div>
         <div class="stat-value">${bookedNights}</div>
         <div class="stat-label">Notti prenotate</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">💶</div>
-        <div class="stat-value" style="font-size:1.4rem;">${formatEuro(totalCost)}</div>
-        <div class="stat-label">Costo prenotazioni</div>
       </div>
     </div>
 
