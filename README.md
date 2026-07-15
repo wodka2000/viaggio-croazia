@@ -14,6 +14,7 @@ Pianificatore di viaggio statico — deployabile su GitHub Pages.
 |---------|-------------|
 | 🏠 Dashboard | Countdown alla partenza, statistiche, prossima tappa |
 | 📅 Itinerario | Timeline giorno per giorno con attività espandibili |
+| 🍽️ Prenotazioni | Gestite in **Note logistiche**: aggiungi una prenotazione (locale, esperienza) con link diretto a Google Maps e allega la conferma (`.eml`, `.pdf` o foto, salvata su dispositivo via IndexedDB). Nel giorno della prenotazione il link a Maps compare tra le attività dell'itinerario. La prenotazione confermata è in `trip.json`, le tue restano in localStorage |
 | 🏨 Hotel | Schede alloggi con date, prezzi, servizi |
 | ✅ Checklist | Lista di imballaggio per categoria, persistente via localStorage |
 | 🗺️ Mappa | Google Maps interattiva con route e marker hotel |

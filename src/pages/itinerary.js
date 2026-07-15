@@ -1,6 +1,7 @@
 import { fetchTripData } from '../utils/data.js'
 import { formatDateIT, formatDayOfWeek } from '../utils/data.js'
 import { getIdeasForDay, addIdea, deleteIdea } from '../utils/ideas.js'
+import { getUserBookingsForDay, bookingMapsUrl } from '../utils/bookings.js'
 
 export async function renderItinerary() {
   const content = document.getElementById('page-content')
@@ -63,8 +64,23 @@ export async function renderItinerary() {
       if (date) section.innerHTML = _renderDayIdeas(date)
     })
   }
+
+  // Sync prenotazioni: ridisegna le righe-attività di ogni giorno.
+  const bookingsHandler = () => {
+    document.querySelectorAll('.activities[data-date]').forEach(list => {
+      const date = list.dataset.date
+      // Rimuovi le righe prenotazione esistenti e riaggiungile aggiornate.
+      list.querySelectorAll('.activity-booking').forEach(el => el.remove())
+      list.insertAdjacentHTML('beforeend', _renderBookingActivities(date))
+    })
+  }
+
   window.addEventListener('ideas:updated', handler)
-  window.__currentPageCleanup = () => window.removeEventListener('ideas:updated', handler)
+  window.addEventListener('bookings:updated', bookingsHandler)
+  window.__currentPageCleanup = () => {
+    window.removeEventListener('ideas:updated', handler)
+    window.removeEventListener('bookings:updated', bookingsHandler)
+  }
 }
 
 /* ── DAY CARD ─────────────────────────────────────────────── */
@@ -107,13 +123,17 @@ function renderDay(day, hotelMap, ferries = []) {
               </a>
             `).join('')}
 
-            <div class="activities">
+            <div class="activities" data-date="${day.date}">
               ${day.activities.map(a => `
                 <div class="activity-item with-dot">
                   <span class="activity-time">${a.time}</span>
-                  <span>${a.text}</span>
+                  <span>
+                    ${a.text}
+                    ${a.maps ? `<a class="activity-maps" href="${_esc(a.maps)}" target="_blank" rel="noopener">🗺️ Maps</a>` : ''}
+                  </span>
                 </div>
               `).join('')}
+              ${_renderBookingActivities(day.date)}
             </div>
 
             ${renderTips(day.tips)}
@@ -199,6 +219,27 @@ function _renderDayIdeas(date) {
       <button class="day-idea-del" data-id="${idea.id}" title="Elimina">×</button>
     </div>
   `).join('')
+}
+
+/* ── PRENOTAZIONI COME ATTIVITÀ ───────────────────────────── */
+
+// Le prenotazioni aggiunte dall'utente (in Note logistiche) compaiono
+// come attività del loro giorno, con il link diretto a Maps.
+function _renderBookingActivities(date) {
+  const bookings = getUserBookingsForDay(date)
+  if (!bookings.length) return ''
+  return bookings.map(b => {
+    const url = bookingMapsUrl(b)
+    return `
+      <div class="activity-item with-dot activity-booking">
+        <span class="activity-time">${b.time ? _esc(b.time) : '🍽️'}</span>
+        <span>
+          🍽️ ${_esc(b.place)}<span class="activity-booking-tag">prenotazione</span>
+          ${url ? `<a class="activity-maps" href="${_esc(url)}" target="_blank" rel="noopener">🗺️ Maps</a>` : ''}
+        </span>
+      </div>
+    `
+  }).join('')
 }
 
 /* ── EVENTS ───────────────────────────────────────────────── */

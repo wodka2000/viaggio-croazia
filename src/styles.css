@@ -2252,6 +2252,209 @@ a.idea-meta-chip.idea-meta-link:hover { background: #eff6ff; color: var(--color-
 
 .quick-form-checks { display: flex; gap: 1rem; flex-wrap: wrap; }
 
+/* Link Maps inline nelle attività dell'itinerario */
+.activity-maps {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #c2410c;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.activity-maps:hover { text-decoration: underline; }
+
+/* Righe "prenotazione" iniettate tra le attività del giorno */
+.activity-booking-tag {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.02rem 0.4rem;
+  font-size: 0.64rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #c2410c;
+  background: #ffedd5;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+/* =========================================================
+   PRENOTAZIONI (in Note Logistiche)
+   ========================================================= */
+.booking-section { margin-bottom: 2rem; }
+
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.booking-empty {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.booking-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.75rem 0.85rem;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-left: 3px solid #f97316;
+  border-radius: 10px;
+}
+
+.booking-card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.booking-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.booking-card-place {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-text);
+}
+
+.booking-badge {
+  padding: 0.05rem 0.45rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #065f46;
+  background: #d1fae5;
+  border-radius: 10px;
+}
+
+.booking-card-when {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #c2410c;
+}
+
+.booking-card-note {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.booking-card-maps {
+  align-self: flex-start;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #c2410c;
+  text-decoration: none;
+}
+
+.booking-card-maps:hover { text-decoration: underline; }
+
+.booking-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.15rem;
+}
+
+.booking-attach {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.booking-attach-open,
+.booking-attach-add {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.booking-attach-open:hover,
+.booking-attach-add:hover { text-decoration: underline; }
+
+.booking-attach-add { color: var(--color-text-muted); }
+
+.booking-attach-del {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.15rem;
+}
+
+.booking-attach-del:hover { color: var(--color-accent); }
+
+.booking-file-label {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.booking-file-label span { font-size: 0.74rem; opacity: 0.8; }
+
+.booking-card-del {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 0 0.25rem;
+  line-height: 1;
+  border: none;
+  background: none;
+  flex-shrink: 0;
+  transition: color var(--transition);
+}
+
+.booking-card-del:hover { color: var(--color-accent); }
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.9rem;
+  background: var(--color-surface-2);
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+}
+
+.booking-form.hidden { display: none; }
+
+.booking-form-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.booking-form-row .booking-date { flex: 1; min-width: 150px; }
+.booking-form-row .booking-time { flex: 0 0 120px; }
+
 /* =========================================================
    CHECKLIST — CUSTOM ITEMS CRUD
    ========================================================= */

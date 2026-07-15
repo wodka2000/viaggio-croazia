@@ -75,6 +75,22 @@ export function navUrlCoords(lat, lng) {
   return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving`
 }
 
+// Link Google Maps "cerca/mostra il posto" — apre la scheda del luogo su Maps.
+// query può essere un testo (nome + indirizzo/città) o "lat,lng".
+export function mapsSearchUrl(query) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`
+}
+
+// Normalizza ciò che l'utente inserisce in un link Maps valido:
+// - se è già un URL (http…), lo usa così com'è (link Maps incollato)
+// - altrimenti costruisce un link di ricerca dal testo (nome + indirizzo)
+export function toMapsUrl(input) {
+  const val = String(input ?? '').trim()
+  if (!val) return ''
+  if (/^https?:\/\//i.test(val)) return val
+  return mapsSearchUrl(val)
+}
+
 // Formattazione valuta italiana deterministica (non dipendente dal locale del browser).
 // Es. 4456.37 → "€ 4.456,37"
 export function formatEuro(n) {

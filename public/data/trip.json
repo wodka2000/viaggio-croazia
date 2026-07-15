@@ -345,6 +345,7 @@
       ],
       "tips": {
         "do": [
+          "🛒 Fare la spesa PRIMA di arrivare: all'Apartman Silvija non c'è nulla (cibo e bevande per sera e mattina)",
           "Kuterevo Bear Sanctuary",
           "Passeggiata lungo il fiume Gacka"
         ],
@@ -507,12 +508,13 @@
           "text": "Radikon — vini naturali (Oslavia)"
         },
         {
-          "time": "13:30",
-          "text": "Eventuale pranzo o cena a La Subida (Cormons)"
-        },
-        {
           "time": "16:00",
           "text": "Check-in Castello di Spessa (Capriva del Friuli)"
+        },
+        {
+          "time": "19:00",
+          "text": "Cena all'Osteria della Subida (La Subida, Cormons) — prenotata ✅",
+          "maps": "https://www.google.com/maps/search/?api=1&query=La%20Subida%20Cormons"
         }
       ],
       "tips": {
@@ -883,6 +885,17 @@
       }
     }
   ],
+  "bookings": [
+    {
+      "id": "book_subida_2026_08_18",
+      "date": "2026-08-18",
+      "time": "19:00",
+      "place": "Osteria della Subida (La Subida)",
+      "address": "Località Subida 22, 34071 Cormons (GO)",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=La%20Subida%20Cormons",
+      "note": "Cena — tavolo per 5 (2 adulti + 3 bambini)"
+    }
+  ],
   "hotels": [
     {
       "id": "brac_pastura",
@@ -1123,6 +1136,12 @@
       "title": "Tappa breve a Otočac (14–15/8)",
       "priority": "low",
       "text": "Una sola notte all'Apartman Silvija: tenere pronto un borsone 'essenziale' per la notte senza disfare tutto. Kuterevo Bear Sanctuary è a ~20 min dall'alloggio."
+    },
+    {
+      "icon": "🛒",
+      "title": "Spesa prima dell'Apartman Silvija (14/8)",
+      "priority": "high",
+      "text": "All'Apartman Silvija (Otočac, Valle della Gacka) non c'è nulla: comprare cibo e bevande PRIMA di arrivare. Fare la spesa lungo il tragitto (supermercato a Otočac/Gospić) per cena, colazione e acqua/bibite per la sera e la mattina seguente."
     }
   ],
   "dining": [
