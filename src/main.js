@@ -9,11 +9,13 @@ import { renderIdeas }     from './pages/ideas.js'
 import { renderNatura }    from './pages/natura.js'
 import { renderLogistics } from './pages/logistics.js'
 import { renderAttivita }  from './pages/attivita.js'
+import { renderPasseggiate } from './pages/passeggiate.js'
 
 const routes = {
   '#dashboard': renderDashboard,
   '#itinerary': renderItinerary,
   '#attivita':  renderAttivita,
+  '#passeggiate': renderPasseggiate,
   '#hotels':    renderHotels,
   '#checklist': renderChecklist,
   '#map':       renderMap,

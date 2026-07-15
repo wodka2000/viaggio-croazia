@@ -1,10 +1,10 @@
 {
   "meta": {
     "title": "Viaggio Croazia e Sesto 2026",
-    "subtitle": "Brač, Zara, Velebit, Istria, Trieste e Collio",
+    "subtitle": "Brač, Zara, Velebit, Istria, Trieste, Collio e Dolomiti di Sesto",
     "start_date": "2026-08-07",
-    "end_date": "2026-08-19",
-    "duration_days": 13,
+    "end_date": "2026-08-29",
+    "duration_days": 23,
     "travelers": 5,
     "travelers_detail": "2 adulti + 3 bambini maschi (8, 6, 2 anni)",
     "emoji": "🇭🇷"
@@ -532,7 +532,7 @@
       "location": "Sesto",
       "title": "Collio → Sesto — Arrivo in Montagna",
       "description": "Check-out dal Castello di Spessa e trasferimento verso Sesto (Dolomiti). Arrivo e inizio del soggiorno in montagna.",
-      "hotel_ref": "sesto_tbd",
+      "hotel_ref": "sesto_kreuzbergpass",
       "coordinates": {
         "lat": 46.6927,
         "lng": 12.3643
@@ -559,6 +559,326 @@
         "eat": [
           "Canederli e speck altoatesini",
           "Strudel di mele; würstel e patate per i bimbi"
+        ]
+      }
+    },
+    {
+      "day": 14,
+      "date": "2026-08-20",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Canederli allo speck o al formaggio",
+          "Strudel di mele; würstel e patatine per i bimbi"
+        ]
+      }
+    },
+    {
+      "day": 15,
+      "date": "2026-08-21",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Peka / grigliata di malga",
+          "Kaiserschmarrn (frittata dolce) per merenda"
+        ]
+      }
+    },
+    {
+      "day": 16,
+      "date": "2026-08-22",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Zuppa d'orzo (Gerstsuppe) in rifugio",
+          "Torta di grano saraceno con mirtilli rossi"
+        ]
+      }
+    },
+    {
+      "day": 17,
+      "date": "2026-08-23",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Formaggi di malga e speck",
+          "Latte fresco e strudel al rifugio"
+        ]
+      }
+    },
+    {
+      "day": 18,
+      "date": "2026-08-24",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Schlutzkrapfen (ravioli di magro)",
+          "Panino con speck durante l'escursione"
+        ]
+      }
+    },
+    {
+      "day": 19,
+      "date": "2026-08-25",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Canederli allo speck o al formaggio",
+          "Strudel di mele; würstel e patatine per i bimbi"
+        ]
+      }
+    },
+    {
+      "day": 20,
+      "date": "2026-08-26",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Peka / grigliata di malga",
+          "Kaiserschmarrn (frittata dolce) per merenda"
+        ]
+      }
+    },
+    {
+      "day": 21,
+      "date": "2026-08-27",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Zuppa d'orzo (Gerstsuppe) in rifugio",
+          "Torta di grano saraceno con mirtilli rossi"
+        ]
+      }
+    },
+    {
+      "day": 22,
+      "date": "2026-08-28",
+      "location": "Sesto",
+      "title": "Sesto — Ultima giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Formaggi di malga e speck",
+          "Latte fresco e strudel al rifugio"
+        ]
+      }
+    },
+    {
+      "day": 23,
+      "date": "2026-08-29",
+      "location": "Sesto → Rientro",
+      "title": "Sesto → Rientro a casa",
+      "description": "Check-out dal Kreuzbergpass e viaggio di rientro. Fine del viaggio!",
+      "hotel_ref": null,
+      "coordinates": {
+        "lat": 46.6448,
+        "lng": 12.4253
+      },
+      "activities": [
+        {
+          "time": "09:00",
+          "text": "Check-out dall'Hotel Kreuzbergpass"
+        },
+        {
+          "time": "mattina",
+          "text": "Partenza e viaggio di rientro verso casa"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Ultima colazione con vista sulle Dolomiti",
+          "Acquisti last-minute: speck, formaggi di malga, strudel"
+        ],
+        "eat": [
+          "Colazione altoatesina abbondante",
+          "Sosta pranzo lungo il rientro"
         ]
       }
     }
@@ -734,27 +1054,29 @@
       "phone": ""
     },
     {
-      "id": "sesto_tbd",
-      "name": "Sistemazione a Sesto (da confermare)",
+      "id": "sesto_kreuzbergpass",
+      "name": "Hotel Kreuzbergpass — Passo Monte Croce Comelico",
       "location": "Sesto",
       "location_group": "Sesto",
-      "address": "Sesto / Sexten, Dolomiti di Sesto, 39030 BZ",
+      "address": "Passo Monte Croce Comelico (Kreuzbergpass), 39030 Sesto/Sexten (BZ)",
       "coordinates": {
-        "lat": 46.6927,
-        "lng": 12.3643
+        "lat": 46.6448,
+        "lng": 12.4253
       },
       "checkin": "2026-08-19",
-      "checkout": "2026-08-27",
-      "nights": 8,
+      "checkout": "2026-08-29",
+      "nights": 10,
       "rating": 0,
       "price_per_night": 0,
       "price_total": 0,
       "amenities": [
-        "Da definire"
+        "Dolomiti di Sesto",
+        "Punto di partenza per passeggiate e rifugi",
+        "Aria di montagna a 1.636 m"
       ],
-      "notes": "Soggiorno a Sesto da confermare. L'itinerario Croazia/Friuli si conclude qui il 19 agosto — inizio del soggiorno sulle Dolomiti di Sesto.",
+      "notes": "Soggiorno in montagna al Passo Monte Croce Comelico (Kreuzbergpass), tra Sesto e il Comelico. Base ideale per le passeggiate e i rifugi delle Dolomiti di Sesto. Prenotato dal 19 al 29 agosto.",
       "booking_ref": "",
-      "status": "da_confermare",
+      "status": "confermata",
       "recommended": true,
       "phone": ""
     }
@@ -804,21 +1126,111 @@
     }
   ],
   "dining": [
-    { "area": "Brač", "name": "Konoba Bracera", "town": "Postira", "type": "Konoba", "specialty": "Pesce fresco, calamari e frutti di mare sulla baia di Postira" },
-    { "area": "Brač", "name": "Konoba Tomić", "town": "Gornji Humac (Brač)", "type": "Konoba", "specialty": "Peka di agnello e carni alla griglia, cucina autentica dell'interno" },
-    { "area": "Area di Zara", "name": "Foša", "town": "Zadar", "type": "Ristorante", "specialty": "Pesce e cucina dalmata nel porticciolo storico Foša" },
-    { "area": "Area di Zara", "name": "Pet Bunara", "town": "Zadar (centro storico)", "type": "Ristorante", "specialty": "Specialità dalmate tradizionali nella città vecchia" },
-    { "area": "Velebit / Otočac", "name": "Bistro Ribič", "town": "Otočac", "type": "Bistro", "specialty": "Trota della Gacka, sulla riva del fiume — lunga tradizione" },
-    { "area": "Velebit / Otočac", "name": "Restoran Vrilo Gacke", "town": "Otočac (sorgente Gacka)", "type": "Ristorante", "specialty": "Trota e agnello/vitello sotto la peka, alla sorgente della Gacka" },
-    { "area": "Rovigno", "name": "Konoba Rovignese", "town": "Rovigno", "type": "Konoba (family)", "specialty": "Cucina istriana, porzioni generose e area giochi per bambini" },
-    { "area": "Rovigno", "name": "Konoba Tugurio", "town": "Rovigno", "type": "Konoba", "specialty": "Scampi alla busara e pesce, konoba tradizionale in centro" },
-    { "area": "Rovigno", "name": "Monte", "town": "Rovigno", "type": "Fine dining", "specialty": "Alta cucina istriana, 1 stella Michelin (serata speciale, su prenotazione)" },
-    { "area": "Trieste", "name": "Buffet da Pepi", "town": "Trieste (Via Cassa di Risparmio 3)", "type": "Buffet storico", "specialty": "Prosciutto cotto caldo, jota e gulasch — dal 1897" },
-    { "area": "Trieste", "name": "Caffè San Marco", "town": "Trieste", "type": "Caffè storico", "specialty": "Colazione e pausa caffè in un'atmosfera liberty (dal 1914)" },
-    { "area": "Collio", "name": "Trattoria al Cacciatore – La Subida", "town": "Cormons", "type": "Trattoria", "specialty": "Cucina friulana-slovena del Collio (frico, cjarsons)" },
-    { "area": "Collio", "name": "Osteria Caramella", "town": "Cormons", "type": "Osteria / bar", "specialty": "Prosciutto d'Osvaldo, frico e aperitivo nel centro di Cormons" },
-    { "area": "Sesto", "name": "Malga Nemes", "town": "Sesto (1.877 m)", "type": "Malga (family)", "specialty": "Canederli al burro, cucina di malga e parco giochi per bambini" },
-    { "area": "Sesto", "name": "Ristorante Riega", "town": "Sesto", "type": "Ristorante", "specialty": "Canederli, gulasch e cucina altoatesina in paese" }
+    {
+      "area": "Brač",
+      "name": "Konoba Bracera",
+      "town": "Postira",
+      "type": "Konoba",
+      "specialty": "Pesce fresco, calamari e frutti di mare sulla baia di Postira"
+    },
+    {
+      "area": "Brač",
+      "name": "Konoba Tomić",
+      "town": "Gornji Humac (Brač)",
+      "type": "Konoba",
+      "specialty": "Peka di agnello e carni alla griglia, cucina autentica dell'interno"
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Foša",
+      "town": "Zadar",
+      "type": "Ristorante",
+      "specialty": "Pesce e cucina dalmata nel porticciolo storico Foša"
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Pet Bunara",
+      "town": "Zadar (centro storico)",
+      "type": "Ristorante",
+      "specialty": "Specialità dalmate tradizionali nella città vecchia"
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Bistro Ribič",
+      "town": "Otočac",
+      "type": "Bistro",
+      "specialty": "Trota della Gacka, sulla riva del fiume — lunga tradizione"
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Restoran Vrilo Gacke",
+      "town": "Otočac (sorgente Gacka)",
+      "type": "Ristorante",
+      "specialty": "Trota e agnello/vitello sotto la peka, alla sorgente della Gacka"
+    },
+    {
+      "area": "Rovigno",
+      "name": "Konoba Rovignese",
+      "town": "Rovigno",
+      "type": "Konoba (family)",
+      "specialty": "Cucina istriana, porzioni generose e area giochi per bambini"
+    },
+    {
+      "area": "Rovigno",
+      "name": "Konoba Tugurio",
+      "town": "Rovigno",
+      "type": "Konoba",
+      "specialty": "Scampi alla busara e pesce, konoba tradizionale in centro"
+    },
+    {
+      "area": "Rovigno",
+      "name": "Monte",
+      "town": "Rovigno",
+      "type": "Fine dining",
+      "specialty": "Alta cucina istriana, 1 stella Michelin (serata speciale, su prenotazione)"
+    },
+    {
+      "area": "Trieste",
+      "name": "Buffet da Pepi",
+      "town": "Trieste (Via Cassa di Risparmio 3)",
+      "type": "Buffet storico",
+      "specialty": "Prosciutto cotto caldo, jota e gulasch — dal 1897"
+    },
+    {
+      "area": "Trieste",
+      "name": "Caffè San Marco",
+      "town": "Trieste",
+      "type": "Caffè storico",
+      "specialty": "Colazione e pausa caffè in un'atmosfera liberty (dal 1914)"
+    },
+    {
+      "area": "Collio",
+      "name": "Trattoria al Cacciatore – La Subida",
+      "town": "Cormons",
+      "type": "Trattoria",
+      "specialty": "Cucina friulana-slovena del Collio (frico, cjarsons)"
+    },
+    {
+      "area": "Collio",
+      "name": "Osteria Caramella",
+      "town": "Cormons",
+      "type": "Osteria / bar",
+      "specialty": "Prosciutto d'Osvaldo, frico e aperitivo nel centro di Cormons"
+    },
+    {
+      "area": "Sesto",
+      "name": "Malga Nemes",
+      "town": "Sesto (1.877 m)",
+      "type": "Malga (family)",
+      "specialty": "Canederli al burro, cucina di malga e parco giochi per bambini"
+    },
+    {
+      "area": "Sesto",
+      "name": "Ristorante Riega",
+      "town": "Sesto",
+      "type": "Ristorante",
+      "specialty": "Canederli, gulasch e cucina altoatesina in paese"
+    }
   ],
   "checklist": {
     "categories": [
@@ -1089,5 +1501,142 @@
         ]
       }
     ]
-  }
+  },
+  "hikes": [
+    {
+      "id": "nemes",
+      "area": "Sesto",
+      "name": "Rifugio Nemes (Nemeshütte)",
+      "type": "Rifugio",
+      "difficulty": "Media",
+      "duration": "2–3 h a/r",
+      "family": true,
+      "start": "Passo Monte Croce Comelico (dall'hotel)",
+      "description": "Salita panoramica dai prati del passo fino al rifugio e alla Malga Nemes, con vista sulle Dolomiti di Sesto. Partenza comoda proprio dall'hotel.",
+      "coordinates": {
+        "lat": 46.6553,
+        "lng": 12.4471
+      }
+    },
+    {
+      "id": "fiscalina",
+      "area": "Sesto",
+      "name": "Val Fiscalina e Rifugio Fondovalle (Talschlusshütte)",
+      "type": "Passeggiata",
+      "difficulty": "Facile",
+      "duration": "1–1,5 h",
+      "family": true,
+      "start": "Parcheggio Val Fiscalina / Bagni di Moso",
+      "description": "Passeggiata pianeggiante e ombreggiata lungo la valle fino al rifugio, con la celebre Meridiana di Sesto davanti. Adatta al passeggino nel primo tratto.",
+      "coordinates": {
+        "lat": 46.6706,
+        "lng": 12.3903
+      }
+    },
+    {
+      "id": "tre_cime",
+      "area": "Sesto",
+      "name": "Giro delle Tre Cime di Lavaredo e Rifugio Locatelli",
+      "type": "Escursione",
+      "difficulty": "Impegnativa",
+      "duration": "4–5 h (anello)",
+      "family": false,
+      "start": "Rifugio Auronzo (strada a pedaggio)",
+      "description": "L'anello classico attorno alle Tre Cime con la vista sulle pareti nord dal Rifugio Locatelli (Dreizinnenhütte). Impegnativo per i piccoli: valuta lo zaino porta-bimbo.",
+      "coordinates": {
+        "lat": 46.6132,
+        "lng": 12.2955
+      }
+    },
+    {
+      "id": "croda_rossa",
+      "area": "Sesto",
+      "name": "Prati di Croda Rossa (Rotwandwiesen)",
+      "type": "Passeggiata",
+      "difficulty": "Facile",
+      "duration": "cabinovia + 1–2 h",
+      "family": true,
+      "start": "Cabinovia Croda Rossa, Moso/Sesto",
+      "description": "Si sale in cabinovia agli ampi prati con parco giochi e rifugi (Rudi, Croda Rossa). Passeggiate facili e panoramiche, perfette con i bambini.",
+      "coordinates": {
+        "lat": 46.6613,
+        "lng": 12.3706
+      }
+    },
+    {
+      "id": "monte_elmo",
+      "area": "Sesto",
+      "name": "Monte Elmo (Helm) — panorami e giochi",
+      "type": "Panorama",
+      "difficulty": "Facile",
+      "duration": "cabinovia + 1–2 h",
+      "family": true,
+      "start": "Cabinovia Monte Elmo, Sesto",
+      "description": "Cabinovia fino in quota con vista a 360° sulle Dolomiti, sentieri facili e aree gioco per bambini. Ottima anche con meteo incerto a valle.",
+      "coordinates": {
+        "lat": 46.7226,
+        "lng": 12.4137
+      }
+    },
+    {
+      "id": "campo_dentro",
+      "area": "Sesto",
+      "name": "Val Campo di Dentro e Rifugio Tre Scarperi",
+      "type": "Passeggiata",
+      "difficulty": "Facile–Media",
+      "duration": "2–3 h a/r",
+      "family": true,
+      "start": "Parcheggio Val Campo di Dentro (San Candido)",
+      "description": "Ampia valle su strada forestale fino al rifugio ai piedi della Cima Tre Scarperi (Dreischusterhütte). Fattibile con passeggino da trekking nel primo tratto.",
+      "coordinates": {
+        "lat": 46.7302,
+        "lng": 12.3372
+      }
+    },
+    {
+      "id": "berti",
+      "area": "Sesto",
+      "name": "Rifugio Berti ai piedi della Croda dei Toni",
+      "type": "Rifugio",
+      "difficulty": "Impegnativa",
+      "duration": "4–5 h a/r",
+      "family": false,
+      "start": "Val Campo di Dentro / Comelico",
+      "description": "Escursione in ambiente selvaggio verso il rifugio dominato dalla Croda dei Toni. Per camminatori allenati, meno adatta ai più piccoli.",
+      "coordinates": {
+        "lat": 46.62,
+        "lng": 12.3719
+      }
+    },
+    {
+      "id": "braies",
+      "area": "Sesto",
+      "name": "Lago di Braies (Pragser Wildsee) — gita",
+      "type": "Gita / Lago",
+      "difficulty": "Facile",
+      "duration": "giro lago ~1,5 h (auto ~50 min)",
+      "family": true,
+      "start": "Lago di Braies (in alta stagione accesso auto regolamentato)",
+      "description": "Il lago più famoso delle Dolomiti: giro ad anello pianeggiante, barche a remi e panorami da cartolina. In agosto verifica le regole d'accesso in auto.",
+      "coordinates": {
+        "lat": 46.6947,
+        "lng": 12.0855
+      }
+    },
+    {
+      "id": "coltrondo",
+      "area": "Sesto",
+      "name": "Malga Coltrondo e Rifugio Rinfreddo (Comelico)",
+      "type": "Passeggiata",
+      "difficulty": "Facile",
+      "duration": "2–3 h a/r",
+      "family": true,
+      "start": "Padola / Passo Monte Croce (versante Comelico)",
+      "description": "Dolci pascoli del Comelico tra malghe e rifugi, con vista sulle Dolomiti di Sesto. Camminata tranquilla e genuina, adatta alle famiglie.",
+      "coordinates": {
+        "lat": 46.6083,
+        "lng": 12.4667
+      }
+    }
+  ]
 }
