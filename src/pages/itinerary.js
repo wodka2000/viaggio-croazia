@@ -2,6 +2,20 @@ import { fetchTripData } from '../utils/data.js'
 import { formatDateIT, formatDayOfWeek } from '../utils/data.js'
 import { getIdeasForDay, addIdea, deleteIdea } from '../utils/ideas.js'
 import { getUserBookingsForDay, bookingMapsUrl } from '../utils/bookings.js'
+import {
+  getDayProgram,
+  isDayModified,
+  editBaseActivity,
+  hideBaseActivity,
+  addActivity,
+  editAddedActivity,
+  removeAddedActivity,
+  resetDay,
+} from '../utils/program.js'
+
+// Stato di sessione: quali giorni sono in modalità modifica + mappa date→day.
+const _editModeDates = new Set()
+let _daysByDate = {}
 
 export async function renderItinerary() {
   const content = document.getElementById('page-content')
@@ -17,6 +31,7 @@ export async function renderItinerary() {
   const { days, hotels, meta } = data
   const ferries = data.ferries || []
   const hotelMap = Object.fromEntries(hotels.map(h => [h.id, h]))
+  _daysByDate = Object.fromEntries(days.map(d => [d.date, d]))
 
   content.innerHTML = `
     <div class="page-header">
@@ -57,6 +72,9 @@ export async function renderItinerary() {
   // Quick-add idea per giorno
   _bindDayIdeaEvents(days)
 
+  // Modifica programma del giorno
+  _bindProgramEvents()
+
   // Sync in tempo reale: quando le idee cambiano, aggiorna le sezioni idee
   const handler = () => {
     document.querySelectorAll('.day-ideas-section').forEach(section => {
@@ -65,13 +83,10 @@ export async function renderItinerary() {
     })
   }
 
-  // Sync prenotazioni: ridisegna le righe-attività di ogni giorno.
+  // Sync prenotazioni: ridisegna le attività dei giorni interessati.
   const bookingsHandler = () => {
     document.querySelectorAll('.activities[data-date]').forEach(list => {
-      const date = list.dataset.date
-      // Rimuovi le righe prenotazione esistenti e riaggiungile aggiornate.
-      list.querySelectorAll('.activity-booking').forEach(el => el.remove())
-      list.insertAdjacentHTML('beforeend', _renderBookingActivities(date))
+      _rerenderDayActivities(list.dataset.date)
     })
   }
 
@@ -124,16 +139,7 @@ function renderDay(day, hotelMap, ferries = []) {
             `).join('')}
 
             <div class="activities" data-date="${day.date}">
-              ${day.activities.map(a => `
-                <div class="activity-item with-dot">
-                  <span class="activity-time">${a.time}</span>
-                  <span>
-                    ${a.text}
-                    ${a.maps ? `<a class="activity-maps" href="${_esc(a.maps)}" target="_blank" rel="noopener">🗺️ Maps</a>` : ''}
-                  </span>
-                </div>
-              `).join('')}
-              ${_renderBookingActivities(day.date)}
+              ${_renderActivitiesInner(day, _editModeDates.has(day.date))}
             </div>
 
             ${renderTips(day.tips)}
@@ -221,7 +227,61 @@ function _renderDayIdeas(date) {
   `).join('')
 }
 
-/* ── PRENOTAZIONI COME ATTIVITÀ ───────────────────────────── */
+/* ── PROGRAMMA DEL GIORNO (visualizza + modifica) ─────────── */
+
+// Contenuto del contenitore .activities: in lettura mostra le attività
+// (base + modifiche utente) e le prenotazioni; in modifica mostra i campi
+// per cambiare orario/testo, eliminare e aggiungere attività.
+function _renderActivitiesInner(day, editMode) {
+  const items = getDayProgram(day.date, day.activities)
+
+  if (editMode) {
+    return `
+      <div class="program-edit">
+        ${items.map(_renderEditRow).join('')}
+        <div class="program-add-row">
+          <input type="text" class="prog-add-time" placeholder="Ora" />
+          <input type="text" class="prog-add-text" placeholder="Nuova attività…" />
+          <button type="button" class="prog-add-btn" data-date="${day.date}" title="Aggiungi">＋</button>
+        </div>
+        <div class="program-controls">
+          <button type="button" class="btn btn-primary program-edit-done" data-date="${day.date}"
+            style="font-size:0.8rem;padding:0.3rem 0.7rem;">✓ Fine</button>
+          <button type="button" class="btn btn-outline program-reset" data-date="${day.date}"
+            style="font-size:0.8rem;padding:0.3rem 0.7rem;">↺ Ripristina giorno</button>
+        </div>
+      </div>
+    `
+  }
+
+  return `
+    ${items.map(it => `
+      <div class="activity-item with-dot">
+        <span class="activity-time">${_esc(it.time)}</span>
+        <span>
+          ${_esc(it.text)}
+          ${it.maps ? `<a class="activity-maps" href="${_esc(it.maps)}" target="_blank" rel="noopener">🗺️ Maps</a>` : ''}
+        </span>
+      </div>
+    `).join('')}
+    ${_renderBookingActivities(day.date)}
+    <div class="program-controls">
+      <button type="button" class="program-edit-toggle" data-date="${day.date}">✏️ Modifica programma</button>
+      ${isDayModified(day.date) ? '<span class="program-modified">modificato</span>' : ''}
+    </div>
+  `
+}
+
+function _renderEditRow(it) {
+  const ref = it.base ? `data-index="${it.index}"` : `data-id="${_esc(it.id)}"`
+  return `
+    <div class="program-edit-row" data-base="${it.base}" ${ref}>
+      <input type="text" class="prog-time" value="${_esc(it.time)}" placeholder="Ora" />
+      <input type="text" class="prog-text" value="${_esc(it.text)}" placeholder="Attività" />
+      <button type="button" class="prog-del" title="Elimina">🗑️</button>
+    </div>
+  `
+}
 
 // Le prenotazioni aggiunte dall'utente (in Note logistiche) compaiono
 // come attività del loro giorno, con il link diretto a Maps.
@@ -240,6 +300,13 @@ function _renderBookingActivities(date) {
       </div>
     `
   }).join('')
+}
+
+// Ridisegna il contenitore attività di un giorno nella modalità corrente.
+function _rerenderDayActivities(date) {
+  const container = document.querySelector(`.activities[data-date="${date}"]`)
+  const day = _daysByDate[date]
+  if (container && day) container.innerHTML = _renderActivitiesInner(day, _editModeDates.has(date))
 }
 
 /* ── EVENTS ───────────────────────────────────────────────── */
@@ -309,6 +376,83 @@ function _bindDayIdeaEvents(days) {
     form.querySelector('.quick-checklist').checked = false
     form.classList.add('hidden')
     // La sezione idee si aggiorna via ideas:updated
+  })
+}
+
+function _bindProgramEvents() {
+  const timeline = document.querySelector('.timeline')
+  if (!timeline) return
+
+  timeline.addEventListener('click', e => {
+    // Entra in modifica
+    const toggle = e.target.closest('.program-edit-toggle')
+    if (toggle) { _editModeDates.add(toggle.dataset.date); _rerenderDayActivities(toggle.dataset.date); return }
+
+    // Esci dalla modifica
+    const done = e.target.closest('.program-edit-done')
+    if (done) { _editModeDates.delete(done.dataset.date); _rerenderDayActivities(done.dataset.date); return }
+
+    // Ripristina il giorno come da itinerario originale
+    const reset = e.target.closest('.program-reset')
+    if (reset) {
+      const date = reset.dataset.date
+      if (confirm('Ripristinare il programma di questo giorno come nell’itinerario originale? Le modifiche fatte a questo giorno andranno perse.')) {
+        resetDay(date)
+        _editModeDates.delete(date)
+        _rerenderDayActivities(date)
+      }
+      return
+    }
+
+    // Elimina un'attività
+    const del = e.target.closest('.prog-del')
+    if (del) {
+      const row  = del.closest('.program-edit-row')
+      const date = del.closest('.activities')?.dataset.date
+      if (!row || !date) return
+      if (row.dataset.base === 'true') hideBaseActivity(date, Number(row.dataset.index))
+      else removeAddedActivity(date, row.dataset.id)
+      _rerenderDayActivities(date)
+      return
+    }
+
+    // Aggiungi un'attività
+    const add = e.target.closest('.prog-add-btn')
+    if (add) {
+      const date = add.dataset.date
+      const wrap = add.closest('.program-add-row')
+      const time = wrap.querySelector('.prog-add-time')?.value.trim() || ''
+      const text = wrap.querySelector('.prog-add-text')?.value.trim() || ''
+      if (!text) { wrap.querySelector('.prog-add-text')?.focus(); return }
+      addActivity(date, { time, text })
+      _rerenderDayActivities(date)
+      document.querySelector(`.activities[data-date="${date}"] .prog-add-text`)?.focus()
+      return
+    }
+  })
+
+  // Invio nel campo "nuova attività" = aggiungi
+  timeline.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && e.target.classList.contains('prog-add-text')) {
+      e.preventDefault()
+      e.target.closest('.program-add-row')?.querySelector('.prog-add-btn')?.click()
+    }
+  })
+
+  // Salva le modifiche a orario/testo su blur, senza ridisegnare (per non
+  // perdere il focus mentre si scrive). Il riordino per orario si applica
+  // all'uscita dalla modifica.
+  timeline.addEventListener('change', e => {
+    const input = e.target
+    const isTime = input.classList?.contains('prog-time')
+    const isText = input.classList?.contains('prog-text')
+    if (!isTime && !isText) return
+    const row  = input.closest('.program-edit-row')
+    const date = input.closest('.activities')?.dataset.date
+    if (!row || !date) return
+    const patch = { [isTime ? 'time' : 'text']: input.value.trim() }
+    if (row.dataset.base === 'true') editBaseActivity(date, Number(row.dataset.index), patch)
+    else editAddedActivity(date, row.dataset.id, patch)
   })
 }
 

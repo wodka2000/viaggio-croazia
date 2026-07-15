@@ -2265,6 +2265,116 @@ a.idea-meta-chip.idea-meta-link:hover { background: #eff6ff; color: var(--color-
 
 .activity-maps:hover { text-decoration: underline; }
 
+/* =========================================================
+   PROGRAMMA DEL GIORNO — modifica inline
+   ========================================================= */
+.program-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.program-edit-toggle {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.25rem 0;
+  transition: color var(--transition);
+}
+
+.program-edit-toggle:hover { color: var(--color-primary); }
+
+.program-modified {
+  font-size: 0.66rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  background: rgba(0,0,0,0.04);
+  padding: 0.05rem 0.4rem;
+  border-radius: 10px;
+}
+
+.program-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.program-edit-row,
+.program-add-row {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.program-edit-row .prog-time,
+.program-add-row .prog-add-time {
+  flex: 0 0 68px;
+  min-width: 0;
+}
+
+.program-edit-row .prog-text,
+.program-add-row .prog-add-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.program-edit input {
+  font: inherit;
+  font-size: 0.84rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.program-edit input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.prog-del {
+  flex: 0 0 auto;
+  font-size: 0.95rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0.3rem;
+  border-radius: 6px;
+  opacity: 0.75;
+  transition: opacity var(--transition), background var(--transition);
+}
+
+.prog-del:hover { opacity: 1; background: rgba(239,68,68,0.1); }
+
+.program-add-row {
+  margin-top: 0.2rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.prog-add-btn {
+  flex: 0 0 auto;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+.prog-add-btn:hover { filter: brightness(1.05); }
+
 /* Righe "prenotazione" iniettate tra le attività del giorno */
 .activity-booking-tag {
   display: inline-block;
