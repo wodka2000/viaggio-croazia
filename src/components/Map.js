@@ -18,6 +18,10 @@ export async function renderMap() {
     <div class="page-header">
       <h1>🗺️ Mappa del Viaggio</h1>
       <p>Percorso completo, alloggi e idee geo-localizzate</p>
+      <a id="open-route-gmaps" class="btn btn-primary" target="_blank" rel="noopener"
+         style="display:none; margin-top:0.6rem;">
+        🚗 Apri percorso stradale in Google Maps
+      </a>
     </div>
     <div class="map-container" id="map-outer">
       <div class="map-controls" id="map-controls">
@@ -32,6 +36,14 @@ export async function renderMap() {
   `
 
   _tripData = await fetchTripData()
+
+  // Pulsante "percorso stradale" — link Google Maps generato dalle tappe (funziona anche senza API key)
+  const routeUrl = buildDrivingRouteUrl(_tripData)
+  const routeBtn = document.getElementById('open-route-gmaps')
+  if (routeBtn && routeUrl) {
+    routeBtn.href = routeUrl
+    routeBtn.style.display = 'inline-flex'
+  }
 
   if (!API_KEY) {
     renderNoKeyFallback(content, _tripData)
@@ -300,6 +312,20 @@ function drawDrivingRoute(data) {
 function applyRouteVisibility() {
   const visible = activeLayer === 'all' || activeLayer === 'route'
   routeElements.forEach(e => e.setMap(visible ? mapInstance : null))
+}
+
+// Costruisce l'URL Google Maps con l'itinerario stradale (tappe uniche in ordine).
+function buildDrivingRouteUrl(data) {
+  const pts = []
+  data.days.filter(d => d.coordinates).forEach(d => {
+    const last = pts[pts.length - 1]
+    if (!last || last.lat !== d.coordinates.lat || last.lng !== d.coordinates.lng) {
+      pts.push(d.coordinates)
+    }
+  })
+  if (pts.length < 2) return null
+  const path = pts.map(p => `${p.lat},${p.lng}`).join('/')
+  return `https://www.google.com/maps/dir/${path}`
 }
 
 function fitBounds(data) {
