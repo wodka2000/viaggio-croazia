@@ -1579,6 +1579,21 @@
       }
     },
     {
+      "id": "dobbiaco_lienz",
+      "area": "Sesto",
+      "name": "Ciclabile Dobbiaco–Lienz (lungo la Drava)",
+      "type": "Bici",
+      "difficulty": "Facile",
+      "duration": "~44 km · 3–4 h (rientro in treno)",
+      "family": true,
+      "start": "Dobbiaco (noleggio bici) — rientro in treno da Lienz",
+      "description": "La classica biciclettata lungo il fiume Drava: da Dobbiaco a Lienz (Austria), circa 44 km quasi tutti in leggera discesa, su pista ciclabile asfaltata e sicura. Ideale con i bambini; bici a noleggio e comodo rientro in treno con la bici al seguito.",
+      "coordinates": {
+        "lat": 46.735,
+        "lng": 12.2206
+      }
+    },
+    {
       "id": "campo_dentro",
       "area": "Sesto",
       "name": "Val Campo di Dentro e Rifugio Tre Scarperi",
