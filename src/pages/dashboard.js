@@ -1,5 +1,6 @@
 import { fetchTripData } from '../utils/data.js'
 import { formatDateIT, daysUntil } from '../utils/data.js'
+import { loadIdeas } from '../utils/ideas.js'
 
 export async function renderDashboard() {
   const content = document.getElementById('page-content')
@@ -34,6 +35,9 @@ export async function renderDashboard() {
   const bookedStructures = confirmedHotels.length
   const bookedNights     = confirmedHotels.reduce((s, h) => s + h.nights, 0)
 
+  // Suggerimenti per la tappa corrente: attività del giorno + ristoranti in zona + idee abbinate
+  const suggestionCount = currentDay ? suggestionsCount(currentDay, data.dining) : 0
+
   content.innerHTML = `
     <div class="dashboard-hero">
       <h1>${meta.emoji} ${meta.title}</h1>
@@ -64,6 +68,12 @@ export async function renderDashboard() {
         <div class="stat-value">${bookedNights}</div>
         <div class="stat-label">Notti prenotate</div>
       </div>
+      <button type="button" class="stat-card stat-card--action" id="suggestions-card"
+        title="Vedi i suggerimenti per ${currentDay ? currentDay.location : 'la tappa'}">
+        <div class="stat-icon">💡</div>
+        <div class="stat-value">${suggestionCount}</div>
+        <div class="stat-label">Attività suggerite<br><span class="stat-card-cta">tocca per aprire →</span></div>
+      </button>
     </div>
 
     <div class="dashboard-grid">
@@ -101,8 +111,6 @@ export async function renderDashboard() {
       </div>
     </div>
 
-    ${diningHtml(data.dining)}
-
     <div style="margin-top:1.25rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
       <a href="#itinerary" class="btn btn-primary">📅 Vai all'itinerario</a>
       <a href="#hotels" class="btn btn-outline">🏨 Controlla gli hotel</a>
@@ -113,47 +121,119 @@ export async function renderDashboard() {
       <a href="#ideas" class="btn btn-outline">💡 Idee rapide</a>
     </div>
   `
+
+  // Apertura popup suggerimenti del giorno
+  document.getElementById('suggestions-card')?.addEventListener('click', () => {
+    if (!currentDay) return
+    openSuggestionsModal(currentDay, data.dining)
+  })
 }
 
-function diningHtml(dining) {
-  if (!dining || !dining.length) return ''
+/* ── SUGGERIMENTI DEL GIORNO ──────────────────────────── */
 
-  // Raggruppa per area mantenendo l'ordine di comparsa
-  const groups = {}
-  const order = []
-  for (const d of dining) {
-    if (!groups[d.area]) { groups[d.area] = []; order.push(d.area) }
-    groups[d.area].push(d)
-  }
+// Ristoranti la cui area combacia con la località della tappa
+function diningForLocation(dining, location) {
+  if (!dining || !location) return []
+  const loc = location.toLowerCase()
+  return dining.filter(d => loc.includes(d.area.toLowerCase()))
+}
 
-  const mapsSearch = q => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`
+// Idee salvate (localStorage) abbinate a questo giorno
+function ideasForDay(date) {
+  return loadIdeas().filter(i => i.day_date === date && i.stato !== 'scartata')
+}
 
-  return `
-    <div class="card card-body dining-section" style="margin-top:1.25rem;">
-      <div class="section-title">🍽️ Dove mangiare — consigli per tappa</div>
-      <p style="font-size:0.82rem; color:var(--color-text-muted); margin:-0.25rem 0 0.75rem;">
-        Locali consigliati dove gustare le specialità di ogni zona. Tocca per aprire su Maps (orari, recensioni, indicazioni).
-      </p>
-      ${order.map(area => `
-        <div class="dining-area">
-          <div class="dining-area-title">📍 ${area}</div>
-          <div class="dining-list">
-            ${groups[area].map(d => `
-              <a class="dining-item" target="_blank" rel="noopener"
-                 href="${mapsSearch(d.name + ' ' + d.town)}">
-                <div class="dining-item-head">
-                  <span class="dining-name">${d.name}</span>
-                  ${d.type ? `<span class="dining-type">${d.type}</span>` : ''}
-                </div>
-                <div class="dining-town">📍 ${d.town}</div>
-                <div class="dining-spec">${d.specialty}</div>
-              </a>
-            `).join('')}
-          </div>
-        </div>
-      `).join('')}
+// Numero totale di suggerimenti mostrati nel popup per la tappa
+function suggestionsCount(day, dining) {
+  const acts = day.activities?.length || 0
+  const rest = diningForLocation(dining, day.location).length
+  const ideas = ideasForDay(day.date).length
+  return acts + rest + ideas
+}
+
+function openSuggestionsModal(day, dining) {
+  document.getElementById('suggestions-modal')?.remove()
+
+  const restaurants = diningForLocation(dining, day.location)
+  const ideas       = ideasForDay(day.date)
+  const tipsDo      = day.tips?.do || []
+  const tipsEat     = day.tips?.eat || []
+  const mapsSearch  = q => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`
+
+  const activitiesHtml = (day.activities?.length)
+    ? `<div class="sugg-section">
+         <div class="sugg-section-title">🎯 Programma del giorno</div>
+         <div class="sugg-activities">
+           ${day.activities.map(a => `
+             <div class="sugg-activity">
+               <span class="sugg-activity-time">${esc(a.time)}</span>
+               <span>${esc(a.text)}</span>
+             </div>`).join('')}
+         </div>
+       </div>` : ''
+
+  const tipsHtml = (tipsDo.length)
+    ? `<div class="sugg-section">
+         <div class="sugg-section-title">✨ Cose da fare in zona</div>
+         <ul class="sugg-tips">${tipsDo.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+       </div>` : ''
+
+  const restaurantsHtml = (restaurants.length || tipsEat.length)
+    ? `<div class="sugg-section">
+         <div class="sugg-section-title">🍽️ Dove mangiare in zona</div>
+         ${tipsEat.length ? `<ul class="sugg-tips">${tipsEat.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+         <div class="sugg-dining">
+           ${restaurants.map(d => `
+             <a class="sugg-dining-item" target="_blank" rel="noopener" href="${mapsSearch(d.name + ' ' + d.town)}">
+               <div class="sugg-dining-head">
+                 <span class="sugg-dining-name">${esc(d.name)}</span>
+                 ${d.type ? `<span class="sugg-dining-type">${esc(d.type)}</span>` : ''}
+               </div>
+               <div class="sugg-dining-town">📍 ${esc(d.town)}</div>
+               <div class="sugg-dining-spec">${esc(d.specialty)}</div>
+             </a>`).join('')}
+         </div>
+       </div>` : ''
+
+  const ideasHtml = `
+    <div class="sugg-section">
+      <div class="sugg-section-title">💡 Le tue idee per questo giorno</div>
+      ${ideas.length
+        ? `<div class="sugg-ideas">${ideas.map(i => `
+            <div class="sugg-idea">
+              <span class="sugg-idea-text">${esc(i.text)}</span>
+              ${i.note ? `<span class="sugg-idea-note">${esc(i.note)}</span>` : ''}
+              ${i.location_name ? `<span class="sugg-idea-chip">📍 ${esc(i.location_name)}</span>` : ''}
+              ${i.link ? `<a href="${esc(i.link)}" target="_blank" rel="noopener" class="sugg-idea-chip">🔗 Link</a>` : ''}
+            </div>`).join('')}</div>`
+        : `<p class="sugg-empty">Nessuna idea abbinata a questo giorno. Aggiungine dalla pagina <a href="#ideas">💡 Idee rapide</a> (imposta il campo “Giorno”).</p>`
+      }
+    </div>`
+
+  const body = activitiesHtml + tipsHtml + restaurantsHtml + ideasHtml
+
+  const modal = document.createElement('div')
+  modal.id = 'suggestions-modal'
+  modal.className = 'day-link-modal-overlay'
+  modal.innerHTML = `
+    <div class="day-link-modal suggestions-modal">
+      <button type="button" class="sugg-close" id="sugg-close" aria-label="Chiudi">✕</button>
+      <div class="sugg-header">
+        <div class="sugg-title">💡 Suggerimenti — Gg. ${day.day}</div>
+        <div class="sugg-subtitle">📍 ${esc(day.location)} · ${formatDateIT(day.date)}</div>
+      </div>
+      <div class="sugg-body">${body}</div>
     </div>
   `
+  document.body.appendChild(modal)
+
+  const close = () => modal.remove()
+  document.getElementById('sugg-close')?.addEventListener('click', close)
+  modal.addEventListener('click', e => { if (e.target === modal) close() })
+}
+
+function esc(str) {
+  return String(str ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
 }
 
 function countdownHtml(departure, end) {
