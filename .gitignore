@@ -9,6 +9,9 @@ dist/
 # Config con API key — usa config.template.js come riferimento
 src/config.js
 
+# Documenti personali / prenotazioni — MAI committare (repo pubblico)
+*.pdf
+
 # OS
 .DS_Store
 Thumbs.db
