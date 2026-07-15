@@ -7,7 +7,8 @@ let mapInstance    = null
 let markersHotels  = []
 let markersRoute   = []
 let markersIdeas   = []
-let routePolyline  = null
+let routeElements  = []
+let activeLayer    = 'all'
 let _tripData      = null
 
 export async function renderMap() {
@@ -115,7 +116,7 @@ function initMap(data) {
 
   addRouteMarkers(data)
   addHotelMarkers(data)
-  drawRoutePolyline(data)
+  drawDrivingRoute(data)
   addIdeaMarkers()
   fitBounds(data)
 }
@@ -240,19 +241,65 @@ function addIdeaMarkers() {
   })
 }
 
-function drawRoutePolyline(data) {
-  routePolyline = new google.maps.Polyline({
-    path: data.days.filter(d => d.coordinates).map(d => d.coordinates),
-    geodesic: true,
-    strokeColor: '#3b82f6',
-    strokeOpacity: 0.7,
-    strokeWeight: 3,
-    icons: [{
-      icon: { path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW, scale: 3 },
-      repeat: '120px',
-    }],
-    map: mapInstance,
+// Disegna il percorso stradale reale tra le tappe usando le Directions di Google.
+// Ogni tratta è una richiesta indipendente: se una non è instradabile in auto
+// (es. tratta con traghetto verso l'isola), si ripiega su una linea tratteggiata.
+function drawDrivingRoute(data) {
+  routeElements.forEach(e => e.setMap(null))
+  routeElements = []
+
+  // Sequenza tappe unica: rimuove coordinate consecutive duplicate (giorni nella stessa base)
+  const pts = []
+  data.days.filter(d => d.coordinates).forEach(d => {
+    const last = pts[pts.length - 1]
+    if (!last || last.lat !== d.coordinates.lat || last.lng !== d.coordinates.lng) {
+      pts.push(d.coordinates)
+    }
   })
+  if (pts.length < 2) return
+
+  const service = new google.maps.DirectionsService()
+
+  for (let i = 0; i < pts.length - 1; i++) {
+    const origin = pts[i]
+    const destination = pts[i + 1]
+    service.route(
+      { origin, destination, travelMode: google.maps.TravelMode.DRIVING },
+      (result, status) => {
+        if (status === 'OK' && result) {
+          const renderer = new google.maps.DirectionsRenderer({
+            map: mapInstance,
+            directions: result,
+            suppressMarkers: true,
+            suppressInfoWindows: true,
+            preserveViewport: true,
+            polylineOptions: { strokeColor: '#2563eb', strokeOpacity: 0.9, strokeWeight: 5 },
+          })
+          routeElements.push(renderer)
+        } else {
+          // Fallback: linea tratteggiata (tratta non instradabile in auto, es. traghetto)
+          const line = new google.maps.Polyline({
+            path: [origin, destination],
+            map: mapInstance,
+            geodesic: true,
+            strokeOpacity: 0,
+            icons: [{
+              icon: { path: 'M 0,-1 0,1', strokeColor: '#f59e0b', strokeOpacity: 0.9, scale: 3 },
+              offset: '0',
+              repeat: '14px',
+            }],
+          })
+          routeElements.push(line)
+        }
+        applyRouteVisibility()
+      }
+    )
+  }
+}
+
+function applyRouteVisibility() {
+  const visible = activeLayer === 'all' || activeLayer === 'route'
+  routeElements.forEach(e => e.setMap(visible ? mapInstance : null))
 }
 
 function fitBounds(data) {
@@ -276,11 +323,12 @@ function initLayerControls() {
     document.querySelectorAll('.map-btn').forEach(b => b.classList.remove('active'))
     btn.classList.add('active')
     const layer = btn.dataset.layer
+    activeLayer = layer
 
     markersRoute.forEach(m  => m.setVisible(layer === 'all' || layer === 'route'))
     markersHotels.forEach(m => m.setVisible(layer === 'all' || layer === 'hotels'))
     markersIdeas.forEach(m  => m.setVisible(layer === 'all' || layer === 'ideas'))
-    routePolyline?.setVisible(layer === 'all' || layer === 'route')
+    applyRouteVisibility()
   })
 }
 
