@@ -8,10 +8,12 @@ import { renderMap }       from './components/Map.js'
 import { renderIdeas }     from './pages/ideas.js'
 import { renderNatura }    from './pages/natura.js'
 import { renderLogistics } from './pages/logistics.js'
+import { renderAttivita }  from './pages/attivita.js'
 
 const routes = {
   '#dashboard': renderDashboard,
   '#itinerary': renderItinerary,
+  '#attivita':  renderAttivita,
   '#hotels':    renderHotels,
   '#checklist': renderChecklist,
   '#map':       renderMap,
