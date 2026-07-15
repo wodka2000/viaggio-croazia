@@ -1636,7 +1636,8 @@
       "coordinates": {
         "lat": 46.6947,
         "lng": 12.0855
-      }
+      },
+      "car": true
     },
     {
       "id": "coltrondo",
@@ -1651,6 +1652,118 @@
       "coordinates": {
         "lat": 46.6083,
         "lng": 12.4667
+      }
+    },
+    {
+      "id": "misurina",
+      "area": "Sesto",
+      "name": "Lago di Misurina",
+      "type": "Lago",
+      "difficulty": "Facile",
+      "duration": "giro lago ~1 h (auto ~30 min)",
+      "family": true,
+      "car": true,
+      "start": "Misurina (parcheggi lungo il lago)",
+      "description": "Giro pianeggiante attorno al lago più bello del Cadore, ai piedi del Sorapiss e vicino alle Tre Cime. Passeggino ok, barche a pedali e bar sul lungolago.",
+      "coordinates": {
+        "lat": 46.5817,
+        "lng": 12.2536
+      }
+    },
+    {
+      "id": "dobbiaco_lago",
+      "area": "Sesto",
+      "name": "Lago di Dobbiaco (Toblacher See)",
+      "type": "Lago",
+      "difficulty": "Facile",
+      "duration": "giro lago ~1 h (auto ~20 min)",
+      "family": true,
+      "car": true,
+      "start": "Lago di Dobbiaco (parcheggio)",
+      "description": "Facile giro ad anello su fondo pianeggiante immerso nei boschi, con noleggio barche e aree picnic. Perfetto con passeggino e bambini piccoli.",
+      "coordinates": {
+        "lat": 46.7233,
+        "lng": 12.2489
+      }
+    },
+    {
+      "id": "san_candido",
+      "area": "Sesto",
+      "name": "San Candido (Innichen) e Acquafun",
+      "type": "Paese / Acqua",
+      "difficulty": "Facile",
+      "duration": "mezza giornata (auto ~25 min)",
+      "family": true,
+      "car": true,
+      "start": "San Candido (centro / Acquafun)",
+      "description": "Grazioso centro storico con la Collegiata romanica, gelaterie e negozi; accanto il centro acquatico Acquafun con scivoli e piscine. Ottimo per il pomeriggio o con meteo incerto.",
+      "coordinates": {
+        "lat": 46.7325,
+        "lng": 12.2807
+      }
+    },
+    {
+      "id": "santa_caterina",
+      "area": "Sesto",
+      "name": "Lago di Santa Caterina (Auronzo)",
+      "type": "Lago",
+      "difficulty": "Facile",
+      "duration": "passeggiata + spiaggia (auto ~25 min)",
+      "family": true,
+      "car": true,
+      "start": "Auronzo di Cadore (lungolago)",
+      "description": "Lago balneabile con spiaggette, pedalò e lungolago pianeggiante, sul versante Comelico vicino al passo. Bella opzione per una giornata più rilassata con i bimbi.",
+      "coordinates": {
+        "lat": 46.5522,
+        "lng": 12.43
+      }
+    },
+    {
+      "id": "kronplatz",
+      "area": "Sesto",
+      "name": "Plan de Corones (Kronplatz)",
+      "type": "In quota",
+      "difficulty": "Facile–Media",
+      "duration": "giornata (auto ~1 h + funivia)",
+      "family": true,
+      "car": true,
+      "start": "Funivia da Valdaora / Brunico",
+      "description": "Funivia fino in cima con parco giochi di montagna, sentieri panoramici e i musei Messner (MMM Corones) e della fotografia (LUMEN). Tanto divertimento per i bambini.",
+      "coordinates": {
+        "lat": 46.7378,
+        "lng": 11.9542
+      }
+    },
+    {
+      "id": "cortina",
+      "area": "Sesto",
+      "name": "Cortina d'Ampezzo e Lago di Ghedina",
+      "type": "Gita",
+      "difficulty": "Facile",
+      "duration": "mezza/intera giornata (auto ~45 min)",
+      "family": true,
+      "car": true,
+      "start": "Cortina d'Ampezzo (centro)",
+      "description": "Passeggiata nel centro pedonale della \"regina delle Dolomiti\" e sosta al laghetto di Ghedina immerso nei boschi. Gita comoda e scenografica.",
+      "coordinates": {
+        "lat": 46.5405,
+        "lng": 12.1357
+      }
+    },
+    {
+      "id": "monte_piana",
+      "area": "Sesto",
+      "name": "Monte Piana — museo all'aperto della Grande Guerra",
+      "type": "Storia",
+      "difficulty": "Media",
+      "duration": "mezza giornata (auto ~35 min + navetta)",
+      "family": true,
+      "car": true,
+      "start": "Misurina (navetta jeep o sentiero)",
+      "description": "Altopiano tra trincee, gallerie e postazioni della Prima Guerra Mondiale, con viste spettacolari sulle Dolomiti. Salita in jeep-navetta da Misurina; più adatto ai bimbi più grandi.",
+      "coordinates": {
+        "lat": 46.6206,
+        "lng": 12.2361
       }
     }
   ],

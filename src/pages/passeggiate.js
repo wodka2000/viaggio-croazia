@@ -26,8 +26,8 @@ export async function renderPasseggiate() {
 
   content.innerHTML = `
     <div class="page-header">
-      <h1>🥾 Passeggiate &amp; Rifugi</h1>
-      <p>Dolomiti di Sesto — base al Passo Monte Croce (Kreuzbergpass). Scegli le mete e aggiungile a un giorno: compariranno nelle <a href="#attivita">attività suggerite</a> di quella data.</p>
+      <h1>🥾 Passeggiate, Rifugi &amp; Gite</h1>
+      <p>Dolomiti di Sesto — base al Passo Monte Croce (Kreuzbergpass). Passeggiate, rifugi e gite in zona (anche in auto). Scegli le mete e aggiungile a un giorno: compariranno nelle <a href="#attivita">attività suggerite</a> di quella data.</p>
     </div>
 
     <div class="hike-filters" id="hike-filters">
@@ -54,6 +54,7 @@ function filtersHtml() {
     { key: 'tutte',   label: `Tutte (${_hikes.length})` },
     { key: 'family',  label: `👶 Adatte ai bimbi (${_hikes.filter(h => h.family).length})` },
     { key: 'facili',  label: `🟢 Facili (${_hikes.filter(h => /facile/i.test(h.difficulty)).length})` },
+    { key: 'auto',    label: `🚗 In auto (${_hikes.filter(h => h.car).length})` },
     { key: 'rifugi',  label: `🏔️ Rifugi (${_hikes.filter(h => /rifugio/i.test(h.type)).length})` },
   ]
   return f.map(x => `
@@ -65,6 +66,7 @@ function filteredHikes() {
   switch (_filter) {
     case 'family': return _hikes.filter(h => h.family)
     case 'facili': return _hikes.filter(h => /facile/i.test(h.difficulty))
+    case 'auto':   return _hikes.filter(h => h.car)
     case 'rifugi': return _hikes.filter(h => /rifugio/i.test(h.type))
     default:       return _hikes
   }
@@ -110,6 +112,7 @@ function listHtml() {
           <div class="hike-badges">
             <span class="hike-type">${esc(h.type)}</span>
             <span class="hike-diff ${diffClass(h.difficulty)}">${esc(h.difficulty)}</span>
+            ${h.car ? `<span class="hike-family" title="Raggiungibile in auto">🚗</span>` : ''}
             ${h.family ? `<span class="hike-family" title="Adatta ai bambini">👶</span>` : ''}
           </div>
         </div>
