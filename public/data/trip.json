@@ -799,6 +799,23 @@
       "text": "Una sola notte all'Apartman Silvija: tenere pronto un borsone 'essenziale' per la notte senza disfare tutto. Kuterevo Bear Sanctuary è a ~20 min dall'alloggio."
     }
   ],
+  "dining": [
+    { "area": "Brač", "name": "Konoba Bracera", "town": "Postira", "type": "Konoba", "specialty": "Pesce fresco, calamari e frutti di mare sulla baia di Postira" },
+    { "area": "Brač", "name": "Konoba Tomić", "town": "Gornji Humac (Brač)", "type": "Konoba", "specialty": "Peka di agnello e carni alla griglia, cucina autentica dell'interno" },
+    { "area": "Area di Zara", "name": "Foša", "town": "Zadar", "type": "Ristorante", "specialty": "Pesce e cucina dalmata nel porticciolo storico Foša" },
+    { "area": "Area di Zara", "name": "Pet Bunara", "town": "Zadar (centro storico)", "type": "Ristorante", "specialty": "Specialità dalmate tradizionali nella città vecchia" },
+    { "area": "Velebit / Otočac", "name": "Bistro Ribič", "town": "Otočac", "type": "Bistro", "specialty": "Trota della Gacka, sulla riva del fiume — lunga tradizione" },
+    { "area": "Velebit / Otočac", "name": "Restoran Vrilo Gacke", "town": "Otočac (sorgente Gacka)", "type": "Ristorante", "specialty": "Trota e agnello/vitello sotto la peka, alla sorgente della Gacka" },
+    { "area": "Rovigno", "name": "Konoba Rovignese", "town": "Rovigno", "type": "Konoba (family)", "specialty": "Cucina istriana, porzioni generose e area giochi per bambini" },
+    { "area": "Rovigno", "name": "Konoba Tugurio", "town": "Rovigno", "type": "Konoba", "specialty": "Scampi alla busara e pesce, konoba tradizionale in centro" },
+    { "area": "Rovigno", "name": "Monte", "town": "Rovigno", "type": "Fine dining", "specialty": "Alta cucina istriana, 1 stella Michelin (serata speciale, su prenotazione)" },
+    { "area": "Trieste", "name": "Buffet da Pepi", "town": "Trieste (Via Cassa di Risparmio 3)", "type": "Buffet storico", "specialty": "Prosciutto cotto caldo, jota e gulasch — dal 1897" },
+    { "area": "Trieste", "name": "Caffè San Marco", "town": "Trieste", "type": "Caffè storico", "specialty": "Colazione e pausa caffè in un'atmosfera liberty (dal 1914)" },
+    { "area": "Collio", "name": "Trattoria al Cacciatore – La Subida", "town": "Cormons", "type": "Trattoria", "specialty": "Cucina friulana-slovena del Collio (frico, cjarsons)" },
+    { "area": "Collio", "name": "Osteria Caramella", "town": "Cormons", "type": "Osteria / bar", "specialty": "Prosciutto d'Osvaldo, frico e aperitivo nel centro di Cormons" },
+    { "area": "Sesto", "name": "Malga Nemes", "town": "Sesto (1.877 m)", "type": "Malga (family)", "specialty": "Canederli al burro, cucina di malga e parco giochi per bambini" },
+    { "area": "Sesto", "name": "Ristorante Riega", "town": "Sesto", "type": "Ristorante", "specialty": "Canederli, gulasch e cucina altoatesina in paese" }
+  ],
   "checklist": {
     "categories": [
       {

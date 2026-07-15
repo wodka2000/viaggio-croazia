@@ -107,6 +107,8 @@ export async function renderDashboard() {
       </div>
     </div>
 
+    ${diningHtml(data.dining)}
+
     <div style="margin-top:1.25rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
       <a href="#itinerary" class="btn btn-primary">📅 Vai all'itinerario</a>
       <a href="#hotels" class="btn btn-outline">🏨 Controlla gli hotel</a>
@@ -115,6 +117,47 @@ export async function renderDashboard() {
       <a href="#natura" class="btn btn-outline">🌿 Natura &amp; Cultura</a>
       <a href="#logistics" class="btn btn-outline">📋 Note logistiche</a>
       <a href="#ideas" class="btn btn-outline">💡 Idee rapide</a>
+    </div>
+  `
+}
+
+function diningHtml(dining) {
+  if (!dining || !dining.length) return ''
+
+  // Raggruppa per area mantenendo l'ordine di comparsa
+  const groups = {}
+  const order = []
+  for (const d of dining) {
+    if (!groups[d.area]) { groups[d.area] = []; order.push(d.area) }
+    groups[d.area].push(d)
+  }
+
+  const mapsSearch = q => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`
+
+  return `
+    <div class="card card-body dining-section" style="margin-top:1.25rem;">
+      <div class="section-title">🍽️ Dove mangiare — consigli per tappa</div>
+      <p style="font-size:0.82rem; color:var(--color-text-muted); margin:-0.25rem 0 0.75rem;">
+        Locali consigliati dove gustare le specialità di ogni zona. Tocca per aprire su Maps (orari, recensioni, indicazioni).
+      </p>
+      ${order.map(area => `
+        <div class="dining-area">
+          <div class="dining-area-title">📍 ${area}</div>
+          <div class="dining-list">
+            ${groups[area].map(d => `
+              <a class="dining-item" target="_blank" rel="noopener"
+                 href="${mapsSearch(d.name + ' ' + d.town)}">
+                <div class="dining-item-head">
+                  <span class="dining-name">${d.name}</span>
+                  ${d.type ? `<span class="dining-type">${d.type}</span>` : ''}
+                </div>
+                <div class="dining-town">📍 ${d.town}</div>
+                <div class="dining-spec">${d.specialty}</div>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+      `).join('')}
     </div>
   `
 }
