@@ -2902,6 +2902,7 @@ a.idea-meta-chip.idea-meta-link:hover { background: #eff6ff; color: var(--color-
 }
 .sugg-eat-act { display: block; font-weight: 700; font-size: 0.86rem; }
 .sugg-eat-tip { display: block; font-size: 0.83rem; color: var(--color-text); margin-top: 0.15rem; }
+.sugg-eat .sugg-tips { margin: 0.25rem 0 0; }
 .sugg-all-link {
   display: inline-block;
   margin-top: 1.25rem;

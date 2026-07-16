@@ -55,11 +55,33 @@ export function suggestionsSectionsHtml(day, dining, hikes = []) {
          </div>
        </div>` : ''
 
-  const tipsHtml = (tipsDo.length)
+  // Consigli generici della tappa: SOLO fuori Sesto. Sulle Dolomiti di Sesto
+  // i consigli compaiono in base all'attività scelta (vedi sotto).
+  const tipsHtml = (!sesto && tipsDo.length)
     ? `<div class="sugg-section">
          <div class="sugg-section-title">✨ Cose da fare in zona</div>
          <ul class="sugg-tips">${tipsDo.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
        </div>` : ''
+
+  // Sesto: consigli pertinenti in base a passeggiate/gite/rifugi abbinati al giorno.
+  let sestoTipsHtml = ''
+  if (sesto) {
+    const picks = ideas
+      .map(i => hikes.find(h => h.id === i.hike_id))
+      .filter(h => h && Array.isArray(h.tips) && h.tips.length)
+    if (picks.length) {
+      sestoTipsHtml = `<div class="sugg-section">
+        <div class="sugg-section-title">✨ Consigli — in base alle attività scelte</div>
+        <div class="sugg-eat-list">
+          ${picks.map(h => `
+            <div class="sugg-eat">
+              <span class="sugg-eat-act">${esc(h.name)}</span>
+              <ul class="sugg-tips">${h.tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+            </div>`).join('')}
+        </div>
+      </div>`
+    }
+  }
 
   // Dove mangiare:
   //  • Tappe in Croazia → ristoranti di zona (comportamento invariato)
@@ -115,5 +137,5 @@ export function suggestionsSectionsHtml(day, dining, hikes = []) {
       }
     </div>`
 
-  return activitiesHtml + tipsHtml + restaurantsHtml + ideasHtml
+  return activitiesHtml + tipsHtml + sestoTipsHtml + restaurantsHtml + ideasHtml
 }

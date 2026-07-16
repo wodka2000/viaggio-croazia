@@ -2,6 +2,7 @@ import { fetchTripData } from '../utils/data.js'
 import { formatDateIT, formatDayOfWeek } from '../utils/data.js'
 import { getIdeasForDay, addIdea, deleteIdea } from '../utils/ideas.js'
 import { getUserBookingsForDay, bookingMapsUrl } from '../utils/bookings.js'
+import { isSesto } from '../utils/suggestions.js'
 import {
   getDayProgram,
   isDayModified,
@@ -142,7 +143,7 @@ function renderDay(day, hotelMap, ferries = []) {
               ${_renderActivitiesInner(day, _editModeDates.has(day.date))}
             </div>
 
-            ${renderTips(day.tips)}
+            ${isSesto(day) ? '' : renderTips(day.tips)}
 
             ${hotel ? `
               <div class="hotel-ref-badge">

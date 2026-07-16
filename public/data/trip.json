@@ -1536,7 +1536,12 @@
         "lat": 46.6553,
         "lng": 12.4471
       },
-      "eat": "Pranzo al Rifugio Nemes o alla vicina Malga Nemes: canederli, formaggi di malga e piatti tirolesi."
+      "eat": "Pranzo al Rifugio Nemes o alla vicina Malga Nemes: canederli, formaggi di malga e piatti tirolesi.",
+      "tips": [
+        "Partenza comoda dall'hotel: niente auto, ottima come prima uscita per acclimatarsi",
+        "Scarpe da trekking anche se è 'media': prati e sterrato spesso umidi al mattino",
+        "Verifica l'apertura del rifugio/malga prima di salire, se conti di pranzarci"
+      ]
     },
     {
       "id": "fiscalina",
@@ -1552,7 +1557,12 @@
         "lat": 46.6706,
         "lng": 12.3903
       },
-      "eat": "Sosta al Rifugio Fondovalle (Talschlusshütte) per canederli e strudel."
+      "eat": "Sosta al Rifugio Fondovalle (Talschlusshütte) per canederli e strudel.",
+      "tips": [
+        "Primo tratto quasi piano e passeggino-friendly: adatto anche al piccolo di 2 anni",
+        "Vai presto: il parcheggio Val Fiscalina si riempie entro le 9–9:30 in agosto",
+        "Fondovalle ombroso e fresco: porta acqua e una felpa per tutti"
+      ]
     },
     {
       "id": "tre_cime",
@@ -1568,7 +1578,12 @@
         "lat": 46.6132,
         "lng": 12.2955
       },
-      "eat": "Pranzo ai rifugi lungo il giro: Auronzo, Lavaredo o Locatelli (Dreizinnenhütte)."
+      "eat": "Pranzo ai rifugi lungo il giro: Auronzo, Lavaredo o Locatelli (Dreizinnenhütte).",
+      "tips": [
+        "NON adatta ai bimbi piccoli: anello di 4–5 h, da fare senza i più piccoli",
+        "Strada del Rif. Auronzo a pedaggio e trafficata: arriva prima delle 9 per evitare code e parcheggio pieno",
+        "In quota vento e sbalzi di temperatura: giacca a vento, acqua abbondante e scarpe da trekking"
+      ]
     },
     {
       "id": "croda_rossa",
@@ -1584,7 +1599,12 @@
         "lat": 46.6613,
         "lng": 12.3706
       },
-      "eat": "Ristoro ai rifugi dei prati: Rudi o Croda Rossa (Rotwandhütte), con parco giochi."
+      "eat": "Ristoro ai rifugi dei prati: Rudi o Croda Rossa (Rotwandhütte), con parco giochi.",
+      "tips": [
+        "Sali in cabinovia e cammina in quota: dislivello minimo, perfetto con i bambini",
+        "Controlla orari e ultima corsa della cabinovia per non perdere il rientro",
+        "In quota fresco anche d'estate: uno strato in più"
+      ]
     },
     {
       "id": "monte_elmo",
@@ -1600,7 +1620,12 @@
         "lat": 46.7226,
         "lng": 12.4137
       },
-      "eat": "Malghe e ristori in quota sul Monte Elmo: speck, canederli e strudel."
+      "eat": "Malghe e ristori in quota sul Monte Elmo: speck, canederli e strudel.",
+      "tips": [
+        "In vetta c'è il percorso a tema/giochi: tappa vincente con i bimbi",
+        "Cabinovia da Sesto: verifica gli orari; pranzo al rifugio in cima",
+        "Poca ombra sull'altopiano: cappellino e crema solare"
+      ]
     },
     {
       "id": "dobbiaco_lienz",
@@ -1616,7 +1641,12 @@
         "lat": 46.735,
         "lng": 12.2206
       },
-      "eat": "Gasthof e biergarten lungo la Drava o a Lienz; gelato a San Candido al ritorno."
+      "eat": "Gasthof e biergarten lungo la Drava o a Lienz; gelato a San Candido al ritorno.",
+      "tips": [
+        "In gran parte in leggera discesa lungo la Drava: fattibile in famiglia (seggiolino per il piccolo)",
+        "Prenota il rientro in treno Lienz–Dobbiaco con bici a bordo: verifica orari e posti bici",
+        "Noleggia bici e caschi presto; porta acqua e k-way"
+      ]
     },
     {
       "id": "campo_dentro",
@@ -1632,7 +1662,12 @@
         "lat": 46.7302,
         "lng": 12.3372
       },
-      "eat": "Pranzo al Rifugio Tre Scarperi (Dreischusterhütte): zuppa d'orzo e Kaiserschmarrn."
+      "eat": "Pranzo al Rifugio Tre Scarperi (Dreischusterhütte): zuppa d'orzo e Kaiserschmarrn.",
+      "tips": [
+        "Valle ampia e ombreggiata verso il Rif. Tre Scarperi: adatta ai bambini con scarponcini",
+        "Parcheggio a pagamento e affollato: arriva presto",
+        "Pranzo al Rifugio Tre Scarperi, comodo a metà percorso"
+      ]
     },
     {
       "id": "berti",
@@ -1648,7 +1683,12 @@
         "lat": 46.62,
         "lng": 12.3719
       },
-      "eat": "Ristoro al Rifugio Berti; porta comunque acqua e snack per la salita."
+      "eat": "Ristoro al Rifugio Berti; porta comunque acqua e snack per la salita.",
+      "tips": [
+        "Lunga e faticosa ai piedi della Croda dei Toni: solo per chi cammina bene, senza i piccoli",
+        "Parti al mattino presto: 4–5 h a/r, occhio al meteo del pomeriggio",
+        "Scarponi, giacca e scorta d'acqua; verifica l'apertura del rifugio"
+      ]
     },
     {
       "id": "braies",
@@ -1665,7 +1705,12 @@
         "lng": 12.0855
       },
       "car": true,
-      "eat": "Bar e ristorante all'hotel del Lago di Braies, oppure picnic sulle rive."
+      "eat": "Bar e ristorante all'hotel del Lago di Braies, oppure picnic sulle rive.",
+      "tips": [
+        "Accesso auto regolamentato in alta stagione: prenota lo slot/parcheggio o arriva prima delle 9",
+        "Giro del lago pianeggiante e passeggino-friendly; barca a remi carina con i bimbi",
+        "Meta iconica e affollatissima: vacci all'apertura o nel tardo pomeriggio"
+      ]
     },
     {
       "id": "coltrondo",
@@ -1681,7 +1726,12 @@
         "lat": 46.6083,
         "lng": 12.4667
       },
-      "eat": "Merenda o pranzo alla Malga Coltrondo o al Rifugio Rinfreddo: latticini e polenta."
+      "eat": "Merenda o pranzo alla Malga Coltrondo o al Rifugio Rinfreddo: latticini e polenta.",
+      "tips": [
+        "Versante Comelico tranquillo e poco affollato tra malghe e prati: ottimo con i bambini",
+        "Sterrato di malga: scarpe chiuse; sosta latte/merenda alla malga",
+        "Poca ombra a tratti: acqua e cappellino"
+      ]
     },
     {
       "id": "misurina",
@@ -1698,7 +1748,12 @@
         "lat": 46.5817,
         "lng": 12.2536
       },
-      "eat": "Bar e ristoranti sul lungolago di Misurina; piatti cadorini e pesce di lago."
+      "eat": "Bar e ristoranti sul lungolago di Misurina; piatti cadorini e pesce di lago.",
+      "tips": [
+        "Giro del lago piatto e passeggino-friendly, con vista sulle Tre Cime",
+        "Parcheggi a pagamento lungo il lago: in agosto arriva presto",
+        "Base perfetta da abbinare a Col de Varda o alle Tre Cime nello stesso giorno"
+      ]
     },
     {
       "id": "dobbiaco_lago",
@@ -1715,7 +1770,12 @@
         "lat": 46.7233,
         "lng": 12.2489
       },
-      "eat": "Ristorante del Lago di Dobbiaco, o rientro a Dobbiaco per lo strudel."
+      "eat": "Ristorante del Lago di Dobbiaco, o rientro a Dobbiaco per lo strudel.",
+      "tips": [
+        "Passeggiata breve e piatta intorno al lago: mezza giornata soft con i piccoli",
+        "Passerelle in legno adatte al passeggino; area pic-nic in riva",
+        "Vicino a Dobbiaco: comodo da unire alla ciclabile o a San Candido"
+      ]
     },
     {
       "id": "san_candido",
@@ -1732,7 +1792,12 @@
         "lat": 46.7325,
         "lng": 12.2807
       },
-      "eat": "Nel centro di San Candido: caffè storici, gelaterie e ristoranti tirolesi."
+      "eat": "Nel centro di San Candido: caffè storici, gelaterie e ristoranti tirolesi.",
+      "tips": [
+        "Giornata jolly per meteo incerto: centro pedonale + piscine Acquafun al coperto",
+        "Verifica gli orari dell'Acquafun e porta costumi e ciabatte",
+        "Centro carino per gelato e passeggino; parcheggi in struttura"
+      ]
     },
     {
       "id": "santa_caterina",
@@ -1749,7 +1814,12 @@
         "lat": 46.5522,
         "lng": 12.43
       },
-      "eat": "Bar e trattorie sul lungolago di Auronzo: pizza e piatti cadorini."
+      "eat": "Bar e trattorie sul lungolago di Auronzo: pizza e piatti cadorini.",
+      "tips": [
+        "Lago con spiaggette: porta costumi e teli, i bimbi giocano in riva",
+        "Passeggiata lungolago semplice e ombreggiata; possibile noleggio pedalò",
+        "Parcheggio ad Auronzo; abbinabile a Misurina/Tre Cime"
+      ]
     },
     {
       "id": "kronplatz",
@@ -1766,7 +1836,12 @@
         "lat": 46.7378,
         "lng": 11.9542
       },
-      "eat": "Rifugi e ristoranti in quota a Plan de Corones; ampia scelta anche per i bimbi."
+      "eat": "Rifugi e ristoranti in quota a Plan de Corones; ampia scelta anche per i bimbi.",
+      "tips": [
+        "Giornata intera: funivia + musei (MMM Corones) e panorami a 360° — biglietti anche online",
+        "In cima parchi gioco e sentieri facili per i bambini; poca ombra, copriti bene",
+        "Verifica orari della funivia e l'ultima discesa"
+      ]
     },
     {
       "id": "cortina",
@@ -1783,7 +1858,12 @@
         "lat": 46.5405,
         "lng": 12.1357
       },
-      "eat": "Cortina: dal ristoro veloce ai locali gourmet; gelato in Corso Italia."
+      "eat": "Cortina: dal ristoro veloce ai locali gourmet; gelato in Corso Italia.",
+      "tips": [
+        "Passeggiata al Lago di Ghedina + centro di Cortina: giornata rilassata, non escursionistica",
+        "Parcheggi a pagamento in centro; il lago ha giro breve e ombreggiato",
+        "Buona alternativa 'da paese' se il meteo in quota è instabile"
+      ]
     },
     {
       "id": "monte_piana",
@@ -1800,7 +1880,12 @@
         "lat": 46.6206,
         "lng": 12.2361
       },
-      "eat": "Pranzo al Rifugio Bosi su Monte Piana, o a Misurina al ritorno."
+      "eat": "Pranzo al Rifugio Bosi su Monte Piana, o a Misurina al ritorno.",
+      "tips": [
+        "Museo all'aperto della Grande Guerra: trincee e gallerie appassionano i più grandi (8 e 6 anni)",
+        "Sali in navetta jeep da Misurina per risparmiare gambe con i bimbi, poi sentieri facili in quota",
+        "Torcia per le gallerie, scarpe chiuse e giacca: in cima fresco e ventoso"
+      ]
     },
     {
       "id": "rif_auronzo",
@@ -1817,7 +1902,12 @@
         "lat": 46.6136,
         "lng": 12.2957
       },
-      "eat": "Pranzo al Rifugio Auronzo, terrazza panoramica sulle Tre Cime."
+      "eat": "Pranzo al Rifugio Auronzo, terrazza panoramica sulle Tre Cime.",
+      "tips": [
+        "Ci arrivi in auto (strada a pedaggio): rifugio con vista Tre Cime senza camminare",
+        "Strada a pedaggio e parcheggio si saturano: sali prima delle 9 o nel pomeriggio",
+        "Ottima base di partenza per Rif. Lavaredo/Locatelli e per il pranzo"
+      ]
     },
     {
       "id": "rif_lavaredo",
@@ -1834,7 +1924,12 @@
         "lat": 46.6182,
         "lng": 12.3061
       },
-      "eat": "Sosta al Rifugio Lavaredo o Locatelli lungo il giro delle Tre Cime."
+      "eat": "Sosta al Rifugio Lavaredo o Locatelli lungo il giro delle Tre Cime.",
+      "tips": [
+        "Breve e panoramico dal Rif. Auronzo verso le Tre Cime: fattibile con bimbi allenati",
+        "Sentiero largo ma sassoso: scarpe da trekking e passo attento con i piccoli",
+        "Abbinalo all'arrivo in auto al Rif. Auronzo per accorciare la giornata"
+      ]
     },
     {
       "id": "rif_zsigmondy",
@@ -1850,7 +1945,12 @@
         "lat": 46.6222,
         "lng": 12.3563
       },
-      "eat": "Piatti caldi al Rifugio Zsigmondy-Comici dopo la salita."
+      "eat": "Piatti caldi al Rifugio Zsigmondy-Comici dopo la salita.",
+      "tips": [
+        "Impegnativa in ambiente alpino: solo per camminatori esperti, senza i piccoli",
+        "Parti presto dalla Val Fiscalina; metti in conto il meteo pomeridiano",
+        "Scarponi, bastoncini, giacca e acqua; verifica l'apertura del rifugio"
+      ]
     },
     {
       "id": "rif_pian_cengia",
@@ -1866,7 +1966,12 @@
         "lat": 46.6268,
         "lng": 12.3423
       },
-      "eat": "Ristoro al piccolo e panoramico Rifugio Pian di Cengia (Büllelejochhütte)."
+      "eat": "Ristoro al piccolo e panoramico Rifugio Pian di Cengia (Büllelejochhütte).",
+      "tips": [
+        "Anello alto e lungo (5–6 h) con tratti esposti: per escursionisti allenati, non per i bambini",
+        "Partenza all'alba per completare l'anello ed evitare i temporali del pomeriggio",
+        "Equipaggiamento alpino completo e buona scorta d'acqua"
+      ]
     },
     {
       "id": "rif_col_varda",
@@ -1883,7 +1988,12 @@
         "lat": 46.5726,
         "lng": 12.262
       },
-      "eat": "Pranzo al Rifugio Col de Varda con vista sui Cadini."
+      "eat": "Pranzo al Rifugio Col de Varda con vista sui Cadini.",
+      "tips": [
+        "Seggiovia da Misurina + 30 min: vista sui Cadini con pochissima fatica, top con i bimbi",
+        "Controlla orari seggiovia e ultima corsa; pranzo in terrazza al rifugio",
+        "Puoi fare solo andata/ritorno in seggiovia se i piccoli sono stanchi"
+      ]
     },
     {
       "id": "rif_fonda_savio",
@@ -1899,7 +2009,12 @@
         "lat": 46.5966,
         "lng": 12.279
       },
-      "eat": "Ristoro al Rifugio Fonda Savio tra le guglie dei Cadini."
+      "eat": "Ristoro al Rifugio Fonda Savio tra le guglie dei Cadini.",
+      "tips": [
+        "Salita ripida ai Cadini di Misurina (3–4 h): per gambe allenate, non con i piccoli",
+        "Sentiero sassoso e a tratti esposto: scarponi e passo sicuro",
+        "Parti presto da Genzianella; acqua e giacca a vento"
+      ]
     },
     {
       "id": "rif_vallandro",
@@ -1916,7 +2031,12 @@
         "lat": 46.6447,
         "lng": 12.2119
       },
-      "eat": "Pranzo al Rifugio Vallandro o alle malghe di Prato Piazza."
+      "eat": "Pranzo al Rifugio Vallandro o alle malghe di Prato Piazza.",
+      "tips": [
+        "Da Prato Piazza salita dolce con panorama enorme: fattibile con bimbi allenati",
+        "Accesso auto a Prato Piazza regolamentato a fasce orarie: verifica gli orari o usa la navetta",
+        "In quota fresco e ventoso: uno strato in più anche in agosto"
+      ]
     },
     {
       "id": "rif_carpi",
@@ -1932,7 +2052,12 @@
         "lat": 46.6089,
         "lng": 12.4744
       },
-      "eat": "Ristoro al Rifugio Città di Carpi sul crinale del Comelico."
+      "eat": "Ristoro al Rifugio Città di Carpi sul crinale del Comelico.",
+      "tips": [
+        "Giornata piena (5–6 h) pur essendo 'media': partenza dall'hotel ma meglio senza i piccoli",
+        "Parti al mattino; pranzo al sacco o verifica l'apertura del rifugio",
+        "Scarpe da trekking e acqua abbondante"
+      ]
     },
     {
       "id": "rif_sorapiss",
@@ -1949,7 +2074,12 @@
         "lat": 46.5333,
         "lng": 12.2214
       },
-      "eat": "Sosta al Rifugio Vandelli presso il lago; porta comunque scorte d'acqua."
+      "eat": "Sosta al Rifugio Vandelli presso il lago; porta comunque scorte d'acqua.",
+      "tips": [
+        "Tratti esposti attrezzati con corde metalliche: NO bambini, sì solo escursionisti esperti senza vertigini",
+        "Il celebre lago turchese è affollato: parti all'alba dal Passo Tre Croci",
+        "Scarponi, eventuali guanti per le corde, giacca e acqua"
+      ]
     }
   ],
   "ferries": [
