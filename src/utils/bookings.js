@@ -8,7 +8,7 @@
 // nel rendering dell'itinerario.
 // ─────────────────────────────────────────────────────────────
 
-import { toMapsUrl } from './data.js'
+import { toMapsUrl, timeToMinutes } from './data.js'
 
 const KEY = 'viaggio_croazia_bookings_v1'
 
@@ -80,13 +80,7 @@ export function deleteBooking(id) {
 export function getUserBookingsForDay(date) {
   return loadBookings()
     .filter(b => b.date === date)
-    .sort((a, b) => _timeKey(a.time) - _timeKey(b.time))
-}
-
-// 'HH:MM' → minuti; testo non orario → in fondo.
-function _timeKey(time) {
-  const m = /^(\d{1,2}):(\d{2})$/.exec(String(time).trim())
-  return m ? Number(m[1]) * 60 + Number(m[2]) : 9999
+    .sort((a, b) => timeToMinutes(a.time) - timeToMinutes(b.time))
 }
 
 export function exportBookingsJSON() {

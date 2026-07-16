@@ -75,6 +75,29 @@ export function navUrlCoords(lat, lng) {
   return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving`
 }
 
+// Converte un orario "libero" in minuti dalla mezzanotte, per ordinare le
+// attività. Accetta 19:30, 19.30, 19,30, 19h30, 1930, 19 e parole chiave
+// (mattina, pranzo, pomeriggio, sera, notte…). Non riconosciuto → in fondo.
+const _TIME_WORDS = {
+  mattina: 8 * 60, mattino: 8 * 60, colazione: 8 * 60, pranzo: 13 * 60,
+  pomeriggio: 15 * 60, aperitivo: 18 * 60, sera: 20 * 60, serata: 20 * 60,
+  cena: 20 * 60, notte: 23 * 60,
+}
+export function timeToMinutes(time) {
+  const t = String(time ?? '').trim().toLowerCase()
+  if (!t) return 9998
+  const m = t.match(/(\d{1,2})\s*[:.,h]\s*(\d{2})/) ||
+            t.match(/^(\d{1,2})(\d{2})$/) ||
+            t.match(/^(\d{1,2})$/)
+  if (m) {
+    const h = Number(m[1])
+    const min = m[2] != null ? Number(m[2]) : 0
+    if (h <= 23 && min <= 59) return h * 60 + min
+  }
+  for (const w in _TIME_WORDS) if (t.includes(w)) return _TIME_WORDS[w]
+  return 9998
+}
+
 // Link Google Maps "cerca/mostra il posto" — apre la scheda del luogo su Maps.
 // query può essere un testo (nome + indirizzo/città) o "lat,lng".
 export function mapsSearchUrl(query) {

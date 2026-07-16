@@ -1,5 +1,5 @@
 import { fetchTripData } from '../utils/data.js'
-import { formatDateIT } from '../utils/data.js'
+import { formatDateIT, timeToMinutes } from '../utils/data.js'
 import {
   loadBookings,
   addBooking,
@@ -160,12 +160,11 @@ function _renderAttachment(bookingId) {
   `
 }
 
-// Chiave di ordinamento: 'YYYY-MM-DD HH:MM' (data mancante → in fondo).
+// Chiave di ordinamento: 'YYYY-MM-DD' + minuti orario (data mancante → in fondo).
 function _sortKey(b) {
   const date = b.date || '9999-12-31'
-  const m = /^(\d{1,2}):(\d{2})$/.exec(String(b.time ?? '').trim())
-  const time = m ? `${m[1].padStart(2, '0')}:${m[2]}` : '99:99'
-  return `${date} ${time}`
+  const mins = String(timeToMinutes(b.time)).padStart(5, '0')
+  return `${date} ${mins}`
 }
 
 function _bindBookingEvents(staticBookings) {

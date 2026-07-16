@@ -13,6 +13,8 @@
 // dove `index` è la posizione dell'attività nell'array base di quel giorno.
 // ─────────────────────────────────────────────────────────────
 
+import { timeToMinutes } from './data.js'
+
 const KEY = 'viaggio_croazia_program_v1'
 
 function genId() {
@@ -46,16 +48,6 @@ function _entry(data, date) {
   return e
 }
 
-// 'HH:MM' → minuti; parole chiave note → fascia oraria; altro → in fondo.
-const _WORD_MIN = { mattina: 8 * 60, mattino: 8 * 60, pranzo: 13 * 60, pomeriggio: 15 * 60, sera: 20 * 60, serata: 20 * 60, notte: 23 * 60 }
-export function timeKey(time) {
-  const t = String(time ?? '').trim().toLowerCase()
-  const m = /^(\d{1,2}):(\d{2})$/.exec(t)
-  if (m) return Number(m[1]) * 60 + Number(m[2])
-  for (const w in _WORD_MIN) if (t.includes(w)) return _WORD_MIN[w]
-  return 9998
-}
-
 // Programma effettivo del giorno: base (con modifiche/nascondimenti) + aggiunte,
 // ordinato per orario. Ogni voce: { key, base, index?|id?, time, text, maps }.
 export function getDayProgram(date, baseActivities = []) {
@@ -77,7 +69,7 @@ export function getDayProgram(date, baseActivities = []) {
     items.push({ key: 'add:' + a.id, base: false, id: a.id, time: a.time || '', text: a.text || '', maps: a.maps || null })
   })
 
-  items.sort((x, y) => timeKey(x.time) - timeKey(y.time))
+  items.sort((x, y) => timeToMinutes(x.time) - timeToMinutes(y.time))
   return items
 }
 
