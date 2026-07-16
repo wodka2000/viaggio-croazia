@@ -20,6 +20,12 @@ const PRIORITY_LABELS = {
   low:    { label: 'Promemoria',         cls: 'logi-prio-low' },
 }
 
+// La guida di viaggio è un libro sotto copyright: NON va nel repo (che è
+// pubblico) né sul sito. Vive come allegato locale, sullo stesso binario
+// degli allegati delle prenotazioni: blob in IndexedDB, metadati in
+// localStorage. Va caricata una volta per dispositivo e poi resta offline.
+const GUIDE_ID = 'guida-viaggio'
+
 export async function renderLogistics() {
   const content = document.getElementById('page-content')
 
@@ -45,6 +51,8 @@ export async function renderLogistics() {
 
     ${renderFerries(data.ferries)}
 
+    <div id="guide-section">${renderGuide()}</div>
+
     ${notes.length === 0
       ? `<p style="color:var(--color-text-muted);">Nessuna nota logistica.</p>`
       : `<div class="logi-list">${notes.map(renderNote).join('')}</div>`
@@ -52,6 +60,95 @@ export async function renderLogistics() {
   `
 
   _bindBookingEvents(staticBookings)
+  _bindGuideEvents()
+}
+
+/* ── GUIDA DI VIAGGIO ─────────────────────────────────────── */
+
+function renderGuide() {
+  const meta = getAttachmentMeta(GUIDE_ID)
+  const fileInput = `<input type="file" id="guide-file" accept="application/pdf,.pdf,.epub" hidden />`
+
+  if (meta) {
+    return `
+      <div class="guide-section">
+        <div class="section-title">📚 Guida di viaggio</div>
+        <div class="guide-card">
+          <div class="guide-card-main">
+            <span class="guide-name">${attachmentIcon(meta)} ${_esc(meta.name)}</span>
+            <span class="guide-size">${_fmtSize(meta.size)} · salvata su questo dispositivo</span>
+          </div>
+          <div class="guide-card-actions">
+            <button class="btn btn-primary" id="guide-open">📖 Apri la guida</button>
+            <button class="btn btn-outline" id="guide-del">Rimuovi</button>
+          </div>
+        </div>
+      </div>
+      ${fileInput}
+    `
+  }
+
+  return `
+    <div class="guide-section">
+      <div class="section-title">📚 Guida di viaggio</div>
+      <p class="guide-hint">
+        Carica qui il PDF della guida per averlo a portata di mano — e <strong>offline</strong>,
+        senza scaricarlo in roaming. Resta su questo dispositivo: non viene caricato online
+        (il sito è pubblico e la guida è sotto copyright), quindi va aggiunto una volta per
+        ogni telefono o computer.
+      </p>
+      <button class="btn btn-outline" id="guide-add">📎 Carica la guida (PDF)</button>
+    </div>
+    ${fileInput}
+  `
+}
+
+function _bindGuideEvents() {
+  const box = document.getElementById('guide-section')
+  if (!box) return
+
+  box.addEventListener('click', e => {
+    if (e.target.closest('#guide-add')) {
+      document.getElementById('guide-file')?.click()
+      return
+    }
+    if (e.target.closest('#guide-open')) {
+      _openAttachment(GUIDE_ID)
+      return
+    }
+    if (e.target.closest('#guide-del')) {
+      if (confirm('Rimuovere la guida da questo dispositivo?')) removeAttachment(GUIDE_ID)
+    }
+  })
+
+  box.addEventListener('change', e => {
+    const input = e.target.closest('#guide-file')
+    if (!input?.files?.length) return
+    const file = input.files[0]
+    setAttachment(GUIDE_ID, file).catch(err => {
+      console.error('[guida]', err)
+      // Un PDF da decine di MB può sforare la quota del browser.
+      alert('Impossibile salvare la guida su questo dispositivo: il file è grande e lo spazio del browser potrebbe non bastare.')
+    })
+    input.value = ''
+  })
+
+  // Ridisegna quando la guida viene aggiunta o rimossa. I listener stanno sul
+  // box, che sopravvive al re-render. Concateno il cleanup di _bindBookingEvents
+  // invece di sovrascriverlo, altrimenti resterebbero listener appesi.
+  const refresh = () => { box.innerHTML = renderGuide() }
+  window.addEventListener('attachments:updated', refresh)
+  const prevCleanup = window.__currentPageCleanup
+  window.__currentPageCleanup = () => {
+    prevCleanup?.()
+    window.removeEventListener('attachments:updated', refresh)
+  }
+}
+
+function _fmtSize(bytes) {
+  if (!bytes) return ''
+  const mb = bytes / (1024 * 1024)
+  return mb >= 1 ? `${mb.toFixed(1)} MB` : `${Math.round(bytes / 1024)} kB`
 }
 
 /* ── PRENOTAZIONI ─────────────────────────────────────────── */
