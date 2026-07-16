@@ -9,8 +9,8 @@ import {
 import {
   getAttachmentMeta,
   setAttachment,
-  getAttachmentUrl,
   removeAttachment,
+  openAttachment,
   attachmentIcon,
 } from '../utils/attachments.js'
 
@@ -20,10 +20,13 @@ const PRIORITY_LABELS = {
   low:    { label: 'Promemoria',         cls: 'logi-prio-low' },
 }
 
-// La guida di viaggio è un libro sotto copyright: NON va nel repo (che è
-// pubblico) né sul sito. Vive come allegato locale, sullo stesso binario
-// degli allegati delle prenotazioni: blob in IndexedDB, metadati in
-// localStorage. Va caricata una volta per dispositivo e poi resta offline.
+// La guida è un libro sotto copyright: il FILE non va nel repo (che è pubblico)
+// né sul sito. Due modi per averla, nessuno dei quali pubblica il PDF:
+//  • copia locale (questo id): blob in IndexedDB, metadati in localStorage, come
+//    gli allegati delle prenotazioni. Una volta per dispositivo, ma funziona offline.
+//  • link cloud (trip.json → guide.url): nel repo finisce solo l'URL. Regge solo
+//    finché la condivisione resta ristretta: se diventasse "chiunque abbia il
+//    collegamento", quell'URL in un repo pubblico equivarrebbe a pubblicare il libro.
 const GUIDE_ID = 'guida-viaggio'
 
 export async function renderLogistics() {
@@ -49,7 +52,7 @@ export async function renderLogistics() {
 
     ${renderBookings(days, staticBookings)}
 
-    ${renderFerries(data.ferries)}
+    <div id="ferry-box">${renderFerries(data.ferries)}</div>
 
     <div id="guide-section">${renderGuide(data.guide)}</div>
 
@@ -61,6 +64,7 @@ export async function renderLogistics() {
 
   _bindBookingEvents(staticBookings)
   _bindGuideEvents(data.guide)
+  _bindFerryEvents(data.ferries)
 }
 
 /* ── GUIDA DI VIAGGIO ─────────────────────────────────────── */
@@ -155,8 +159,11 @@ function _bindGuideEvents(guide) {
   }
 }
 
+// 0 byte non e come "dimensione ignota": un file vuoto (es. un segnaposto di
+// sincronizzazione cloud scelto per sbaglio) va detto, non nascosto.
 function _fmtSize(bytes) {
-  if (!bytes) return ''
+  if (bytes == null) return ''
+  if (bytes === 0) return 'file vuoto (0 byte)'
   const mb = bytes / (1024 * 1024)
   return mb >= 1 ? `${mb.toFixed(1)} MB` : `${Math.round(bytes / 1024)} kB`
 }
@@ -377,58 +384,100 @@ function _bindBookingEvents(staticBookings) {
   }
 }
 
-// Apre l'allegato in una nuova scheda (o lo scarica se il browser non
-// può visualizzarlo, es. .eml). L'Object URL viene revocato dopo un po'.
-async function _openAttachment(bookingId) {
-  try {
-    const url = await getAttachmentUrl(bookingId)
-    if (!url) { alert('Allegato non trovato su questo dispositivo.'); return }
-    const meta = getAttachmentMeta(bookingId)
-    const canView = /^(image\/|application\/pdf)/.test(meta?.type || '')
-    if (canView) {
-      window.open(url, '_blank', 'noopener')
-    } else {
-      // .eml e simili: forza il download col nome originale.
-      const a = document.createElement('a')
-      a.href = url
-      a.download = meta?.name || 'allegato'
-      document.body.appendChild(a)
-      a.click()
-      a.remove()
-    }
-    setTimeout(() => URL.revokeObjectURL(url), 60_000)
-  } catch (err) {
-    console.error('[attachments]', err)
-    alert('Impossibile aprire l’allegato.')
-  }
-}
+const _openAttachment = openAttachment   // apertura condivisa (vedi utils/attachments.js)
 
 /* ── TRAGHETTI ────────────────────────────────────────────── */
 
 function renderFerries(ferries) {
   if (!ferries || !ferries.length) return ''
-  const base = import.meta.env.BASE_URL
   return `
     <div class="ferry-section">
       <div class="section-title">🎫 Biglietti traghetti</div>
       <p style="font-size:0.82rem;color:var(--color-text-muted);margin:-0.25rem 0 0.75rem;">
-        Tocca un biglietto per aprire il PDF (salvalo offline sul telefono prima di partire).
+        I biglietti contengono nomi e documenti, quindi non stanno online: vanno allegati
+        qui una volta per dispositivo e restano solo su questo. In cambio si aprono
+        <strong>anche senza rete</strong>, che al gate è esattamente quando serve.
       </p>
       <div class="ferry-list">
-        ${ferries.map(f => `
-          <a class="ferry-card" target="_blank" rel="noopener" href="${base}${f.pdf}">
-            <div class="ferry-route">
-              <span class="ferry-from">${f.from}</span>
-              <span class="ferry-arrow">→</span>
-              <span class="ferry-to">${f.to}</span>
-            </div>
-            <div class="ferry-meta">📅 ${formatDateIT(f.date)} · 🕐 ${f.time}${f.note ? ` · ${f.note}` : ''}</div>
-            <span class="ferry-open">📄 Apri biglietto PDF</span>
-          </a>
-        `).join('')}
+        ${ferries.map(f => _renderFerryCard(f)).join('')}
       </div>
+      <p class="ferry-warn">
+        ⚠️ Tienili anche fuori dal browser (app File del telefono, o stampati): questo è un
+        archivio del browser, comodo ma non è il posto dove avere l'unica copia del biglietto.
+      </p>
     </div>
   `
+}
+
+function _renderFerryCard(f) {
+  const meta = getAttachmentMeta(f.id)
+  const route = `
+    <div class="ferry-route">
+      <span class="ferry-from">${_esc(f.from)}</span>
+      <span class="ferry-arrow">→</span>
+      <span class="ferry-to">${_esc(f.to)}</span>
+    </div>
+    <div class="ferry-meta">📅 ${formatDateIT(f.date)} · 🕐 ${_esc(f.time)}${f.note ? ` · ${_esc(f.note)}` : ''}</div>
+  `
+  const input = `<input type="file" class="ferry-file" data-id="${_esc(f.id)}"
+      accept="application/pdf,.pdf,image/*" hidden />`
+
+  if (meta) {
+    return `
+      <div class="ferry-card" data-id="${_esc(f.id)}">
+        ${route}
+        <div class="ferry-actions">
+          <button class="ferry-open" data-act="open" data-id="${_esc(f.id)}">📄 Apri biglietto</button>
+          <button class="ferry-del" data-act="del" data-id="${_esc(f.id)}" title="Rimuovi da questo dispositivo">×</button>
+        </div>
+        ${input}
+      </div>
+    `
+  }
+  return `
+    <div class="ferry-card ferry-card-empty" data-id="${_esc(f.id)}">
+      ${route}
+      <button class="ferry-attach" data-act="add" data-id="${_esc(f.id)}">📎 Allega il biglietto</button>
+      ${input}
+    </div>
+  `
+}
+
+// I listener stanno su #ferry-box, che sopravvive al re-render della lista.
+function _bindFerryEvents(ferries) {
+  const box = document.getElementById('ferry-box')
+  if (!box) return
+
+  box.addEventListener('click', e => {
+    const btn = e.target.closest('[data-act]')
+    if (!btn) return
+    const id = btn.dataset.id
+    if (btn.dataset.act === 'add') {
+      box.querySelector(`.ferry-file[data-id="${CSS.escape(id)}"]`)?.click()
+    } else if (btn.dataset.act === 'open') {
+      openAttachment(id)
+    } else if (btn.dataset.act === 'del') {
+      if (confirm('Rimuovere il biglietto da questo dispositivo?')) removeAttachment(id)
+    }
+  })
+
+  box.addEventListener('change', e => {
+    const input = e.target.closest('.ferry-file')
+    if (!input?.files?.length) return
+    setAttachment(input.dataset.id, input.files[0]).catch(err => {
+      console.error('[biglietti]', err)
+      alert('Impossibile salvare il biglietto su questo dispositivo: ' + (err?.message || ''))
+    })
+    input.value = ''
+  })
+
+  const refresh = () => { box.innerHTML = renderFerries(ferries) }
+  window.addEventListener('attachments:updated', refresh)
+  const prevCleanup = window.__currentPageCleanup
+  window.__currentPageCleanup = () => {
+    prevCleanup?.()
+    window.removeEventListener('attachments:updated', refresh)
+  }
 }
 
 function renderNote(n) {

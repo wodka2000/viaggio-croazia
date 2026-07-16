@@ -10,9 +10,11 @@ dist/
 src/config.js
 
 # Documenti personali / prenotazioni — MAI committare (repo pubblico)
-# ...tranne i biglietti traghetto, che devono essere serviti dalla webapp
+# Nessuna eccezione: i biglietti contengono nomi, date di nascita e numeri di
+# documento (anche dei bambini). Committarli qui li rende scaricabili da
+# chiunque, sia dal repo sia dal sito. Si allegano dalla webapp e restano sul
+# dispositivo (utils/attachments.js) — cosi funzionano pure senza rete.
 *.pdf
-!public/biglietti/*.pdf
 
 # OS
 .DS_Store

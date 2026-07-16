@@ -91,6 +91,14 @@ export async function setAttachment(bookingId, file) {
     added_at: new Date().toISOString(),
   }
   _saveMeta(meta)
+
+  // _saveMeta non rilancia (per non far fallire le rimozioni), quindi qui
+  // controlliamo che i metadati siano davvero atterrati: senza di loro l'UI
+  // non saprebbe mai che il file c'è, e l'utente riproverebbe all'infinito
+  // senza capire perché. Meglio un errore esplicito.
+  if (!getAttachmentMeta(bookingId)) {
+    throw new Error('Metadati non salvati: spazio del browser esaurito o localStorage non disponibile.')
+  }
   return meta[bookingId]
 }
 
@@ -106,6 +114,45 @@ export async function removeAttachment(bookingId) {
   const meta = loadAttachmentMeta()
   delete meta[bookingId]
   _saveMeta(meta)
+}
+
+// Apre un allegato in una nuova scheda (o lo scarica se il browser non può
+// visualizzarlo, es. .eml).
+//
+// La scheda va aperta SUBITO, in modo sincrono: leggere il blob da IndexedDB
+// richiede un await, e dopo l'await il gesto dell'utente è scaduto — Safari su
+// iOS bloccherebbe la finestra e il tocco non farebbe nulla. Quindi apriamo
+// prima una scheda vuota e le assegniamo l'URL a lettura finita.
+export async function openAttachment(id) {
+  const meta = getAttachmentMeta(id)
+  const canView = /^(image\/|application\/pdf)/.test(meta?.type || '')
+  const win = canView ? window.open('', '_blank') : null
+  if (win) win.opener = null
+
+  try {
+    const url = await getAttachmentUrl(id)
+    if (!url) {
+      win?.close()
+      alert('File non trovato su questo dispositivo.')
+      return
+    }
+    if (win) win.location = url
+    else _download(url, meta?.name)   // popup bloccato o file non visualizzabile
+    setTimeout(() => URL.revokeObjectURL(url), 60_000)
+  } catch (err) {
+    console.error('[attachments]', err)
+    win?.close()
+    alert('Impossibile aprire il file.')
+  }
+}
+
+function _download(url, name) {
+  const a = document.createElement('a')
+  a.href = url
+  a.download = name || 'allegato'
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
 }
 
 // Etichetta breve del tipo di file, per l'icona.

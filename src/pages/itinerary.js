@@ -3,6 +3,7 @@ import { formatDateIT, formatDayOfWeek } from '../utils/data.js'
 import { getIdeasForDay, addIdea, deleteIdea } from '../utils/ideas.js'
 import { getUserBookingsForDay, bookingMapsUrl } from '../utils/bookings.js'
 import { isSesto } from '../utils/suggestions.js'
+import { getAttachmentMeta, openAttachment } from '../utils/attachments.js'
 import {
   getDayProgram,
   isDayModified,
@@ -101,6 +102,25 @@ export async function renderItinerary() {
 
 /* ── DAY CARD ─────────────────────────────────────────────── */
 
+// Il biglietto e un allegato locale (contiene nomi e documenti: non sta online).
+// Qui lo si apre soltanto; si allega dalle Note logistiche, cosi il flusso di
+// caricamento vive in un posto solo.
+function _renderFerryBadge(f) {
+  const tratta = `🎫 Traghetto ${_esc(f.from)} → ${_esc(f.to)} · 🕐 ${_esc(f.time)}`
+  if (getAttachmentMeta(f.id)) {
+    return `
+      <button class="day-ferry-badge" data-ferry="${_esc(f.id)}">
+        ${tratta} — <strong>apri biglietto</strong>
+      </button>
+    `
+  }
+  return `
+    <a class="day-ferry-badge day-ferry-badge-empty" href="#logistics">
+      ${tratta} — <strong>allega il biglietto nelle Note</strong>
+    </a>
+  `
+}
+
 function renderDay(day, hotelMap, ferries = []) {
   const hotel  = day.hotel_ref ? hotelMap[day.hotel_ref] : null
   const dayFerries = ferries.filter(f => f.day === day.day || f.date === day.date)
@@ -133,11 +153,7 @@ function renderDay(day, hotelMap, ferries = []) {
           <div class="timeline-card-body hidden">
             ${day.description ? `<p class="timeline-description">${day.description}</p>` : ''}
 
-            ${dayFerries.map(f => `
-              <a class="day-ferry-badge" target="_blank" rel="noopener" href="${import.meta.env.BASE_URL}${f.pdf}">
-                🎫 Traghetto ${f.from} → ${f.to} · 🕐 ${f.time} — <strong>apri biglietto PDF</strong>
-              </a>
-            `).join('')}
+            ${dayFerries.map(f => _renderFerryBadge(f)).join('')}
 
             <div class="activities" data-date="${day.date}">
               ${_renderActivitiesInner(day, _editModeDates.has(day.date))}
@@ -347,6 +363,10 @@ function _bindDayIdeaEvents(days) {
         // ideas:updated event aggiorna la sezione automaticamente
       }
     }
+
+    // Apri il biglietto del traghetto (allegato locale)
+    const ferryBtn = e.target.closest('[data-ferry]')
+    if (ferryBtn) openAttachment(ferryBtn.dataset.ferry)
   })
 
   // Submit quick-add form
