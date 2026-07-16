@@ -51,7 +51,7 @@ export async function renderLogistics() {
 
     ${renderFerries(data.ferries)}
 
-    <div id="guide-section">${renderGuide()}</div>
+    <div id="guide-section">${renderGuide(data.guide)}</div>
 
     ${notes.length === 0
       ? `<p style="color:var(--color-text-muted);">Nessuna nota logistica.</p>`
@@ -60,50 +60,60 @@ export async function renderLogistics() {
   `
 
   _bindBookingEvents(staticBookings)
-  _bindGuideEvents()
+  _bindGuideEvents(data.guide)
 }
 
 /* ── GUIDA DI VIAGGIO ─────────────────────────────────────── */
 
-function renderGuide() {
+// Due modi di avere la guida, non alternativi:
+//  • link cloud (trip.json → guide.url): comodo, funziona ovunque, serve rete
+//    e l'accesso al proprio account. Il file NON sta nel repo.
+//  • copia locale (allegato): funziona offline, ma va caricata per dispositivo.
+function renderGuide(guide) {
   const meta = getAttachmentMeta(GUIDE_ID)
   const fileInput = `<input type="file" id="guide-file" accept="application/pdf,.pdf,.epub" hidden />`
 
-  if (meta) {
-    return `
-      <div class="guide-section">
-        <div class="section-title">📚 Guida di viaggio</div>
-        <div class="guide-card">
-          <div class="guide-card-main">
-            <span class="guide-name">${attachmentIcon(meta)} ${_esc(meta.name)}</span>
-            <span class="guide-size">${_fmtSize(meta.size)} · salvata su questo dispositivo</span>
-          </div>
-          <div class="guide-card-actions">
-            <button class="btn btn-primary" id="guide-open">📖 Apri la guida</button>
-            <button class="btn btn-outline" id="guide-del">Rimuovi</button>
-          </div>
-        </div>
+  const cloud = guide?.url ? `
+    <a class="guide-card" href="${_esc(guide.url)}" target="_blank" rel="noopener">
+      <div class="guide-card-main">
+        <span class="guide-name">☁️ ${_esc(guide.title || 'Guida di viaggio')}</span>
+        <span class="guide-size">${_esc(guide.note || 'Apri dal cloud — serve la rete')}</span>
       </div>
-      ${fileInput}
-    `
-  }
+      <span class="guide-open-hint">📖 Apri →</span>
+    </a>
+  ` : ''
+
+  const local = meta ? `
+    <div class="guide-card">
+      <div class="guide-card-main">
+        <span class="guide-name">${attachmentIcon(meta)} ${_esc(meta.name)}</span>
+        <span class="guide-size">${_fmtSize(meta.size)} · su questo dispositivo, anche offline</span>
+      </div>
+      <div class="guide-card-actions">
+        <button class="btn btn-primary" id="guide-open">📖 Apri</button>
+        <button class="btn btn-outline" id="guide-del">Rimuovi</button>
+      </div>
+    </div>
+  ` : `
+    <p class="guide-hint">
+      ${cloud
+        ? 'Per averla anche <strong>senza rete</strong> — utile in viaggio, senza scaricare 65 MB in roaming — puoi tenerne una copia su questo dispositivo.'
+        : 'Carica il PDF della guida per aprirlo dalla webapp, anche <strong>offline</strong>. Resta su questo dispositivo: non viene caricato online.'}
+    </p>
+    <button class="btn btn-outline" id="guide-add">📎 Tieni una copia offline</button>
+  `
 
   return `
     <div class="guide-section">
       <div class="section-title">📚 Guida di viaggio</div>
-      <p class="guide-hint">
-        Carica qui il PDF della guida per averlo a portata di mano — e <strong>offline</strong>,
-        senza scaricarlo in roaming. Resta su questo dispositivo: non viene caricato online
-        (il sito è pubblico e la guida è sotto copyright), quindi va aggiunto una volta per
-        ogni telefono o computer.
-      </p>
-      <button class="btn btn-outline" id="guide-add">📎 Carica la guida (PDF)</button>
+      ${cloud}
+      ${local}
     </div>
     ${fileInput}
   `
 }
 
-function _bindGuideEvents() {
+function _bindGuideEvents(guide) {
   const box = document.getElementById('guide-section')
   if (!box) return
 
@@ -136,7 +146,7 @@ function _bindGuideEvents() {
   // Ridisegna quando la guida viene aggiunta o rimossa. I listener stanno sul
   // box, che sopravvive al re-render. Concateno il cleanup di _bindBookingEvents
   // invece di sovrascriverlo, altrimenti resterebbero listener appesi.
-  const refresh = () => { box.innerHTML = renderGuide() }
+  const refresh = () => { box.innerHTML = renderGuide(guide) }
   window.addEventListener('attachments:updated', refresh)
   const prevCleanup = window.__currentPageCleanup
   window.__currentPageCleanup = () => {

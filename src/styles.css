@@ -3170,6 +3170,29 @@ a.idea-meta-chip.idea-meta-link:hover { background: #eff6ff; color: var(--color-
 .guide-card-actions .btn {
   font-size: 0.85rem;
 }
+
+/* La scheda cloud è un link: si illumina al passaggio */
+a.guide-card {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+a.guide-card:hover {
+  border-color: var(--color-primary, #2563eb);
+  background: #f1f5f9;
+}
+
+.guide-open-hint {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary, #2563eb);
+  white-space: nowrap;
+}
+
+.guide-section .guide-card + .guide-hint {
+  margin-top: 0.85rem;
+}
 .ferry-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
