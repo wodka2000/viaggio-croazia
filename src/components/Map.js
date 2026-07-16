@@ -11,7 +11,19 @@ let routeElements  = []
 let activeLayer    = 'all'
 let _tripData      = null
 
+// Cresce a ogni ingresso nella pagina. Le Directions rispondono in modo
+// asincrono: se nel frattempo l'utente e uscito (o rientrato), la risposta
+// vecchia si riferisce a una mappa che non c'e piu e va buttata, altrimenti
+// finirebbe per disegnarsi sulla mappa nuova.
+let _gen = 0
+
 export async function renderMap() {
+  const gen = ++_gen
+  // I pulsanti dei layer rinascono con "Tutto" attivo a ogni ingresso, quindi
+  // anche il filtro deve ripartire da li: se restasse quello di prima, la mappa
+  // mostrerebbe un filtro diverso da quello evidenziato.
+  activeLayer = 'all'
+
   const content = document.getElementById('page-content')
 
   content.innerHTML = `
@@ -54,7 +66,7 @@ export async function renderMap() {
     return
   }
 
-  initMap(_tripData)
+  initMap(_tripData, gen)
   initLayerControls()
   renderLegend()
 
@@ -74,7 +86,24 @@ export async function renderMap() {
     }
   }
   window.addEventListener('ideas:updated', handler)
-  window.__currentPageCleanup = () => window.removeEventListener('ideas:updated', handler)
+  window.__currentPageCleanup = () => {
+    window.removeEventListener('ideas:updated', handler)
+    teardownMap()
+  }
+}
+
+// Il router sostituisce l'HTML della pagina, quindi il div della mappa sparisce
+// da sotto Google Maps senza che nessuno glielo dica: mappa e marker restano
+// agganciati a un elemento staccato dal documento. Qui li sganciamo a mano.
+function teardownMap() {
+  ;[markersRoute, markersHotels, markersIdeas, routeElements]
+    .flat()
+    .forEach(el => { try { el.setMap(null) } catch { /* gia sganciato */ } })
+  markersRoute  = []
+  markersHotels = []
+  markersIdeas  = []
+  routeElements = []
+  mapInstance   = null
 }
 
 /* ── MAPPA NON CARICABILE (offline / Google irraggiungibile) ── */
@@ -143,7 +172,7 @@ function loadGoogleMapsScript(apiKey) {
   })
 }
 
-function initMap(data) {
+function initMap(data, gen) {
   const mapEl = document.getElementById('google-map')
   if (!mapEl) return
 
@@ -159,7 +188,7 @@ function initMap(data) {
 
   addRouteMarkers(data)
   addHotelMarkers(data)
-  drawDrivingRoute(data)
+  drawDrivingRoute(data, gen)
   addIdeaMarkers()
   fitBounds(data)
 }
@@ -287,7 +316,7 @@ function addIdeaMarkers() {
 // Disegna il percorso stradale reale tra le tappe usando le Directions di Google.
 // Ogni tratta è una richiesta indipendente: se una non è instradabile in auto
 // (es. tratta con traghetto verso l'isola), si ripiega su una linea tratteggiata.
-function drawDrivingRoute(data) {
+function drawDrivingRoute(data, gen) {
   routeElements.forEach(e => e.setMap(null))
   routeElements = []
 
@@ -309,6 +338,8 @@ function drawDrivingRoute(data) {
     service.route(
       { origin, destination, travelMode: google.maps.TravelMode.DRIVING },
       (result, status) => {
+        // Risposta arrivata dopo che l'utente ha lasciato la mappa: ignorala.
+        if (gen !== _gen || !mapInstance) return
         if (status === 'OK' && result) {
           const renderer = new google.maps.DirectionsRenderer({
             map: mapInstance,
