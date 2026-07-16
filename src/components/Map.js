@@ -43,7 +43,17 @@ export async function renderMap() {
     return
   }
 
-  await loadGoogleMapsScript(API_KEY)
+  // Google Maps vive sulla rete: non e cacheabile (le condizioni d'uso non lo
+  // permettono) e in viaggio la rete e proprio cio che manca. Se non si carica
+  // non facciamo morire la pagina: il resto dell'app e offline, e l'elenco
+  // "naviga alla tappa" qui sopra resta utile appena il campo torna.
+  try {
+    await loadGoogleMapsScript(API_KEY)
+  } catch {
+    renderMapOffline(_tripData)
+    return
+  }
+
   initMap(_tripData)
   initLayerControls()
   renderLegend()
@@ -65,6 +75,34 @@ export async function renderMap() {
   }
   window.addEventListener('ideas:updated', handler)
   window.__currentPageCleanup = () => window.removeEventListener('ideas:updated', handler)
+}
+
+/* ── MAPPA NON CARICABILE (offline / Google irraggiungibile) ── */
+
+function renderMapOffline(data) {
+  const outer = document.getElementById('map-outer')
+  if (!outer) return
+  const tappe = [...new Set(data.days.map(d => d.location))]
+  outer.innerHTML = `
+    <div class="map-no-key">
+      <div class="map-no-key-icon">📡</div>
+      <h3>Mappa non disponibile offline</h3>
+      <p>
+        Google Maps ha bisogno della rete e non può essere salvato sul dispositivo.
+        <strong>Il resto dell'app funziona lo stesso</strong>: itinerario, attività,
+        hotel, biglietti e checklist sono tutti consultabili senza connessione.
+      </p>
+      <p style="margin-top:0.5rem;">
+        I link “naviga” qui sopra si apriranno appena torna il campo.
+      </p>
+      <div style="margin-top:1rem;text-align:left;">
+        <strong>Tappe del viaggio:</strong>
+        <ul style="margin-top:0.5rem;color:var(--color-text-muted);font-size:0.88rem;line-height:2;">
+          ${tappe.map(l => `<li>📍 ${l}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  `
 }
 
 /* ── NO API KEY ───────────────────────────────────────────── */

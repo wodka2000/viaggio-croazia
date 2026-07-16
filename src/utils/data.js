@@ -9,10 +9,21 @@ export async function fetchTripData() {
   const base = import.meta.env.BASE_URL
   const url = `${base}data/trip.json`
 
-  // 'no-cache' forza il browser a rivalidare col server (304 se invariato,
-  // file fresco se aggiornato) → gli aggiornamenti ai dati compaiono senza
-  // dover svuotare manualmente la cache.
-  const res = await fetch(url, { cache: 'no-cache' })
+  // Niente 'no-cache': ci pensa il service worker. trip.json è precacheato al
+  // deploy, quindi in viaggio (dove la rete manca) i dati ci sono comunque, e
+  // a ogni nuovo deploy il service worker si aggiorna da solo e porta i dati
+  // freschi — che era poi lo scopo del vecchio 'no-cache'.
+  let res
+  try {
+    res = await fetch(url)
+  } catch {
+    // Rete assente E niente in cache: succede solo se l'app non è mai stata
+    // aperta online su questo dispositivo.
+    throw new Error(
+      'Dati del viaggio non disponibili offline. Apri l’app una volta con la rete: ' +
+      'da quel momento resta consultabile anche senza connessione.'
+    )
+  }
   if (!res.ok) throw new Error(`Impossibile caricare trip.json (${res.status})`)
 
   _cache = await res.json()
