@@ -1249,6 +1249,174 @@
       "town": "Sesto",
       "type": "Ristorante",
       "specialty": "Canederli, gulasch e cucina altoatesina in paese"
+    },
+    {
+      "area": "Brač",
+      "name": "Konoba Toni",
+      "town": "Dol (3 km a sud di Postira)",
+      "type": "Konoba",
+      "specialty": "Taverna di paese in fondo a una valle fertile: prosciutto crudo di produzione propria, carni al forno e pesce al forno su una terrazza all'ombra degli alberi. La più vicina alla base e con lo spazio all'aperto ideale per i bambini."
+    },
+    {
+      "area": "Brač",
+      "name": "Palute",
+      "town": "Supetar (Porat 4, tavoli sul pontile)",
+      "type": "Ristorante",
+      "specialty": "Griglie di pesce e carne più paste e risotti leggeri, con i piatti del giorno sulla lavagna: prezzi molto contenuti e tavoli all'aperto sul molo. Una delle opzioni più economiche dell'isola."
+    },
+    {
+      "area": "Brač",
+      "name": "Punta",
+      "town": "Supetar (Punta 1, dietro il mausoleo)",
+      "type": "Ristorante",
+      "specialty": "Braciole di maiale e cotolette dominano il menu — utile con tre bambini — con pesce fresco locale per gli adulti e una terrazza ombreggiata perfetta per il tramonto."
+    },
+    {
+      "area": "Brač",
+      "name": "Pansion Lučica",
+      "town": "Pučišća (10 min a piedi sul lato ovest dell'insenatura)",
+      "type": "Ristorante",
+      "specialty": "Terrazza al primo piano sospesa sull'acqua tra i rami di un fico: il pesce fresco è il piatto forte, ma i risotti sono l'alternativa leggera per un pranzo coi piccoli."
+    },
+    {
+      "area": "Brač",
+      "name": "Konoba Kala",
+      "town": "Povlja (sul molo del porticciolo)",
+      "type": "Konoba",
+      "specialty": "Incrocio riuscito tra konoba dalmata e cucina contemporanea: pesce e paste alla griglia serviti in banchina guardando le barche. È anche il posto del paese per il caffè del mattino."
+    },
+    {
+      "area": "Brač",
+      "name": "Pizzeria Topolino",
+      "town": "Bol (Frane Radića 1, a pochi metri dal mare)",
+      "type": "Pizzeria",
+      "specialty": "Pizze al forno a legna, paste, insalate sostanziose e limonata fatta in casa a due passi dall'acqua: la scelta più semplice e senza attese durante una giornata a Zlatni Rat."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Pizzeria Šime",
+      "town": "Zara (Borik, Matije Gupca 15 — il quartiere più vicino a Petrčane)",
+      "type": "Pizzeria",
+      "specialty": "Pizze sottili e abbondanti, servizio rapido e una terrazza enorme appena sopra Borik. A luglio e agosto si riempie: meglio arrivare presto coi bambini."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Konoba Skoblar",
+      "town": "Zara (Trg Petra Zoranića, centro storico)",
+      "type": "Konoba",
+      "specialty": "Tutto il repertorio dalmata a prezzi onesti, coi piatti del giorno sulla lavagna fuori dalla porta. È la konoba dove vanno i locali per la marenda o un pranzo tardo senza formalità."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Lungo Mare",
+      "town": "Zara (Obala kneza Trpimira 23, tra centro e Borik)",
+      "type": "Ristorante",
+      "specialty": "Grande terrazza all'ombra degli alberi sulla passeggiata a mare, con molto pesce fresco e crostacei: atmosfera rilassata e spazio, il tipo di posto dove i bambini possono muoversi."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Dva Ribara",
+      "town": "Zara (Blaža Jurjeva 1, centro storico)",
+      "type": "Ristorante",
+      "specialty": "Menu ampio di carne e pesce, ma è per le pizze che gli zaratini fanno la fila. Prezzi bassi e posizione comoda dopo una passeggiata in città."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Donat",
+      "town": "Zara (Trg sv. Stošje 4, davanti alla cattedrale)",
+      "type": "Gelateria",
+      "specialty": "La guida la indica come la migliore gelateria di Zara, coi tavolini all'aperto accanto alla cattedrale: sosta obbligata durante il passeggio serale."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Aenona",
+      "town": "Nin (Petra Zoranića 2, di fronte alla chiesa di Santa Croce)",
+      "type": "Ristorante",
+      "specialty": "Doppia anima da pizzeria e da ristorante dalmata — pizze sottili, risotti di pesce, griglia — con terrazza ombreggiata: la soluzione più pratica in giornata a Nin."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Butina",
+      "town": "Kuterevo 21a (accanto al santuario degli orsi, ~25 min da Otočac)",
+      "type": "Konoba",
+      "specialty": "Ristorante rustico a gestione familiare, sorvegliato da orsi scolpiti nel legno: da abbinare alla visita al santuario degli orsi, la tappa più amata dai bambini della zona."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Petro",
+      "town": "Rastoke, Slunj (Rastoke 29, ~1 h da Otočac)",
+      "type": "Ristorante",
+      "specialty": "Baita sull'acqua nel borgo dei mulini, con terrazza sotto ombrelloni di canne e una vasca centrale piena di trote: si mangia trota e lucioperca alla griglia e i bambini si incantano a guardare i pesci."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Lička kuća",
+      "town": "Plitvice (Ingresso 1 del parco, ~50 min da Otočac)",
+      "type": "Ristorante",
+      "specialty": "Grande locale in stile fattoria della Lika: trota, carni al forno e tutto il repertorio dell'agnello. È un magnete per le comitive, ma resta il posto giusto per assaggiare la cucina locale dopo i laghi."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Martina",
+      "town": "Senj (Vukasovića 23, 1 km a nord-ovest del centro)",
+      "type": "Ristorante",
+      "specialty": "Carne alla griglia, pesce e frutti di mare su una terrazza affacciata sulle coste di Krk: la scelta più semplice per una giornata a Senj e alla fortezza di Nehaj."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Gostionica Jablan",
+      "town": "Senjska Draga 19 (6 km nell'entroterra di Senj, sulla salita al passo Vratnik)",
+      "type": "Trattoria",
+      "specialty": "Agnello allo spiedo servito in grossi pezzi con l'osso e pagato a peso: interno spartano ma bella terrazza esterna, sosta perfetta scendendo verso il mare."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Pod Rastočkim Krovom",
+      "town": "Rastoke, Slunj (Rastoke 25b, ~1 h da Otočac)",
+      "type": "Ristorante",
+      "specialty": "Edifici originali a due passi dalle cascate, con pesce d'acqua dolce e cotolette mitteleuropee. Dal suo giardino si gode la vista migliore sulle rapide (ingresso a pagamento anche solo per la passeggiata)."
+    },
+    {
+      "area": "Rovigno",
+      "name": "Pizzeria San Giacomo",
+      "town": "Rovigno (Ricarda Daveggie 11, nei vicoli dietro il porto)",
+      "type": "Pizzeria",
+      "specialty": "Pizzeria senza pretese con lunghe panche di legno e pizze in stile italiano fatte bene, frequentata dai locali: economica e aperta tutto l'anno, la carta vincente per una cena rapida coi bambini."
+    },
+    {
+      "area": "Rovigno",
+      "name": "Konoba Neptun",
+      "town": "Rovigno (Joakima Rakovca 10)",
+      "type": "Konoba",
+      "specialty": "La risposta economica alla ressa di locali gourmet di Rovigno: ćevapi, pljeskavice e altre grigliate cotte sul focolare in fondo alla sala, più il pescato del giorno."
+    },
+    {
+      "area": "Rovigno",
+      "name": "Alla Beccaccia",
+      "town": "Valbandon (Pineta 25, ~40 min da Rovigno)",
+      "type": "Ristorante",
+      "specialty": "Uno dei ristoranti più celebrati dell'Istria, con prezzi ragionevoli: selvaggina, pesce, ombolo e pasta fatta in casa cotti sul focolare, serviti in un giardino con prato — spazio vero per i bambini. Prenotazione necessaria."
+    },
+    {
+      "area": "Rovigno",
+      "name": "Puli Pineta",
+      "town": "Žminj (Karlov vrt, 7 km a est di Dvigrad, ~35 min da Rovigno)",
+      "type": "Konoba",
+      "specialty": "Dietro quello che sembra un garage di periferia si nasconde uno dei migliori locali tradizionali dell'Istria: pasta fatta in casa con sughi stagionali, carne e pesce sul focolare. Ottimo abbinato alle rovine di Dvigrad."
+    },
+    {
+      "area": "Rovigno",
+      "name": "La Grisa",
+      "town": "Valle / Bale (La Grisa 23, ~20 min da Rovigno)",
+      "type": "Ristorante",
+      "specialty": "Cucina da konoba istriana trattata con stile: l'ombolo con purè e verdure è la scelta di mezzo prezzo, e la carta dei vini istriani offre molto al bicchiere."
+    },
+    {
+      "area": "Rovigno",
+      "name": "Stara konoba",
+      "town": "Fasana / Fažana (Trg stare škole 1, sul lungomare, ~40 min da Rovigno)",
+      "type": "Konoba",
+      "specialty": "Sul lungomare turistico ma senza cedere sulla qualità: filetti di pesce, ombolo e molti piatti a base di sardine locali su panche di legno. Col vino della casa si mangia davvero a poco."
     }
   ],
   "checklist": {
