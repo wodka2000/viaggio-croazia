@@ -324,6 +324,43 @@ ul { list-style: none; }
   min-width: 50px;
 }
 
+/* Tappa cliccabile: porta al giorno corrispondente nell'itinerario. */
+.route-stop--link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+.route-stop--link:hover,
+.route-stop--link:focus-visible {
+  background: #eff6ff;
+  border-left-color: var(--color-primary);
+  transform: translateX(2px);
+}
+.route-stop-arrow {
+  margin-left: auto;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.route-stop--link:hover .route-stop-arrow,
+.route-stop--link:focus-visible .route-stop-arrow {
+  opacity: 1;
+}
+/* Su touch non esiste l'hover: la freccia deve restare sempre visibile,
+   altrimenti niente segnala che la riga si puo toccare. */
+@media (hover: none) {
+  .route-stop-arrow { opacity: 1; }
+}
+
+/* Evidenzia il giorno su cui si e appena atterrati da un link. */
+.timeline-card--evidenza {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+  transition: box-shadow 0.4s, border-color 0.4s;
+}
+
 .today-card .activity-list {
   display: flex;
   flex-direction: column;

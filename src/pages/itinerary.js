@@ -19,7 +19,10 @@ import {
 const _editModeDates = new Set()
 let _daysByDate = {}
 
-export async function renderItinerary() {
+// `targetDate` arriva dalla rotta (#itinerary/2026-08-08): e' il giorno su cui
+// aprirsi, quando ci si arriva da un link a una tappa precisa invece che dal
+// menu. Senza parametro la pagina si comporta come sempre.
+export async function renderItinerary(targetDate) {
   const content = document.getElementById('page-content')
 
   let data
@@ -71,6 +74,9 @@ export async function renderItinerary() {
     document.querySelectorAll('.timeline-toggle').forEach(c => c.classList.remove('open'))
   })
 
+  // Arrivo da un link a una tappa precisa: apri quel giorno e portacisi.
+  if (targetDate) _openDay(targetDate)
+
   // Quick-add idea per giorno
   _bindDayIdeaEvents(days)
 
@@ -98,6 +104,25 @@ export async function renderItinerary() {
     window.removeEventListener('ideas:updated', handler)
     window.removeEventListener('bookings:updated', bookingsHandler)
   }
+}
+
+// Apre la scheda di un giorno e ci porta sopra. Serve quando si arriva da un
+// link a una tappa: le schede nascono chiuse, quindi senza aprirla l'utente
+// atterrerebbe su un titolo e dovrebbe cliccare di nuovo.
+function _openDay(date) {
+  const item = document.querySelector(`.timeline-item[data-date="${date}"]`)
+  if (!item) return
+
+  item.querySelector('.timeline-card-body')?.classList.remove('hidden')
+  item.querySelector('.timeline-toggle')?.classList.add('open')
+
+  const card = item.querySelector('.timeline-card')
+  card?.classList.add('timeline-card--evidenza')
+  // L'evidenza dice "sei arrivato qui": passati due secondi ha esaurito il suo
+  // compito e resterebbe solo rumore visivo.
+  setTimeout(() => card?.classList.remove('timeline-card--evidenza'), 2000)
+
+  item.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 /* ── DAY CARD ─────────────────────────────────────────────── */
@@ -130,7 +155,7 @@ function renderDay(day, hotelMap, ferries = []) {
   const coordsJson = day.coordinates ? JSON.stringify(day.coordinates) : 'null'
 
   return `
-    <div class="timeline-item">
+    <div class="timeline-item" data-date="${day.date}">
       <div class="timeline-line"></div>
       <div class="timeline-left">
         <div class="timeline-day-num"

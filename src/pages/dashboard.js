@@ -82,10 +82,12 @@ export async function renderDashboard() {
         <div class="section-title">Rotta del viaggio</div>
         <div class="route-stops">
           ${uniqueLocations.map(loc => `
-            <div class="route-stop">
+            <a class="route-stop route-stop--link" href="#itinerary/${loc.date}"
+               title="Apri il ${loc.location} nell'itinerario — puoi controllarlo e modificarlo">
               <span class="stop-day">Gg. ${loc.day}</span>
               <span>📍 ${loc.location}</span>
-            </div>
+              <span class="route-stop-arrow">→</span>
+            </a>
           `).join('')}
         </div>
       </div>

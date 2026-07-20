@@ -16,7 +16,9 @@ export function initNav() {
 
   // Aggiorna link attivo al cambio hash
   function updateActive() {
-    const hash = window.location.hash || '#dashboard'
+    // Solo la parte prima della barra: #itinerary/2026-08-08 e' pur sempre la
+    // pagina Itinerario, e la voce di menu deve restare evidenziata.
+    const hash = (window.location.hash || '#dashboard').split('/')[0]
     document.querySelectorAll('.nav-link').forEach(link => {
       link.classList.toggle('active', link.getAttribute('href') === hash)
     })

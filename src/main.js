@@ -31,7 +31,9 @@ async function router() {
     window.__currentPageCleanup = null
   }
 
-  const hash   = window.location.hash || '#dashboard'
+  // Le rotte possono portare un parametro dopo la barra (#itinerary/2026-08-08):
+  // serve ad aprire una pagina su un elemento preciso invece che dall'inizio.
+  const [hash, param] = (window.location.hash || '#dashboard').split('/')
   const render = routes[hash] ?? routes['#dashboard']
 
   const content = document.getElementById('page-content')
@@ -43,7 +45,7 @@ async function router() {
   `
 
   try {
-    await render()
+    await render(param)
   } catch (err) {
     console.error('[router]', err)
     content.innerHTML = `
