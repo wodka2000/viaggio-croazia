@@ -72,7 +72,7 @@ export async function renderDashboard() {
       </div>
       <button type="button" class="stat-card stat-card--action" id="suggestions-card"
         title="Vedi i suggerimenti per ${currentDay ? currentDay.location : 'la tappa'}">
-        <div class="stat-icon">💡</div>
+        <div class="stat-icon">🎯</div>
         <div class="stat-value">${suggestionCount}</div>
         <div class="stat-label">Attività suggerite<br><span class="stat-card-cta">tocca per aprire →</span></div>
       </button>

@@ -22,7 +22,7 @@ export async function renderAttivita() {
 
   content.innerHTML = `
     <div class="page-header">
-      <h1>💡 Attività suggerite</h1>
+      <h1>🎯 Attività suggerite</h1>
       <p>Pianifica in anticipo: programma, ristoranti della zona e le tue idee per ogni tappa. Tocca un giorno per espanderlo.</p>
     </div>
     <div class="attivita-list" id="attivita-list">
