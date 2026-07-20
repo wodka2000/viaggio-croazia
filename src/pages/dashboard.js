@@ -1,6 +1,7 @@
 import { fetchTripData } from '../utils/data.js'
 import { formatDateIT, daysUntil } from '../utils/data.js'
 import { suggestionsCount, suggestionsSectionsHtml } from '../utils/suggestions.js'
+import { navTargetsHtml } from '../utils/navigation.js'
 
 export async function renderDashboard() {
   const content = document.getElementById('page-content')
@@ -107,6 +108,7 @@ export async function renderDashboard() {
             `).join('')}
             ${currentDay.activities.length > 5 ? `<div style="font-size:0.8rem;color:var(--color-text-muted);">+${currentDay.activities.length - 5} altre attività → <a href="#itinerary" style="color:var(--color-primary);">Vedi itinerario</a></div>` : ''}
           </div>
+          ${navTargetsHtml(currentDay, data)}
         ` : '<p style="color:var(--color-text-muted);font-size:0.9rem;">Nessuna tappa disponibile.</p>'}
       </div>
     </div>
