@@ -316,6 +316,11 @@ function addIdeaMarkers() {
 // Disegna il percorso stradale reale tra le tappe usando le Directions di Google.
 // Ogni tratta è una richiesta indipendente: se una non è instradabile in auto
 // (es. tratta con traghetto verso l'isola), si ripiega su una linea tratteggiata.
+//
+// Le richieste vanno in fila e non tutte insieme: Google limita le Directions
+// ravvicinate e risponde OVER_QUERY_LIMIT a una parte di quelle simultanee.
+// Lanciandole in parallelo, alcune tratte perfettamente stradali finivano
+// disegnate come linee dritte, in modo apparentemente casuale.
 function drawDrivingRoute(data, gen) {
   routeElements.forEach(e => e.setMap(null))
   routeElements = []
@@ -332,43 +337,73 @@ function drawDrivingRoute(data, gen) {
 
   const service = new google.maps.DirectionsService()
 
-  for (let i = 0; i < pts.length - 1; i++) {
-    const origin = pts[i]
-    const destination = pts[i + 1]
+  ;(async () => {
+    for (let i = 0; i < pts.length - 1; i++) {
+      // L'utente ha lasciato la mappa: smetti, il resto non serve più.
+      if (gen !== _gen || !mapInstance) return
+      await drawLeg(service, pts[i], pts[i + 1], gen)
+      // Respiro tra una tratta e l'altra: il limite di Google e' sul ritmo,
+      // non sul totale, e cosi i ritentativi restano un caso raro.
+      await sleep(120)
+    }
+  })()
+}
+
+const sleep = ms => new Promise(r => setTimeout(r, ms))
+
+function routeOnce(service, origin, destination) {
+  return new Promise(resolve => {
     service.route(
       { origin, destination, travelMode: google.maps.TravelMode.DRIVING },
-      (result, status) => {
-        // Risposta arrivata dopo che l'utente ha lasciato la mappa: ignorala.
-        if (gen !== _gen || !mapInstance) return
-        if (status === 'OK' && result) {
-          const renderer = new google.maps.DirectionsRenderer({
-            map: mapInstance,
-            directions: result,
-            suppressMarkers: true,
-            suppressInfoWindows: true,
-            preserveViewport: true,
-            polylineOptions: { strokeColor: '#2563eb', strokeOpacity: 0.9, strokeWeight: 5 },
-          })
-          routeElements.push(renderer)
-        } else {
-          // Fallback: linea tratteggiata (tratta non instradabile in auto, es. traghetto)
-          const line = new google.maps.Polyline({
-            path: [origin, destination],
-            map: mapInstance,
-            geodesic: true,
-            strokeOpacity: 0,
-            icons: [{
-              icon: { path: 'M 0,-1 0,1', strokeColor: '#f59e0b', strokeOpacity: 0.9, scale: 3 },
-              offset: '0',
-              repeat: '14px',
-            }],
-          })
-          routeElements.push(line)
-        }
-        applyRouteVisibility()
-      }
+      (result, status) => resolve({ result, status })
     )
+  })
+}
+
+// Una singola tratta, con ritentativi sui rifiuti temporanei. La linea
+// tratteggiata resta riservata a chi non è davvero instradabile in auto
+// (il traghetto), cosi non si confonde piu un limite di quota con un tratto
+// di mare.
+async function drawLeg(service, origin, destination, gen, tentativi = 4) {
+  let attesa = 300
+
+  for (let n = 0; n < tentativi; n++) {
+    const { result, status } = await routeOnce(service, origin, destination)
+    if (gen !== _gen || !mapInstance) return
+
+    if (status === 'OK' && result) {
+      routeElements.push(new google.maps.DirectionsRenderer({
+        map: mapInstance,
+        directions: result,
+        suppressMarkers: true,
+        suppressInfoWindows: true,
+        preserveViewport: true,
+        polylineOptions: { strokeColor: '#2563eb', strokeOpacity: 0.9, strokeWeight: 5 },
+      }))
+      applyRouteVisibility()
+      return
+    }
+
+    // ZERO_RESULTS e simili non migliorano riprovando: e' il caso del traghetto.
+    if (status !== google.maps.DirectionsStatus.OVER_QUERY_LIMIT) break
+
+    await sleep(attesa)
+    attesa *= 2
+    if (gen !== _gen || !mapInstance) return
   }
+
+  routeElements.push(new google.maps.Polyline({
+    path: [origin, destination],
+    map: mapInstance,
+    geodesic: true,
+    strokeOpacity: 0,
+    icons: [{
+      icon: { path: 'M 0,-1 0,1', strokeColor: '#f59e0b', strokeOpacity: 0.9, scale: 3 },
+      offset: '0',
+      repeat: '14px',
+    }],
+  }))
+  applyRouteVisibility()
 }
 
 function applyRouteVisibility() {
