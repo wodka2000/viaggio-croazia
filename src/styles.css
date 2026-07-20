@@ -324,9 +324,15 @@ ul { list-style: none; }
   min-width: 50px;
 }
 
-/* Tappa cliccabile: porta al giorno corrispondente nell'itinerario. */
+/* Tappa cliccabile: mostra l'anteprima nella scheda accanto.
+   E un <button>, quindi vanno tolti gli stili suoi di serie. */
 .route-stop--link {
+  width: 100%;
+  text-align: left;
+  font: inherit;
   color: inherit;
+  border: none;
+  border-left: 3px solid var(--color-primary-light);
   text-decoration: none;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s, transform 0.15s;
@@ -337,6 +343,29 @@ ul { list-style: none; }
   border-left-color: var(--color-primary);
   transform: translateX(2px);
 }
+/* Tappa attualmente in anteprima */
+.route-stop--attiva {
+  background: #eff6ff;
+  border-left-color: var(--color-primary);
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.25);
+}
+.route-stop--attiva .route-stop-arrow { opacity: 1; }
+
+/* Ritorno alla tappa corrente, dentro il titolo della scheda */
+.preview-reset {
+  float: right;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+.preview-reset:hover { background: #eff6ff; border-color: var(--color-primary); color: var(--color-primary); }
 .route-stop-arrow {
   margin-left: auto;
   color: var(--color-text-muted);
