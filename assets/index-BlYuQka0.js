@@ -102,7 +102,7 @@
       </div>
       <button type="button" class="stat-card stat-card--action" id="suggestions-card"
         title="Vedi i suggerimenti per ${u?u.location:"la tappa"}">
-        <div class="stat-icon">💡</div>
+        <div class="stat-icon">🎯</div>
         <div class="stat-value">${g}</div>
         <div class="stat-label">Attività suggerite<br><span class="stat-card-cta">tocca per aprire →</span></div>
       </button>
@@ -1148,7 +1148,7 @@
     </div>
   `}function v(a){return String(a??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}async function Dt(){const a=document.getElementById("page-content");let e;try{e=await I()}catch(l){a.innerHTML=`<div class="error-state"><div class="error-icon">⚠️</div><h2>Errore</h2><p>${l.message}</p></div>`;return}const{days:i,dining:t}=e,o=e.hikes||[],n=new Date().toISOString().slice(0,10),s=i.find(l=>l.date===n)||i.find(l=>l.date>n)||i[i.length-1];a.innerHTML=`
     <div class="page-header">
-      <h1>💡 Attività suggerite</h1>
+      <h1>🎯 Attività suggerite</h1>
       <p>Pianifica in anticipo: programma, ristoranti della zona e le tue idee per ogni tappa. Tocca un giorno per espanderlo.</p>
     </div>
     <div class="attivita-list" id="attivita-list">
