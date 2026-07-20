@@ -1,4 +1,4 @@
-import { loadIdeas } from './ideas.js'
+import { loadIdeas, addIdea } from './ideas.js'
 
 /* Suggerimenti del giorno — logica condivisa tra Dashboard (popup) e scheda Attività. */
 
@@ -39,6 +39,9 @@ const mapsSearch = q => `https://www.google.com/maps/search/?api=1&query=${encod
 export function suggestionsSectionsHtml(day, dining, hikes = []) {
   const restaurants = diningForLocation(dining, day.location)
   const ideas       = ideasForDay(day.date)
+  // Cosa e gia' in programma per questo giorno: serve a non riproporre il
+  // pulsante "Aggiungi" su chi c'e gia'.
+  const giaInProgramma = new Set(ideas.map(i => String(i.text ?? '').toLowerCase()))
   const tipsDo      = day.tips?.do || []
   const tipsEat     = day.tips?.eat || []
   const sesto       = isSesto(day)
@@ -110,14 +113,23 @@ export function suggestionsSectionsHtml(day, dining, hikes = []) {
          ${tipsEat.length ? `<ul class="sugg-tips">${tipsEat.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
          <div class="sugg-dining">
            ${restaurants.map(d => `
-             <a class="sugg-dining-item" target="_blank" rel="noopener" href="${mapsSearch(d.name + ' ' + d.town)}">
-               <div class="sugg-dining-head">
-                 <span class="sugg-dining-name">${esc(d.name)}</span>
-                 ${d.type ? `<span class="sugg-dining-type">${esc(d.type)}</span>` : ''}
-               </div>
-               <div class="sugg-dining-town">📍 ${esc(d.town)}</div>
-               <div class="sugg-dining-spec">${esc(d.specialty)}</div>
-             </a>`).join('')}
+             <div class="sugg-dining-item">
+               <a class="sugg-dining-link" target="_blank" rel="noopener" href="${mapsSearch(d.name + ' ' + d.town)}">
+                 <div class="sugg-dining-head">
+                   <span class="sugg-dining-name">${esc(d.name)}</span>
+                   ${d.type ? `<span class="sugg-dining-type">${esc(d.type)}</span>` : ''}
+                 </div>
+                 <div class="sugg-dining-town">📍 ${esc(d.town)}</div>
+                 <div class="sugg-dining-spec">${esc(d.specialty)}</div>
+               </a>
+               ${giaInProgramma.has(d.name.toLowerCase())
+                 ? `<button type="button" class="sugg-dining-add" disabled>✅ Aggiunto</button>`
+                 : `<button type="button" class="sugg-dining-add"
+                      data-date="${esc(day.date)}"
+                      data-name="${esc(d.name)}"
+                      data-town="${esc(d.town)}"
+                      title="Metti in programma per questo giorno">📌 Aggiungi</button>`}
+             </div>`).join('')}
          </div>
        </div>`
   }
@@ -138,4 +150,40 @@ export function suggestionsSectionsHtml(day, dining, hikes = []) {
     </div>`
 
   return activitiesHtml + tipsHtml + sestoTipsHtml + restaurantsHtml + ideasHtml
+}
+
+/* Aggiunta di un ristorante al programma del giorno.
+ *
+ * Qui il giorno e gia' noto — i suggerimenti sono per definizione di una
+ * tappa — quindi non serve chiedere quale: si aggiunge a quello.
+ *
+ * Il click e' intercettato sul contenitore invece che sui singoli pulsanti,
+ * perche' le schede vengono ridisegnate a ogni cambio di idee e i pulsanti
+ * legati uno a uno sparirebbero insieme al loro ascoltatore.
+ */
+export function bindDiningAdds(root) {
+  if (!root || root.dataset.diningBound === '1') return
+  root.dataset.diningBound = '1'
+
+  root.addEventListener('click', e => {
+    const btn = e.target.closest('.sugg-dining-add')
+    if (!btn || btn.disabled) return
+
+    e.preventDefault()
+    const { date, name, town } = btn.dataset
+    if (!date || !name) return
+
+    addIdea({
+      text:          name,
+      note:          town ? `Ristorante · ${town}` : 'Ristorante',
+      categoria:     'ristorante',
+      stato:         'idea',
+      day_date:      date,
+      location_name: town || null,
+      link:          mapsSearch(`${name} ${town || ''}`.trim()),
+    })
+
+    btn.textContent = '✅ Aggiunto'
+    btn.disabled = true
+  })
 }

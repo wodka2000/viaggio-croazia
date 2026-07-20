@@ -1,5 +1,10 @@
-import { addIdea } from '../utils/ideas.js'
-import { navUrl } from '../utils/data.js'
+import { addIdea, loadIdeas } from '../utils/ideas.js'
+import { navUrl, fetchTripData } from '../utils/data.js'
+import { openDayPicker } from '../utils/dayPicker.js'
+
+// Giorni del viaggio, per agganciare una meta a una tappa. Restano vuoti se
+// trip.json non si carica: in quel caso l'aggiunta ripiega sulle sole Idee.
+let _giorni = []
 
 /* ── DATI STATICI ─────────────────────────────────────────
    Suggerimenti in linea con l'itinerario: spostamenti di
@@ -1137,6 +1142,14 @@ const TIPO_LABELS = {
 export async function renderNatura() {
   const content = document.getElementById('page-content')
 
+  // La pagina vive di dati propri: i giorni servono solo per il selettore, e
+  // se mancano non deve impedire di consultare le schede.
+  try {
+    _giorni = (await fetchTripData()).days || []
+  } catch {
+    _giorni = []
+  }
+
   const aree = [...new Set(NATURA_DATA.map(n => n.area))]
   let _activeArea = 'tutte'
   let _activeTipo = 'tutti'
@@ -1281,7 +1294,7 @@ function renderCard(n) {
           data-area="${_esc(n.area)}"
           data-lat="${n.coords.lat}"
           data-lng="${n.coords.lng}">
-          💡 Aggiungi alle Idee
+          📌 Aggiungi a un giorno
         </button>
       </div>
     </div>
@@ -1295,20 +1308,43 @@ function bindCardEvents() {
       const area  = btn.dataset.area
       const lat   = parseFloat(btn.dataset.lat)
       const lng   = parseFloat(btn.dataset.lng)
-      addIdea({
-        text: nome,
-        location_name: area,
-        categoria: 'escursione',
-        stato: 'da-verificare',
-        add_to_map: true,
-        coordinates: { lat, lng },
-        marker_color: '#10b981',
+
+      const salva = date => {
+        addIdea({
+          text: nome,
+          location_name: area,
+          categoria: 'escursione',
+          stato: 'da-verificare',
+          day_date: date,
+          add_to_map: true,
+          coordinates: { lat, lng },
+          marker_color: '#10b981',
+        })
+        _conferma(btn, date)
+      }
+
+      // Senza giorni caricati il selettore non avrebbe nulla da offrire: si
+      // salva tra le Idee, che e' poi il comportamento di prima.
+      if (!_giorni.length) { salva(null); return }
+
+      openDayPicker({
+        nome,
+        giorni: _giorni,
+        giaScelti: loadIdeas().filter(i => i.text === nome && i.day_date).map(i => i.day_date),
+        consentiNessuno: true,
+        onConferma: salva,
       })
-      btn.textContent = '✅ Aggiunta!'
-      btn.disabled = true
-      setTimeout(() => { btn.textContent = '💡 Aggiungi alle Idee'; btn.disabled = false }, 2000)
     })
   })
+}
+
+// Riscontro sul pulsante: dice anche DOVE e finita, perche' ora l'esito non e
+// piu scontato come quando andava sempre e solo nelle Idee.
+function _conferma(btn, date) {
+  const giorno = date ? _giorni.find(g => g.date === date) : null
+  btn.textContent = giorno ? `✅ Aggiunta al Gg. ${giorno.day}` : '✅ Aggiunta alle Idee'
+  btn.disabled = true
+  setTimeout(() => { btn.textContent = '📌 Aggiungi a un giorno'; btn.disabled = false }, 2200)
 }
 
 function _esc(str) {

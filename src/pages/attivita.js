@@ -1,6 +1,6 @@
 import { fetchTripData } from '../utils/data.js'
 import { formatDateIT } from '../utils/data.js'
-import { suggestionsCount, suggestionsSectionsHtml } from '../utils/suggestions.js'
+import { suggestionsCount, suggestionsSectionsHtml, bindDiningAdds } from '../utils/suggestions.js'
 
 export async function renderAttivita() {
   const content = document.getElementById('page-content')
@@ -31,6 +31,9 @@ export async function renderAttivita() {
   `
 
   bindAccordion()
+  // Sul contenitore, non sui pulsanti: la lista si ridisegna a ogni cambio di
+  // idee e gli ascoltatori legati ai singoli pulsanti se ne andrebbero con loro.
+  bindDiningAdds(content.querySelector('#attivita-list'))
 
   // Aggiorna i conteggi/idee quando cambiano le idee salvate
   const handler = () => {

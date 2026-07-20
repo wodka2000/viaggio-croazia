@@ -1,6 +1,6 @@
 import { fetchTripData } from '../utils/data.js'
 import { formatDateIT, daysUntil } from '../utils/data.js'
-import { suggestionsCount, suggestionsSectionsHtml } from '../utils/suggestions.js'
+import { suggestionsCount, suggestionsSectionsHtml, bindDiningAdds } from '../utils/suggestions.js'
 import { navTargetsHtml } from '../utils/navigation.js'
 
 export async function renderDashboard() {
@@ -156,6 +156,7 @@ function openSuggestionsModal(day, dining, hikes) {
     </div>
   `
   document.body.appendChild(modal)
+  bindDiningAdds(modal.querySelector('.sugg-body'))
 
   const close = () => modal.remove()
   document.getElementById('sugg-close')?.addEventListener('click', close)

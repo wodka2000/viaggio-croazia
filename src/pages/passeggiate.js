@@ -1,6 +1,7 @@
 import { fetchTripData } from '../utils/data.js'
 import { formatDateIT } from '../utils/data.js'
 import { loadIdeas, addIdea, deleteIdea } from '../utils/ideas.js'
+import { openDayPicker as openDayPickerModal } from '../utils/dayPicker.js'
 import { esc } from '../utils/suggestions.js'
 
 let _hikes    = []
@@ -160,60 +161,31 @@ function bindGrid() {
 
 /* ── DAY PICKER ────────────────────────────────────── */
 
+// La finestra di scelta del giorno e condivisa (utils/dayPicker.js): qui resta
+// solo cio che e proprio delle passeggiate, cioe' che idea costruirci sopra.
 function openDayPicker(hikeId) {
   const hike = _hikes.find(h => h.id === hikeId)
   if (!hike) return
 
-  document.getElementById('hike-day-modal')?.remove()
-
-  const alreadyDates = new Set(assignedDays(hikeId).map(a => a.day.date))
-  const opts = _sestoDays.map(d => `
-    <option value="${d.date}" ${alreadyDates.has(d.date) ? 'disabled' : ''}>
-      Gg. ${d.day} — ${formatDateIT(d.date)}${alreadyDates.has(d.date) ? ' (già aggiunta)' : ''}
-    </option>
-  `).join('')
-
-  const modal = document.createElement('div')
-  modal.id = 'hike-day-modal'
-  modal.className = 'day-link-modal-overlay'
-  modal.innerHTML = `
-    <div class="day-link-modal">
-      <div class="day-link-modal-title">📌 Aggiungi al giorno</div>
-      <p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:0.75rem;">
-        “${esc(hike.name)}” comparirà nelle attività suggerite del giorno scelto.
-      </p>
-      <select id="hike-day-select" class="ideas-select">
-        ${opts}
-      </select>
-      <div style="display:flex;gap:0.5rem;margin-top:1rem;">
-        <button class="btn btn-primary" id="hike-day-confirm">✓ Aggiungi</button>
-        <button class="btn btn-outline" id="hike-day-cancel">Annulla</button>
-      </div>
-    </div>
-  `
-  document.body.appendChild(modal)
-
-  const close = () => modal.remove()
-  document.getElementById('hike-day-cancel')?.addEventListener('click', close)
-  modal.addEventListener('click', e => { if (e.target === modal) close() })
-
-  document.getElementById('hike-day-confirm')?.addEventListener('click', () => {
-    const date = document.getElementById('hike-day-select')?.value
-    if (!date) return
-    addIdea({
-      text:          hike.name,
-      note:          `${hike.type} · ${hike.difficulty} · ${hike.duration} — ${hike.description}`,
-      categoria:     'escursione',
-      stato:         'idea',
-      day_date:      date,
-      location_name: hike.start,
-      link:          mapsUrl(hike.name),
-      coordinates:   hike.coordinates || null,
-      add_to_map:    !!hike.coordinates,
-      marker_color:  '#10b981',
-      hike_id:       hike.id,
-    })
-    close()
-    // refreshGrid avviene via evento ideas:updated
+  openDayPickerModal({
+    nome: hike.name,
+    giorni: _sestoDays,
+    giaScelti: assignedDays(hikeId).map(a => a.day.date),
+    onConferma: date => {
+      addIdea({
+        text:          hike.name,
+        note:          `${hike.type} · ${hike.difficulty} · ${hike.duration} — ${hike.description}`,
+        categoria:     'escursione',
+        stato:         'idea',
+        day_date:      date,
+        location_name: hike.start,
+        link:          mapsUrl(hike.name),
+        coordinates:   hike.coordinates || null,
+        add_to_map:    !!hike.coordinates,
+        marker_color:  '#10b981',
+        hike_id:       hike.id,
+      })
+      // refreshGrid avviene via evento ideas:updated
+    },
   })
 }

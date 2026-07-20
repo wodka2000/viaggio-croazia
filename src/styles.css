@@ -2932,17 +2932,48 @@ a.idea-meta-chip.idea-meta-link:hover { background: #eff6ff; color: var(--color-
 }
 .sugg-tips li { margin-bottom: 0.25rem; }
 .sugg-dining { display: flex; flex-direction: column; gap: 0.5rem; }
+/* Riga ristorante: la scheda apre Maps, il pulsante lo mette in programma.
+   Due azioni distinte, quindi il pulsante non puo stare dentro il link. */
 .sugg-dining-item {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
   padding: 0.6rem 0.75rem;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
-  text-decoration: none;
   color: inherit;
   background: var(--color-surface);
   transition: border-color 0.12s ease, background 0.12s ease;
 }
 .sugg-dining-item:hover { border-color: var(--color-primary); background: rgba(99,102,241,0.04); }
+.sugg-dining-link {
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+.sugg-dining-add {
+  flex-shrink: 0;
+  align-self: center;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.sugg-dining-add:hover:not(:disabled) {
+  background: #eff6ff;
+  border-color: var(--color-primary);
+}
+.sugg-dining-add:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
 .sugg-dining-head { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
 .sugg-dining-name { font-weight: 700; font-size: 0.9rem; }
 .sugg-dining-type {
