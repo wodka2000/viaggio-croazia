@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Viaggio Croazia e Sesto 2026</name>
+    <description>Itinerario 7–19 agosto 2026. Alloggi confermati, tappe e soste. Importabile in Google My Maps.</description>
+
+    <Style id="alloggio">
+      <IconStyle>
+        <color>ff0000ff</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="tappa">
+      <IconStyle>
+        <color>ffff7800</color>
+        <scale>1.0</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-circle.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="percorso">
+      <LineStyle>
+        <color>ffdb3b3b</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+
+    <Folder>
+      <name>Alloggi confermati</name>
+
+      <Placemark>
+        <name>1 · Hotel Pastura (Brač)</name>
+        <styleUrl>#alloggio</styleUrl>
+        <description>Vrilo 28, 21410 Postira (Brač). Check-in 08/08 → check-out 11/08 · 3 notti. Tel. +385 21 740000.</description>
+        <Point><coordinates>16.6257,43.3775,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>2 · Hotel Pinija (Petrčane, Zara)</name>
+        <styleUrl>#alloggio</styleUrl>
+        <description>Ulica V 1a, 23231 Petrčane (Zadar). Check-in 11/08 → check-out 14/08 · 3 notti.</description>
+        <Point><coordinates>15.1589,44.1799,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>3 · Apartman Silvija (Otočac, Valle della Gacka)</name>
+        <styleUrl>#alloggio</styleUrl>
+        <description>Ulica pod Pakljom 5, 53220 Otočac (Valle della Gacka). Check-in 14/08 → check-out 15/08 · 1 notte. Tel. +385 99 427 1318.</description>
+        <Point><coordinates>15.2359,44.8688,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>4 · Luxury Apartments Magali 1 (Rovigno)</name>
+        <styleUrl>#alloggio</styleUrl>
+        <description>Ulica Valsavie 11, 52210 Rovinj (Istria). Check-in 15/08 → check-out 17/08 · 2 notti.</description>
+        <Point><coordinates>13.6278,45.1030,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>5 · DoubleTree by Hilton Trieste</name>
+        <styleUrl>#alloggio</styleUrl>
+        <description>Piazza della Repubblica 1, 34122 Trieste. Check-in 17/08 → check-out 18/08 · 1 notte. Tel. +39 040 9712950.</description>
+        <Point><coordinates>13.7741,45.6501,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>6 · Castello di Spessa (Collio)</name>
+        <styleUrl>#alloggio</styleUrl>
+        <description>Via Spessa 1, 34070 Capriva del Friuli (GO). Check-in 18/08 → check-out 19/08 · 1 notte.</description>
+        <Point><coordinates>13.5049,45.9477,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>7 · Sesto / Sexten (da confermare)</name>
+        <styleUrl>#alloggio</styleUrl>
+        <description>Dolomiti di Sesto (BZ). Arrivo 19/08 — inizio soggiorno in montagna. Sistemazione da confermare.</description>
+        <Point><coordinates>12.3643,46.6927,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Tappe e soste</name>
+
+      <Placemark>
+        <name>Partenza · Roma (07/08)</name>
+        <styleUrl>#tappa</styleUrl>
+        <description>Partenza da Roma verso la Croazia.</description>
+        <Point><coordinates>12.4964,41.9028,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Kuterevo Bear Sanctuary (14/08)</name>
+        <styleUrl>#tappa</styleUrl>
+        <description>Rifugio per orsi bruni orfani ai piedi del Velebit.</description>
+        <Point><coordinates>15.1389,44.8266,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Castello di Miramare (17/08)</name>
+        <styleUrl>#tappa</styleUrl>
+        <description>Viale Miramare, 34151 Trieste. Parco e vista sul golfo.</description>
+        <Point><coordinates>13.7125,45.7025,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Gravner (18/08)</name>
+        <styleUrl>#tappa</styleUrl>
+        <description>Az. Agricola Joško Gravner, Località Lenzuolo Bianco, Oslavia (GO).</description>
+        <Point><coordinates>13.6066,45.9826,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Radikon (18/08)</name>
+        <styleUrl>#tappa</styleUrl>
+        <description>Az. Agricola Radikon, Località Tre Buchi, Oslavia (GO).</description>
+        <Point><coordinates>13.6028,45.9828,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>La Subida (18/08)</name>
+        <styleUrl>#tappa</styleUrl>
+        <description>La Subida, Cormons (GO). Pranzo o cena.</description>
+        <Point><coordinates>13.4950,45.9641,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Percorso (ordine tappe)</name>
+      <Placemark>
+        <name>Rotta Roma → Sesto</name>
+        <styleUrl>#percorso</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            12.4964,41.9028,0
+            16.6257,43.3775,0
+            15.1589,44.1799,0
+            15.2359,44.8688,0
+            13.6278,45.1030,0
+            13.7741,45.6501,0
+            13.5049,45.9477,0
+            12.3643,46.6927,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+
+  </Document>
+</kml>

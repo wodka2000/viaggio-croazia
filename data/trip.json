@@ -1,0 +1,2287 @@
+{
+  "meta": {
+    "title": "Estate 2026",
+    "subtitle": "Brač, Zara, Velebit, Istria, Trieste, Collio e Dolomiti di Sesto",
+    "start_date": "2026-08-07",
+    "end_date": "2026-08-29",
+    "duration_days": 23,
+    "travelers": 5,
+    "travelers_detail": "2 adulti + 3 bambini maschi (8, 6, 2 anni)",
+    "emoji": "☀️"
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-08-07",
+      "location": "Roma → Ancona → Spalato",
+      "title": "Partenza da Roma — Traghetto per Spalato",
+      "description": "Trasferimento in auto da Roma ad Ancona e imbarco sul traghetto notturno per Spalato (prenotato). Check-in al porto alle 16:30, partenza alle 19:30; notte in cabina e arrivo a Spalato la mattina dell'8.",
+      "hotel_ref": null,
+      "coordinates": {
+        "lat": 41.9028,
+        "lng": 12.4964
+      },
+      "activities": [
+        {
+          "time": "pomeriggio",
+          "text": "Partenza da Roma verso il porto di Ancona (~3h)"
+        },
+        {
+          "time": "16:30",
+          "text": "Check-in al porto di Ancona"
+        },
+        {
+          "time": "19:30",
+          "text": "Partenza traghetto Ancona → Spalato"
+        },
+        {
+          "time": "sera",
+          "text": "Cena a bordo e notte in cabina"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Sistemare presto la cabina e cena a bordo al tramonto",
+          "Far sfogare i bimbi sul ponte prima della notte"
+        ],
+        "eat": [
+          "A bordo: piatti italiani semplici; snack per i bambini",
+          "Sosta ad Ancona: piadina o gelato prima dell'imbarco"
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "date": "2026-08-08",
+      "location": "Brač",
+      "title": "Arrivo a Brač — Check-in Hotel Pastura",
+      "description": "Arrivo sull'isola di Brač e check-in all'Hotel Pastura di Postira. Giornata di arrivo dedicata al primo mare e al relax in famiglia.",
+      "hotel_ref": "brac_pastura",
+      "coordinates": {
+        "lat": 43.3775,
+        "lng": 16.6257
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Arrivo a Brač (Supetar) e trasferimento a Postira"
+        },
+        {
+          "time": "15:00",
+          "text": "Check-in Hotel Pastura, Postira"
+        },
+        {
+          "time": "16:00",
+          "text": "Primo bagno e spiaggia con i bambini"
+        },
+        {
+          "time": "19:30",
+          "text": "Cena leggera in loco"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Primo bagno a Postira e passeggiata sul lungomare",
+          "Gelato al porto al tramonto"
+        ],
+        "eat": [
+          "Pesce fresco alla griglia; ćevapi per i bimbi",
+          "Formaggio di Brač e olio d'oliva locale"
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "date": "2026-08-09",
+      "location": "Brač",
+      "title": "Brač — Mare e Calette",
+      "description": "Giornata di mare sull'isola: calette vicine a Postira, snorkeling e relax. Possibile visita a Postira o a Supetar nel pomeriggio.",
+      "hotel_ref": "brac_pastura",
+      "coordinates": {
+        "lat": 43.3775,
+        "lng": 16.6257
+      },
+      "activities": [
+        {
+          "time": "09:00",
+          "text": "Colazione con calma"
+        },
+        {
+          "time": "10:00",
+          "text": "Mare e calette vicino a Postira"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo locale"
+        },
+        {
+          "time": "17:00",
+          "text": "Passeggiata a Postira o Supetar"
+        },
+        {
+          "time": "20:00",
+          "text": "Cena in paese"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Snorkeling nelle calette vicine a Postira",
+          "Giro tra le vie di Supetar"
+        ],
+        "eat": [
+          "Peka di polpo o agnello (da ordinare in anticipo)",
+          "Vitalac, specialità dell'isola per i più curiosi"
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "date": "2026-08-10",
+      "location": "Brač",
+      "title": "Brač — Zlatni Rat",
+      "description": "Esperienza clou dell'isola: la spiaggia di Zlatni Rat a Bol. In alternativa, altra esperienza sull'isola. Vidova Gora resta solo come opzione panoramica per chi vuole.",
+      "hotel_ref": "brac_pastura",
+      "coordinates": {
+        "lat": 43.3775,
+        "lng": 16.6257
+      },
+      "activities": [
+        {
+          "time": "08:00",
+          "text": "Partenza per Bol, prima della folla"
+        },
+        {
+          "time": "09:00",
+          "text": "Zlatni Rat — spiaggia di ciottoli bianchi e acque turchesi"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo a Bol"
+        },
+        {
+          "time": "15:30",
+          "text": "Rientro e relax; Vidova Gora solo come opzione"
+        },
+        {
+          "time": "20:00",
+          "text": "Cena con pesce fresco"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Zlatni Rat la mattina presto, prima della folla",
+          "Lettini, ombrellone e pedalò a Bol"
+        ],
+        "eat": [
+          "Pranzo di pesce sul porto di Bol",
+          "Granita o gelato per i bambini"
+        ]
+      }
+    },
+    {
+      "day": 5,
+      "date": "2026-08-11",
+      "location": "Area di Zara",
+      "title": "Brač → Zara — Check-out Pastura, Check-in Pinija",
+      "description": "Ultima mattinata di mare a Brač con calma, poi check-out e traghetto per Split nel primo pomeriggio. Trasferimento in A1 e arrivo a Petrčane nel pomeriggio, con check-in all'Hotel Pinija.",
+      "hotel_ref": "zadar_pinija",
+      "coordinates": {
+        "lat": 44.1799,
+        "lng": 15.1589
+      },
+      "activities": [
+        {
+          "time": "09:30",
+          "text": "Colazione con calma"
+        },
+        {
+          "time": "10:00",
+          "text": "Ultimo bagno di mare a Postira"
+        },
+        {
+          "time": "11:00",
+          "text": "Check-out Hotel Pastura"
+        },
+        {
+          "time": "12:30",
+          "text": "Pranzo a Supetar"
+        },
+        {
+          "time": "pomeriggio",
+          "text": "Traghetto Supetar → Split e trasferimento in A1 verso Zara"
+        },
+        {
+          "time": "17:00",
+          "text": "Arrivo e check-in Hotel Pinija, Petrčane"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Ultimo bagno di mare a Brač prima di partire",
+          "Traghetto pomeridiano Supetar–Split, poi A1 verso Zara"
+        ],
+        "eat": [
+          "Pranzo a Supetar prima del traghetto",
+          "Cena di pesce a Petrčane"
+        ]
+      }
+    },
+    {
+      "day": 6,
+      "date": "2026-08-12",
+      "location": "Area di Zara",
+      "title": "Area di Zara — Mare e Relax",
+      "description": "Giornata dedicata al mare e al relax nell'area di Petrčane / Zara.",
+      "hotel_ref": "zadar_pinija",
+      "coordinates": {
+        "lat": 44.1799,
+        "lng": 15.1589
+      },
+      "activities": [
+        {
+          "time": "09:00",
+          "text": "Spiaggia mattina"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo"
+        },
+        {
+          "time": "15:00",
+          "text": "Relax, piscina o mare"
+        },
+        {
+          "time": "20:00",
+          "text": "Cena"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Spiaggia e piscina in totale relax",
+          "Eventuale gita in barca"
+        ],
+        "eat": [
+          "Ćevapi e ražnjići alla griglia",
+          "Brodetto di pesce per gli adulti"
+        ]
+      }
+    },
+    {
+      "day": 7,
+      "date": "2026-08-13",
+      "location": "Area di Zara",
+      "title": "Zara — Centro Storico e Tramonto",
+      "description": "Giornata a Zara: centro storico sulla penisola, l'Organo del Mare (Morske Orgulje) e il Saluto al Sole (Pozdrav Suncu), con il celebre tramonto sul lungomare.",
+      "hotel_ref": "zadar_pinija",
+      "coordinates": {
+        "lat": 44.1799,
+        "lng": 15.1589
+      },
+      "activities": [
+        {
+          "time": "10:00",
+          "text": "Centro storico di Zara — Foro Romano, Cattedrale di Sant'Anastasia"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo in centro"
+        },
+        {
+          "time": "18:30",
+          "text": "Organo del Mare (Morske Orgulje)"
+        },
+        {
+          "time": "19:30",
+          "text": "Saluto al Sole (Pozdrav Suncu) e tramonto"
+        },
+        {
+          "time": "20:30",
+          "text": "Cena a Zara"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Foro romano e centro storico di Zara",
+          "Organo del Mare e Saluto al Sole al tramonto"
+        ],
+        "eat": [
+          "Gelato passeggiando sul Kalelarga",
+          "Maraschino di Zara (per adulti)"
+        ]
+      }
+    },
+    {
+      "day": 8,
+      "date": "2026-08-14",
+      "location": "Velebit / Otočac",
+      "title": "Zara → Velebit — Kuterevo Bear Sanctuary",
+      "description": "Check-out dall'Hotel Pinija e risalita verso l'interno. Visita al Kuterevo Bear Sanctuary, check-in all'Apartman Silvija (Otočac, Valle della Gacka) e, in serata, esplorazione della Valle della Gacka.",
+      "hotel_ref": "velebit_silvija",
+      "coordinates": {
+        "lat": 44.8688,
+        "lng": 15.2359
+      },
+      "activities": [
+        {
+          "time": "09:00",
+          "text": "Check-out Hotel Pinija"
+        },
+        {
+          "time": "mattina",
+          "text": "Trasferimento verso l'area di Kuterevo / Velebit"
+        },
+        {
+          "time": "13:00",
+          "text": "Kuterevo Bear Sanctuary — rifugio per orsi"
+        },
+        {
+          "time": "16:00",
+          "text": "Check-in Apartman Silvija"
+        },
+        {
+          "time": "18:00",
+          "text": "Eventuale Valle della Gacka"
+        }
+      ],
+      "tips": {
+        "do": [
+          "🛒 Fare la spesa PRIMA di arrivare: all'Apartman Silvija non c'è nulla (cibo e bevande per sera e mattina)",
+          "Kuterevo Bear Sanctuary",
+          "Passeggiata lungo il fiume Gacka"
+        ],
+        "eat": [
+          "Trota della Gacka e agnello della Lika",
+          "Formaggio škripavac; štrukli"
+        ]
+      }
+    },
+    {
+      "day": 9,
+      "date": "2026-08-15",
+      "location": "Rovigno / Istria",
+      "title": "Velebit → Istria — Check-in Magali (Rovigno)",
+      "description": "Eventuale breve attività naturalistica al mattino nella zona del Velebit / Gacka, poi trasferimento verso l'Istria. Check-in ai Luxury Apartments Magali 1, base per Rovigno.",
+      "hotel_ref": "rovinj_magali",
+      "coordinates": {
+        "lat": 45.103,
+        "lng": 13.6278
+      },
+      "activities": [
+        {
+          "time": "09:00",
+          "text": "Eventuale attività naturalistica breve (Velebit / Gacka)"
+        },
+        {
+          "time": "10:30",
+          "text": "Check-out Apartman Silvija e trasferimento verso Rovigno"
+        },
+        {
+          "time": "15:00",
+          "text": "Check-in Luxury Apartments Magali 1"
+        },
+        {
+          "time": "17:00",
+          "text": "Primo mare e passeggiata a Rovigno"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Trasferimento con sosta pranzo lungo il percorso",
+          "Bagno vicino all'appartamento; serata soft"
+        ],
+        "eat": [
+          "Fuži o pljukanci al tartufo istriano",
+          "Prenotare la cena (Ferragosto: tutto pieno)"
+        ]
+      }
+    },
+    {
+      "day": 10,
+      "date": "2026-08-16",
+      "location": "Rovigno / Istria",
+      "title": "Rovigno e Istria",
+      "description": "Giornata a Rovigno e in Istria: mare, centro storico collinare con la Chiesa di Sant'Eufemia, eventuale Canale di Leme ed eventuale cena a Rovigno.",
+      "hotel_ref": "rovinj_magali",
+      "coordinates": {
+        "lat": 45.103,
+        "lng": 13.6278
+      },
+      "activities": [
+        {
+          "time": "09:00",
+          "text": "Mare in Istria"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo"
+        },
+        {
+          "time": "15:00",
+          "text": "Centro storico di Rovigno — Sant'Eufemia"
+        },
+        {
+          "time": "17:00",
+          "text": "Eventuale Canale di Leme (Limski Kanal)"
+        },
+        {
+          "time": "20:30",
+          "text": "Eventuale cena a Rovigno"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Centro storico e chiesa di Sant'Eufemia",
+          "Acquario di Rovigno o Canale di Leme"
+        ],
+        "eat": [
+          "Scampi alla busara; ostriche del Leme",
+          "Gelato sul porto per i bambini"
+        ]
+      }
+    },
+    {
+      "day": 11,
+      "date": "2026-08-17",
+      "location": "Trieste",
+      "title": "Istria → Trieste",
+      "description": "Check-out dai Luxury Apartments Magali 1 e trasferimento a Trieste. Check-in al DoubleTree by Hilton e passeggiata in città o visita al Castello di Miramare.",
+      "hotel_ref": "trieste_doubletree",
+      "coordinates": {
+        "lat": 45.6501,
+        "lng": 13.7741
+      },
+      "activities": [
+        {
+          "time": "10:00",
+          "text": "Check-out Luxury Apartments Magali 1"
+        },
+        {
+          "time": "10:30",
+          "text": "Trasferimento verso Trieste (con eventuale sosta lungo il percorso)"
+        },
+        {
+          "time": "15:30",
+          "text": "Check-in DoubleTree by Hilton Trieste"
+        },
+        {
+          "time": "17:00",
+          "text": "Passeggiata a Trieste o Castello di Miramare"
+        },
+        {
+          "time": "20:00",
+          "text": "Cena a Trieste"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Parco del Castello di Miramare",
+          "Passeggiata in Piazza Unità d'Italia"
+        ],
+        "eat": [
+          "Jota, gulasch e prosciutto di Praga",
+          "Caffè in un locale storico; gelato in piazza"
+        ]
+      }
+    },
+    {
+      "day": 12,
+      "date": "2026-08-18",
+      "location": "Collio",
+      "title": "Trieste → Collio — Gravner, Radikon, La Subida",
+      "description": "Check-out dal DoubleTree e giornata nel Collio: visite enologiche da Gravner e Radikon, eventuale pranzo o cena a La Subida (Cormons). Check-in al Castello di Spessa.",
+      "hotel_ref": "collio_spessa",
+      "coordinates": {
+        "lat": 45.9477,
+        "lng": 13.5049
+      },
+      "activities": [
+        {
+          "time": "09:30",
+          "text": "Check-out DoubleTree Trieste"
+        },
+        {
+          "time": "10:30",
+          "text": "Gravner — visita azienda vitivinicola (Oslavia)"
+        },
+        {
+          "time": "12:00",
+          "text": "Radikon — vini naturali (Oslavia)"
+        },
+        {
+          "time": "16:00",
+          "text": "Check-in Castello di Spessa (Capriva del Friuli)"
+        },
+        {
+          "time": "19:00",
+          "text": "Cena all'Osteria della Subida (La Subida, Cormons) — prenotata ✅",
+          "maps": "https://www.google.com/maps/search/?api=1&query=La%20Subida%20Cormons"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Visite in cantina Gravner/Radikon (su appuntamento)",
+          "Passeggiata tra i vigneti del Collio"
+        ],
+        "eat": [
+          "Pranzo a La Subida (frico, cjarsons)",
+          "Prosciutto San Daniele; gnocchi per i bimbi"
+        ]
+      }
+    },
+    {
+      "day": 13,
+      "date": "2026-08-19",
+      "location": "Sesto",
+      "title": "Collio → Sesto — Arrivo in Montagna",
+      "description": "Check-out dal Castello di Spessa e trasferimento verso Sesto (Dolomiti). Arrivo e inizio del soggiorno in montagna.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "09:30",
+          "text": "Check-out Castello di Spessa"
+        },
+        {
+          "time": "10:00",
+          "text": "Trasferimento verso Sesto (Dolomiti)"
+        },
+        {
+          "time": "15:00",
+          "text": "Arrivo a Sesto — inizio soggiorno in montagna 🏔️"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Trasferimento verso le Dolomiti",
+          "Primo giro e aria di montagna a Sesto"
+        ],
+        "eat": [
+          "Canederli e speck altoatesini",
+          "Strudel di mele; würstel e patate per i bimbi"
+        ]
+      }
+    },
+    {
+      "day": 14,
+      "date": "2026-08-20",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Canederli allo speck o al formaggio",
+          "Strudel di mele; würstel e patatine per i bimbi"
+        ]
+      }
+    },
+    {
+      "day": 15,
+      "date": "2026-08-21",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Peka / grigliata di malga",
+          "Kaiserschmarrn (frittata dolce) per merenda"
+        ]
+      }
+    },
+    {
+      "day": 16,
+      "date": "2026-08-22",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Zuppa d'orzo (Gerstsuppe) in rifugio",
+          "Torta di grano saraceno con mirtilli rossi"
+        ]
+      }
+    },
+    {
+      "day": 17,
+      "date": "2026-08-23",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Formaggi di malga e speck",
+          "Latte fresco e strudel al rifugio"
+        ]
+      }
+    },
+    {
+      "day": 18,
+      "date": "2026-08-24",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Schlutzkrapfen (ravioli di magro)",
+          "Panino con speck durante l'escursione"
+        ]
+      }
+    },
+    {
+      "day": 19,
+      "date": "2026-08-25",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Canederli allo speck o al formaggio",
+          "Strudel di mele; würstel e patatine per i bimbi"
+        ]
+      }
+    },
+    {
+      "day": 20,
+      "date": "2026-08-26",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Peka / grigliata di malga",
+          "Kaiserschmarrn (frittata dolce) per merenda"
+        ]
+      }
+    },
+    {
+      "day": 21,
+      "date": "2026-08-27",
+      "location": "Sesto",
+      "title": "Sesto — Giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Zuppa d'orzo (Gerstsuppe) in rifugio",
+          "Torta di grano saraceno con mirtilli rossi"
+        ]
+      }
+    },
+    {
+      "day": 22,
+      "date": "2026-08-28",
+      "location": "Sesto",
+      "title": "Sesto — Ultima giornata in Dolomiti",
+      "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno",
+          "Adatta la meta al meteo e ai bimbi (2, 6 e 8 anni)"
+        ],
+        "eat": [
+          "Formaggi di malga e speck",
+          "Latte fresco e strudel al rifugio"
+        ]
+      }
+    },
+    {
+      "day": 23,
+      "date": "2026-08-29",
+      "location": "Sesto → Rientro",
+      "title": "Sesto → Rientro a casa",
+      "description": "Check-out dal Kreuzbergpass e viaggio di rientro. Fine del viaggio!",
+      "hotel_ref": null,
+      "coordinates": {
+        "lat": 46.6448,
+        "lng": 12.4253
+      },
+      "activities": [
+        {
+          "time": "09:00",
+          "text": "Check-out dall'Hotel Kreuzbergpass"
+        },
+        {
+          "time": "mattina",
+          "text": "Partenza e viaggio di rientro verso casa"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Ultima colazione con vista sulle Dolomiti",
+          "Acquisti last-minute: speck, formaggi di malga, strudel"
+        ],
+        "eat": [
+          "Colazione altoatesina abbondante",
+          "Sosta pranzo lungo il rientro"
+        ]
+      }
+    }
+  ],
+  "bookings": [
+    {
+      "id": "book_subida_2026_08_18",
+      "date": "2026-08-18",
+      "time": "19:00",
+      "place": "Osteria della Subida (La Subida)",
+      "address": "Località Subida 22, 34071 Cormons (GO)",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=La%20Subida%20Cormons",
+      "note": "Cena — tavolo per 5 (2 adulti + 3 bambini)"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "brac_pastura",
+      "name": "Hotel Pastura",
+      "location": "Postira (Brač)",
+      "location_group": "Brač",
+      "address": "Vrilo 28, 21410 Postira, Isola di Brač",
+      "coordinates": {
+        "lat": 43.3775,
+        "lng": 16.6257
+      },
+      "checkin": "2026-08-08",
+      "checkout": "2026-08-11",
+      "nights": 3,
+      "rating": 4,
+      "price_per_night": 310,
+      "price_total": 930,
+      "amenities": [
+        "Piscina",
+        "Vicino al mare",
+        "Adatto famiglie",
+        "Ristorante",
+        "Wi-Fi"
+      ],
+      "notes": "Soggiorno sull'isola di Brač, a Postira. Prenotazione confermata.",
+      "booking_ref": "",
+      "status": "confermata",
+      "recommended": true,
+      "phone": "+385 21 740000"
+    },
+    {
+      "id": "zadar_pinija",
+      "name": "Hotel Pinija",
+      "location": "Petrčane (Zara)",
+      "location_group": "Zara",
+      "address": "Ulica V 1a, 23231 Petrčane (Zadar)",
+      "coordinates": {
+        "lat": 44.1799,
+        "lng": 15.1589
+      },
+      "checkin": "2026-08-11",
+      "checkout": "2026-08-14",
+      "nights": 3,
+      "rating": 4,
+      "price_per_night": 586.33,
+      "price_total": 1758.99,
+      "amenities": [
+        "Spiaggia",
+        "Piscina",
+        "Adatto famiglie",
+        "Ristorante",
+        "Wi-Fi"
+      ],
+      "notes": "Soggiorno nell'area di Zara, a Petrčane. Prenotazione confermata.",
+      "booking_ref": "",
+      "status": "confermata",
+      "recommended": true,
+      "phone": ""
+    },
+    {
+      "id": "velebit_silvija",
+      "name": "Apartman Silvija",
+      "location": "Otočac (Valle della Gacka)",
+      "location_group": "Velebit / Otočac",
+      "address": "Ulica pod Pakljom 5, 53220 Otočac (Valle della Gacka)",
+      "coordinates": {
+        "lat": 44.8688,
+        "lng": 15.2359
+      },
+      "checkin": "2026-08-14",
+      "checkout": "2026-08-15",
+      "nights": 1,
+      "rating": 0,
+      "price_per_night": 300,
+      "price_total": 300,
+      "amenities": [
+        "Adatto famiglie",
+        "Giardino",
+        "Parcheggio",
+        "Vicino al fiume Gacka"
+      ],
+      "notes": "Appartamento nella Valle della Gacca a Otočac, base per la visita al Kuterevo Bear Sanctuary (~20 min) e l'esplorazione del Velebit. Prenotazione confermata.",
+      "booking_ref": "",
+      "status": "confermata",
+      "recommended": true,
+      "phone": "+385 99 427 1318"
+    },
+    {
+      "id": "rovinj_magali",
+      "name": "Luxury Apartments Magali 1",
+      "location": "Rovigno (Istria)",
+      "location_group": "Rovigno",
+      "address": "Ulica Valsavie 11, 52210 Rovinj (Istria)",
+      "coordinates": {
+        "lat": 45.103,
+        "lng": 13.6278
+      },
+      "checkin": "2026-08-15",
+      "checkout": "2026-08-17",
+      "nights": 2,
+      "rating": 0,
+      "price_per_night": 315,
+      "price_total": 630,
+      "amenities": [
+        "Appartamenti",
+        "Base per Rovigno",
+        "Adatto famiglie"
+      ],
+      "notes": "Base in Istria per Rovigno, il mare e l'eventuale Canale di Leme. Prenotazione confermata.",
+      "booking_ref": "",
+      "status": "confermata",
+      "recommended": true,
+      "phone": ""
+    },
+    {
+      "id": "trieste_doubletree",
+      "name": "DoubleTree by Hilton Trieste",
+      "location": "Trieste",
+      "location_group": "Trieste",
+      "address": "Piazza della Repubblica 1, 34122 Trieste",
+      "coordinates": {
+        "lat": 45.6501,
+        "lng": 13.7741
+      },
+      "checkin": "2026-08-17",
+      "checkout": "2026-08-18",
+      "nights": 1,
+      "rating": 4,
+      "price_per_night": 398.48,
+      "price_total": 398.48,
+      "amenities": [
+        "Wi-Fi",
+        "Ristorante",
+        "Centro città",
+        "Vista mare"
+      ],
+      "notes": "Pernottamento a Trieste prima del Collio: visita della città ed eventuale Castello di Miramare. Prenotazione confermata.",
+      "booking_ref": "",
+      "status": "confermata",
+      "recommended": true,
+      "phone": "+39 040 9712950"
+    },
+    {
+      "id": "collio_spessa",
+      "name": "Castello di Spessa – Residenze d'Epoca",
+      "location": "Capriva del Friuli (Collio)",
+      "location_group": "Collio",
+      "address": "Via Spessa 1, 34070 Capriva del Friuli (GO) — Collio",
+      "coordinates": {
+        "lat": 45.9477,
+        "lng": 13.5049
+      },
+      "checkin": "2026-08-18",
+      "checkout": "2026-08-19",
+      "nights": 1,
+      "rating": 4,
+      "price_per_night": 438.9,
+      "price_total": 438.9,
+      "amenities": [
+        "Residenza d'epoca",
+        "Golf",
+        "Parco",
+        "Ristorante"
+      ],
+      "notes": "Pernottamento nel Collio: Gravner, Radikon e La Subida, poi partenza per Sesto il 19 agosto. Prenotazione confermata.",
+      "booking_ref": "",
+      "status": "confermata",
+      "recommended": true,
+      "phone": ""
+    },
+    {
+      "id": "sesto_kreuzbergpass",
+      "name": "Hotel Kreuzbergpass — Passo Monte Croce Comelico",
+      "location": "Sesto",
+      "location_group": "Sesto",
+      "address": "Passo Monte Croce Comelico (Kreuzbergpass), 39030 Sesto/Sexten (BZ)",
+      "coordinates": {
+        "lat": 46.6448,
+        "lng": 12.4253
+      },
+      "checkin": "2026-08-19",
+      "checkout": "2026-08-29",
+      "nights": 10,
+      "rating": 0,
+      "price_per_night": 0,
+      "price_total": 0,
+      "amenities": [
+        "Dolomiti di Sesto",
+        "Punto di partenza per passeggiate e rifugi",
+        "Aria di montagna a 1.636 m"
+      ],
+      "notes": "Soggiorno in montagna al Passo Monte Croce Comelico (Kreuzbergpass), tra Sesto e il Comelico. Base ideale per le passeggiate e i rifugi delle Dolomiti di Sesto. Prenotato dal 19 al 29 agosto.",
+      "booking_ref": "",
+      "status": "confermata",
+      "recommended": true,
+      "phone": ""
+    }
+  ],
+  "logistics": [
+    {
+      "icon": "⛴️",
+      "title": "Traghetto Ancona → Spalato — PRENOTATO",
+      "priority": "high",
+      "text": "Check-in al porto di Ancona alle 16:30, partenza alle 19:30 (7 agosto). Traghetto notturno con cabina, arrivo a Spalato la mattina dell'8. Da Roma partire con ampio margine (~3h + traffico d'agosto) per essere al check-in entro le 16:30. Tenere a portata di mano un piccolo bagaglio per la notte in cabina."
+    },
+    {
+      "icon": "🚗",
+      "title": "Documenti auto ed estero",
+      "priority": "high",
+      "text": "Libretto, patente, assicurazione con carta verde per l'estero. Vignetta Slovenia se si transita in autostrada slovena; pedaggi/autostrade in Croazia. Kit obbligatorio (giubbotti catarifrangenti, triangolo)."
+    },
+    {
+      "icon": "🛥️",
+      "title": "Traghetti per l'isola di Brač",
+      "priority": "high",
+      "text": "Collegamento Spalato–Supetar (auto al seguito) all'andata (8/8) e al ritorno verso Zara (11/8). In agosto prenotare/arrivare in anticipo: code frequenti agli imbarchi."
+    },
+    {
+      "icon": "📅",
+      "title": "Ferragosto (15 agosto)",
+      "priority": "high",
+      "text": "Il 15 è giorno di trasferimento Otočac → Rovigno E arrivo in Istria, nel picco di folla. Spiagge e ristoranti pieni: serata soft in appartamento e attività la mattina presto. Prenotare in anticipo l'eventuale cena."
+    },
+    {
+      "icon": "⏱️",
+      "title": "Tratte lunghe: pianificare le soste",
+      "priority": "medium",
+      "text": "Due tratte da ~3h con i bambini: Otočac → Rovigno (~250 km, 15/8) e Capriva/Collio → Sesto (~230 km, 19/8). Prevedere una sosta pranzo/gioco (es. zona Rijeka/Učka il 15; un lago della Pusteria o Udine il 19)."
+    },
+    {
+      "icon": "🍷",
+      "title": "Cantine e ristoranti su prenotazione",
+      "priority": "medium",
+      "text": "Gravner e Radikon (18/8) sono piccoli produttori SOLO su appuntamento: contattarli con anticipo. Con tre bimbi conviene la degustazione 'a staffetta' (un genitore assaggia, l'altro con i bambini). Prenotare anche il tavolo a La Subida."
+    },
+    {
+      "icon": "🎒",
+      "title": "Tappa breve a Otočac (14–15/8)",
+      "priority": "low",
+      "text": "Una sola notte all'Apartman Silvija: tenere pronto un borsone 'essenziale' per la notte senza disfare tutto. Kuterevo Bear Sanctuary è a ~20 min dall'alloggio."
+    },
+    {
+      "icon": "🛒",
+      "title": "Spesa prima dell'Apartman Silvija (14/8)",
+      "priority": "high",
+      "text": "All'Apartman Silvija (Otočac, Valle della Gacka) non c'è nulla: comprare cibo e bevande PRIMA di arrivare. Fare la spesa lungo il tragitto (supermercato a Otočac/Gospić) per cena, colazione e acqua/bibite per la sera e la mattina seguente."
+    }
+  ],
+  "dining": [
+    {
+      "area": "Brač",
+      "name": "Konoba Bracera",
+      "town": "Postira",
+      "type": "Konoba",
+      "specialty": "Pesce fresco, calamari e frutti di mare sulla baia di Postira"
+    },
+    {
+      "area": "Brač",
+      "name": "Konoba Tomić",
+      "town": "Gornji Humac (Brač)",
+      "type": "Konoba",
+      "specialty": "Peka di agnello e carni alla griglia, cucina autentica dell'interno"
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Foša",
+      "town": "Zadar",
+      "type": "Ristorante",
+      "specialty": "Pesce e cucina dalmata nel porticciolo storico Foša"
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Pet Bunara",
+      "town": "Zadar (centro storico)",
+      "type": "Ristorante",
+      "specialty": "Specialità dalmate tradizionali nella città vecchia"
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Bistro Ribič",
+      "town": "Otočac",
+      "type": "Bistro",
+      "specialty": "Trota della Gacka, sulla riva del fiume — lunga tradizione"
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Restoran Vrilo Gacke",
+      "town": "Otočac (sorgente Gacka)",
+      "type": "Ristorante",
+      "specialty": "Trota e agnello/vitello sotto la peka, alla sorgente della Gacka"
+    },
+    {
+      "area": "Rovigno",
+      "name": "Konoba Rovignese",
+      "town": "Rovigno",
+      "type": "Konoba (family)",
+      "specialty": "Cucina istriana, porzioni generose e area giochi per bambini"
+    },
+    {
+      "area": "Rovigno",
+      "name": "Konoba Tugurio",
+      "town": "Rovigno",
+      "type": "Konoba",
+      "specialty": "Scampi alla busara e pesce, konoba tradizionale in centro"
+    },
+    {
+      "area": "Rovigno",
+      "name": "Monte",
+      "town": "Rovigno",
+      "type": "Fine dining",
+      "specialty": "Alta cucina istriana, 1 stella Michelin (serata speciale, su prenotazione)"
+    },
+    {
+      "area": "Trieste",
+      "name": "Buffet da Pepi",
+      "town": "Trieste (Via Cassa di Risparmio 3)",
+      "type": "Buffet storico",
+      "specialty": "Prosciutto cotto caldo, jota e gulasch — dal 1897"
+    },
+    {
+      "area": "Trieste",
+      "name": "Caffè San Marco",
+      "town": "Trieste",
+      "type": "Caffè storico",
+      "specialty": "Colazione e pausa caffè in un'atmosfera liberty (dal 1914)"
+    },
+    {
+      "area": "Collio",
+      "name": "Trattoria al Cacciatore – La Subida",
+      "town": "Cormons",
+      "type": "Trattoria",
+      "specialty": "Cucina friulana-slovena del Collio (frico, cjarsons)"
+    },
+    {
+      "area": "Collio",
+      "name": "Osteria Caramella",
+      "town": "Cormons",
+      "type": "Osteria / bar",
+      "specialty": "Prosciutto d'Osvaldo, frico e aperitivo nel centro di Cormons"
+    },
+    {
+      "area": "Sesto",
+      "name": "Malga Nemes",
+      "town": "Sesto (1.877 m)",
+      "type": "Malga (family)",
+      "specialty": "Canederli al burro, cucina di malga e parco giochi per bambini"
+    },
+    {
+      "area": "Sesto",
+      "name": "Ristorante Riega",
+      "town": "Sesto",
+      "type": "Ristorante",
+      "specialty": "Canederli, gulasch e cucina altoatesina in paese"
+    },
+    {
+      "area": "Brač",
+      "name": "Konoba Toni",
+      "town": "Dol, Brač",
+      "type": "Konoba",
+      "specialty": "Taverna di paese in fondo a una valle fertile: prosciutto crudo di produzione propria, carni al forno e pesce al forno su una terrazza all'ombra degli alberi. La più vicina alla base e con lo spazio all'aperto ideale per i bambini. A 3 km da Postira."
+    },
+    {
+      "area": "Brač",
+      "name": "Palute",
+      "town": "Porat 4, Supetar",
+      "type": "Ristorante",
+      "specialty": "Griglie di pesce e carne più paste e risotti leggeri, con i piatti del giorno sulla lavagna: prezzi molto contenuti e tavoli all'aperto sul molo. Una delle opzioni più economiche dell'isola. Tavoli all’aperto sul pontile del porto."
+    },
+    {
+      "area": "Brač",
+      "name": "Punta",
+      "town": "Punta 1, Supetar",
+      "type": "Ristorante",
+      "specialty": "Braciole di maiale e cotolette dominano il menu — utile con tre bambini — con pesce fresco locale per gli adulti e una terrazza ombreggiata perfetta per il tramonto. Sul lungomare, dietro il mausoleo."
+    },
+    {
+      "area": "Brač",
+      "name": "Pansion Lučica",
+      "town": "Pučišća, Brač",
+      "type": "Ristorante",
+      "specialty": "Terrazza al primo piano sospesa sull'acqua tra i rami di un fico: il pesce fresco è il piatto forte, ma i risotti sono l'alternativa leggera per un pranzo coi piccoli. A 10 min a piedi dal porto, sul lato ovest dell’insenatura."
+    },
+    {
+      "area": "Brač",
+      "name": "Konoba Kala",
+      "town": "Povlja, Brač",
+      "type": "Konoba",
+      "specialty": "Incrocio riuscito tra konoba dalmata e cucina contemporanea: pesce e paste alla griglia serviti in banchina guardando le barche. È anche il posto del paese per il caffè del mattino. Sul molo del porticciolo."
+    },
+    {
+      "area": "Brač",
+      "name": "Pizzeria Topolino",
+      "town": "Frane Radića 1, Bol",
+      "type": "Pizzeria",
+      "specialty": "Pizze al forno a legna, paste, insalate sostanziose e limonata fatta in casa a due passi dall'acqua: la scelta più semplice e senza attese durante una giornata a Zlatni Rat. A pochi metri dal mare."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Pizzeria Šime",
+      "town": "Matije Gupca 15, Borik, Zadar",
+      "type": "Pizzeria",
+      "specialty": "Pizze sottili e abbondanti, servizio rapido e una terrazza enorme appena sopra Borik. A luglio e agosto si riempie: meglio arrivare presto coi bambini. Borik è il quartiere più vicino a Petrčane."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Konoba Skoblar",
+      "town": "Trg Petra Zoranića, Zadar",
+      "type": "Konoba",
+      "specialty": "Tutto il repertorio dalmata a prezzi onesti, coi piatti del giorno sulla lavagna fuori dalla porta. È la konoba dove vanno i locali per la marenda o un pranzo tardo senza formalità. In centro storico."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Lungo Mare",
+      "town": "Obala kneza Trpimira 23, Zadar",
+      "type": "Ristorante",
+      "specialty": "Grande terrazza all'ombra degli alberi sulla passeggiata a mare, con molto pesce fresco e crostacei: atmosfera rilassata e spazio, il tipo di posto dove i bambini possono muoversi. Sul lungomare, tra il centro e Borik."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Dva Ribara",
+      "town": "Blaža Jurjeva 1, Zadar",
+      "type": "Ristorante",
+      "specialty": "Menu ampio di carne e pesce, ma è per le pizze che gli zaratini fanno la fila. Prezzi bassi e posizione comoda dopo una passeggiata in città. In centro storico."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Donat",
+      "town": "Trg sv. Stošije 4, Zadar",
+      "type": "Gelateria",
+      "specialty": "La guida la indica come la migliore gelateria di Zara, coi tavolini all'aperto accanto alla cattedrale: sosta obbligata durante il passeggio serale. Davanti alla cattedrale."
+    },
+    {
+      "area": "Area di Zara",
+      "name": "Aenona",
+      "town": "Petra Zoranića 2, Nin",
+      "type": "Ristorante",
+      "specialty": "Doppia anima da pizzeria e da ristorante dalmata — pizze sottili, risotti di pesce, griglia — con terrazza ombreggiata: la soluzione più pratica in giornata a Nin. Di fronte alla chiesa di Santa Croce."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Butina",
+      "town": "Kuterevo 21a",
+      "type": "Konoba",
+      "specialty": "Ristorante rustico a gestione familiare, sorvegliato da orsi scolpiti nel legno: da abbinare alla visita al santuario degli orsi, la tappa più amata dai bambini della zona. Accanto al santuario degli orsi, ~25 min da Otočac."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Petro",
+      "town": "Rastoke 29, Slunj",
+      "type": "Ristorante",
+      "specialty": "Baita sull'acqua nel borgo dei mulini, con terrazza sotto ombrelloni di canne e una vasca centrale piena di trote: si mangia trota e lucioperca alla griglia e i bambini si incantano a guardare i pesci. ~1 h da Otočac."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Lička kuća",
+      "town": "Plitvička jezera, Ulaz 1",
+      "type": "Ristorante",
+      "specialty": "Grande locale in stile fattoria della Lika: trota, carni al forno e tutto il repertorio dell'agnello. È un magnete per le comitive, ma resta il posto giusto per assaggiare la cucina locale dopo i laghi. All’Ingresso 1 del parco, ~50 min da Otočac."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Martina",
+      "town": "Vukasovića 23, Senj",
+      "type": "Ristorante",
+      "specialty": "Carne alla griglia, pesce e frutti di mare su una terrazza affacciata sulle coste di Krk: la scelta più semplice per una giornata a Senj e alla fortezza di Nehaj. A 1 km a nord-ovest del centro, sulla costiera."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Gostionica Jablan",
+      "town": "Senjska Draga 19, Senj",
+      "type": "Trattoria",
+      "specialty": "Agnello allo spiedo servito in grossi pezzi con l'osso e pagato a peso: interno spartano ma bella terrazza esterna, sosta perfetta scendendo verso il mare. A 6 km nell’entroterra, sulla salita al passo Vratnik."
+    },
+    {
+      "area": "Velebit / Otočac",
+      "name": "Pod Rastočkim Krovom",
+      "town": "Rastoke 25b, Slunj",
+      "type": "Ristorante",
+      "specialty": "Edifici originali a due passi dalle cascate, con pesce d'acqua dolce e cotolette mitteleuropee. Dal suo giardino si gode la vista migliore sulle rapide (ingresso a pagamento anche solo per la passeggiata). ~1 h da Otočac."
+    },
+    {
+      "area": "Rovigno",
+      "name": "Pizzeria San Giacomo",
+      "town": "Ricarda Daveggie 11, Rovinj",
+      "type": "Pizzeria",
+      "specialty": "Pizzeria senza pretese con lunghe panche di legno e pizze in stile italiano fatte bene, frequentata dai locali: economica e aperta tutto l'anno, la carta vincente per una cena rapida coi bambini. Nei vicoli dietro il porto."
+    },
+    {
+      "area": "Rovigno",
+      "name": "Konoba Neptun",
+      "town": "Joakima Rakovca 10, Rovinj",
+      "type": "Konoba",
+      "specialty": "La risposta economica alla ressa di locali gourmet di Rovigno: ćevapi, pljeskavice e altre grigliate cotte sul focolare in fondo alla sala, più il pescato del giorno."
+    },
+    {
+      "area": "Rovigno",
+      "name": "Alla Beccaccia",
+      "town": "Pineta 25, Valbandon",
+      "type": "Ristorante",
+      "specialty": "Uno dei ristoranti più celebrati dell'Istria, con prezzi ragionevoli: selvaggina, pesce, ombolo e pasta fatta in casa cotti sul focolare, serviti in un giardino con prato — spazio vero per i bambini. Prenotazione necessaria. ~40 min da Rovigno, verso Pola."
+    },
+    {
+      "area": "Rovigno",
+      "name": "Puli Pineta",
+      "town": "Karlov vrt, Žminj",
+      "type": "Konoba",
+      "specialty": "Dietro quello che sembra un garage di periferia si nasconde uno dei migliori locali tradizionali dell'Istria: pasta fatta in casa con sughi stagionali, carne e pesce sul focolare. Ottimo abbinato alle rovine di Dvigrad. A 7 km a est di Dvigrad, ~35 min da Rovigno."
+    },
+    {
+      "area": "Rovigno",
+      "name": "La Grisa",
+      "town": "La Grisa 23, Bale",
+      "type": "Ristorante",
+      "specialty": "Cucina da konoba istriana trattata con stile: l'ombolo con purè e verdure è la scelta di mezzo prezzo, e la carta dei vini istriani offre molto al bicchiere. ~20 min da Rovigno."
+    },
+    {
+      "area": "Rovigno",
+      "name": "Stara konoba",
+      "town": "Trg stare škole 1, Fažana",
+      "type": "Konoba",
+      "specialty": "Sul lungomare turistico ma senza cedere sulla qualità: filetti di pesce, ombolo e molti piatti a base di sardine locali su panche di legno. Col vino della casa si mangia davvero a poco. Sul lungomare, ~40 min da Rovigno."
+    }
+  ],
+  "checklist": {
+    "categories": [
+      {
+        "id": "trasporti",
+        "name": "Trasporti",
+        "icon": "🚗",
+        "items": [
+          {
+            "id": "tra_1",
+            "text": "Definire e prenotare il trasferimento del 7 agosto (auto e/o traghetto verso la Croazia)",
+            "priority": "high"
+          },
+          {
+            "id": "tra_2",
+            "text": "Verificare collegamenti / traghetti per l'isola di Brač (Split–Supetar)",
+            "priority": "high"
+          },
+          {
+            "id": "tra_3",
+            "text": "Documenti auto e assicurazione estero (libretto, carta verde)",
+            "priority": "high"
+          },
+          {
+            "id": "tra_4",
+            "text": "Vignetta Slovenia (se il percorso la richiede)",
+            "priority": "medium"
+          },
+          {
+            "id": "tra_5",
+            "text": "Pedaggi / vignetta Croazia e Austria (se il percorso li richiede)",
+            "priority": "medium"
+          },
+          {
+            "id": "tra_6",
+            "text": "Verificare percorso GPS e varchi di confine con bambini",
+            "priority": "low"
+          }
+        ]
+      },
+      {
+        "id": "hotel",
+        "name": "Prenotazioni Hotel",
+        "icon": "🏨",
+        "items": [
+          {
+            "id": "hot_1",
+            "text": "Hotel Pastura (Brač) — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_2",
+            "text": "Hotel Pinija (area Zara) — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_3",
+            "text": "Apartman Silvija (Velebit / Kuterevo) — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_4",
+            "text": "Luxury Apartments Magali 1 (Rovigno) — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_5",
+            "text": "DoubleTree by Hilton Trieste — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_6",
+            "text": "Castello di Spessa (Collio) — confermato ✅",
+            "priority": "low"
+          },
+          {
+            "id": "hot_7",
+            "text": "Confermare i dettagli del soggiorno a Sesto (dal 19 agosto)",
+            "priority": "high"
+          },
+          {
+            "id": "hot_8",
+            "text": "Stampare / salvare tutti i voucher di prenotazione",
+            "priority": "medium"
+          }
+        ]
+      },
+      {
+        "id": "attivita",
+        "name": "Attività",
+        "icon": "🎯",
+        "items": [
+          {
+            "id": "att_1",
+            "text": "Kuterevo Bear Sanctuary",
+            "priority": "high"
+          },
+          {
+            "id": "att_2",
+            "text": "Eventuale attività Velebit / Valle della Gacka",
+            "priority": "medium"
+          },
+          {
+            "id": "att_3",
+            "text": "Attività e spiagge a Brač (Zlatni Rat)",
+            "priority": "medium"
+          },
+          {
+            "id": "att_4",
+            "text": "Zara: centro storico, Organo del Mare e Saluto al Sole",
+            "priority": "medium"
+          },
+          {
+            "id": "att_5",
+            "text": "Castello di Miramare (Trieste)",
+            "priority": "medium"
+          }
+        ]
+      },
+      {
+        "id": "cantine",
+        "name": "Cantine",
+        "icon": "🍷",
+        "items": [
+          {
+            "id": "can_1",
+            "text": "Gravner (Oslavia, Collio) — contattare per visita",
+            "priority": "medium"
+          },
+          {
+            "id": "can_2",
+            "text": "Radikon (Oslavia, Collio) — contattare per visita",
+            "priority": "medium"
+          }
+        ]
+      },
+      {
+        "id": "ristoranti",
+        "name": "Ristoranti",
+        "icon": "🍽️",
+        "items": [
+          {
+            "id": "ris_1",
+            "text": "La Subida (Cormons) — prenotazione (pranzo o cena 18 agosto)",
+            "priority": "high"
+          },
+          {
+            "id": "ris_2",
+            "text": "Eventuale cena a Rovigno",
+            "priority": "low"
+          }
+        ]
+      },
+      {
+        "id": "bambini",
+        "name": "Bambini",
+        "icon": "👶",
+        "items": [
+          {
+            "id": "bam_1",
+            "text": "Documenti bambini (carta d'identità o passaporto per tutti e 3)",
+            "priority": "high"
+          },
+          {
+            "id": "bam_2",
+            "text": "Farmaci base: antipiretico, antidiarroico, antistaminico",
+            "priority": "high"
+          },
+          {
+            "id": "bam_3",
+            "text": "Giochi da viaggio (per auto e traghetto)",
+            "priority": "medium"
+          },
+          {
+            "id": "bam_4",
+            "text": "Passeggino / supporto per il piccolo (2 anni)",
+            "priority": "high"
+          },
+          {
+            "id": "bam_5",
+            "text": "Scarpette da scoglio per tutti i bambini",
+            "priority": "high"
+          },
+          {
+            "id": "bam_6",
+            "text": "Salvagente / braccioli per il più piccolo",
+            "priority": "high"
+          },
+          {
+            "id": "bam_7",
+            "text": "Snack per il viaggio (traghetto e lunghe tappe in auto)",
+            "priority": "medium"
+          }
+        ]
+      },
+      {
+        "id": "mare",
+        "name": "Mare",
+        "icon": "🏖️",
+        "items": [
+          {
+            "id": "mar_1",
+            "text": "Costumi da bagno (almeno 2 a testa)",
+            "priority": "high"
+          },
+          {
+            "id": "mar_2",
+            "text": "Teli da mare (uno per persona)",
+            "priority": "high"
+          },
+          {
+            "id": "mar_3",
+            "text": "Crema solare SPF 50+ (adulti e bambini, più tubetti)",
+            "priority": "high"
+          },
+          {
+            "id": "mar_4",
+            "text": "After-sun / gel aloe",
+            "priority": "medium"
+          },
+          {
+            "id": "mar_5",
+            "text": "Maschere e boccaglio (snorkeling)",
+            "priority": "medium"
+          },
+          {
+            "id": "mar_6",
+            "text": "Cappello parasole per tutti",
+            "priority": "high"
+          }
+        ]
+      },
+      {
+        "id": "varie",
+        "name": "Varie",
+        "icon": "🧳",
+        "items": [
+          {
+            "id": "var_1",
+            "text": "Carte di credito / contanti Euro (Croazia usa EUR)",
+            "priority": "high"
+          },
+          {
+            "id": "var_2",
+            "text": "Caricatori telefono e power bank",
+            "priority": "high"
+          },
+          {
+            "id": "var_3",
+            "text": "Assicurazione viaggio (malattia + bagaglio)",
+            "priority": "high"
+          },
+          {
+            "id": "var_4",
+            "text": "Tessera Sanitaria Europea (TEAM) per tutti",
+            "priority": "high"
+          },
+          {
+            "id": "var_5",
+            "text": "Download mappe offline (Google Maps: Croazia, Slovenia, FVG)",
+            "priority": "medium"
+          },
+          {
+            "id": "var_6",
+            "text": "Adattatore per prese (standard EU type F, già standard in Croazia)",
+            "priority": "low"
+          }
+        ]
+      }
+    ]
+  },
+  "hikes": [
+    {
+      "id": "nemes",
+      "area": "Sesto",
+      "name": "Rifugio Nemes (Nemeshütte)",
+      "type": "Rifugio",
+      "difficulty": "Media",
+      "duration": "2–3 h a/r",
+      "family": true,
+      "start": "Passo Monte Croce Comelico (dall'hotel)",
+      "description": "Salita panoramica dai prati del passo fino al rifugio e alla Malga Nemes, con vista sulle Dolomiti di Sesto. Partenza comoda proprio dall'hotel.",
+      "coordinates": {
+        "lat": 46.6553,
+        "lng": 12.4471
+      },
+      "eat": "Pranzo al Rifugio Nemes o alla vicina Malga Nemes: canederli, formaggi di malga e piatti tirolesi.",
+      "tips": [
+        "Partenza comoda dall'hotel: niente auto, ottima come prima uscita per acclimatarsi",
+        "Scarpe da trekking anche se è 'media': prati e sterrato spesso umidi al mattino",
+        "Verifica l'apertura del rifugio/malga prima di salire, se conti di pranzarci"
+      ]
+    },
+    {
+      "id": "fiscalina",
+      "area": "Sesto",
+      "name": "Val Fiscalina e Rifugio Fondovalle (Talschlusshütte)",
+      "type": "Passeggiata",
+      "difficulty": "Facile",
+      "duration": "1–1,5 h",
+      "family": true,
+      "start": "Parcheggio Val Fiscalina / Bagni di Moso",
+      "description": "Passeggiata pianeggiante e ombreggiata lungo la valle fino al rifugio, con la celebre Meridiana di Sesto davanti. Adatta al passeggino nel primo tratto.",
+      "coordinates": {
+        "lat": 46.6706,
+        "lng": 12.3903
+      },
+      "eat": "Sosta al Rifugio Fondovalle (Talschlusshütte) per canederli e strudel.",
+      "tips": [
+        "Primo tratto quasi piano e passeggino-friendly: adatto anche al piccolo di 2 anni",
+        "Vai presto: il parcheggio Val Fiscalina si riempie entro le 9–9:30 in agosto",
+        "Fondovalle ombroso e fresco: porta acqua e una felpa per tutti"
+      ]
+    },
+    {
+      "id": "tre_cime",
+      "area": "Sesto",
+      "name": "Giro delle Tre Cime di Lavaredo e Rifugio Locatelli",
+      "type": "Escursione",
+      "difficulty": "Impegnativa",
+      "duration": "4–5 h (anello)",
+      "family": false,
+      "start": "Rifugio Auronzo (strada a pedaggio)",
+      "description": "L'anello classico attorno alle Tre Cime con la vista sulle pareti nord dal Rifugio Locatelli (Dreizinnenhütte). Impegnativo per i piccoli: valuta lo zaino porta-bimbo.",
+      "coordinates": {
+        "lat": 46.6132,
+        "lng": 12.2955
+      },
+      "eat": "Pranzo ai rifugi lungo il giro: Auronzo, Lavaredo o Locatelli (Dreizinnenhütte).",
+      "tips": [
+        "NON adatta ai bimbi piccoli: anello di 4–5 h, da fare senza i più piccoli",
+        "Strada del Rif. Auronzo a pedaggio e trafficata: arriva prima delle 9 per evitare code e parcheggio pieno",
+        "In quota vento e sbalzi di temperatura: giacca a vento, acqua abbondante e scarpe da trekking"
+      ]
+    },
+    {
+      "id": "croda_rossa",
+      "area": "Sesto",
+      "name": "Prati di Croda Rossa (Rotwandwiesen)",
+      "type": "Passeggiata",
+      "difficulty": "Facile",
+      "duration": "cabinovia + 1–2 h",
+      "family": true,
+      "start": "Cabinovia Croda Rossa, Moso/Sesto",
+      "description": "Si sale in cabinovia agli ampi prati con parco giochi e rifugi (Rudi, Croda Rossa). Passeggiate facili e panoramiche, perfette con i bambini.",
+      "coordinates": {
+        "lat": 46.6613,
+        "lng": 12.3706
+      },
+      "eat": "Ristoro ai rifugi dei prati: Rudi o Croda Rossa (Rotwandhütte), con parco giochi.",
+      "tips": [
+        "Sali in cabinovia e cammina in quota: dislivello minimo, perfetto con i bambini",
+        "Controlla orari e ultima corsa della cabinovia per non perdere il rientro",
+        "In quota fresco anche d'estate: uno strato in più"
+      ]
+    },
+    {
+      "id": "monte_elmo",
+      "area": "Sesto",
+      "name": "Monte Elmo (Helm) — panorami e giochi",
+      "type": "Panorama",
+      "difficulty": "Facile",
+      "duration": "cabinovia + 1–2 h",
+      "family": true,
+      "start": "Cabinovia Monte Elmo, Sesto",
+      "description": "Cabinovia fino in quota con vista a 360° sulle Dolomiti, sentieri facili e aree gioco per bambini. Ottima anche con meteo incerto a valle.",
+      "coordinates": {
+        "lat": 46.7226,
+        "lng": 12.4137
+      },
+      "eat": "Malghe e ristori in quota sul Monte Elmo: speck, canederli e strudel.",
+      "tips": [
+        "In vetta c'è il percorso a tema/giochi: tappa vincente con i bimbi",
+        "Cabinovia da Sesto: verifica gli orari; pranzo al rifugio in cima",
+        "Poca ombra sull'altopiano: cappellino e crema solare"
+      ]
+    },
+    {
+      "id": "dobbiaco_lienz",
+      "area": "Sesto",
+      "name": "Ciclabile Dobbiaco–Lienz (lungo la Drava)",
+      "type": "Bici",
+      "difficulty": "Facile",
+      "duration": "~44 km · 3–4 h (rientro in treno)",
+      "family": true,
+      "start": "Dobbiaco (noleggio bici) — rientro in treno da Lienz",
+      "description": "La classica biciclettata lungo il fiume Drava: da Dobbiaco a Lienz (Austria), circa 44 km quasi tutti in leggera discesa, su pista ciclabile asfaltata e sicura. Ideale con i bambini; bici a noleggio e comodo rientro in treno con la bici al seguito.",
+      "coordinates": {
+        "lat": 46.735,
+        "lng": 12.2206
+      },
+      "eat": "Gasthof e biergarten lungo la Drava o a Lienz; gelato a San Candido al ritorno.",
+      "tips": [
+        "In gran parte in leggera discesa lungo la Drava: fattibile in famiglia (seggiolino per il piccolo)",
+        "Prenota il rientro in treno Lienz–Dobbiaco con bici a bordo: verifica orari e posti bici",
+        "Noleggia bici e caschi presto; porta acqua e k-way"
+      ]
+    },
+    {
+      "id": "campo_dentro",
+      "area": "Sesto",
+      "name": "Val Campo di Dentro e Rifugio Tre Scarperi",
+      "type": "Passeggiata",
+      "difficulty": "Facile–Media",
+      "duration": "2–3 h a/r",
+      "family": true,
+      "start": "Parcheggio Val Campo di Dentro (San Candido)",
+      "description": "Ampia valle su strada forestale fino al rifugio ai piedi della Cima Tre Scarperi (Dreischusterhütte). Fattibile con passeggino da trekking nel primo tratto.",
+      "coordinates": {
+        "lat": 46.7302,
+        "lng": 12.3372
+      },
+      "eat": "Pranzo al Rifugio Tre Scarperi (Dreischusterhütte): zuppa d'orzo e Kaiserschmarrn.",
+      "tips": [
+        "Valle ampia e ombreggiata verso il Rif. Tre Scarperi: adatta ai bambini con scarponcini",
+        "Parcheggio a pagamento e affollato: arriva presto",
+        "Pranzo al Rifugio Tre Scarperi, comodo a metà percorso"
+      ]
+    },
+    {
+      "id": "berti",
+      "area": "Sesto",
+      "name": "Rifugio Berti ai piedi della Croda dei Toni",
+      "type": "Rifugio",
+      "difficulty": "Impegnativa",
+      "duration": "4–5 h a/r",
+      "family": false,
+      "start": "Val Campo di Dentro / Comelico",
+      "description": "Escursione in ambiente selvaggio verso il rifugio dominato dalla Croda dei Toni. Per camminatori allenati, meno adatta ai più piccoli.",
+      "coordinates": {
+        "lat": 46.62,
+        "lng": 12.3719
+      },
+      "eat": "Ristoro al Rifugio Berti; porta comunque acqua e snack per la salita.",
+      "tips": [
+        "Lunga e faticosa ai piedi della Croda dei Toni: solo per chi cammina bene, senza i piccoli",
+        "Parti al mattino presto: 4–5 h a/r, occhio al meteo del pomeriggio",
+        "Scarponi, giacca e scorta d'acqua; verifica l'apertura del rifugio"
+      ]
+    },
+    {
+      "id": "braies",
+      "area": "Sesto",
+      "name": "Lago di Braies (Pragser Wildsee) — gita",
+      "type": "Gita / Lago",
+      "difficulty": "Facile",
+      "duration": "giro lago ~1,5 h (auto ~50 min)",
+      "family": true,
+      "start": "Lago di Braies (in alta stagione accesso auto regolamentato)",
+      "description": "Il lago più famoso delle Dolomiti: giro ad anello pianeggiante, barche a remi e panorami da cartolina. In agosto verifica le regole d'accesso in auto.",
+      "coordinates": {
+        "lat": 46.6947,
+        "lng": 12.0855
+      },
+      "car": true,
+      "eat": "Bar e ristorante all'hotel del Lago di Braies, oppure picnic sulle rive.",
+      "tips": [
+        "Accesso auto regolamentato in alta stagione: prenota lo slot/parcheggio o arriva prima delle 9",
+        "Giro del lago pianeggiante e passeggino-friendly; barca a remi carina con i bimbi",
+        "Meta iconica e affollatissima: vacci all'apertura o nel tardo pomeriggio"
+      ]
+    },
+    {
+      "id": "coltrondo",
+      "area": "Sesto",
+      "name": "Malga Coltrondo e Rifugio Rinfreddo (Comelico)",
+      "type": "Passeggiata",
+      "difficulty": "Facile",
+      "duration": "2–3 h a/r",
+      "family": true,
+      "start": "Padola / Passo Monte Croce (versante Comelico)",
+      "description": "Dolci pascoli del Comelico tra malghe e rifugi, con vista sulle Dolomiti di Sesto. Camminata tranquilla e genuina, adatta alle famiglie.",
+      "coordinates": {
+        "lat": 46.6083,
+        "lng": 12.4667
+      },
+      "eat": "Merenda o pranzo alla Malga Coltrondo o al Rifugio Rinfreddo: latticini e polenta.",
+      "tips": [
+        "Versante Comelico tranquillo e poco affollato tra malghe e prati: ottimo con i bambini",
+        "Sterrato di malga: scarpe chiuse; sosta latte/merenda alla malga",
+        "Poca ombra a tratti: acqua e cappellino"
+      ]
+    },
+    {
+      "id": "misurina",
+      "area": "Sesto",
+      "name": "Lago di Misurina",
+      "type": "Lago",
+      "difficulty": "Facile",
+      "duration": "giro lago ~1 h (auto ~30 min)",
+      "family": true,
+      "car": true,
+      "start": "Misurina (parcheggi lungo il lago)",
+      "description": "Giro pianeggiante attorno al lago più bello del Cadore, ai piedi del Sorapiss e vicino alle Tre Cime. Passeggino ok, barche a pedali e bar sul lungolago.",
+      "coordinates": {
+        "lat": 46.5817,
+        "lng": 12.2536
+      },
+      "eat": "Bar e ristoranti sul lungolago di Misurina; piatti cadorini e pesce di lago.",
+      "tips": [
+        "Giro del lago piatto e passeggino-friendly, con vista sulle Tre Cime",
+        "Parcheggi a pagamento lungo il lago: in agosto arriva presto",
+        "Base perfetta da abbinare a Col de Varda o alle Tre Cime nello stesso giorno"
+      ]
+    },
+    {
+      "id": "dobbiaco_lago",
+      "area": "Sesto",
+      "name": "Lago di Dobbiaco (Toblacher See)",
+      "type": "Lago",
+      "difficulty": "Facile",
+      "duration": "giro lago ~1 h (auto ~20 min)",
+      "family": true,
+      "car": true,
+      "start": "Lago di Dobbiaco (parcheggio)",
+      "description": "Facile giro ad anello su fondo pianeggiante immerso nei boschi, con noleggio barche e aree picnic. Perfetto con passeggino e bambini piccoli.",
+      "coordinates": {
+        "lat": 46.7233,
+        "lng": 12.2489
+      },
+      "eat": "Ristorante del Lago di Dobbiaco, o rientro a Dobbiaco per lo strudel.",
+      "tips": [
+        "Passeggiata breve e piatta intorno al lago: mezza giornata soft con i piccoli",
+        "Passerelle in legno adatte al passeggino; area pic-nic in riva",
+        "Vicino a Dobbiaco: comodo da unire alla ciclabile o a San Candido"
+      ]
+    },
+    {
+      "id": "san_candido",
+      "area": "Sesto",
+      "name": "San Candido (Innichen) e Acquafun",
+      "type": "Paese / Acqua",
+      "difficulty": "Facile",
+      "duration": "mezza giornata (auto ~25 min)",
+      "family": true,
+      "car": true,
+      "start": "San Candido (centro / Acquafun)",
+      "description": "Grazioso centro storico con la Collegiata romanica, gelaterie e negozi; accanto il centro acquatico Acquafun con scivoli e piscine. Ottimo per il pomeriggio o con meteo incerto.",
+      "coordinates": {
+        "lat": 46.7325,
+        "lng": 12.2807
+      },
+      "eat": "Nel centro di San Candido: caffè storici, gelaterie e ristoranti tirolesi.",
+      "tips": [
+        "Giornata jolly per meteo incerto: centro pedonale + piscine Acquafun al coperto",
+        "Verifica gli orari dell'Acquafun e porta costumi e ciabatte",
+        "Centro carino per gelato e passeggino; parcheggi in struttura"
+      ]
+    },
+    {
+      "id": "santa_caterina",
+      "area": "Sesto",
+      "name": "Lago di Santa Caterina (Auronzo)",
+      "type": "Lago",
+      "difficulty": "Facile",
+      "duration": "passeggiata + spiaggia (auto ~25 min)",
+      "family": true,
+      "car": true,
+      "start": "Auronzo di Cadore (lungolago)",
+      "description": "Lago balneabile con spiaggette, pedalò e lungolago pianeggiante, sul versante Comelico vicino al passo. Bella opzione per una giornata più rilassata con i bimbi.",
+      "coordinates": {
+        "lat": 46.5522,
+        "lng": 12.43
+      },
+      "eat": "Bar e trattorie sul lungolago di Auronzo: pizza e piatti cadorini.",
+      "tips": [
+        "Lago con spiaggette: porta costumi e teli, i bimbi giocano in riva",
+        "Passeggiata lungolago semplice e ombreggiata; possibile noleggio pedalò",
+        "Parcheggio ad Auronzo; abbinabile a Misurina/Tre Cime"
+      ]
+    },
+    {
+      "id": "kronplatz",
+      "area": "Sesto",
+      "name": "Plan de Corones (Kronplatz)",
+      "type": "In quota",
+      "difficulty": "Facile–Media",
+      "duration": "giornata (auto ~1 h + funivia)",
+      "family": true,
+      "car": true,
+      "start": "Funivia da Valdaora / Brunico",
+      "description": "Funivia fino in cima con parco giochi di montagna, sentieri panoramici e i musei Messner (MMM Corones) e della fotografia (LUMEN). Tanto divertimento per i bambini.",
+      "coordinates": {
+        "lat": 46.7378,
+        "lng": 11.9542
+      },
+      "eat": "Rifugi e ristoranti in quota a Plan de Corones; ampia scelta anche per i bimbi.",
+      "tips": [
+        "Giornata intera: funivia + musei (MMM Corones) e panorami a 360° — biglietti anche online",
+        "In cima parchi gioco e sentieri facili per i bambini; poca ombra, copriti bene",
+        "Verifica orari della funivia e l'ultima discesa"
+      ]
+    },
+    {
+      "id": "cortina",
+      "area": "Sesto",
+      "name": "Cortina d'Ampezzo e Lago di Ghedina",
+      "type": "Gita",
+      "difficulty": "Facile",
+      "duration": "mezza/intera giornata (auto ~45 min)",
+      "family": true,
+      "car": true,
+      "start": "Cortina d'Ampezzo (centro)",
+      "description": "Passeggiata nel centro pedonale della \"regina delle Dolomiti\" e sosta al laghetto di Ghedina immerso nei boschi. Gita comoda e scenografica.",
+      "coordinates": {
+        "lat": 46.5405,
+        "lng": 12.1357
+      },
+      "eat": "Cortina: dal ristoro veloce ai locali gourmet; gelato in Corso Italia.",
+      "tips": [
+        "Passeggiata al Lago di Ghedina + centro di Cortina: giornata rilassata, non escursionistica",
+        "Parcheggi a pagamento in centro; il lago ha giro breve e ombreggiato",
+        "Buona alternativa 'da paese' se il meteo in quota è instabile"
+      ]
+    },
+    {
+      "id": "monte_piana",
+      "area": "Sesto",
+      "name": "Monte Piana — museo all'aperto della Grande Guerra",
+      "type": "Storia",
+      "difficulty": "Media",
+      "duration": "mezza giornata (auto ~35 min + navetta)",
+      "family": true,
+      "car": true,
+      "start": "Misurina (navetta jeep o sentiero)",
+      "description": "Altopiano tra trincee, gallerie e postazioni della Prima Guerra Mondiale, con viste spettacolari sulle Dolomiti. Salita in jeep-navetta da Misurina; più adatto ai bimbi più grandi.",
+      "coordinates": {
+        "lat": 46.6206,
+        "lng": 12.2361
+      },
+      "eat": "Pranzo al Rifugio Bosi su Monte Piana, o a Misurina al ritorno.",
+      "tips": [
+        "Museo all'aperto della Grande Guerra: trincee e gallerie appassionano i più grandi (8 e 6 anni)",
+        "Sali in navetta jeep da Misurina per risparmiare gambe con i bimbi, poi sentieri facili in quota",
+        "Torcia per le gallerie, scarpe chiuse e giacca: in cima fresco e ventoso"
+      ]
+    },
+    {
+      "id": "rif_auronzo",
+      "area": "Sesto",
+      "name": "Rifugio Auronzo (Auronzohütte)",
+      "type": "Rifugio",
+      "difficulty": "Facile",
+      "duration": "arrivo in auto (strada a pedaggio)",
+      "family": true,
+      "car": true,
+      "start": "Rifugio Auronzo — strada a pedaggio da Misurina",
+      "description": "Il balcone sulle Tre Cime: ci si arriva comodamente in auto e da qui parte il celebre giro. Terrazza panoramica spettacolare, base perfetta anche con i bimbi.",
+      "coordinates": {
+        "lat": 46.6136,
+        "lng": 12.2957
+      },
+      "eat": "Pranzo al Rifugio Auronzo, terrazza panoramica sulle Tre Cime.",
+      "tips": [
+        "Ci arrivi in auto (strada a pedaggio): rifugio con vista Tre Cime senza camminare",
+        "Strada a pedaggio e parcheggio si saturano: sali prima delle 9 o nel pomeriggio",
+        "Ottima base di partenza per Rif. Lavaredo/Locatelli e per il pranzo"
+      ]
+    },
+    {
+      "id": "rif_lavaredo",
+      "area": "Sesto",
+      "name": "Rifugio Lavaredo (Lavaredohütte)",
+      "type": "Rifugio",
+      "difficulty": "Facile–Media",
+      "duration": "~1,5 h a/r dal Rif. Auronzo",
+      "family": true,
+      "car": false,
+      "start": "Rifugio Auronzo (Tre Cime)",
+      "description": "Breve e facile cammino sul sentiero delle Tre Cime fino al rifugio, con la vista che si apre sulle pareti nord. Ottima meta intermedia, fattibile con bambini allenati.",
+      "coordinates": {
+        "lat": 46.6182,
+        "lng": 12.3061
+      },
+      "eat": "Sosta al Rifugio Lavaredo o Locatelli lungo il giro delle Tre Cime.",
+      "tips": [
+        "Breve e panoramico dal Rif. Auronzo verso le Tre Cime: fattibile con bimbi allenati",
+        "Sentiero largo ma sassoso: scarpe da trekking e passo attento con i piccoli",
+        "Abbinalo all'arrivo in auto al Rif. Auronzo per accorciare la giornata"
+      ]
+    },
+    {
+      "id": "rif_zsigmondy",
+      "area": "Sesto",
+      "name": "Rifugio Zsigmondy-Comici",
+      "type": "Rifugio",
+      "difficulty": "Impegnativa",
+      "duration": "4–5 h a/r (Val Fiscalina)",
+      "family": false,
+      "start": "Val Fiscalina / Rifugio Fondovalle",
+      "description": "Uno dei rifugi più belli delle Dolomiti di Sesto, ai piedi della Croda dei Toni e della Cima Una. Salita impegnativa in ambiente severo, per camminatori allenati.",
+      "coordinates": {
+        "lat": 46.6222,
+        "lng": 12.3563
+      },
+      "eat": "Piatti caldi al Rifugio Zsigmondy-Comici dopo la salita.",
+      "tips": [
+        "Impegnativa in ambiente alpino: solo per camminatori esperti, senza i piccoli",
+        "Parti presto dalla Val Fiscalina; metti in conto il meteo pomeridiano",
+        "Scarponi, bastoncini, giacca e acqua; verifica l'apertura del rifugio"
+      ]
+    },
+    {
+      "id": "rif_pian_cengia",
+      "area": "Sesto",
+      "name": "Rifugio Pian di Cengia (Büllelejochhütte)",
+      "type": "Rifugio",
+      "difficulty": "Impegnativa",
+      "duration": "5–6 h (anello alto)",
+      "family": false,
+      "start": "Val Fiscalina / Rifugio Locatelli",
+      "description": "Piccolo rifugio d'alta quota tra le guglie, spesso inserito nell'anello Locatelli–Pian di Cengia–Val Fiscalina. Panorami eccezionali, itinerario per esperti.",
+      "coordinates": {
+        "lat": 46.6268,
+        "lng": 12.3423
+      },
+      "eat": "Ristoro al piccolo e panoramico Rifugio Pian di Cengia (Büllelejochhütte).",
+      "tips": [
+        "Anello alto e lungo (5–6 h) con tratti esposti: per escursionisti allenati, non per i bambini",
+        "Partenza all'alba per completare l'anello ed evitare i temporali del pomeriggio",
+        "Equipaggiamento alpino completo e buona scorta d'acqua"
+      ]
+    },
+    {
+      "id": "rif_col_varda",
+      "area": "Sesto",
+      "name": "Rifugio Col de Varda",
+      "type": "Rifugio",
+      "difficulty": "Facile",
+      "duration": "seggiovia + 30 min (da Misurina)",
+      "family": true,
+      "car": true,
+      "start": "Seggiovia da Misurina",
+      "description": "Si sale in seggiovia sopra Misurina per una vista magnifica sui Cadini e sulle Tre Cime. Rifugio panoramico e facilissimo da raggiungere, perfetto con i bambini.",
+      "coordinates": {
+        "lat": 46.5726,
+        "lng": 12.262
+      },
+      "eat": "Pranzo al Rifugio Col de Varda con vista sui Cadini.",
+      "tips": [
+        "Seggiovia da Misurina + 30 min: vista sui Cadini con pochissima fatica, top con i bimbi",
+        "Controlla orari seggiovia e ultima corsa; pranzo in terrazza al rifugio",
+        "Puoi fare solo andata/ritorno in seggiovia se i piccoli sono stanchi"
+      ]
+    },
+    {
+      "id": "rif_fonda_savio",
+      "area": "Sesto",
+      "name": "Rifugio Fonda Savio (Cadini di Misurina)",
+      "type": "Rifugio",
+      "difficulty": "Impegnativa",
+      "duration": "3–4 h a/r",
+      "family": false,
+      "start": "Misurina (località Genzianella)",
+      "description": "Incastonato tra le guglie dei Cadini di Misurina, uno degli scorci più fotografati delle Dolomiti. Sentiero ripido con qualche tratto attrezzato, per escursionisti.",
+      "coordinates": {
+        "lat": 46.5966,
+        "lng": 12.279
+      },
+      "eat": "Ristoro al Rifugio Fonda Savio tra le guglie dei Cadini.",
+      "tips": [
+        "Salita ripida ai Cadini di Misurina (3–4 h): per gambe allenate, non con i piccoli",
+        "Sentiero sassoso e a tratti esposto: scarponi e passo sicuro",
+        "Parti presto da Genzianella; acqua e giacca a vento"
+      ]
+    },
+    {
+      "id": "rif_vallandro",
+      "area": "Sesto",
+      "name": "Rifugio Vallandro (Prato Piazza)",
+      "type": "Rifugio",
+      "difficulty": "Facile–Media",
+      "duration": "1,5–2 h a/r da Prato Piazza",
+      "family": true,
+      "car": true,
+      "start": "Prato Piazza (Plätzwiese) — accesso auto regolamentato",
+      "description": "Dall'altopiano prativo di Prato Piazza si sale al rifugio con vista aperta su Cristallo, Tre Cime e Croda Rossa. Ampio e panoramico, adatto anche alle famiglie.",
+      "coordinates": {
+        "lat": 46.6447,
+        "lng": 12.2119
+      },
+      "eat": "Pranzo al Rifugio Vallandro o alle malghe di Prato Piazza.",
+      "tips": [
+        "Da Prato Piazza salita dolce con panorama enorme: fattibile con bimbi allenati",
+        "Accesso auto a Prato Piazza regolamentato a fasce orarie: verifica gli orari o usa la navetta",
+        "In quota fresco e ventoso: uno strato in più anche in agosto"
+      ]
+    },
+    {
+      "id": "rif_carpi",
+      "area": "Sesto",
+      "name": "Rifugio Città di Carpi",
+      "type": "Rifugio",
+      "difficulty": "Media",
+      "duration": "5–6 h a/r dal passo",
+      "family": false,
+      "start": "Passo Monte Croce Comelico (dall'hotel)",
+      "description": "Rifugio panoramico sul crinale del Comelico raggiungibile direttamente dal passo, con vista a 360° sulle Dolomiti di Sesto. Bella traversata di mezza montagna.",
+      "coordinates": {
+        "lat": 46.6089,
+        "lng": 12.4744
+      },
+      "eat": "Ristoro al Rifugio Città di Carpi sul crinale del Comelico.",
+      "tips": [
+        "Giornata piena (5–6 h) pur essendo 'media': partenza dall'hotel ma meglio senza i piccoli",
+        "Parti al mattino; pranzo al sacco o verifica l'apertura del rifugio",
+        "Scarpe da trekking e acqua abbondante"
+      ]
+    },
+    {
+      "id": "rif_sorapiss",
+      "area": "Sesto",
+      "name": "Lago di Sorapiss & Rifugio Vandelli",
+      "type": "Lago / Rifugio",
+      "difficulty": "Impegnativa",
+      "duration": "4 h a/r (tratti esposti con corde)",
+      "family": false,
+      "car": false,
+      "start": "Passo Tre Croci (da Misurina/Cortina)",
+      "description": "Il famoso lago dal colore turchese ai piedi del Sorapiss, con il Rifugio Vandelli. Escursione spettacolare ma con passaggi esposti attrezzati: sconsigliata con bimbi piccoli.",
+      "coordinates": {
+        "lat": 46.5333,
+        "lng": 12.2214
+      },
+      "eat": "Sosta al Rifugio Vandelli presso il lago; porta comunque scorte d'acqua.",
+      "tips": [
+        "Tratti esposti attrezzati con corde metalliche: NO bambini, sì solo escursionisti esperti senza vertigini",
+        "Il celebre lago turchese è affollato: parti all'alba dal Passo Tre Croci",
+        "Scarponi, eventuali guanti per le corde, giacca e acqua"
+      ]
+    }
+  ],
+  "ferries": [
+    {
+      "id": "ancona-spalato",
+      "from": "Ancona",
+      "to": "Spalato",
+      "date": "2026-08-07",
+      "time": "19:30",
+      "note": "Traghetto notturno (cabina)",
+      "day": 1
+    },
+    {
+      "id": "spalato-brac",
+      "from": "Spalato",
+      "to": "Supetar (Brač)",
+      "date": "2026-08-08",
+      "time": "10:30",
+      "note": "Catamarano/traghetto per Brač",
+      "day": 2
+    },
+    {
+      "id": "brac-spalato",
+      "from": "Supetar (Brač)",
+      "to": "Spalato",
+      "date": "2026-08-11",
+      "time": "14:00",
+      "note": "Ritorno verso Spalato",
+      "day": 5
+    }
+  ],
+  "guide": {
+    "title": "The Rough Guide to Croatia",
+    "url": "https://1drv.ms/b/c/651090ED57E9EB1A/AbTUCQ7z-W9Lg8FjBOGE9qk?e=8zevTv",
+    "note": "OneDrive — serve il tuo account Microsoft"
+  }
+}
