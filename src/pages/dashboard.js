@@ -81,38 +81,21 @@ export async function renderDashboard() {
     <div class="dashboard-grid">
       <div class="card card-body">
         <div class="section-title">Rotta del viaggio</div>
-        <div class="route-stops">
+        <div class="route-stops" id="route-stops">
           ${uniqueLocations.map(loc => `
-            <div class="route-stop">
-              <span class="stop-day">Gg. ${loc.day}<span class="stop-date">${formatDateIT(loc.date)}</span></span>
+            <button type="button" class="route-stop route-stop--link ${currentDay && loc.date === currentDay.date ? 'route-stop--attiva' : ''}"
+               data-date="${loc.date}"
+               title="Vedi l'anteprima di ${loc.location} qui accanto">
+              <span class="stop-day">Gg. ${loc.day}</span>
               <span>📍 ${loc.location}</span>
-            </div>
+              <span class="route-stop-arrow">→</span>
+            </button>
           `).join('')}
         </div>
       </div>
 
-      <div class="card card-body today-card">
-        <div class="section-title">${etichettaCorrente}</div>
-        ${currentDay ? `
-          <div style="margin-bottom:0.75rem;">
-            <strong>${esc(currentDay.title)}</strong>
-            <div style="font-size:0.82rem; color:var(--color-text-muted); margin-top:0.2rem;">
-              📍 ${esc(currentDay.location)} · ${formatDateIT(currentDay.date)}
-            </div>
-          </div>
-          <div class="activity-list">
-            ${(currentDay.activities || []).slice(0, 5).map(a => `
-              <div class="activity-item">
-                <span class="activity-time">${esc(a.time)}</span>
-                <span>${esc(a.text)}</span>
-              </div>
-            `).join('')}
-            ${(currentDay.activities || []).length > 5
-              ? `<div style="font-size:0.8rem;color:var(--color-text-muted);">+${currentDay.activities.length - 5} altre attività → <a href="#itinerary/${currentDay.date}" style="color:var(--color-primary);">Vedi itinerario</a></div>`
-              : ''}
-          </div>
-          ${navTargetsHtml(currentDay, data)}
-        ` : '<p style="color:var(--color-text-muted);font-size:0.9rem;">Nessuna tappa disponibile.</p>'}
+      <div class="card card-body today-card" id="today-card">
+        ${dayPreviewHtml(currentDay, data, currentDay, etichettaCorrente)}
       </div>
     </div>
 
@@ -127,6 +110,31 @@ export async function renderDashboard() {
       <a href="#ideas" class="btn btn-outline">💡 Idee rapide</a>
     </div>
   `
+
+  // Anteprima di una tappa nella scheda accanto, senza lasciare la dashboard:
+  // la rotta serve a dare un'occhiata, non a spostarsi.
+  document.getElementById('route-stops')?.addEventListener('click', e => {
+    const btn = e.target.closest('.route-stop')
+    if (!btn) return
+    const day = days.find(d => d.date === btn.dataset.date)
+    if (!day) return
+
+    const card = document.getElementById('today-card')
+    if (card) card.innerHTML = dayPreviewHtml(day, data, currentDay, etichettaCorrente)
+
+    document.querySelectorAll('#route-stops .route-stop')
+      .forEach(b => b.classList.toggle('route-stop--attiva', b === btn))
+  })
+
+  // "Torna a oggi": ripristina la tappa corrente. Delegato sulla scheda perche'
+  // il pulsante nasce e muore con l'anteprima.
+  document.getElementById('today-card')?.addEventListener('click', e => {
+    if (!e.target.closest('#preview-reset')) return
+    const card = document.getElementById('today-card')
+    if (card) card.innerHTML = dayPreviewHtml(currentDay, data, currentDay, etichettaCorrente)
+    document.querySelectorAll('#route-stops .route-stop').forEach(b =>
+      b.classList.toggle('route-stop--attiva', !!currentDay && b.dataset.date === currentDay.date))
+  })
 
   // Apertura popup suggerimenti del giorno
   document.getElementById('suggestions-card')?.addEventListener('click', () => {
