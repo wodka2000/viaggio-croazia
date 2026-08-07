@@ -64,9 +64,9 @@
       </Placemark>
 
       <Placemark>
-        <name>6 · Sesto / Sexten (da confermare)</name>
+        <name>6 · Hotel Kreuzbergpass (Sesto / Sexten)</name>
         <styleUrl>#alloggio</styleUrl>
-        <description>Dolomiti di Sesto (BZ). Arrivo 19/08 — inizio soggiorno in montagna. Sistemazione da confermare.</description>
+        <description>Passo Monte Croce Comelico (Kreuzbergpass), 39030 Sesto/Sexten (BZ). Check-in 19/08 → check-out 30/08 · 11 notti.</description>
         <Point><coordinates>12.3643,46.6927,0</coordinates></Point>
       </Placemark>
     </Folder>

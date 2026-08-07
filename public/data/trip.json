@@ -3,8 +3,8 @@
     "title": "Estate 2026",
     "subtitle": "Brač, Zara, Velebit, Istria, Collio e Dolomiti di Sesto",
     "start_date": "2026-08-07",
-    "end_date": "2026-08-29",
-    "duration_days": 23,
+    "end_date": "2026-08-30",
+    "duration_days": 24,
     "travelers": 5,
     "travelers_detail": "2 adulti + 3 bambini maschi (8, 6, 2 anni)",
     "emoji": "☀️"
@@ -864,7 +864,7 @@
       "day": 22,
       "date": "2026-08-28",
       "location": "Sesto",
-      "title": "Sesto — Ultima giornata in Dolomiti",
+      "title": "Sesto — Giornata in Dolomiti",
       "description": "Giornata sulle Dolomiti di Sesto con base al Passo Monte Croce (Kreuzbergpass). Scegli una passeggiata o un rifugio dalla scheda dedicata e verrà aggiunta ai suggerimenti del giorno.",
       "hotel_ref": "sesto_kreuzbergpass",
       "coordinates": {
@@ -895,6 +895,42 @@
     {
       "day": 23,
       "date": "2026-08-29",
+      "location": "Sesto",
+      "title": "Sesto — Ultima giornata in Dolomiti",
+      "description": "Ultimo giorno pieno in montagna prima del rientro: una passeggiata o un rifugio a scelta, senza strafare, e le valigie da preparare la sera.",
+      "hotel_ref": "sesto_kreuzbergpass",
+      "coordinates": {
+        "lat": 46.6927,
+        "lng": 12.3643
+      },
+      "activities": [
+        {
+          "time": "mattina",
+          "text": "Colazione in hotel al Passo Monte Croce"
+        },
+        {
+          "time": "giornata",
+          "text": "Passeggiata o rifugio a scelta — vedi 🥾 Passeggiate & Rifugi"
+        },
+        {
+          "time": "sera",
+          "text": "Valigie e acquisti last-minute: speck, formaggi di malga, strudel"
+        }
+      ],
+      "tips": {
+        "do": [
+          "Meta corta e sicura: domani si guida, meglio non arrivare a sera distrutti",
+          "Scegli da 🥾 Passeggiate & Rifugi e aggiungila a questo giorno"
+        ],
+        "eat": [
+          "Ultima cena in hotel o in malga: canederli e Kaiserschmarrn",
+          "Comprare speck e formaggi prima della chiusura dei negozi"
+        ]
+      }
+    },
+    {
+      "day": 24,
+      "date": "2026-08-30",
       "location": "Sesto → Rientro",
       "title": "Sesto → Rientro a casa",
       "description": "Check-out dal Kreuzbergpass e viaggio di rientro. Fine del viaggio!",
@@ -916,7 +952,7 @@
       "tips": {
         "do": [
           "Ultima colazione con vista sulle Dolomiti",
-          "Acquisti last-minute: speck, formaggi di malga, strudel"
+          "Partire presto: è domenica, traffico di rientro sulle statali"
         ],
         "eat": [
           "Colazione altoatesina abbondante",
@@ -1089,8 +1125,8 @@
         "lng": 12.4253
       },
       "checkin": "2026-08-19",
-      "checkout": "2026-08-29",
-      "nights": 10,
+      "checkout": "2026-08-30",
+      "nights": 11,
       "rating": 0,
       "price_per_night": 0,
       "price_total": 0,
@@ -1099,7 +1135,7 @@
         "Punto di partenza per passeggiate e rifugi",
         "Aria di montagna a 1.636 m"
       ],
-      "notes": "Soggiorno in montagna al Passo Monte Croce Comelico (Kreuzbergpass), tra Sesto e il Comelico. Base ideale per le passeggiate e i rifugi delle Dolomiti di Sesto. Prenotato dal 19 al 29 agosto.",
+      "notes": "Soggiorno in montagna al Passo Monte Croce Comelico (Kreuzbergpass), tra Sesto e il Comelico. Base ideale per le passeggiate e i rifugi delle Dolomiti di Sesto. Prenotato dal 19 al 30 agosto, 11 notti.",
       "booking_ref": "",
       "status": "confermata",
       "recommended": true,
@@ -1502,7 +1538,7 @@
           },
           {
             "id": "hot_7",
-            "text": "Confermare i dettagli del soggiorno a Sesto (dal 19 agosto)",
+            "text": "Confermare i dettagli del soggiorno a Sesto (19–30 agosto, 11 notti)",
             "priority": "high"
           },
           {
