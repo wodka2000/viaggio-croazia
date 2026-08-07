@@ -45,14 +45,14 @@ export async function renderDashboard() {
       <h1>${meta.emoji} ${meta.title}</h1>
       <p class="subtitle">${meta.subtitle}</p>
       <div class="dates">
-        <span class="date-badge">✈️ ${formatDateIT(meta.start_date)}</span>
+        <span class="date-badge">⛴️ ${formatDateIT(meta.start_date)}</span>
         <span style="color:rgba(255,255,255,0.5);">→</span>
         <span class="date-badge">🏔️ ${formatDateIT(meta.end_date)}</span>
         <span class="date-badge">👥 ${meta.travelers_detail || meta.travelers + ' viaggiatori'}</span>
       </div>
     </div>
 
-    ${countdownHtml(departure, end)}
+    ${countdownHtml(departure, end, todayDay, meta.duration_days)}
 
     <div class="stats-grid">
       <div class="stat-card">
@@ -81,21 +81,38 @@ export async function renderDashboard() {
     <div class="dashboard-grid">
       <div class="card card-body">
         <div class="section-title">Rotta del viaggio</div>
-        <div class="route-stops" id="route-stops">
+        <div class="route-stops">
           ${uniqueLocations.map(loc => `
-            <button type="button" class="route-stop route-stop--link ${currentDay && loc.date === currentDay.date ? 'route-stop--attiva' : ''}"
-               data-date="${loc.date}"
-               title="Vedi l'anteprima di ${loc.location} qui accanto">
-              <span class="stop-day">Gg. ${loc.day}</span>
+            <div class="route-stop">
+              <span class="stop-day">Gg. ${loc.day}<span class="stop-date">${formatDateIT(loc.date)}</span></span>
               <span>📍 ${loc.location}</span>
-              <span class="route-stop-arrow">→</span>
-            </button>
+            </div>
           `).join('')}
         </div>
       </div>
 
-      <div class="card card-body today-card" id="today-card">
-        ${dayPreviewHtml(currentDay, data, currentDay, etichettaCorrente)}
+      <div class="card card-body today-card">
+        <div class="section-title">${etichettaCorrente}</div>
+        ${currentDay ? `
+          <div style="margin-bottom:0.75rem;">
+            <strong>${esc(currentDay.title)}</strong>
+            <div style="font-size:0.82rem; color:var(--color-text-muted); margin-top:0.2rem;">
+              📍 ${esc(currentDay.location)} · ${formatDateIT(currentDay.date)}
+            </div>
+          </div>
+          <div class="activity-list">
+            ${(currentDay.activities || []).slice(0, 5).map(a => `
+              <div class="activity-item">
+                <span class="activity-time">${esc(a.time)}</span>
+                <span>${esc(a.text)}</span>
+              </div>
+            `).join('')}
+            ${(currentDay.activities || []).length > 5
+              ? `<div style="font-size:0.8rem;color:var(--color-text-muted);">+${currentDay.activities.length - 5} altre attività → <a href="#itinerary/${currentDay.date}" style="color:var(--color-primary);">Vedi itinerario</a></div>`
+              : ''}
+          </div>
+          ${navTargetsHtml(currentDay, data)}
+        ` : '<p style="color:var(--color-text-muted);font-size:0.9rem;">Nessuna tappa disponibile.</p>'}
       </div>
     </div>
 
@@ -110,31 +127,6 @@ export async function renderDashboard() {
       <a href="#ideas" class="btn btn-outline">💡 Idee rapide</a>
     </div>
   `
-
-  // Anteprima di una tappa nella scheda accanto, senza lasciare la dashboard:
-  // la rotta serve a dare un'occhiata, non a spostarsi.
-  document.getElementById('route-stops')?.addEventListener('click', e => {
-    const btn = e.target.closest('.route-stop')
-    if (!btn) return
-    const day = days.find(d => d.date === btn.dataset.date)
-    if (!day) return
-
-    const card = document.getElementById('today-card')
-    if (card) card.innerHTML = dayPreviewHtml(day, data, currentDay, etichettaCorrente)
-
-    document.querySelectorAll('#route-stops .route-stop')
-      .forEach(b => b.classList.toggle('route-stop--attiva', b === btn))
-  })
-
-  // "Torna a oggi": ripristina la tappa corrente. Delegato sulla scheda perche'
-  // il pulsante nasce e muore con l'anteprima.
-  document.getElementById('today-card')?.addEventListener('click', e => {
-    if (!e.target.closest('#preview-reset')) return
-    const card = document.getElementById('today-card')
-    if (card) card.innerHTML = dayPreviewHtml(currentDay, data, currentDay, etichettaCorrente)
-    document.querySelectorAll('#route-stops .route-stop').forEach(b =>
-      b.classList.toggle('route-stop--attiva', !!currentDay && b.dataset.date === currentDay.date))
-  })
 
   // Apertura popup suggerimenti del giorno
   document.getElementById('suggestions-card')?.addEventListener('click', () => {
@@ -225,11 +217,24 @@ function esc(str) {
   return String(str ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
 }
 
-function countdownHtml(departure, end) {
+// Icona della tappa in corso: il viaggio non è solo Croazia — si parte in
+// traghetto, si finisce nel Collio e in Dolomiti, e dire "sei in Croazia" il
+// 7 agosto (quando si è ancora in Italia) o il 20 (a Sesto) è semplicemente falso.
+function iconaTappa(location) {
+  const loc = String(location ?? '').toLowerCase()
+  if (loc.includes('rientro')) return '🏠'
+  if (loc.includes('sesto'))   return '🏔️'
+  if (loc.includes('collio'))  return '🍷'
+  if (loc.includes('velebit')) return '🐻'
+  if (loc.includes('spalato')) return '⛴️'
+  return '🌊'
+}
+
+function countdownHtml(departure, end, todayDay, totale) {
   if (departure > 0) {
     return `
       <div class="countdown-card">
-        <div class="countdown-icon">✈️</div>
+        <div class="countdown-icon">⛴️</div>
         <div>
           <div class="countdown-days">${departure} giorni</div>
           <div class="countdown-text">alla partenza — il viaggio si avvicina!</div>
@@ -238,12 +243,17 @@ function countdownHtml(departure, end) {
     `
   }
   if (departure <= 0 && end >= 0) {
+    const rimanenti = end === 0 ? 'è l\'ultimo giorno!' : `ancora ${end} giorni`
+    // Senza la tappa di oggi (buco nelle date) si resta sul generico: meglio
+    // vago che sbagliato.
+    const titolo = todayDay ? `Giorno ${todayDay.day} di ${totale}` : 'Viaggio in corso'
+    const dove   = todayDay ? `📍 ${esc(todayDay.location)} — ` : ''
     return `
       <div class="countdown-card departed">
-        <div class="countdown-icon">🌊</div>
+        <div class="countdown-icon">${iconaTappa(todayDay?.location)}</div>
         <div>
-          <div class="countdown-days">Sei in Croazia!</div>
-          <div class="countdown-text">Buon viaggio — ${end === 0 ? 'è l\'ultimo giorno!' : `ancora ${end} giorni`}</div>
+          <div class="countdown-days">${titolo}</div>
+          <div class="countdown-text">${dove}${rimanenti}</div>
         </div>
       </div>
     `
