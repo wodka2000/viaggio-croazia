@@ -57,21 +57,14 @@
       </Placemark>
 
       <Placemark>
-        <name>5 · DoubleTree by Hilton Trieste</name>
+        <name>5 · Castello di Spessa (Collio)</name>
         <styleUrl>#alloggio</styleUrl>
-        <description>Piazza della Repubblica 1, 34122 Trieste. Check-in 17/08 → check-out 18/08 · 1 notte. Tel. +39 040 9712950.</description>
-        <Point><coordinates>13.7741,45.6501,0</coordinates></Point>
-      </Placemark>
-
-      <Placemark>
-        <name>6 · Castello di Spessa (Collio)</name>
-        <styleUrl>#alloggio</styleUrl>
-        <description>Via Spessa 1, 34070 Capriva del Friuli (GO). Check-in 18/08 → check-out 19/08 · 1 notte.</description>
+        <description>Via Spessa 1, 34070 Capriva del Friuli (GO). Check-in 17/08 → check-out 19/08 · 2 notti.</description>
         <Point><coordinates>13.5049,45.9477,0</coordinates></Point>
       </Placemark>
 
       <Placemark>
-        <name>7 · Sesto / Sexten (da confermare)</name>
+        <name>6 · Sesto / Sexten (da confermare)</name>
         <styleUrl>#alloggio</styleUrl>
         <description>Dolomiti di Sesto (BZ). Arrivo 19/08 — inizio soggiorno in montagna. Sistemazione da confermare.</description>
         <Point><coordinates>12.3643,46.6927,0</coordinates></Point>
@@ -96,9 +89,9 @@
       </Placemark>
 
       <Placemark>
-        <name>Castello di Miramare (17/08)</name>
+        <name>Castello di Miramare (sosta 17/08)</name>
         <styleUrl>#tappa</styleUrl>
-        <description>Viale Miramare, 34151 Trieste. Parco e vista sul golfo.</description>
+        <description>Viale Miramare, 34151 Trieste. Parco e vista sul golfo: sosta lungo il trasferimento Rovigno → Collio.</description>
         <Point><coordinates>13.7125,45.7025,0</coordinates></Point>
       </Placemark>
 
@@ -137,7 +130,6 @@
             15.1589,44.1799,0
             15.2359,44.8688,0
             13.6278,45.1030,0
-            13.7741,45.6501,0
             13.5049,45.9477,0
             12.3643,46.6927,0
           </coordinates>

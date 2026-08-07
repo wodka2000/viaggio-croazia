@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Estate 2026",
-    "subtitle": "Brač, Zara, Velebit, Istria, Trieste, Collio e Dolomiti di Sesto",
+    "subtitle": "Brač, Zara, Velebit, Istria, Collio e Dolomiti di Sesto",
     "start_date": "2026-08-07",
     "end_date": "2026-08-29",
     "duration_days": 23,
@@ -442,13 +442,13 @@
     {
       "day": 11,
       "date": "2026-08-17",
-      "location": "Trieste",
-      "title": "Istria → Trieste",
-      "description": "Check-out dai Luxury Apartments Magali 1 e trasferimento a Trieste. Check-in al DoubleTree by Hilton e passeggiata in città o visita al Castello di Miramare.",
-      "hotel_ref": "trieste_doubletree",
+      "location": "Collio",
+      "title": "Istria → Collio — Castello di Spessa",
+      "description": "Check-out dai Luxury Apartments Magali 1 e trasferimento nel Collio, con una sosta pranzo lungo il percorso. Check-in al Castello di Spessa alle 16 e piscina alle 17: prima delle due notti in Friuli. Miramare e Trieste si vedono con calma il 18.",
+      "hotel_ref": "collio_spessa",
       "coordinates": {
-        "lat": 45.6501,
-        "lng": 13.7741
+        "lat": 45.9477,
+        "lng": 13.5049
       },
       "activities": [
         {
@@ -457,29 +457,33 @@
         },
         {
           "time": "10:30",
-          "text": "Trasferimento verso Trieste (con eventuale sosta lungo il percorso)"
+          "text": "Trasferimento verso il Collio (~2h30)"
         },
         {
-          "time": "15:30",
-          "text": "Check-in DoubleTree by Hilton Trieste"
+          "time": "13:00",
+          "text": "Sosta pranzo lungo il percorso (es. Pirano o il golfo di Sistiana)"
         },
         {
-          "time": "17:00",
-          "text": "Passeggiata a Trieste o Castello di Miramare"
+          "time": "16:00",
+          "text": "Check-in Castello di Spessa (Capriva del Friuli)"
         },
         {
-          "time": "20:00",
-          "text": "Cena a Trieste"
+          "time": "17:00–19:00",
+          "text": "Piscina della Vinum SPA — slot prenotato ✅"
+        },
+        {
+          "time": "19:30",
+          "text": "Cena all'Hosteria del Castello (in tenuta, al golf) — da prenotare. La Tavernetta è chiusa il lunedì"
         }
       ],
       "tips": {
         "do": [
-          "Parco del Castello di Miramare",
-          "Passeggiata in Piazza Unità d'Italia"
+          "Giornata di solo trasferimento: una sosta pranzo lunga vale più di una visita di corsa",
+          "Piscina dalle 17 alle 19: arrivare in tenuta con un margine per disfare l'essenziale"
         ],
         "eat": [
-          "Jota, gulasch e prosciutto di Praga",
-          "Caffè in un locale storico; gelato in piazza"
+          "Cena in tenuta il primo giorno: si esce dalla piscina e si è già a tavola",
+          "Cucina dell'Hosteria dalle 19:30; prosciutto d'Osvaldo e frico, gnocchi per i bimbi"
         ]
       }
     },
@@ -487,8 +491,8 @@
       "day": 12,
       "date": "2026-08-18",
       "location": "Collio",
-      "title": "Trieste → Collio — Gravner, Radikon, La Subida",
-      "description": "Check-out dal DoubleTree e giornata nel Collio: visite enologiche da Gravner e Radikon, eventuale pranzo o cena a La Subida (Cormons). Check-in al Castello di Spessa.",
+      "title": "Gita a Trieste — Miramare, poi piscina e La Subida",
+      "description": "La piscina della tenuta è chiusa la mattina, quindi si va a Trieste (~45 min): parco del Castello di Miramare e passaggio in Piazza Unità. Rientro in tenuta per lo slot piscina delle 15 e cena a La Subida. Le cantine si spostano alla mattina del 19.",
       "hotel_ref": "collio_spessa",
       "coordinates": {
         "lat": 45.9477,
@@ -496,20 +500,30 @@
       },
       "activities": [
         {
-          "time": "09:30",
-          "text": "Check-out DoubleTree Trieste"
+          "time": "08:30",
+          "text": "Colazione al Castello di Spessa"
         },
         {
-          "time": "10:30",
-          "text": "Gravner — visita azienda vitivinicola (Oslavia)"
+          "time": "09:15",
+          "text": "Partenza per Trieste (~45 min)"
         },
         {
-          "time": "12:00",
-          "text": "Radikon — vini naturali (Oslavia)"
+          "time": "10:00",
+          "text": "Castello di Miramare — parco sul golfo e interni brevi",
+          "maps": "https://www.google.com/maps/search/?api=1&query=Castello%20di%20Miramare%20Trieste"
         },
         {
-          "time": "16:00",
-          "text": "Check-in Castello di Spessa (Capriva del Friuli)"
+          "time": "12:30",
+          "text": "Piazza Unità d'Italia e pranzo in centro (Buffet da Pepi)",
+          "maps": "https://www.google.com/maps/search/?api=1&query=Piazza%20Unit%C3%A0%20d%27Italia%20Trieste"
+        },
+        {
+          "time": "13:45",
+          "text": "Rientro in tenuta (~45 min)"
+        },
+        {
+          "time": "15:00–17:00",
+          "text": "Piscina della Vinum SPA — slot prenotato ✅"
         },
         {
           "time": "19:00",
@@ -519,12 +533,12 @@
       ],
       "tips": {
         "do": [
-          "Visite in cantina Gravner/Radikon (su appuntamento)",
-          "Passeggiata tra i vigneti del Collio"
+          "Con 4 ore scarse a Trieste, Miramare è l'ancora: il parco vale più degli interni",
+          "Se i bimbi crollano, tagliare il centro e rientrare prima: la piscina è alle 15"
         ],
         "eat": [
-          "Pranzo a La Subida (frico, cjarsons)",
-          "Prosciutto San Daniele; gnocchi per i bimbi"
+          "Buffet da Pepi in centro: prosciutto cotto caldo, jota e gulasch",
+          "Gelato in Piazza Unità prima di rimettersi in auto"
         ]
       }
     },
@@ -532,8 +546,8 @@
       "day": 13,
       "date": "2026-08-19",
       "location": "Sesto",
-      "title": "Collio → Sesto — Arrivo in Montagna",
-      "description": "Check-out dal Castello di Spessa e trasferimento verso Sesto (Dolomiti). Arrivo e inizio del soggiorno in montagna.",
+      "title": "Collio → Sesto — Cantine e Arrivo in Montagna",
+      "description": "Ultima mattina in tenuta: gli altri in piscina (slot 10:30–12:30), salto in cantina da Gravner e Radikon a Oslavia. Poi check-out dal Castello di Spessa e trasferimento verso Sesto (Dolomiti), con partenza dopo pranzo e arrivo in montagna nel tardo pomeriggio.",
       "hotel_ref": "sesto_kreuzbergpass",
       "coordinates": {
         "lat": 46.6927,
@@ -541,26 +555,47 @@
       },
       "activities": [
         {
-          "time": "09:30",
-          "text": "Check-out Castello di Spessa"
+          "time": "09:00",
+          "text": "Colazione e valigie: caricare l'auto PRIMA della piscina"
         },
         {
           "time": "10:00",
-          "text": "Trasferimento verso Sesto (Dolomiti)"
+          "text": "Check-out Castello di Spessa (chiedere il deposito bagagli: lo slot piscina è dopo il check-out)"
         },
         {
-          "time": "15:00",
+          "time": "10:30–12:30",
+          "text": "Piscina della Vinum SPA per gli altri — slot prenotato ✅"
+        },
+        {
+          "time": "10:30",
+          "text": "Gravner e Radikon (Oslavia, ~20 min) — salto in cantina in staffetta, su appuntamento",
+          "maps": "https://www.google.com/maps/search/?api=1&query=Gravner%20Oslavia%20Gorizia"
+        },
+        {
+          "time": "12:45",
+          "text": "Rientro in tenuta e ricongiungimento"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo veloce in tenuta o a Capriva"
+        },
+        {
+          "time": "14:00",
+          "text": "Partenza per Sesto (Dolomiti) — ~230 km, ~3h"
+        },
+        {
+          "time": "17:00",
           "text": "Arrivo a Sesto — inizio soggiorno in montagna 🏔️"
         }
       ],
       "tips": {
         "do": [
-          "Trasferimento verso le Dolomiti",
-          "Primo giro e aria di montagna a Sesto"
+          "Auto già carica prima della piscina: si riparte senza rientrare in camera",
+          "Cantine con appuntamento breve e orario di uscita dichiarato: alle 12:45 si deve essere di ritorno"
         ],
         "eat": [
-          "Canederli e speck altoatesini",
-          "Strudel di mele; würstel e patate per i bimbi"
+          "Assaggi contenuti: dopo si guida per 230 km con i bambini a bordo",
+          "Pranzo prima di partire; canederli e strudel una volta a Sesto"
         ]
       }
     },
@@ -1011,34 +1046,6 @@
       "phone": ""
     },
     {
-      "id": "trieste_doubletree",
-      "name": "DoubleTree by Hilton Trieste",
-      "location": "Trieste",
-      "location_group": "Trieste",
-      "address": "Piazza della Repubblica 1, 34122 Trieste",
-      "coordinates": {
-        "lat": 45.6501,
-        "lng": 13.7741
-      },
-      "checkin": "2026-08-17",
-      "checkout": "2026-08-18",
-      "nights": 1,
-      "rating": 4,
-      "price_per_night": 398.48,
-      "price_total": 398.48,
-      "amenities": [
-        "Wi-Fi",
-        "Ristorante",
-        "Centro città",
-        "Vista mare"
-      ],
-      "notes": "Pernottamento a Trieste prima del Collio: visita della città ed eventuale Castello di Miramare. Prenotazione confermata.",
-      "booking_ref": "",
-      "status": "confermata",
-      "recommended": true,
-      "phone": "+39 040 9712950"
-    },
-    {
       "id": "collio_spessa",
       "name": "Castello di Spessa – Residenze d'Epoca",
       "location": "Capriva del Friuli (Collio)",
@@ -1048,19 +1055,19 @@
         "lat": 45.9477,
         "lng": 13.5049
       },
-      "checkin": "2026-08-18",
+      "checkin": "2026-08-17",
       "checkout": "2026-08-19",
-      "nights": 1,
+      "nights": 2,
       "rating": 4,
-      "price_per_night": 438.9,
-      "price_total": 438.9,
+      "price_per_night": 395.01,
+      "price_total": 790.02,
       "amenities": [
         "Residenza d'epoca",
         "Golf",
         "Parco",
         "Ristorante"
       ],
-      "notes": "Pernottamento nel Collio: Gravner, Radikon e La Subida, poi partenza per Sesto il 19 agosto. Prenotazione confermata.",
+      "notes": "Due notti nel Collio (17–19 agosto), al posto della tappa di Trieste: arrivo dall'Istria il 17, giornata di cantine (Gravner, Radikon) e La Subida il 18, partenza per Sesto il 19. Prenotazione confermata.",
       "booking_ref": "",
       "status": "confermata",
       "recommended": true,
@@ -1123,13 +1130,13 @@
       "icon": "⏱️",
       "title": "Tratte lunghe: pianificare le soste",
       "priority": "medium",
-      "text": "Due tratte da ~3h con i bambini: Otočac → Rovigno (~250 km, 15/8) e Capriva/Collio → Sesto (~230 km, 19/8). Prevedere una sosta pranzo/gioco (es. zona Rijeka/Učka il 15; un lago della Pusteria o Udine il 19)."
+      "text": "Tre tratte impegnative con i bambini: Otočac → Rovigno (~250 km, 15/8), Rovigno → Capriva del Friuli (~180 km con confini, 17/8) e Capriva/Collio → Sesto (~230 km, 19/8). Prevedere una sosta pranzo/gioco (es. zona Rijeka/Učka il 15; il parco del Castello di Miramare a Trieste il 17, che è quasi sulla strada). ⚠️ Il 19 si parte solo dopo lo slot piscina delle 10:30–12:30: pranzare a Capriva prima di mettersi in strada e mettere in conto l'arrivo a Sesto verso le 17."
     },
     {
       "icon": "🍷",
       "title": "Cantine e ristoranti su prenotazione",
       "priority": "medium",
-      "text": "Gravner e Radikon (18/8) sono piccoli produttori SOLO su appuntamento: contattarli con anticipo. Con tre bimbi conviene la degustazione 'a staffetta' (un genitore assaggia, l'altro con i bambini). Prenotare anche il tavolo a La Subida."
+      "text": "Gravner e Radikon sono piccoli produttori SOLO su appuntamento: contattarli con anticipo. Le visite sono la mattina del 19/8, in staffetta durante lo slot piscina degli altri (10:30–12:30): chiedere una visita breve e dichiarare l'orario di uscita, perché subito dopo si parte per Sesto. Le due cantine distano ~300 m l'una dall'altra a Oslavia, ~20 min da Capriva. Prenotare anche il tavolo a La Subida (18/8)."
     },
     {
       "icon": "🎒",
@@ -1209,18 +1216,18 @@
       "specialty": "Alta cucina istriana, 1 stella Michelin (serata speciale, su prenotazione)"
     },
     {
-      "area": "Trieste",
+      "area": "Collio",
       "name": "Buffet da Pepi",
       "town": "Trieste (Via Cassa di Risparmio 3)",
       "type": "Buffet storico",
-      "specialty": "Prosciutto cotto caldo, jota e gulasch — dal 1897"
+      "specialty": "Prosciutto cotto caldo, jota e gulasch — dal 1897. A Trieste: sosta pranzo del 17/8 o gita dal Collio (~40 min)"
     },
     {
-      "area": "Trieste",
+      "area": "Collio",
       "name": "Caffè San Marco",
       "town": "Trieste",
       "type": "Caffè storico",
-      "specialty": "Colazione e pausa caffè in un'atmosfera liberty (dal 1914)"
+      "specialty": "Colazione e pausa caffè in un'atmosfera liberty (dal 1914). A Trieste, ~40 min dal Castello di Spessa"
     },
     {
       "area": "Collio",
@@ -1484,13 +1491,8 @@
             "priority": "low"
           },
           {
-            "id": "hot_5",
-            "text": "DoubleTree by Hilton Trieste — confermato ✅",
-            "priority": "low"
-          },
-          {
             "id": "hot_6",
-            "text": "Castello di Spessa (Collio) — confermato ✅",
+            "text": "Castello di Spessa (Collio) — 2 notti (17–19/8), confermato ✅",
             "priority": "low"
           },
           {
@@ -1532,7 +1534,7 @@
           },
           {
             "id": "att_5",
-            "text": "Castello di Miramare (Trieste)",
+            "text": "Castello di Miramare (Trieste) — gita della mattina del 18/8",
             "priority": "medium"
           }
         ]
@@ -1544,13 +1546,13 @@
         "items": [
           {
             "id": "can_1",
-            "text": "Gravner (Oslavia, Collio) — contattare per visita",
-            "priority": "medium"
+            "text": "Gravner (Oslavia) — fissare visita breve la mattina del 19/8 (10:45–12:30)",
+            "priority": "high"
           },
           {
             "id": "can_2",
-            "text": "Radikon (Oslavia, Collio) — contattare per visita",
-            "priority": "medium"
+            "text": "Radikon (Oslavia) — fissare visita breve la mattina del 19/8, di seguito a Gravner",
+            "priority": "high"
           }
         ]
       },

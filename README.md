@@ -4,7 +4,7 @@ Pianificatore di viaggio statico — deployabile su GitHub Pages.
 
 **Itinerario**: 13 giorni · 8 – 20 agosto 2026  
 **Viaggiatori**: 2 adulti + 3 bambini (8, 6, 2 anni)  
-**Destinazioni**: Ancona → Brač → Zara → Rovigno → Trieste → Sesto
+**Destinazioni**: Ancona → Brač → Zara → Rovigno → Collio → Sesto
 
 ---
 

@@ -886,15 +886,18 @@ const NATURA_DATA = [
     coords: { lat: 44.9268, lng: 13.8029 },
   },
 
-  /* ──────── TRIESTE ──────── */
+  /* ──────── COLLIO E TRIESTE ────────
+     Base della tappa: Castello di Spessa (Capriva del Friuli), due
+     notti dal 17 al 19/8. Trieste e il Carso restano a portata di
+     mezza giornata, o come sosta lungo il viaggio dall'Istria. */
   {
     id: 'trieste-centro',
     nome: 'Trieste — Piazza Unità d\'Italia',
-    area: 'Trieste',
+    area: 'Collio e Trieste',
     tipo: 'cultura',
     categoria: 'citta',
     categoriaLabel: '🏛️ Città storica',
-    descrizione: 'La piazza affacciata sul mare più grande d\'Europa, cuore della Trieste asburgica, tra caffè storici e palazzi liberty. Alla base della tappa.',
+    descrizione: 'La piazza affacciata sul mare più grande d\'Europa, cuore della Trieste asburgica, tra caffè storici e palazzi liberty. A ~45 min dal Castello di Spessa, o come sosta lungo il viaggio dall\'Istria il 17/8.',
     bambini: true,
     bambini_nota: 'Spazi ampi e pedonali; gelato e passeggiata sul molo Audace',
     impegno: 'sosta-breve',
@@ -904,11 +907,11 @@ const NATURA_DATA = [
   {
     id: 'miramare',
     nome: 'Castello di Miramare',
-    area: 'Trieste',
+    area: 'Collio e Trieste',
     tipo: 'cultura',
     categoria: 'citta',
     categoriaLabel: '🏰 Castello / Parco',
-    descrizione: 'Il castello bianco di Massimiliano d\'Asburgo a picco sul golfo, con un grande parco affacciato sul mare. A ~15 min dal centro di Trieste.',
+    descrizione: 'Il castello bianco di Massimiliano d\'Asburgo a picco sul golfo, con un grande parco affacciato sul mare. Quasi sulla strada tra Rovigno e il Collio: ottima sosta per sgranchirsi il 17/8. A ~40 min dal Castello di Spessa.',
     bambini: true,
     bambini_nota: 'Ottimo — parco enorme per correre e vista mare; interni brevi',
     impegno: 'mezza-giornata',
@@ -918,11 +921,11 @@ const NATURA_DATA = [
   {
     id: 'grotta-gigante',
     nome: 'Grotta Gigante',
-    area: 'Trieste',
+    area: 'Collio e Trieste',
     tipo: 'natura',
     categoria: 'natura',
     categoriaLabel: '🕳️ Grotta',
-    descrizione: 'Enorme caverna del Carso triestino, tra le più grandi visitabili al mondo. Visita guidata con scalinata tra stalattiti e stalagmiti. A ~20 min da Trieste.',
+    descrizione: 'Enorme caverna del Carso triestino, tra le più grandi visitabili al mondo. Visita guidata con scalinata tra stalattiti e stalagmiti. A ~20 min da Trieste e ~40 min dal Castello di Spessa.',
     bambini: true,
     bambini_nota: 'Adatto ai più grandi — tante scale ma spettacolo assicurato; fresco d\'estate',
     impegno: 'sosta-breve',
@@ -930,11 +933,10 @@ const NATURA_DATA = [
     coords: { lat: 45.7099, lng: 13.7646 },
   },
 
-  /* ──────── COLLIO / FRIULI ──────── */
   {
     id: 'aquileia',
     nome: 'Aquileia — Basilica e Area Romana',
-    area: 'Collio / Friuli',
+    area: 'Collio e Trieste',
     tipo: 'cultura',
     categoria: 'citta',
     categoriaLabel: '🏛️ Sito UNESCO',
