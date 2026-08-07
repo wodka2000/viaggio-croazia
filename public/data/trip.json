@@ -547,7 +547,7 @@
       "date": "2026-08-19",
       "location": "Sesto",
       "title": "Collio → Sesto — Cantine e Arrivo in Montagna",
-      "description": "Ultima mattina in tenuta: gli altri restano in hotel e vanno in piscina (slot 10:30–12:30), tu fai il salto in cantina da Gravner (10:00, prenotata) e Radikon a Oslavia. Check-out al rientro, pranzo e trasferimento verso Sesto (Dolomiti), con arrivo in montagna nel tardo pomeriggio.",
+      "description": "Ultima mattina in tenuta: gli altri restano in hotel e vanno in piscina (slot 10:30–12:30), tu fai il salto a Oslavia da Gravner (visita prenotata alle 10) e un passaggio da Radikon per acquisti. Check-out al rientro, pranzo e trasferimento verso Sesto (Dolomiti), con arrivo in montagna nel tardo pomeriggio.",
       "hotel_ref": "sesto_kreuzbergpass",
       "coordinates": {
         "lat": 46.6927,
@@ -572,8 +572,8 @@
           "text": "Piscina della Vinum SPA per gli altri — slot prenotato ✅"
         },
         {
-          "time": "11:15",
-          "text": "Radikon (~300 m da Gravner) — su appuntamento",
+          "time": "11:30",
+          "text": "Radikon (~300 m da Gravner) — passaggio veloce solo per acquisti, senza appuntamento",
           "maps": "https://www.google.com/maps/search/?api=1&query=Radikon%20Oslavia%20Gorizia"
         },
         {
@@ -596,7 +596,7 @@
       "tips": {
         "do": [
           "Auto carica prima di uscire per le cantine: al rientro si fa solo il check-out",
-          "A Radikon dichiarare l'ora di uscita: alle 12:30 si deve essere di ritorno"
+          "L'unico orario fisso è Gravner alle 10: da Radikon si passa e basta"
         ],
         "eat": [
           "Assaggi contenuti: dopo si guida per 230 km con i bambini a bordo",
@@ -1177,7 +1177,7 @@
       "icon": "🍷",
       "title": "Cantine e ristoranti su prenotazione",
       "priority": "medium",
-      "text": "Gravner è prenotato il 19/8 alle 10:00 a Oslavia ✅; Radikon (~300 m più in là) è ancora da fissare, verso le 11:15. Si va in staffetta: gli altri restano in hotel per la piscina (10:30–12:30) e il check-out si fa al rientro, quindi non è un vincolo. Uscire da Capriva alle 9:40, Oslavia è a ~20 min. Dichiarare a Radikon l'ora di uscita, perché alle 12:30 si rientra e alle 14 si parte per Sesto. Prenotare anche il tavolo a La Subida (18/8)."
+      "text": "Gravner è prenotato il 19/8 alle 10:00 a Oslavia ✅. Da Radikon (~300 m più in là) si passa solo per acquisti, senza appuntamento ✅. Si va in staffetta: gli altri restano in hotel per la piscina (10:30–12:30) e il check-out si fa al rientro, quindi non è un vincolo. Uscire da Capriva alle 9:40, Oslavia è a ~20 min. L'unico orario rigido della mattina è Gravner: dopo, si rientra con calma per le 12:30 e alle 14 si parte per Sesto. Prenotare anche il tavolo a La Subida (18/8)."
     },
     {
       "icon": "🎒",
@@ -1592,8 +1592,8 @@
           },
           {
             "id": "can_2",
-            "text": "Radikon (Oslavia) — fissare visita breve il 19/8 verso le 11:15, di seguito a Gravner",
-            "priority": "high"
+            "text": "Radikon (Oslavia) — sentiti: il 19/8 basta passare per acquisti, nessun appuntamento ✅",
+            "priority": "low"
           }
         ]
       },
