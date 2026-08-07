@@ -1476,8 +1476,8 @@
         "items": [
           {
             "id": "tra_1",
-            "text": "Definire e prenotare il trasferimento del 7 agosto (auto e/o traghetto verso la Croazia)",
-            "priority": "high"
+            "text": "Traghetto Ancona → Spalato del 7 agosto — prenotato ✅ (check-in al porto 16:30, partenza 19:30)",
+            "priority": "low"
           },
           {
             "id": "tra_2",
@@ -1604,7 +1604,12 @@
         "items": [
           {
             "id": "ris_1",
-            "text": "La Subida (Cormons) — prenotazione (pranzo o cena 18 agosto)",
+            "text": "Osteria della Subida (Cormons) — cena del 18 agosto, prenotata ✅",
+            "priority": "low"
+          },
+          {
+            "id": "ris_3",
+            "text": "Hosteria del Castello (in tenuta) — cena del 17 agosto, da prenotare · +39 0481 809156",
             "priority": "high"
           },
           {
