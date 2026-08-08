@@ -176,7 +176,7 @@
         },
         {
           "time": "20:00",
-          "text": "Cena a Bol e rientro a Postira"
+          "text": "Cena — da decidere: a Bol, oppure in konoba nell'interno sulla via del rientro"
         }
       ],
       "tips": {
@@ -193,8 +193,12 @@
         ],
         "eat": [
           "Pranzo di pesce sul porto di Bol",
+          "Arguola, in Vladimira Nazora 6: panini col pane fatto in casa, quello con acciughe e capperi è il consiglio della guida — ottimo da portare in spiaggia",
           "Granita o gelato per i bambini",
-          "Cena a Bol prima di rimettersi in strada per Postira (mezz'ora di curve)"
+          "Cena a Bol: si resta sul porto, ma dopo restano mezz'ora di curve al buio fino a Postira",
+          "Cena nell'interno tornando: si lascia Bol verso le 19:30 con la luce e si finisce a dieci minuti dal letto",
+          "Konoba Tomić a Gornji Humac, sulla strada verso nord: peka di agnello, ma va ordinata la mattina perché cuoce due ore sotto la campana",
+          "Konoba Toni a Dol, 3 km da Postira: prosciutto di produzione propria e terrazza all'ombra, la più comoda se si rientra tardi"
         ]
       }
     },
@@ -1387,6 +1391,13 @@
       "town": "Frane Radića 1, Bol",
       "type": "Pizzeria",
       "specialty": "Pizze al forno a legna, paste, insalate sostanziose e limonata fatta in casa a due passi dall'acqua: la scelta più semplice e senza attese durante una giornata a Zlatni Rat. A pochi metri dal mare."
+    },
+    {
+      "area": "Brač",
+      "name": "Arguola",
+      "town": "Vladimira Nazora 6, Bol",
+      "type": "Paninoteca",
+      "specialty": "Paninoteca sopra la media: cuociono in casa il pane dei panini e li farciscono con ingredienti dell'isola. Quello con acciughe e capperi è saporito e costa poco. Da prendere al volo per la spiaggia."
     },
     {
       "area": "Area di Zara",
