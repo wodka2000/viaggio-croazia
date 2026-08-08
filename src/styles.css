@@ -2114,6 +2114,48 @@ ul { list-style: none; }
 .idea-card:hover { box-shadow: 0 3px 10px var(--color-shadow); }
 .idea-card--scartata { opacity: 0.55; }
 
+/* Le cose gia' fatte restano leggibili ma arretrano rispetto al da fare. */
+.idea-card--fatta { background: #f8fafc; }
+
+/* Voto 1-3 stelle sulle cose fatte. */
+.idea-stars {
+  display: inline-flex;
+  gap: 0.1rem;
+  align-items: center;
+  line-height: 1;
+}
+
+.idea-stars .star,
+.idea-stars .star-btn {
+  font-size: 1rem;
+  color: var(--color-border);
+  background: none;
+  border: none;
+  padding: 0 0.05rem;
+  line-height: 1;
+}
+
+.idea-stars .star-btn { cursor: pointer; }
+.idea-stars .star--on { color: #f59e0b; }
+.idea-stars .star-btn:hover { color: #f59e0b; }
+
+.idea-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.idea-rating-row.hidden { display: none; }
+.idea-rating-row .ideas-label { margin-bottom: 0; }
+
+/* Idea aperta da un link dell'itinerario: si evidenzia per due secondi. */
+.idea-card--evidenza {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+  transition: box-shadow 0.4s, border-color 0.4s;
+}
+
 .idea-card-main { flex: 1; min-width: 0; }
 
 .idea-card-header-row {
@@ -2325,7 +2367,7 @@ a.idea-meta-chip.idea-meta-link:hover { background: #eff6ff; color: var(--color-
 
 .idea-tiny-badge { font-size: 0.7rem; flex-shrink: 0; }
 
-.day-idea-del {
+.day-idea-unlink {
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--color-text-muted);
@@ -2338,7 +2380,33 @@ a.idea-meta-chip.idea-meta-link:hover { background: #eff6ff; color: var(--color-
   background: none;
 }
 
-.day-idea-del:hover { color: var(--color-accent); }
+.day-idea-unlink:hover { color: var(--color-accent); }
+
+/* Il testo dell'idea porta alla sua scheda nella pagina Idee. */
+a.day-idea-text {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.day-idea-text:hover { text-decoration: underline; }
+
+.day-idea-stars {
+  font-size: 0.7rem;
+  color: #f59e0b;
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+
+/* Stesso stato che si vede nella pagina Idee, in formato pillola. */
+.day-idea-stato {
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 0.05rem 0.35rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
 .day-add-idea-btn {
   font-size: 0.78rem;
@@ -2366,6 +2434,18 @@ a.idea-meta-chip.idea-meta-link:hover { background: #eff6ff; color: var(--color-
 .day-quick-form.hidden { display: none; }
 
 .quick-form-checks { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Categoria e stato anche nell'aggiunta rapida: cosi' l'idea nasce gia'
+   classificata come se fosse stata scritta nella pagina Idee. */
+.quick-form-selects { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.quick-form-selects .ideas-select {
+  flex: 1 1 130px;
+  width: auto;
+  margin-bottom: 0;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.8rem;
+}
 
 /* Link Maps inline nelle attività dell'itinerario */
 .activity-maps {

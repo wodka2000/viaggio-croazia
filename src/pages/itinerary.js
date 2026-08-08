@@ -1,6 +1,6 @@
 import { fetchTripData } from '../utils/data.js'
 import { formatDateIT, formatDayOfWeek } from '../utils/data.js'
-import { getIdeasForDay, addIdea, deleteIdea } from '../utils/ideas.js'
+import { getIdeasForDay, addIdea, updateIdea, CATEGORIE, STATI, MAX_RATING } from '../utils/ideas.js'
 import { getUserBookingsForDay, bookingMapsUrl } from '../utils/bookings.js'
 import { isSesto } from '../utils/suggestions.js'
 import { getAttachmentMeta, openAttachment } from '../utils/attachments.js'
@@ -205,6 +205,14 @@ function renderDay(day, hotelMap, ferries = []) {
               </button>
               <form class="day-quick-form hidden" id="quick-form-${day.date}" data-date="${day.date}">
                 <input type="text" class="quick-idea-text idea-input" placeholder="Descrivi l'idea…" />
+                <div class="quick-form-selects">
+                  <select class="quick-idea-cat ideas-select" title="Categoria">
+                    ${CATEGORIE.map(c => `<option value="${c.value}" ${c.value === 'varia' ? 'selected' : ''}>${c.label}</option>`).join('')}
+                  </select>
+                  <select class="quick-idea-stato ideas-select" title="Stato">
+                    ${STATI.map(s => `<option value="${s.value}" ${s.value === 'idea' ? 'selected' : ''}>${s.label}</option>`).join('')}
+                  </select>
+                </div>
                 <div class="quick-form-checks">
                   <label class="idea-check-label">
                     <input type="checkbox" class="quick-checklist" /> 📋 Checklist
@@ -255,18 +263,30 @@ function renderTips(tips) {
 
 /* ── IDEAS SECTION ────────────────────────────────────────── */
 
+// Le idee del giorno sono le stesse della pagina Idee: qui si mostra abbastanza
+// (categoria, stato) da riconoscerle, e il testo porta alla scheda completa.
 function _renderDayIdeas(date) {
   const ideas = getIdeasForDay(date)
   if (ideas.length === 0) return ''
-  return ideas.map(idea => `
+  return ideas.map(idea => {
+    const cat    = CATEGORIE.find(c => c.value === idea.categoria)
+    const stato  = STATI.find(s => s.value === idea.stato)
+    const rating = Math.min(MAX_RATING, Math.max(0, Number(idea.rating) || 0))
+    return `
     <div class="day-idea-pill ${idea.completed ? 'day-idea-pill--done' : ''}" data-id="${idea.id}">
-      <span class="day-idea-text">${_esc(idea.text)}</span>
+      <span class="idea-tiny-badge" title="${_esc(cat?.label ?? '')}">${cat ? cat.label.split(' ')[0] : '💡'}</span>
+      <a class="day-idea-text" href="#ideas/${idea.id}" title="Apri nella pagina Idee">${_esc(idea.text)}</a>
+      ${stato && idea.stato !== 'idea' ? `
+        <span class="day-idea-stato"
+          style="background:${stato.color}20;color:${stato.color};border-color:${stato.color}40;">${stato.label}</span>` : ''}
+      ${rating ? `<span class="day-idea-stars" title="${rating} su ${MAX_RATING}">${'★'.repeat(rating)}</span>` : ''}
       ${idea.add_to_checklist ? '<span class="idea-tiny-badge">📋</span>' : ''}
       ${idea.add_to_map       ? '<span class="idea-tiny-badge">🗺️</span>' : ''}
-      ${idea.completed        ? '<span class="idea-tiny-badge">✅</span>' : ''}
-      <button class="day-idea-del" data-id="${idea.id}" title="Elimina">×</button>
+      <button class="day-idea-unlink" data-id="${idea.id}"
+        title="Togli dal giorno (l'idea resta in Idee)">×</button>
     </div>
-  `).join('')
+    `
+  }).join('')
 }
 
 /* ── PROGRAMMA DEL GIORNO (visualizza + modifica) ─────────── */
@@ -379,14 +399,12 @@ function _bindDayIdeaEvents(days) {
       cancelBtn.closest('.day-quick-form')?.classList.add('hidden')
     }
 
-    // Elimina idea dal giorno
-    const delBtn = e.target.closest('.day-idea-del')
-    if (delBtn) {
-      const id = delBtn.dataset.id
-      if (confirm('Eliminare questa idea?')) {
-        deleteIdea(id)
-        // ideas:updated event aggiorna la sezione automaticamente
-      }
+    // Stacca l'idea dal giorno. Non la cancella: vive nella pagina Idee, dove
+    // sta anche il cestino — da qui si toglie solo il collegamento al giorno.
+    const unlinkBtn = e.target.closest('.day-idea-unlink')
+    if (unlinkBtn) {
+      updateIdea(unlinkBtn.dataset.id, { day_date: null })
+      // ideas:updated event aggiorna la sezione automaticamente
     }
 
     // Apri il biglietto del traghetto (allegato locale)
@@ -410,6 +428,8 @@ function _bindDayIdeaEvents(days) {
 
     addIdea({
       text,
+      categoria: form.querySelector('.quick-idea-cat')?.value ?? 'varia',
+      stato:     form.querySelector('.quick-idea-stato')?.value ?? 'idea',
       day_date: date,
       location_name: day?.location ?? null,
       coordinates: (addMap && day?.coordinates) ? day.coordinates : null,
@@ -418,6 +438,8 @@ function _bindDayIdeaEvents(days) {
     })
 
     form.querySelector('.quick-idea-text').value = ''
+    form.querySelector('.quick-idea-cat').value = 'varia'
+    form.querySelector('.quick-idea-stato').value = 'idea'
     form.querySelector('.quick-map').checked = false
     form.querySelector('.quick-checklist').checked = false
     form.classList.add('hidden')

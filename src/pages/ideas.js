@@ -3,7 +3,7 @@ import { formatDate, formatDateIT } from '../utils/data.js'
 import {
   loadIdeas, addIdea, updateIdea, deleteIdea,
   exportIdeasJSON, importIdeasJSON,
-  CATEGORIE, STATI, PRIORITA, COLORS,
+  CATEGORIE, STATI, PRIORITA, COLORS, MAX_RATING,
 } from '../utils/ideas.js'
 
 let _editingId     = null
@@ -13,7 +13,9 @@ let _showAdvanced  = false
 
 /* ── INIT ─────────────────────────────────────────────── */
 
-export async function renderIdeas() {
+// `focusId` arriva dalla rotta (#ideas/idea_xxx): e' l'idea su cui aprirsi,
+// quando ci si arriva cliccandola dentro un giorno dell'itinerario.
+export async function renderIdeas(focusId) {
   const content = document.getElementById('page-content')
 
   let tripData
@@ -63,6 +65,8 @@ export async function renderIdeas() {
   _bindListEvents()
   _bindFilterEvents()
   _bindIOEvents()
+
+  if (focusId) _focusIdea(focusId)
 
   const handler = () => {
     _refreshList()
@@ -118,6 +122,12 @@ function _buildFormHTML(idea) {
           <label class="ideas-label">Priorità</label>
           <select id="idea-priorita" class="ideas-select">${priOpts}</select>
         </div>
+      </div>
+
+      <!-- Voto: compare solo per le cose fatte -->
+      <div class="idea-rating-row ${idea?.stato === 'fatto' ? '' : 'hidden'}" id="idea-rating-row">
+        <span class="ideas-label">Com'è andata?</span>
+        ${_starsHTML(idea?.rating, 'form')}
       </div>
 
       <!-- Toggle dettagli aggiuntivi -->
@@ -198,6 +208,36 @@ function _buildFormHTML(idea) {
   `
 }
 
+/* ── STELLINE ─────────────────────────────────────────── */
+
+// mode: 'static' (sola lettura) · 'form' (nel form, stato locale)
+// · 'card' (nella lista, salva subito sull'idea `id`).
+// Ricliccare la stella corrente azzera il voto: senza, uno sbaglio
+// resterebbe li' per sempre.
+function _starsHTML(rating, mode = 'static', id = '') {
+  const r = Math.min(MAX_RATING, Math.max(0, Number(rating) || 0))
+  const stars = Array.from({ length: MAX_RATING }, (_, i) => {
+    const v  = i + 1
+    const on = v <= r
+    if (mode === 'static') return `<span class="star ${on ? 'star--on' : ''}">${on ? '★' : '☆'}</span>`
+    return `
+      <button type="button" class="star-btn ${on ? 'star--on' : ''}"
+        ${mode === 'card' ? `data-action="rate" data-id="${id}"` : ''}
+        data-v="${v}" title="${v} su ${MAX_RATING}">${on ? '★' : '☆'}</button>`
+  }).join('')
+  return `<span class="idea-stars" data-rating="${r}">${stars}</span>`
+}
+
+// Aggiorna in posto un gruppo di stelline cliccabili nel form.
+function _paintStars(box, value) {
+  box.dataset.rating = value
+  box.querySelectorAll('.star-btn').forEach(b => {
+    const on = Number(b.dataset.v) <= value
+    b.classList.toggle('star--on', on)
+    b.textContent = on ? '★' : '☆'
+  })
+}
+
 function _bindFormEvents() {
   const wrap = document.getElementById('ideas-form-wrap')
   if (!wrap) return
@@ -224,6 +264,18 @@ function _bindFormEvents() {
     if (e.target.id === 'idea-add-map') {
       document.getElementById('idea-color-row')?.classList.toggle('hidden', !e.target.checked)
     }
+    if (e.target.id === 'idea-stato') {
+      document.getElementById('idea-rating-row')?.classList.toggle('hidden', e.target.value !== 'fatto')
+    }
+  })
+
+  // Stelline del form: nessun salvataggio finche' non si conferma l'idea.
+  wrap.addEventListener('click', e => {
+    const btn = e.target.closest('.star-btn')
+    if (!btn) return
+    const box = btn.closest('.idea-stars')
+    const v   = Number(btn.dataset.v)
+    _paintStars(box, Number(box.dataset.rating) === v ? 0 : v)
   })
 
   // Submit
@@ -255,6 +307,7 @@ function _handleSave() {
     note:             document.getElementById('idea-note')?.value.trim() ?? '',
     categoria:        document.getElementById('idea-categoria')?.value ?? 'varia',
     stato:            document.getElementById('idea-stato')?.value ?? 'idea',
+    rating:           Number(document.querySelector('#idea-rating-row .idea-stars')?.dataset.rating) || 0,
     priorita:         document.getElementById('idea-priorita')?.value ?? 'media',
     day_date:         document.getElementById('idea-day')?.value || null,
     location_name:    document.getElementById('idea-location')?.value.trim() || null,
@@ -290,6 +343,7 @@ function _buildFiltersHTML() {
     { key: 'da-verificare', label: `Da verificare (${ideas.filter(i=>i.stato==='da-verificare').length})` },
     { key: 'prenotare',     label: `Prenotare (${ideas.filter(i=>i.stato==='prenotare').length})` },
     { key: 'approvata',     label: `Approvate (${ideas.filter(i=>i.stato==='approvata').length})` },
+    { key: 'fatto',         label: `✅ Fatte (${ideas.filter(i=>i.stato==='fatto').length})` },
     { key: 'scartata',      label: `Scartate (${ideas.filter(i=>i.stato==='scartata').length})` },
   ]
 
@@ -344,7 +398,7 @@ function _buildIdeaCardHTML(idea) {
   const day     = idea.day_date ? _tripDays.find(d => d.date === idea.day_date) : null
 
   return `
-    <div class="idea-card ${idea.stato === 'scartata' ? 'idea-card--scartata' : ''}" data-id="${idea.id}">
+    <div class="idea-card ${idea.stato === 'scartata' ? 'idea-card--scartata' : ''} ${idea.stato === 'fatto' ? 'idea-card--fatta' : ''}" data-id="${idea.id}">
       <div class="idea-card-main">
         <div class="idea-card-header-row">
           <span class="idea-card-text">${_esc(idea.text)}</span>
@@ -355,10 +409,13 @@ function _buildIdeaCardHTML(idea) {
           </div>
         </div>
 
+        <!-- Cose fatte: si votano da qui, senza aprire la modifica -->
+        ${idea.stato === 'fatto' ? _starsHTML(idea.rating, 'card', idea.id) : ''}
+
         ${idea.note ? `<div class="idea-card-note">${_esc(idea.note)}</div>` : ''}
 
         <div class="idea-card-meta">
-          ${day  ? `<span class="idea-meta-chip">📅 Gg. ${day.day} — ${day.location}</span>` : ''}
+          ${day  ? `<a href="#itinerary/${day.date}" class="idea-meta-chip idea-meta-link" title="Vai al giorno nell'itinerario">📅 Gg. ${day.day} — ${day.location}</a>` : ''}
           ${idea.location_name ? `<span class="idea-meta-chip">📍 ${_esc(idea.location_name)}</span>` : ''}
           ${idea.add_to_checklist ? `<span class="idea-meta-chip">📋 Checklist</span>` : ''}
           ${idea.add_to_map ? `<span class="idea-meta-chip" style="border-left:3px solid ${idea.marker_color}">🗺️ Mappa</span>` : ''}
@@ -396,6 +453,19 @@ function _buildIdeaCardHTML(idea) {
       </div>
     </div>
   `
+}
+
+/* ── FOCUS SU UNA SINGOLA IDEA ────────────────────────── */
+
+// Arrivo da un link a un'idea precisa (dall'itinerario): la lista e' lunga,
+// quindi la si porta in vista e la si evidenzia, altrimenti l'utente
+// atterrerebbe in cima e dovrebbe cercarla a mano.
+function _focusIdea(id) {
+  const card = document.querySelector(`.idea-card[data-id="${id}"]`)
+  if (!card) return
+  card.classList.add('idea-card--evidenza')
+  setTimeout(() => card.classList.remove('idea-card--evidenza'), 2000)
+  card.scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
 
 /* ── DAY-LINK MODAL ───────────────────────────────────── */
@@ -492,6 +562,14 @@ function _bindListEvents() {
 
     if (action === 'day-link') {
       _openDayLinkModal(id)
+    }
+
+    if (action === 'rate') {
+      const idea = loadIdeas().find(i => i.id === id)
+      if (!idea) return
+      const v = Number(btn.dataset.v)
+      updateIdea(id, { rating: idea.rating === v ? 0 : v })
+      _refreshList()
     }
   })
 }

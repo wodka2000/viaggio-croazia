@@ -3,6 +3,7 @@ const KEY = 'viaggio_croazia_ideas_v1'
 export const CATEGORIE = [
   { value: 'alloggio',   label: '🏨 Alloggio' },
   { value: 'ristorante', label: '🍽️ Ristorante' },
+  { value: 'bar',        label: '🍹 Bar' },
   { value: 'esperienza', label: '🎯 Esperienza' },
   { value: 'spiaggia',   label: '🏖️ Spiaggia' },
   { value: 'escursione', label: '🥾 Escursione' },
@@ -16,8 +17,13 @@ export const STATI = [
   { value: 'da-verificare', label: 'Da verificare', color: '#f59e0b' },
   { value: 'prenotare',     label: 'Prenotare',     color: '#ef4444' },
   { value: 'approvata',     label: 'Approvata',     color: '#10b981' },
+  { value: 'fatto',         label: 'Fatto',         color: '#0ea5e9' },
   { value: 'scartata',      label: 'Scartata',      color: '#94a3b8' },
 ]
+
+// Voto da 1 a 3 stelle: ha senso solo per le cose gia' fatte, serve a
+// ricordare cosa e' valso la pena e cosa no. 0 = non ancora votato.
+export const MAX_RATING = 3
 
 export const PRIORITA = [
   { value: 'alta',  label: '🔴 Alta' },
@@ -43,6 +49,7 @@ function _normalize(idea) {
     link: '',
     priorita: 'media',
     stato: 'idea',
+    rating: 0,
     note: idea.note ?? '',
     location_name: idea.location_name ?? null,
     ...idea,
@@ -77,6 +84,7 @@ export function addIdea(partial) {
     link: '',
     priorita: 'media',
     stato: 'idea',
+    rating: 0,
     created_at: new Date().toISOString(),
     day_date: null,
     location_name: null,
@@ -87,6 +95,7 @@ export function addIdea(partial) {
     completed: false,
     ...partial,
   })
+  if (idea.stato === 'fatto') idea.completed = true
   ideas.unshift(idea)
   _save(ideas)
   return idea
@@ -96,9 +105,21 @@ export function updateIdea(id, changes) {
   const ideas = loadIdeas()
   const idx = ideas.findIndex(i => i.id === id)
   if (idx === -1) return null
-  ideas[idx] = { ...ideas[idx], ...changes }
+
+  // Lo stato "Fatto" e la spunta nella checklist sono la stessa cosa detta in
+  // due posti: si tengono allineati, altrimenti la stessa idea risulta fatta
+  // da una parte e da fare dall'altra. Chi passa entrambi i campi comanda lui.
+  const next = { ...ideas[idx], ...changes }
+  if ('stato' in changes && !('completed' in changes)) {
+    next.completed = changes.stato === 'fatto'
+  } else if ('completed' in changes && !('stato' in changes)) {
+    if (changes.completed) next.stato = 'fatto'
+    else if (next.stato === 'fatto') next.stato = 'idea'
+  }
+
+  ideas[idx] = next
   _save(ideas)
-  return ideas[idx]
+  return next
 }
 
 export function deleteIdea(id) {
