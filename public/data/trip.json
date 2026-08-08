@@ -182,8 +182,8 @@
       "day": 5,
       "date": "2026-08-11",
       "location": "Area di Zara",
-      "title": "Brač → Zara — Check-out Pastura, Check-in Pinija",
-      "description": "Ultima mattinata di mare a Brač con calma, poi check-out e traghetto per Split nel primo pomeriggio. Trasferimento in A1 e arrivo a Petrčane nel pomeriggio, con check-in all'Hotel Pinija.",
+      "title": "Brač → Spalato → Zara — Palazzo di Diocleziano e Check-in Pinija",
+      "description": "Mattinata compressa: bagno veloce a Postira, check-out alle 10 e traghetto delle 11 da Supetar. Pranzo a Spalato e visita al Palazzo di Diocleziano nel primo pomeriggio, poi A1 verso Zara e check-in all'Hotel Pinija in serata.",
       "hotel_ref": "zadar_pinija",
       "coordinates": {
         "lat": 44.1799,
@@ -191,37 +191,57 @@
       },
       "activities": [
         {
-          "time": "09:30",
-          "text": "Colazione con calma"
+          "time": "08:00",
+          "text": "Colazione"
+        },
+        {
+          "time": "08:45",
+          "text": "Ultimo bagno veloce a Postira e valigie"
         },
         {
           "time": "10:00",
-          "text": "Ultimo bagno di mare a Postira"
-        },
-        {
-          "time": "11:00",
           "text": "Check-out Hotel Pastura"
         },
         {
+          "time": "10:20",
+          "text": "Porto di Supetar — coda per l'imbarco auto"
+        },
+        {
+          "time": "11:00",
+          "text": "Traghetto Supetar → Spalato (circa 50 minuti)"
+        },
+        {
+          "time": "12:00",
+          "text": "Sbarco a Spalato e parcheggio vicino al porto"
+        },
+        {
           "time": "12:30",
-          "text": "Pranzo a Supetar"
+          "text": "Pranzo a Spalato"
         },
         {
-          "time": "pomeriggio",
-          "text": "Traghetto Supetar → Split e trasferimento in A1 verso Zara"
+          "time": "14:00",
+          "text": "Palazzo di Diocleziano: sotterranei, Peristilio, Cattedrale di San Doimo, Vestibolo"
         },
         {
-          "time": "17:00",
+          "time": "16:30",
+          "text": "Partenza in A1 verso Zara (circa 160 km)"
+        },
+        {
+          "time": "18:45",
           "text": "Arrivo e check-in Hotel Pinija, Petrčane"
         }
       ],
       "tips": {
         "do": [
-          "Ultimo bagno di mare a Brač prima di partire",
-          "Traghetto pomeridiano Supetar–Split, poi A1 verso Zara"
+          "Al porto di Supetar in agosto la coda auto si forma presto: meglio esserci per le 10:20",
+          "Sotterranei del palazzo per primi: sono freschi, e alle 14 fuori si scoppia",
+          "Vestibolo, la sala rotonda con l'oculo: se ci sono i cantanti klapa vale la sosta",
+          "Statua di Grgur Ninski fuori dalla Porta Aurea — si tocca l'alluce per fortuna",
+          "Campanile della cattedrale solo se ve la sentite: scale ripide e aperte"
         ],
         "eat": [
-          "Pranzo a Supetar prima del traghetto",
+          "Pranzo a Spalato, dentro o attorno al palazzo",
+          "Gelato sulla Riva prima di rimettersi in macchina",
           "Cena di pesce a Petrčane"
         ]
       }
@@ -2322,8 +2342,8 @@
       "from": "Supetar (Brač)",
       "to": "Spalato",
       "date": "2026-08-11",
-      "time": "14:00",
-      "note": "Ritorno verso Spalato",
+      "time": "11:00",
+      "note": "Ritorno verso Spalato — imbarco auto, meglio in coda per le 10:20",
       "day": 5
     }
   ],
