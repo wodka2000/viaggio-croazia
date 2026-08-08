@@ -93,7 +93,7 @@ function ristorantiInProgramma(dining, day) {
   const testo = testoDelGiorno(day)
   if (!testo) return []
 
-  return diningForLocation(dining, day.location).filter(d => {
+  return diningForLocation(dining, day.location, day.date).filter(d => {
     const nome = String(d.name ?? '').toLowerCase().trim()
     if (!nome) return false
     if (testo.includes(nome)) return true

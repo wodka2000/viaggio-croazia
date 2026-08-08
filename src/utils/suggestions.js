@@ -2,11 +2,24 @@ import { loadIdeas, addIdea } from './ideas.js'
 
 /* Suggerimenti del giorno — logica condivisa tra Dashboard (popup) e scheda Attività. */
 
-// Ristoranti la cui area combacia con la località della tappa
-export function diningForLocation(dining, location) {
+// Ristoranti della zona in cui si dorme quel giorno.
+//
+// Un posto puo' portarsi dietro un campo `dates`: e' legato a una gita, non
+// alla base. Il paninaro di Bol serve il giorno che si va a Bol, non in tutte
+// le giornate sull'isola.
+//
+// E il giorno in cui qualcosa e' agganciato vale solo quello: se si passa la
+// giornata fuori, l'elenco dei locali sparsi per tutta l'isola e' rumore, e i
+// posti giusti sono quelli sul percorso. Senza agganci, la zona intera.
+export function diningForLocation(dining, location, date) {
   if (!dining || !location) return []
   const loc = location.toLowerCase()
-  return dining.filter(d => loc.includes(d.area.toLowerCase()))
+  const inArea = dining.filter(d => loc.includes(d.area.toLowerCase()))
+
+  const delGiorno = inArea.filter(d => Array.isArray(d.dates) && d.dates.includes(date))
+  if (delGiorno.length) return delGiorno
+
+  return inArea.filter(d => !Array.isArray(d.dates) || d.dates.length === 0)
 }
 
 // Idee salvate (localStorage) abbinate a questo giorno (esclude le scartate)
@@ -24,7 +37,7 @@ export function isSesto(day) {
 // all'attività scelta).
 export function suggestionsCount(day, dining) {
   const acts  = day.activities?.length || 0
-  const rest  = isSesto(day) ? 0 : diningForLocation(dining, day.location).length
+  const rest  = isSesto(day) ? 0 : diningForLocation(dining, day.location, day.date).length
   const ideas = ideasForDay(day.date).length
   return acts + rest + ideas
 }
@@ -37,7 +50,7 @@ const mapsSearch = q => `https://www.google.com/maps/search/?api=1&query=${encod
 
 // Blocco sezioni dei suggerimenti per un giorno — markup identico in popup e scheda
 export function suggestionsSectionsHtml(day, dining, hikes = []) {
-  const restaurants = diningForLocation(dining, day.location)
+  const restaurants = diningForLocation(dining, day.location, day.date)
   const ideas       = ideasForDay(day.date)
   // Cosa e gia' in programma per questo giorno: serve a non riproporre il
   // pulsante "Aggiungi" su chi c'e gia'.
