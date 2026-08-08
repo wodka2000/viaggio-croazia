@@ -94,8 +94,8 @@
       "day": 3,
       "date": "2026-08-09",
       "location": "Brač",
-      "title": "Brač — Mare e Calette",
-      "description": "Giornata di mare sull'isola: calette vicine a Postira, snorkeling e relax. Possibile visita a Postira o a Supetar nel pomeriggio.",
+      "title": "Brač — Lovrečina Bay e l'entroterra",
+      "description": "Mattinata a Lovrečina, la baia di sabbia a pochi chilometri da Postira, con le rovine della basilica di San Lorenzo dietro la spiaggia. Ore calde al riparo e nel tardo pomeriggio l'entroterra: Škrip, il paese più antico dell'isola, oppure Pučišća e la sua scuola per scalpellini.",
       "hotel_ref": "brac_pastura",
       "coordinates": {
         "lat": 43.3775,
@@ -103,20 +103,32 @@
       },
       "activities": [
         {
-          "time": "09:00",
-          "text": "Colazione con calma"
+          "time": "08:30",
+          "text": "Colazione"
         },
         {
-          "time": "10:00",
-          "text": "Mare e calette vicino a Postira"
+          "time": "09:15",
+          "text": "Lovrečina Bay — spiaggia di sabbia e fondale basso, 4 km a est di Postira"
+        },
+        {
+          "time": "11:00",
+          "text": "Rovine della basilica di San Lorenzo, dietro la spiaggia"
         },
         {
           "time": "13:00",
-          "text": "Pranzo locale"
+          "text": "Pranzo: bar della baia, oppure rientro a Postira"
         },
         {
-          "time": "17:00",
-          "text": "Passeggiata a Postira o Supetar"
+          "time": "14:30",
+          "text": "Ore calde all'ombra, riposo in hotel"
+        },
+        {
+          "time": "16:30",
+          "text": "Škrip — museo dell'isola nella torre e museo dell'olio (in alternativa Pučišća)"
+        },
+        {
+          "time": "19:00",
+          "text": "Rientro e aperitivo a Postira"
         },
         {
           "time": "20:00",
@@ -125,10 +137,18 @@
       ],
       "tips": {
         "do": [
-          "Snorkeling nelle calette vicine a Postira",
-          "Giro tra le vie di Supetar"
+          "Lovrečina è una delle pochissime spiagge di sabbia dell'isola e l'acqua resta bassa a lungo: per questo d'agosto si riempie presto",
+          "Si parcheggia sopra la baia e si scende a piedi: dopo le 10:30 l'auto la lasci lontano",
+          "Dietro la spiaggia ci sono i resti della basilica paleocristiana di San Lorenzo, V-VI secolo, col fonte battesimale esagonale: la baia prende il nome da lì",
+          "Ombra scarsa, solo i pini ai bordi della baia: meglio portarsi l'ombrellone",
+          "Škrip, 10 minuti nell'entroterra: il paese più antico di Brač, con mura megalitiche, un mausoleo romano e il museo dell'isola nella torre Radojković",
+          "In alternativa Pučišća, 15 minuti a est: la scuola per scalpellini è una delle ultime in Europa e d'estate si visita",
+          "Sopra Splitska, dalla parte opposta, la cava romana di Rasohe con un rilievo di Ercole scolpito nella roccia: mezz'ora a piedi in salita",
+          "Con questa pietra bianca è fatto il palazzo di Diocleziano; che ci sia anche la Casa Bianca è una leggenda locale che non risulta da nessuna parte"
         ],
         "eat": [
+          "Il bar della baia di Lovrečina, per non rimettersi in macchina a pranzo",
+          "Konoba Bracera sulla baia di Postira, a due passi dall'hotel",
           "Peka di polpo o agnello (da ordinare in anticipo)",
           "Vitalac, specialità dell'isola per i più curiosi"
         ]
