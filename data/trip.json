@@ -138,8 +138,8 @@
       "day": 4,
       "date": "2026-08-10",
       "location": "Brač",
-      "title": "Brač — Zlatni Rat",
-      "description": "Esperienza clou dell'isola: la spiaggia di Zlatni Rat a Bol. In alternativa, altra esperienza sull'isola. Vidova Gora resta solo come opzione panoramica per chi vuole.",
+      "title": "Brač — Giornata a Bol e Zlatni Rat",
+      "description": "Giornata intera a Bol: si parte presto da Postira, mattinata a Zlatni Rat, pranzo e pomeriggio in paese fra spiaggia e lungomare, cena a Bol e rientro in serata. Vidova Gora resta solo come opzione panoramica sulla via del ritorno.",
       "hotel_ref": "brac_pastura",
       "coordinates": {
         "lat": 43.3775,
@@ -159,22 +159,35 @@
           "text": "Pranzo a Bol"
         },
         {
-          "time": "15:30",
-          "text": "Rientro e relax; Vidova Gora solo come opzione"
+          "time": "14:30",
+          "text": "Ore calde all'ombra: lungomare di Bol e giro in paese"
+        },
+        {
+          "time": "16:30",
+          "text": "Secondo bagno a Zlatni Rat, quando il maestrale rinfresca"
+        },
+        {
+          "time": "18:30",
+          "text": "Aperitivo sul porto di Bol"
         },
         {
           "time": "20:00",
-          "text": "Cena con pesce fresco"
+          "text": "Cena a Bol e rientro a Postira"
         }
       ],
       "tips": {
         "do": [
-          "Zlatni Rat la mattina presto, prima della folla",
-          "Lettini, ombrellone e pedalò a Bol"
+          "Zlatni Rat la mattina presto, prima della folla: il parcheggio in fondo alla strada si riempie entro le 10",
+          "La punta cambia forma col vento: se tira maestrale il lato ovest resta calmo, l'est va ai windsurf",
+          "Ciottoli, non sabbia — le scarpette da scoglio salvano la giornata",
+          "Ombra scarsa in spiaggia: la pineta dietro è il ripiego migliore",
+          "Dal centro di Bol a Zlatni Rat sono 20 minuti a piedi sul lungomare, o pochi minuti col taxi boat",
+          "Vidova Gora al tramonto, sulla via del rientro, se avanza energia"
         ],
         "eat": [
           "Pranzo di pesce sul porto di Bol",
-          "Granita o gelato per i bambini"
+          "Granita o gelato per i bambini",
+          "Cena a Bol prima di rimettersi in strada per Postira (mezz'ora di curve)"
         ]
       }
     },
