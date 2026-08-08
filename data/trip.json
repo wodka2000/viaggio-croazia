@@ -1277,7 +1277,8 @@
       "name": "Konoba Tomić",
       "town": "Gornji Humac (Brač)",
       "type": "Konoba",
-      "specialty": "Peka di agnello e carni alla griglia, cucina autentica dell'interno"
+      "dates": ["2026-08-10"],
+      "specialty": "Peka di agnello e carni alla griglia, cucina autentica dell'interno. Sta sulla strada del ritorno da Bol: la peka va ordinata la mattina, perché cuoce due ore sotto la campana."
     },
     {
       "area": "Area di Zara",
@@ -1410,6 +1411,7 @@
       "name": "Pizzeria Topolino",
       "town": "Frane Radića 1, Bol",
       "type": "Pizzeria",
+      "dates": ["2026-08-10"],
       "specialty": "Pizze al forno a legna, paste, insalate sostanziose e limonata fatta in casa a due passi dall'acqua: la scelta più semplice e senza attese durante una giornata a Zlatni Rat. A pochi metri dal mare."
     },
     {
@@ -1417,6 +1419,7 @@
       "name": "Arguola",
       "town": "Vladimira Nazora 6, Bol",
       "type": "Paninoteca",
+      "dates": ["2026-08-10"],
       "specialty": "Paninoteca sopra la media: cuociono in casa il pane dei panini e li farciscono con ingredienti dell'isola. Quello con acciughe e capperi è saporito e costa poco. Da prendere al volo per la spiaggia."
     },
     {
