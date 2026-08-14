@@ -386,8 +386,8 @@
       "day": 8,
       "date": "2026-08-14",
       "location": "Velebit / Otočac",
-      "title": "Zara → Velebit — Kuterevo Bear Sanctuary",
-      "description": "Check-out dall'Hotel Pinija e risalita verso l'interno. Visita al Kuterevo Bear Sanctuary, check-in all'Apartman Silvija (Otočac, Valle della Gacka) e, in serata, esplorazione della Valle della Gacka.",
+      "title": "Zara → Velebit — Valle della Gacka",
+      "description": "Check-out dall'Hotel Pinija e risalita verso l'interno, con sosta pranzo lungo il percorso. Check-in all'Apartman Silvija (Otočac) e pomeriggio nella Valle della Gacka. Gli orsi di Kuterevo si vedono con calma domattina, all'apertura, prima di scendere verso l'Istria.",
       "hotel_ref": "velebit_silvija",
       "coordinates": {
         "lat": 44.8688,
@@ -399,31 +399,37 @@
           "text": "Check-out Hotel Pinija"
         },
         {
-          "time": "mattina",
-          "text": "Trasferimento verso l'area di Kuterevo / Velebit"
+          "time": "09:30",
+          "text": "Trasferimento verso Otočac (~1h45 di A1, si risale dal mare all'altopiano della Lika)"
         },
         {
-          "time": "13:00",
-          "text": "Kuterevo Bear Sanctuary — rifugio per orsi"
+          "time": "12:30",
+          "text": "Sosta pranzo lungo il percorso"
         },
         {
-          "time": "16:00",
+          "time": "14:00",
+          "text": "🛒 Spesa a Otočac — cena e colazione, all'appartamento non c'è nulla"
+        },
+        {
+          "time": "15:00",
           "text": "Check-in Apartman Silvija"
         },
         {
-          "time": "18:00",
-          "text": "Eventuale Valle della Gacka"
+          "time": "17:00",
+          "text": "Valle della Gacka — passeggiata lungo il fiume e le sorgenti"
         }
       ],
       "tips": {
         "do": [
           "🛒 Fare la spesa PRIMA di arrivare: all'Apartman Silvija non c'è nulla (cibo e bevande per sera e mattina)",
-          "Kuterevo Bear Sanctuary",
-          "Passeggiata lungo il fiume Gacka"
+          "Passeggiata lungo il fiume Gacka: acqua trasparente, mulini e trote visibili dal ponte",
+          "Serata presto: domattina si parte per gli orsi di Kuterevo all'apertura e la giornata è lunga fino a Rovigno",
+          "Si passa da 30° sul mare a 900 m di altopiano: la sera in Lika rinfresca sul serio, una felpa a portata di mano"
         ],
         "eat": [
           "Trota della Gacka e agnello della Lika",
-          "Formaggio škripavac; štrukli"
+          "Formaggio škripavac; štrukli",
+          "Cena all'appartamento con la spesa fatta a Otočac: si arriva stanchi e i ristoranti della valle chiudono presto"
         ]
       }
     },
@@ -431,8 +437,8 @@
       "day": 9,
       "date": "2026-08-15",
       "location": "Rovigno / Istria",
-      "title": "Velebit → Istria — Check-in Magali (Rovigno)",
-      "description": "Eventuale breve attività naturalistica al mattino nella zona del Velebit / Gacka, poi trasferimento verso l'Istria. Check-in ai Luxury Apartments Magali 1, base per Rovigno.",
+      "title": "Kuterevo e Segna → Rovigno — Orsi, fortezza e primo mare",
+      "description": "Mattina con gli orsi al Kuterevo Bear Sanctuary, poi discesa a Segna (Senj) per la fortezza di Nehaj, a picco sul canale del Quarnero. Nel pomeriggio il lungo trasferimento in Istria: check-in ai Luxury Apartments Magali 1, spiaggia sotto casa e piscina, e in serata il giretto nel centro di Rovigno per aperitivo e cena.",
       "hotel_ref": "rovinj_magali",
       "coordinates": {
         "lat": 45.103,
@@ -440,30 +446,57 @@
       },
       "activities": [
         {
+          "time": "08:30",
+          "text": "Check-out Apartman Silvija — auto carica, si riparte già con le valigie"
+        },
+        {
           "time": "09:00",
-          "text": "Eventuale attività naturalistica breve (Velebit / Gacka)"
+          "text": "Kuterevo Bear Sanctuary — rifugio per orsi (~25 min da Otočac), visita all'apertura"
         },
         {
-          "time": "10:30",
-          "text": "Check-out Apartman Silvija e trasferimento verso Rovigno"
+          "time": "11:00",
+          "text": "Discesa verso il mare per Segna (Senj), ~40 min di curve dal passo Vratnik"
         },
         {
-          "time": "15:00",
-          "text": "Check-in Luxury Apartments Magali 1"
+          "time": "11:45",
+          "text": "Fortezza di Nehaj — il fortino degli Uscocchi sul colle sopra Segna"
+        },
+        {
+          "time": "13:00",
+          "text": "Pranzo a Senj"
+        },
+        {
+          "time": "14:15",
+          "text": "Trasferimento in Istria (~2h45 via Fiume, tunnel di Učka)"
         },
         {
           "time": "17:00",
-          "text": "Primo mare e passeggiata a Rovigno"
+          "text": "Check-in Luxury Apartments Magali 1 (Rovigno)"
+        },
+        {
+          "time": "17:45",
+          "text": "Spiaggia vicino casa e piscina — il primo bagno in Istria"
+        },
+        {
+          "time": "20:00",
+          "text": "Giretto nel centro di Rovigno — aperitivo sul porto e cena"
         }
       ],
       "tips": {
         "do": [
-          "Trasferimento con sosta pranzo lungo il percorso",
-          "Bagno vicino all'appartamento; serata soft"
+          "Kuterevo apre la mattina e la visita dura un'ora scarsa: partire alle 9 lascia tutto il resto della giornata libero",
+          "Il santuario è un rifugio, non uno zoo: orsi orfani in grandi recinti boschivi, si entra a offerta libera e i volontari raccontano la storia di ognuno",
+          "Nehaj sta su un poggio spoglio fuori Segna: si sale in auto fin quasi in cima, dentro tre piani di armi e costumi degli Uscocchi e dai camminamenti si vede l'isola di Krk",
+          "La discesa dal Vratnik su Segna è tutta tornanti: se qualcuno soffre l'auto, meglio prima della visita che dopo pranzo",
+          "Da Segna a Rovigno sono quasi 3 ore vere: partire entro le 14:30 per arrivare con la luce e con tempo per il bagno",
+          "⚠️ Bora: il tratto costiero Senj–Fiume è il più ventoso della Croazia. Con vento forte l'autostrada A1 per Fiume è l'alternativa"
         ],
         "eat": [
+          "Pranzo a Segna: Martina, sulla costiera a 1 km dal centro, è la sosta più semplice — griglia e frutti di mare con vista su Krk",
+          "In alternativa, agnello allo spiedo pagato a peso alla Gostionica Jablan, sulla salita al Vratnik: si mangia prima di scendere in città",
+          "Aperitivo sul porto di Rovigno prima di cena: malvasia istriana per i grandi",
           "Fuži o pljukanci al tartufo istriano",
-          "Prenotare la cena (Ferragosto: tutto pieno)"
+          "⚠️ È Ferragosto: prenotare la cena in centro nel pomeriggio, appena arrivati, o si finisce a girare a vuoto"
         ]
       }
     },
@@ -471,43 +504,70 @@
       "day": 10,
       "date": "2026-08-16",
       "location": "Rovigno / Istria",
-      "title": "Rovigno e Istria",
-      "description": "Giornata a Rovigno e in Istria: mare, centro storico collinare con la Chiesa di Sant'Eufemia, eventuale Canale di Leme ed eventuale cena a Rovigno.",
+      "title": "Brioni — Safari park, resti romani e sera a Pola",
+      "description": "Giornata alle Brijuni: imbarco a Fasana alle 11:30, biglietti con guida in italiano già acquistati ✅. Trenino nel safari park e giro dell'isola maggiore, poi relax e bagno nella baia con i resti della villa romana. Rientro nel tardo pomeriggio, Pola in serata e cena a casa.",
       "hotel_ref": "rovinj_magali",
       "coordinates": {
-        "lat": 45.103,
-        "lng": 13.6278
+        "lat": 44.9167,
+        "lng": 13.7636
       },
       "activities": [
         {
-          "time": "09:00",
-          "text": "Mare in Istria"
+          "time": "09:30",
+          "text": "Colazione con calma e preparazione borse mare (costumi, telo, cappellini, acqua)"
         },
         {
-          "time": "13:00",
-          "text": "Pranzo"
+          "time": "10:15",
+          "text": "Partenza da Rovigno verso Fasana (Fažana), ~40 min"
         },
         {
-          "time": "15:00",
-          "text": "Centro storico di Rovigno — Sant'Eufemia"
+          "time": "11:00",
+          "text": "Arrivo a Fasana — parcheggio e ritiro biglietti al molo del parco"
         },
         {
-          "time": "17:00",
-          "text": "Eventuale Canale di Leme (Limski Kanal)"
+          "time": "11:30",
+          "text": "⛴️ Imbarco per Veliki Brijun — biglietti con guida in italiano ✅"
+        },
+        {
+          "time": "12:00",
+          "text": "Visita guidata: trenino nel safari park (zebre, antilopi, zebù) e giro dell'isola"
+        },
+        {
+          "time": "14:30",
+          "text": "Baia di Verige (Val Catena) — i resti della villa romana marittima affacciati sull'acqua"
+        },
+        {
+          "time": "15:30",
+          "text": "Relax e bagno sull'isola, all'ombra dei pini"
+        },
+        {
+          "time": "17:15",
+          "text": "Battello di rientro a Fasana"
+        },
+        {
+          "time": "18:15",
+          "text": "Pola in serata — Arena romana e passeggiata in centro"
         },
         {
           "time": "20:30",
-          "text": "Eventuale cena a Rovigno"
+          "text": "Rientro a Rovigno (~50 min) e cena a casa"
         }
       ],
       "tips": {
         "do": [
-          "Centro storico e chiesa di Sant'Eufemia",
-          "Acquario di Rovigno o Canale di Leme"
+          "⚠️ Verificare sul biglietto se il rientro è a orario fisso: se il battello è vincolato al giro guidato, il bagno sull'isola va concordato al molo del parco",
+          "Al molo di Fasana presentarsi ~30 min prima dell'imbarco: ad agosto la fila per il controllo biglietti è lunga",
+          "Sull'isola non si gira in auto: trenino, bici o piedi. Col piccolo di 2 anni meglio lo zaino porta-bimbo, i sentieri sono sterrati",
+          "Nel safari park c'è ancora il pappagallo Koki di Tito, che ripete le frasi imparate dal maresciallo: colpo sicuro con i bambini",
+          "Poca ombra fuori dalle pinete e niente ricambio d'acqua: cappellini, crema e almeno 2 litri a testa nello zaino",
+          "L'Arena di Pola la sera è il momento migliore — luce calda e meno caldo; i sotterranei chiudono prima, controllare l'orario",
+          "🛒 Cena a casa: fare la spesa il 15 o la mattina del 16, si rientra a Rovigno verso le 21:30"
         ],
         "eat": [
-          "Scampi alla busara; ostriche del Leme",
-          "Gelato sul porto per i bambini"
+          "Pranzo al sacco portato da casa: sull'isola c'è solo il ristorante del porticciolo, caro e affollato",
+          "Panino o gelato a Pola in serata per i bambini, così a casa la cena può essere leggera",
+          "A Fasana, prima o dopo l'imbarco, le sardine sono la specialità del paese",
+          "Cena a casa a Rovigno"
         ]
       }
     },
@@ -516,7 +576,7 @@
       "date": "2026-08-17",
       "location": "Collio",
       "title": "Istria → Collio — Castello di Spessa",
-      "description": "Check-out dai Luxury Apartments Magali 1 e trasferimento nel Collio, con una sosta pranzo lungo il percorso. Check-in al Castello di Spessa alle 16 e piscina alle 17: prima delle due notti in Friuli. Miramare e Trieste si vedono con calma il 18.",
+      "description": "Ultima mattina a Rovigno senza fretta — un giro nel centro storico fino a Sant'Eufemia, oppure la pineta di Zlatni Rt (Punta Corrente) — poi partenza con calma verso il Collio, con una sosta pranzo lungo il percorso. Check-in al Castello di Spessa alle 16 e piscina alle 17: prima delle due notti in Friuli. Miramare e Trieste si vedono con calma il 18.",
       "hotel_ref": "collio_spessa",
       "coordinates": {
         "lat": 45.9477,
@@ -524,15 +584,23 @@
       },
       "activities": [
         {
+          "time": "08:30",
+          "text": "Colazione senza fretta e valigie"
+        },
+        {
           "time": "10:00",
           "text": "Check-out Luxury Apartments Magali 1"
         },
         {
-          "time": "10:30",
-          "text": "Trasferimento verso il Collio (~2h30)"
+          "time": "10:15",
+          "text": "Ultimo giro a Rovigno — centro storico e Sant'Eufemia, oppure la pineta di Zlatni Rt (Punta Corrente)"
         },
         {
-          "time": "13:00",
+          "time": "12:00",
+          "text": "Partenza verso il Collio (~2h30, due confini: Croazia → Slovenia → Italia)"
+        },
+        {
+          "time": "13:15",
           "text": "Sosta pranzo lungo il percorso (es. Pirano o il golfo di Sistiana)"
         },
         {
@@ -550,7 +618,11 @@
       ],
       "tips": {
         "do": [
-          "Giornata di solo trasferimento: una sosta pranzo lunga vale più di una visita di corsa",
+          "Il check-in a Spessa è alle 16: contando 2h30 di viaggio e la sosta pranzo, si può stare a Rovigno fino a mezzogiorno senza correre",
+          "Il centro storico e Zlatni Rt stanno da parti opposte: sceglierne uno solo, non entrambi",
+          "Zlatni Rt (Punta Corrente) è la scelta comoda con le valigie già in auto: si parcheggia al parco, sentieri piani all'ombra e un ultimo bagno nelle calette di Lone Bay",
+          "Il centro storico, invece, è la salita nei vicoli fino a Sant'Eufemia: bella, ma con la vettura carica e il caldo di mezzogiorno è più faticosa",
+          "Due frontiere sul percorso: documenti di tutti a portata di mano, i controlli d'agosto rallentano",
           "Piscina dalle 17 alle 19: arrivare in tenuta con un margine per disfare l'essenziale"
         ],
         "eat": [
@@ -1035,6 +1107,15 @@
   ],
   "bookings": [
     {
+      "id": "book_brijuni_2026_08_16",
+      "date": "2026-08-16",
+      "time": "11:30",
+      "place": "Brijuni National Park — imbarco e visita guidata",
+      "address": "Molo del parco, Riva 2, 52212 Fažana (Fasana)",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=Nacionalni%20park%20Brijuni%20Fa%C5%BEana",
+      "note": "Biglietti già acquistati ✅ — visita con guida in italiano e safari park. Imbarco alle 11:30: al molo per le 11:00"
+    },
+    {
       "id": "book_subida_2026_08_18",
       "date": "2026-08-18",
       "time": "19:00",
@@ -1149,10 +1230,12 @@
       "price_total": 630,
       "amenities": [
         "Appartamenti",
+        "Piscina",
+        "Spiaggia vicina",
         "Base per Rovigno",
         "Adatto famiglie"
       ],
-      "notes": "Base in Istria per Rovigno, il mare e l'eventuale Canale di Leme. Prenotazione confermata.",
+      "notes": "Base in Istria per Rovigno e per la giornata alle Brijuni. Piscina e spiaggia a due passi: il pomeriggio dell'arrivo (15/8) si sta lì. Prenotazione confermata.",
       "booking_ref": "",
       "status": "confermata",
       "recommended": true,
@@ -1237,7 +1320,7 @@
       "icon": "📅",
       "title": "Ferragosto (15 agosto)",
       "priority": "high",
-      "text": "Il 15 è giorno di trasferimento Otočac → Rovigno E arrivo in Istria, nel picco di folla. Spiagge e ristoranti pieni: serata soft in appartamento e attività la mattina presto. Prenotare in anticipo l'eventuale cena."
+      "text": "Il 15 è giorno di trasferimento Otočac → Rovigno E arrivo in Istria, nel picco di folla. La mattina è già impegnata (orsi a Kuterevo alle 9, Nehaj a mezzogiorno) e si arriva a Rovigno verso le 17: pomeriggio in spiaggia e piscina sotto casa, poi centro in serata. ⚠️ Ristoranti pieni ovunque: prenotare la cena in centro appena arrivati, nel pomeriggio, o telefonare già lungo il viaggio."
     },
     {
       "icon": "⏱️",
@@ -1255,7 +1338,13 @@
       "icon": "🎒",
       "title": "Tappa breve a Otočac (14–15/8)",
       "priority": "low",
-      "text": "Una sola notte all'Apartman Silvija: tenere pronto un borsone 'essenziale' per la notte senza disfare tutto. Kuterevo Bear Sanctuary è a ~20 min dall'alloggio."
+      "text": "Una sola notte all'Apartman Silvija: tenere pronto un borsone 'essenziale' per la notte senza disfare tutto — la mattina del 15 si riparte alle 8:30 con l'auto già carica, perché dopo gli orsi non si torna indietro. Kuterevo Bear Sanctuary è a ~20 min dall'alloggio."
+    },
+    {
+      "icon": "⛴️",
+      "title": "Brijuni con guida in italiano (16/8) — BIGLIETTI ACQUISTATI",
+      "priority": "high",
+      "text": "Imbarco a Fasana (Fažana) alle 11:30, biglietti con guida in italiano già presi ✅. Al molo del parco per le 11:00: ad agosto la fila al controllo è lunga e il parcheggio in paese si riempie. ⚠️ Da verificare sul biglietto se il rientro è a orario fisso o libero: il bagno sull'isola dopo il giro guidato dipende da quello. Sull'isola non circolano auto — trenino, bici o piedi — e il ristorante del porticciolo è caro: pranzo al sacco."
     },
     {
       "icon": "🛒",
@@ -1511,6 +1600,7 @@
       "name": "Pizzeria San Giacomo",
       "town": "Ricarda Daveggie 11, Rovinj",
       "type": "Pizzeria",
+      "dates": ["2026-08-15"],
       "specialty": "Pizzeria senza pretese con lunghe panche di legno e pizze in stile italiano fatte bene, frequentata dai locali: economica e aperta tutto l'anno, la carta vincente per una cena rapida coi bambini. Nei vicoli dietro il porto."
     },
     {
@@ -1518,6 +1608,7 @@
       "name": "Konoba Neptun",
       "town": "Joakima Rakovca 10, Rovinj",
       "type": "Konoba",
+      "dates": ["2026-08-15"],
       "specialty": "La risposta economica alla ressa di locali gourmet di Rovigno: ćevapi, pljeskavice e altre grigliate cotte sul focolare in fondo alla sala, più il pescato del giorno."
     },
     {
@@ -1525,6 +1616,7 @@
       "name": "Alla Beccaccia",
       "town": "Pineta 25, Valbandon",
       "type": "Ristorante",
+      "dates": ["2026-08-16"],
       "specialty": "Uno dei ristoranti più celebrati dell'Istria, con prezzi ragionevoli: selvaggina, pesce, ombolo e pasta fatta in casa cotti sul focolare, serviti in un giardino con prato — spazio vero per i bambini. Prenotazione necessaria. ~40 min da Rovigno, verso Pola."
     },
     {
@@ -1546,6 +1638,7 @@
       "name": "Stara konoba",
       "town": "Trg stare škole 1, Fažana",
       "type": "Konoba",
+      "dates": ["2026-08-16"],
       "specialty": "Sul lungomare turistico ma senza cedere sulla qualità: filetti di pesce, ombolo e molti piatti a base di sardine locali su panche di legno. Col vino della casa si mangia davvero a poco. Sul lungomare, ~40 min da Rovigno."
     }
   ],
@@ -1637,8 +1730,18 @@
         "items": [
           {
             "id": "att_1",
-            "text": "Kuterevo Bear Sanctuary",
+            "text": "Kuterevo Bear Sanctuary — mattina del 15/8, all'apertura, prima di scendere a Segna",
             "priority": "high"
+          },
+          {
+            "id": "att_6",
+            "text": "Brijuni con safari park (16/8) — biglietti con guida in italiano acquistati ✅, imbarco a Fasana alle 11:30",
+            "priority": "low"
+          },
+          {
+            "id": "att_7",
+            "text": "Fortezza di Nehaj a Segna (Senj) — verificare gli orari d'apertura per il 15/8 a mezzogiorno",
+            "priority": "medium"
           },
           {
             "id": "att_2",

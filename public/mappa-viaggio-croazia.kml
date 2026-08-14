@@ -82,10 +82,24 @@
       </Placemark>
 
       <Placemark>
-        <name>Kuterevo Bear Sanctuary (14/08)</name>
+        <name>Kuterevo Bear Sanctuary (15/08, mattina)</name>
         <styleUrl>#tappa</styleUrl>
-        <description>Rifugio per orsi bruni orfani ai piedi del Velebit.</description>
+        <description>Rifugio per orsi bruni orfani ai piedi del Velebit. Visita all'apertura, prima di scendere a Segna e proseguire per l'Istria.</description>
         <Point><coordinates>15.1389,44.8266,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Fortezza di Nehaj · Segna (15/08)</name>
+        <styleUrl>#tappa</styleUrl>
+        <description>Tvrđava Nehaj, Senj. Il fortino degli Uscocchi sul colle sopra la città: sosta di mezzogiorno lungo la discesa verso l'Istria.</description>
+        <Point><coordinates>14.8977,44.9860,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>Imbarco Brijuni · Fasana (16/08, 11:30)</name>
+        <styleUrl>#tappa</styleUrl>
+        <description>Molo del Parco Nazionale, Fažana. Imbarco alle 11:30 per Veliki Brijun: safari park e resti romani, biglietti con guida in italiano già acquistati.</description>
+        <Point><coordinates>13.8029,44.9268,0</coordinates></Point>
       </Placemark>
 
       <Placemark>
